@@ -1,0 +1,94 @@
+\doxysection{Ziz\+Death\+State Class Reference}
+\hypertarget{class_ziz_death_state}{}\label{class_ziz_death_state}\index{ZizDeathState@{ZizDeathState}}
+
+
+Inheritance diagram for Ziz\+Death\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_ziz_death_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Death\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_death_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_death_state_a22ae37392f4a2de313c5f882f02bb363}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_death_state_adffdf44615c7e4e0debe11792dde379e}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_death_state_aa62564268847c09a048dfb008c9a52eb}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_death_state_a1c69f8f7b19740c210c211dd42c98603}\label{class_ziz_death_state_a1c69f8f7b19740c210c211dd42c98603} 
+static \mbox{\hyperlink{class_ziz_death_state}{Ziz\+Death\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_death_state_a8b23dc588e1440b8f9609239c63e5095}\label{class_ziz_death_state_a8b23dc588e1440b8f9609239c63e5095} 
+float {\bfseries death\+Timer}
+\item 
+\Hypertarget{class_ziz_death_state_a08ee88101189d61a3279136997e542f3}\label{class_ziz_death_state_a08ee88101189d61a3279136997e542f3} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_death_state_a945206573bd9cf52b3dc8afb194800be}\label{class_ziz_death_state_a945206573bd9cf52b3dc8afb194800be} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_death_state_ad84eac7af2262d22a7d5e753b9d06918}\label{class_ziz_death_state_ad84eac7af2262d22a7d5e753b9d06918} 
+static \mbox{\hyperlink{class_ziz_death_state}{Ziz\+Death\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_death_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_death_state_a22ae37392f4a2de313c5f882f02bb363}\index{ZizDeathState@{ZizDeathState}!enter@{enter}}
+\index{enter@{enter}!ZizDeathState@{ZizDeathState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_death_state_a22ae37392f4a2de313c5f882f02bb363} 
+void Ziz\+Death\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_death_state_aa62564268847c09a048dfb008c9a52eb}\index{ZizDeathState@{ZizDeathState}!exit@{exit}}
+\index{exit@{exit}!ZizDeathState@{ZizDeathState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_death_state_aa62564268847c09a048dfb008c9a52eb} 
+void Ziz\+Death\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_death_state_adffdf44615c7e4e0debe11792dde379e}\index{ZizDeathState@{ZizDeathState}!update@{update}}
+\index{update@{update}!ZizDeathState@{ZizDeathState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_death_state_adffdf44615c7e4e0debe11792dde379e} 
+void Ziz\+Death\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Death\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Death\+State.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{Arrow.\+h}
+\hypertarget{_arrow_8h_source}{}\label{_arrow_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Arrow.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Arrow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}PlayerAttackCollider.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }Arrow\ :\ \textcolor{keyword}{public}\ PlayerAttackCollider\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordtype}{float}\ arrowSpeed;}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{float}\ damage;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{bool}\ facingDirection;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ timeToDestroy\ =\ 5.0f;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ timeElapsed\ =\ 0.0f;}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ ultGainPercentage;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ readyToDestroy;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ Arrow(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultGainPercentage\_,\ \textcolor{keywordtype}{bool}\ face,\ \textcolor{keywordtype}{float}\ speed,\ \mbox{\hyperlink{class_player}{Player}}*\ p);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ selfUpdate(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arrow_a9fb597371a801b56bcd61016cb4201b9}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerEnter(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setReadyToDestroy(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ getReadyToDestroy()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ getFacingDirection()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ getArrowSpeed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,100 @@
+\doxysection{Player\+Light\+Shield\+Attack2 Class Reference}
+\hypertarget{class_player_light_shield_attack2}{}\label{class_player_light_shield_attack2}\index{PlayerLightShieldAttack2@{PlayerLightShieldAttack2}}
+
+
+Inheritance diagram for Player\+Light\+Shield\+Attack2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_player_light_shield_attack2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Light\+Shield\+Attack2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_player_light_shield_attack2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_light_shield_attack2_aae4cc9c622b90f2eaf2d183f489c0f8c}{enter}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\item 
+void \mbox{\hyperlink{class_player_light_shield_attack2_a3dfcf556c392ff60b34b61098f587347}{update}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float dt\+\_\+) override
+\item 
+void \mbox{\hyperlink{class_player_light_shield_attack2_ac9a0e32ef7ba26bb87002a7fc7667f8f}{exit}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_shield_attack2_a3ecbe03f32e52314abe38e9fd5fb3962}\label{class_player_light_shield_attack2_a3ecbe03f32e52314abe38e9fd5fb3962} 
+static \mbox{\hyperlink{class_player_light_shield_attack2}{Player\+Light\+Shield\+Attack2}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_shield_attack2_a234e1dcbd6cdf02380c6de627b7ca729}\label{class_player_light_shield_attack2_a234e1dcbd6cdf02380c6de627b7ca729} 
+enum {\bfseries Phase} \{ {\bfseries STARTUP}
+, {\bfseries ACTIVE}
+, {\bfseries RECOVERY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_shield_attack2_ab495e2cc374b35d5309e8a0e041e3f55}\label{class_player_light_shield_attack2_ab495e2cc374b35d5309e8a0e041e3f55} 
+float {\bfseries time}
+\item 
+\Hypertarget{class_player_light_shield_attack2_ac3bdd638684e0fc142e84a7b8524b1ea}\label{class_player_light_shield_attack2_ac3bdd638684e0fc142e84a7b8524b1ea} 
+Phase {\bfseries current\+Phase}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_shield_attack2_a4504776e61c0d771622eb3a243846901}\label{class_player_light_shield_attack2_a4504776e61c0d771622eb3a243846901} 
+static \mbox{\hyperlink{class_player_light_shield_attack2}{Player\+Light\+Shield\+Attack2}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_light_shield_attack2_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_light_shield_attack2_aae4cc9c622b90f2eaf2d183f489c0f8c}\index{PlayerLightShieldAttack2@{PlayerLightShieldAttack2}!enter@{enter}}
+\index{enter@{enter}!PlayerLightShieldAttack2@{PlayerLightShieldAttack2}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_player_light_shield_attack2_aae4cc9c622b90f2eaf2d183f489c0f8c} 
+void Player\+Light\+Shield\+Attack2\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_light_shield_attack2_ac9a0e32ef7ba26bb87002a7fc7667f8f}\index{PlayerLightShieldAttack2@{PlayerLightShieldAttack2}!exit@{exit}}
+\index{exit@{exit}!PlayerLightShieldAttack2@{PlayerLightShieldAttack2}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_player_light_shield_attack2_ac9a0e32ef7ba26bb87002a7fc7667f8f} 
+void Player\+Light\+Shield\+Attack2\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_light_shield_attack2_a3dfcf556c392ff60b34b61098f587347}\index{PlayerLightShieldAttack2@{PlayerLightShieldAttack2}!update@{update}}
+\index{update@{update}!PlayerLightShieldAttack2@{PlayerLightShieldAttack2}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_light_shield_attack2_a3dfcf556c392ff60b34b61098f587347} 
+void Player\+Light\+Shield\+Attack2\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{float}]{dt\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Shield\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Shield\+State.\+cpp\end{DoxyCompactItemize}

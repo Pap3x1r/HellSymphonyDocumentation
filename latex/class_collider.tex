@@ -1,0 +1,147 @@
+\doxysection{Collider Class Reference}
+\hypertarget{class_collider}{}\label{class_collider}\index{Collider@{Collider}}
+
+
+Manages collision properties and state for a \doxylink{class_drawable_object}{Drawable\+Object}.  
+
+
+
+
+{\ttfamily \#include $<$Collider.\+h$>$}
+
+
+
+Collaboration diagram for Collider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_collider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb}\label{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb} 
+enum \mbox{\hyperlink{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb}{Collision\+State}} \{ {\bfseries ENTER}
+, {\bfseries STAY}
+, {\bfseries EXIT}
+, {\bfseries NONE}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the state of collision with another collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_a474b8ca28d489c9fd9a9da0118b1cea0}\label{class_collider_a474b8ca28d489c9fd9a9da0118b1cea0} 
+void {\bfseries break\+Links\+Safely} ()
+\begin{DoxyCompactList}\small\item\em Safely unlinks this collider from others (useful during deletion). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Constructors \& Destructor}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_a8c33036102daa701803426c69797da34}\label{class_collider_a8c33036102daa701803426c69797da34} 
+{\bfseries Collider} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}object)
+\item 
+\Hypertarget{class_collider_ad78bf33e2b19e32be2a6df4fe1a88cd2}\label{class_collider_ad78bf33e2b19e32be2a6df4fe1a88cd2} 
+{\bfseries Collider} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}object, float width, float height)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_a118fab4a862f342ecba2a64b19383350}\label{class_collider_a118fab4a862f342ecba2a64b19383350} 
+void {\bfseries set\+Enable\+Collision} (bool value)
+\item 
+\Hypertarget{class_collider_a6cc4cafac34604358a0d5f2f726b3770}\label{class_collider_a6cc4cafac34604358a0d5f2f726b3770} 
+void {\bfseries set\+Trigger} (bool value)
+\item 
+\Hypertarget{class_collider_af459b166dcdef5063a0e1d7b664e2b78}\label{class_collider_af459b166dcdef5063a0e1d7b664e2b78} 
+void {\bfseries set\+Transform} (const \mbox{\hyperlink{class_transform}{Transform}} \&transform)
+\item 
+\Hypertarget{class_collider_aedee308946e12f8067a08cdc0d58c61a}\label{class_collider_aedee308946e12f8067a08cdc0d58c61a} 
+void {\bfseries set\+Width} (float width)
+\item 
+\Hypertarget{class_collider_a1949027fd88039659e5b087c395f67fe}\label{class_collider_a1949027fd88039659e5b087c395f67fe} 
+void {\bfseries set\+Height} (float height)
+\item 
+\Hypertarget{class_collider_a0044716da9cc1c9b6e17f26312a7438f}\label{class_collider_a0044716da9cc1c9b6e17f26312a7438f} 
+void {\bfseries set\+Dimension} (float width, float height)
+\item 
+\Hypertarget{class_collider_a849e6025f86ce6169b6835290182bec8}\label{class_collider_a849e6025f86ce6169b6835290182bec8} 
+void {\bfseries set\+Collision\+Flag} (COLLISION\+\_\+\+FLAG flag)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_a5f0c4c8bb3ba472de45c0d67440df58a}\label{class_collider_a5f0c4c8bb3ba472de45c0d67440df58a} 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+\Hypertarget{class_collider_a532eeb851ebd24d7cd799cf581417f75}\label{class_collider_a532eeb851ebd24d7cd799cf581417f75} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries get\+Global\+Transform} (\mbox{\hyperlink{class_transform}{Transform}} \&self\+Transform)
+\item 
+\Hypertarget{class_collider_a952b32132bc4ffcdfbc38b30a53c63af}\label{class_collider_a952b32132bc4ffcdfbc38b30a53c63af} 
+float {\bfseries get\+Width} () const
+\item 
+\Hypertarget{class_collider_a90d6cd2d6b9e3bb0e398fa98f68c0131}\label{class_collider_a90d6cd2d6b9e3bb0e398fa98f68c0131} 
+float {\bfseries get\+Height} () const
+\item 
+\Hypertarget{class_collider_a9bbe7efd01b37695c17c0002a201a8d4}\label{class_collider_a9bbe7efd01b37695c17c0002a201a8d4} 
+std\+::map$<$ \mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb}{Collision\+State}} $>$ \& {\bfseries get\+Collision\+Map} ()
+\item 
+\Hypertarget{class_collider_aefbbcc15c9c5f769da7eccaf40333f5e}\label{class_collider_aefbbcc15c9c5f769da7eccaf40333f5e} 
+\mbox{\hyperlink{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb}{Collision\+State}} {\bfseries get\+Collision\+State} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_collider_a607c4edc6668aa38ecd8e2905e27cb04}\label{class_collider_a607c4edc6668aa38ecd8e2905e27cb04} 
+bool {\bfseries is\+Enable} () const
+\item 
+\Hypertarget{class_collider_a5268794673e5a3eeabed37fae90512c5}\label{class_collider_a5268794673e5a3eeabed37fae90512c5} 
+bool {\bfseries is\+Trigger} () const
+\item 
+\Hypertarget{class_collider_aef31b50d8aadbb8cab32d9686251f477}\label{class_collider_aef31b50d8aadbb8cab32d9686251f477} 
+COLLISION\+\_\+\+FLAG {\bfseries get\+Collision\+Flag} () const
+\item 
+\Hypertarget{class_collider_aa0039f1c55bcf454e421bd1cc3c94656}\label{class_collider_aa0039f1c55bcf454e421bd1cc3c94656} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Object} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_a4fbb01ab7df75fa2ae9f47b42e59e8d5}\label{class_collider_a4fbb01ab7df75fa2ae9f47b42e59e8d5} 
+bool {\bfseries is\+Destroyed} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collider_ad28f9ff2769af628c0822e5ab9aeaec2}\label{class_collider_ad28f9ff2769af628c0822e5ab9aeaec2} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries object}
+\item 
+\Hypertarget{class_collider_a5be4d90458baccf58a65e1679b0e4d34}\label{class_collider_a5be4d90458baccf58a65e1679b0e4d34} 
+bool {\bfseries enable\+Collision}
+\item 
+\Hypertarget{class_collider_a2381550f86119b86f716ebc0869d5767}\label{class_collider_a2381550f86119b86f716ebc0869d5767} 
+bool {\bfseries trigger}
+\item 
+\Hypertarget{class_collider_a74373bbdaa60e3bf4dad7de781d3deee}\label{class_collider_a74373bbdaa60e3bf4dad7de781d3deee} 
+std\+::map$<$ \mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_collider_ac86ecbb50bd8ac4cf274d3ad580a24fb}{Collision\+State}} $>$ {\bfseries collision\+Map}
+\item 
+\Hypertarget{class_collider_ad32d1d420828127116d261dce654d4f8}\label{class_collider_ad32d1d420828127116d261dce654d4f8} 
+COLLISION\+\_\+\+FLAG {\bfseries collision\+Flag}
+\item 
+\Hypertarget{class_collider_aa969c4568bd7cab0489b56ecef8b6fa4}\label{class_collider_aa969c4568bd7cab0489b56ecef8b6fa4} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\Hypertarget{class_collider_a8860c6203765727e978e24f76d8dc2e6}\label{class_collider_a8860c6203765727e978e24f76d8dc2e6} 
+float {\bfseries width}
+\item 
+\Hypertarget{class_collider_a00cc98e8cbc4499834ba9327403eb197}\label{class_collider_a00cc98e8cbc4499834ba9327403eb197} 
+float {\bfseries height}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages collision properties and state for a \doxylink{class_drawable_object}{Drawable\+Object}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Collider.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Collider.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,479 @@
+\doxysection{Sound\+Manager Class Reference}
+\hypertarget{class_sound_manager}{}\label{class_sound_manager}\index{SoundManager@{SoundManager}}
+
+
+Singleton class responsible for managing music and sound effects.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Sound\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{class_sound_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35}\label{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35} 
+{\bfseries Sound\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_ad5dbf8eab22db48ff8f3db51b02f8938}\label{class_sound_manager_ad5dbf8eab22db48ff8f3db51b02f8938} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Sound\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a50b69324a472c3e9dadfa71769c4a6d0}{Load\+SFX}} (const std\+::string \&name, const std\+::string \&file\+Path, bool ambient)
+\begin{DoxyCompactList}\small\item\em Loads a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a150d49021dd47d0352cbeaa2efc856fe}{Load\+Music}} (const std\+::string \&name, const std\+::string \&file\+Path, bool ambient)
+\begin{DoxyCompactList}\small\item\em Loads a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_ad0527bff2e2bdcf809837ddfc433141c}{Play\+SFX}} (const std\+::string \&name, bool isloop=false)
+\begin{DoxyCompactList}\small\item\em Plays a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a2b713a6f5352bda5d0a7402032bc5425}{Play\+Music}} (const std\+::string \&name, bool isloop=true)
+\begin{DoxyCompactList}\small\item\em Plays a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_aa441241d647959a3a957075a960234e7}{Stop\+SFX}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Stops a sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a29aa73513782ba8b20b7e89c8652220e}{Stop\+Music}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Stops a music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a5b1b4f231f8aa5694d84613d6b95ec18}{Set\+Volume\+SFX}} (const std\+::string \&name, int volume)
+\begin{DoxyCompactList}\small\item\em Sets the volume of a specific sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a11bbf02ad3a2aa0e5c33e49e46af6061}{Set\+Volume\+Music}} (const std\+::string \&name, int volume)
+\begin{DoxyCompactList}\small\item\em Sets the volume of a specific music track. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_aacc31dab19b7e6aa786894a2355eebff}{Set\+Volume\+All\+SFX}} (int volume)
+\begin{DoxyCompactList}\small\item\em Sets volume for all sound effects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_ab390ed679fa44b19d69ea658368f9162}{Set\+Volume\+All\+Music}} (int volume)
+\begin{DoxyCompactList}\small\item\em Sets volume for all music tracks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a01a12df576665f49e446b270cabe38b2}{update\+Volume\+SFX}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Updates volume of a specific sound effect based on current settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_afde68faa23996c7bc19936cb0b65697a}{update\+Volume\+Music}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Updates volume of a specific music track based on current settings. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_ab1fcfe42d5dabef7747240e63ee7bc6f}\label{class_sound_manager_ab1fcfe42d5dabef7747240e63ee7bc6f} 
+void {\bfseries update\+Volume\+All\+SFX} ()
+\begin{DoxyCompactList}\small\item\em Updates volume of all sound effects. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_a2d76d72bd9485cb001f40c53c98da6ca}\label{class_sound_manager_a2d76d72bd9485cb001f40c53c98da6ca} 
+void {\bfseries update\+Volume\+All\+Music} ()
+\begin{DoxyCompactList}\small\item\em Updates volume of all music tracks. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_a05cb0697f1a993704821098883a291f5}\label{class_sound_manager_a05cb0697f1a993704821098883a291f5} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Called every frame to update volume levels or internal logic. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_a4a77d91e2c8257d6c2d02ffffad671ff}\label{class_sound_manager_a4a77d91e2c8257d6c2d02ffffad671ff} 
+void {\bfseries Cleanup} ()
+\begin{DoxyCompactList}\small\item\em Frees resources and clears loaded sounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a18e73cd9f9a930224224a0fcdaa7fc28}{set\+Master\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em Sets the master volume (affects all sound types). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_a5dad329392f7d28215de8a9a452ddde5}{set\+Music\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em Sets music-\/specific volume multiplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_aec00b8d3364f9c7ddde0fb44dfc48a38}{set\+Sound\+Effect\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em Sets SFX-\/specific volume multiplier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_manager_aa149386ad22bf70174ac6f851970489d}{set\+Ambient\+Volume}} (float volume)
+\begin{DoxyCompactList}\small\item\em Sets ambient sound volume. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sound_manager_afba4c3039422c9fc6d30fdcf716f29c9}{get\+Master\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current master volume. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sound_manager_af4a48d097119106997772711e2ea5548}{get\+Music\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Gets the music volume multiplier. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sound_manager_a225c7c404dc6adbfd989eb459b28cd36}{get\+Sound\+Effect\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_s_f_x}{SFX} volume multiplier. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sound_manager_ac3fa7b912e8655dff056b56cc761046d}{get\+Ambient\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ambient volume multiplier. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_abc7c41b9891869fae8aaa65bcedf9e3a}\label{class_sound_manager_abc7c41b9891869fae8aaa65bcedf9e3a} 
+void {\bfseries Stop\+All\+Sounds} ()
+\begin{DoxyCompactList}\small\item\em Stops all currently playing sounds. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_ab37b97e1fc51078aed05bf6bd8b1e622}\label{class_sound_manager_ab37b97e1fc51078aed05bf6bd8b1e622} 
+void {\bfseries save\+Volume\+To\+File} ()
+\begin{DoxyCompactList}\small\item\em Saves volume settings to a file. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_adf93725111a6e72a24d1ce8488078b4f}\label{class_sound_manager_adf93725111a6e72a24d1ce8488078b4f} 
+void {\bfseries load\+Volume\+From\+File} ()
+\begin{DoxyCompactList}\small\item\em Loads volume settings from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sound_manager_a887480b38c9380c9fba23a2337df63be}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the singleton instance. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_sound_manager_a290a2921d73414bf511c976c8b8464c0}{to\+SDLVolume}} (float vol)
+\begin{DoxyCompactList}\small\item\em Converts normalized volume (0.\+0f to 1.\+0f) to SDL volume scale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sound_manager_a4d233922807170fc49d96d3ccd9181ca}\label{class_sound_manager_a4d233922807170fc49d96d3ccd9181ca} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_music}{Music}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries music\+Sounds}
+\begin{DoxyCompactList}\small\item\em Stores loaded music tracks. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_ae99bc6760d879638a376a4ac29bdd903}\label{class_sound_manager_ae99bc6760d879638a376a4ac29bdd903} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_s_f_x}{SFX}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries SFXSounds}
+\begin{DoxyCompactList}\small\item\em Stores loaded sound effects. \end{DoxyCompactList}\item 
+\Hypertarget{class_sound_manager_af84f9bd0cb618f12a6072b793dbb8aee}\label{class_sound_manager_af84f9bd0cb618f12a6072b793dbb8aee} 
+float {\bfseries current\+Master\+Volume} = 1.\+0f
+\item 
+\Hypertarget{class_sound_manager_abb8b2ea5193a2b704aba323ef4d8d172}\label{class_sound_manager_abb8b2ea5193a2b704aba323ef4d8d172} 
+float {\bfseries current\+Sound\+Effect\+Volume} = 1.\+0f
+\item 
+\Hypertarget{class_sound_manager_a168bb63751bd34ede00adeeaca19ef53}\label{class_sound_manager_a168bb63751bd34ede00adeeaca19ef53} 
+float {\bfseries current\+Music\+Volume} = 1.\+0f
+\item 
+\Hypertarget{class_sound_manager_aba6ac7e00fb87b269028c243db43d578}\label{class_sound_manager_aba6ac7e00fb87b269028c243db43d578} 
+float {\bfseries current\+Ambient\+Volume} = 1.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sound_manager_a14c7698bbced59a1774a3f95e0affc61}\label{class_sound_manager_a14c7698bbced59a1774a3f95e0affc61} 
+static \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class responsible for managing music and sound effects. 
+
+Handles loading, playing, stopping, and volume control of all audio assets, including ambient sounds, music, and effects. 
+
+\label{doc-func-members}
+\Hypertarget{class_sound_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sound_manager_ac3fa7b912e8655dff056b56cc761046d}\index{SoundManager@{SoundManager}!getAmbientVolume@{getAmbientVolume}}
+\index{getAmbientVolume@{getAmbientVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{getAmbientVolume()}{getAmbientVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ac3fa7b912e8655dff056b56cc761046d} 
+float Sound\+Manager\+::get\+Ambient\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the ambient volume multiplier. 
+
+\begin{DoxyReturn}{Returns}
+Ambient volume (0.\+0f -\/ 1.\+0f). 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_a887480b38c9380c9fba23a2337df63be}\index{SoundManager@{SoundManager}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a887480b38c9380c9fba23a2337df63be} 
+\mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \texorpdfstring{$\ast$}{*} Sound\+Manager\+::\+Get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_sound_manager}{Sound\+Manager} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_afba4c3039422c9fc6d30fdcf716f29c9}\index{SoundManager@{SoundManager}!getMasterVolume@{getMasterVolume}}
+\index{getMasterVolume@{getMasterVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{getMasterVolume()}{getMasterVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_afba4c3039422c9fc6d30fdcf716f29c9} 
+float Sound\+Manager\+::get\+Master\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current master volume. 
+
+\begin{DoxyReturn}{Returns}
+Master volume (0.\+0f -\/ 1.\+0f). 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_af4a48d097119106997772711e2ea5548}\index{SoundManager@{SoundManager}!getMusicVolume@{getMusicVolume}}
+\index{getMusicVolume@{getMusicVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{getMusicVolume()}{getMusicVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_af4a48d097119106997772711e2ea5548} 
+float Sound\+Manager\+::get\+Music\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the music volume multiplier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_music}{Music} volume (0.\+0f -\/ 1.\+0f). 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_a225c7c404dc6adbfd989eb459b28cd36}\index{SoundManager@{SoundManager}!getSoundEffectVolume@{getSoundEffectVolume}}
+\index{getSoundEffectVolume@{getSoundEffectVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{getSoundEffectVolume()}{getSoundEffectVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a225c7c404dc6adbfd989eb459b28cd36} 
+float Sound\+Manager\+::get\+Sound\+Effect\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the \doxylink{class_s_f_x}{SFX} volume multiplier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_s_f_x}{SFX} volume (0.\+0f -\/ 1.\+0f). 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_a150d49021dd47d0352cbeaa2efc856fe}\index{SoundManager@{SoundManager}!LoadMusic@{LoadMusic}}
+\index{LoadMusic@{LoadMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{LoadMusic()}{LoadMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a150d49021dd47d0352cbeaa2efc856fe} 
+void Sound\+Manager\+::\+Load\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{file\+Path}{, }\item[{bool}]{ambient}{}\end{DoxyParamCaption})}
+
+
+
+Loads a music track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifier for the music. \\
+\hline
+{\em file\+Path} & Path to the music file. \\
+\hline
+{\em ambient} & Whether the music is ambient. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a50b69324a472c3e9dadfa71769c4a6d0}\index{SoundManager@{SoundManager}!LoadSFX@{LoadSFX}}
+\index{LoadSFX@{LoadSFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{LoadSFX()}{LoadSFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a50b69324a472c3e9dadfa71769c4a6d0} 
+void Sound\+Manager\+::\+Load\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{file\+Path}{, }\item[{bool}]{ambient}{}\end{DoxyParamCaption})}
+
+
+
+Loads a sound effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifier for the sound effect. \\
+\hline
+{\em file\+Path} & Path to the audio file. \\
+\hline
+{\em ambient} & Whether the sound is ambient (affected by ambient volume). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a2b713a6f5352bda5d0a7402032bc5425}\index{SoundManager@{SoundManager}!PlayMusic@{PlayMusic}}
+\index{PlayMusic@{PlayMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlayMusic()}{PlayMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a2b713a6f5352bda5d0a7402032bc5425} 
+void Sound\+Manager\+::\+Play\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{bool}]{isloop}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Plays a music track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_music}{Music} track name. \\
+\hline
+{\em isloop} & Whether the music should loop. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_ad0527bff2e2bdcf809837ddfc433141c}\index{SoundManager@{SoundManager}!PlaySFX@{PlaySFX}}
+\index{PlaySFX@{PlaySFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{PlaySFX()}{PlaySFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ad0527bff2e2bdcf809837ddfc433141c} 
+void Sound\+Manager\+::\+Play\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{bool}]{isloop}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Plays a sound effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Sound effect name. \\
+\hline
+{\em isloop} & Whether the sound should loop. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_aa149386ad22bf70174ac6f851970489d}\index{SoundManager@{SoundManager}!setAmbientVolume@{setAmbientVolume}}
+\index{setAmbientVolume@{setAmbientVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{setAmbientVolume()}{setAmbientVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_aa149386ad22bf70174ac6f851970489d} 
+void Sound\+Manager\+::set\+Ambient\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets ambient sound volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Float between 0.\+0f and 1.\+0f. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a18e73cd9f9a930224224a0fcdaa7fc28}\index{SoundManager@{SoundManager}!setMasterVolume@{setMasterVolume}}
+\index{setMasterVolume@{setMasterVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{setMasterVolume()}{setMasterVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a18e73cd9f9a930224224a0fcdaa7fc28} 
+void Sound\+Manager\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets the master volume (affects all sound types). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Float between 0.\+0f and 1.\+0f. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a5dad329392f7d28215de8a9a452ddde5}\index{SoundManager@{SoundManager}!setMusicVolume@{setMusicVolume}}
+\index{setMusicVolume@{setMusicVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{setMusicVolume()}{setMusicVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a5dad329392f7d28215de8a9a452ddde5} 
+void Sound\+Manager\+::set\+Music\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets music-\/specific volume multiplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Float between 0.\+0f and 1.\+0f. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_aec00b8d3364f9c7ddde0fb44dfc48a38}\index{SoundManager@{SoundManager}!setSoundEffectVolume@{setSoundEffectVolume}}
+\index{setSoundEffectVolume@{setSoundEffectVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{setSoundEffectVolume()}{setSoundEffectVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_aec00b8d3364f9c7ddde0fb44dfc48a38} 
+void Sound\+Manager\+::set\+Sound\+Effect\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets SFX-\/specific volume multiplier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Float between 0.\+0f and 1.\+0f. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_ab390ed679fa44b19d69ea658368f9162}\index{SoundManager@{SoundManager}!SetVolumeAllMusic@{SetVolumeAllMusic}}
+\index{SetVolumeAllMusic@{SetVolumeAllMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{SetVolumeAllMusic()}{SetVolumeAllMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_ab390ed679fa44b19d69ea658368f9162} 
+void Sound\+Manager\+::\+Set\+Volume\+All\+Music (\begin{DoxyParamCaption}\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets volume for all music tracks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Volume (0-\/128 or SDL scale). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_aacc31dab19b7e6aa786894a2355eebff}\index{SoundManager@{SoundManager}!SetVolumeAllSFX@{SetVolumeAllSFX}}
+\index{SetVolumeAllSFX@{SetVolumeAllSFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{SetVolumeAllSFX()}{SetVolumeAllSFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_aacc31dab19b7e6aa786894a2355eebff} 
+void Sound\+Manager\+::\+Set\+Volume\+All\+SFX (\begin{DoxyParamCaption}\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets volume for all sound effects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & Volume (0-\/128 or SDL scale). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a11bbf02ad3a2aa0e5c33e49e46af6061}\index{SoundManager@{SoundManager}!SetVolumeMusic@{SetVolumeMusic}}
+\index{SetVolumeMusic@{SetVolumeMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{SetVolumeMusic()}{SetVolumeMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a11bbf02ad3a2aa0e5c33e49e46af6061} 
+void Sound\+Manager\+::\+Set\+Volume\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets the volume of a specific music track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_music}{Music} track name. \\
+\hline
+{\em volume} & Volume (0-\/128 or SDL scale). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a5b1b4f231f8aa5694d84613d6b95ec18}\index{SoundManager@{SoundManager}!SetVolumeSFX@{SetVolumeSFX}}
+\index{SetVolumeSFX@{SetVolumeSFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{SetVolumeSFX()}{SetVolumeSFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a5b1b4f231f8aa5694d84613d6b95ec18} 
+void Sound\+Manager\+::\+Set\+Volume\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+Sets the volume of a specific sound effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Sound effect name. \\
+\hline
+{\em volume} & Volume (0-\/128 or SDL scale). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a29aa73513782ba8b20b7e89c8652220e}\index{SoundManager@{SoundManager}!StopMusic@{StopMusic}}
+\index{StopMusic@{StopMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{StopMusic()}{StopMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a29aa73513782ba8b20b7e89c8652220e} 
+void Sound\+Manager\+::\+Stop\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Stops a music track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_music}{Music} track name. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_aa441241d647959a3a957075a960234e7}\index{SoundManager@{SoundManager}!StopSFX@{StopSFX}}
+\index{StopSFX@{StopSFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{StopSFX()}{StopSFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_aa441241d647959a3a957075a960234e7} 
+void Sound\+Manager\+::\+Stop\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Stops a sound effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Sound effect name. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a290a2921d73414bf511c976c8b8464c0}\index{SoundManager@{SoundManager}!toSDLVolume@{toSDLVolume}}
+\index{toSDLVolume@{toSDLVolume}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{toSDLVolume()}{toSDLVolume()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a290a2921d73414bf511c976c8b8464c0} 
+int Sound\+Manager\+::to\+SDLVolume (\begin{DoxyParamCaption}\item[{float}]{vol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts normalized volume (0.\+0f to 1.\+0f) to SDL volume scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vol} & Float volume (0.\+0f -\/ 1.\+0f). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer SDL volume (0 -\/ 30). 
+\end{DoxyReturn}
+\Hypertarget{class_sound_manager_afde68faa23996c7bc19936cb0b65697a}\index{SoundManager@{SoundManager}!updateVolumeMusic@{updateVolumeMusic}}
+\index{updateVolumeMusic@{updateVolumeMusic}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{updateVolumeMusic()}{updateVolumeMusic()}}
+{\footnotesize\ttfamily \label{class_sound_manager_afde68faa23996c7bc19936cb0b65697a} 
+void Sound\+Manager\+::update\+Volume\+Music (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Updates volume of a specific music track based on current settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_music}{Music} track name. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_manager_a01a12df576665f49e446b270cabe38b2}\index{SoundManager@{SoundManager}!updateVolumeSFX@{updateVolumeSFX}}
+\index{updateVolumeSFX@{updateVolumeSFX}!SoundManager@{SoundManager}}
+\doxysubsubsection{\texorpdfstring{updateVolumeSFX()}{updateVolumeSFX()}}
+{\footnotesize\ttfamily \label{class_sound_manager_a01a12df576665f49e446b270cabe38b2} 
+void Sound\+Manager\+::update\+Volume\+SFX (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Updates volume of a specific sound effect based on current settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Sound effect name. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Sound\+Manager.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Sound\+Manager.\+cpp\end{DoxyCompactItemize}

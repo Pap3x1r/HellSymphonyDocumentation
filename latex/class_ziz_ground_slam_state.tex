@@ -1,0 +1,151 @@
+\doxysection{Ziz\+Ground\+Slam\+State Class Reference}
+\hypertarget{class_ziz_ground_slam_state}{}\label{class_ziz_ground_slam_state}\index{ZizGroundSlamState@{ZizGroundSlamState}}
+
+
+Inheritance diagram for Ziz\+Ground\+Slam\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_ziz_ground_slam_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Ground\+Slam\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_ground_slam_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_ground_slam_state_ad1f10c8d46fa36e1380f8d2b5f9d8656}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_ground_slam_state_a621c2ca292c3ed1348f85ae7c1b113f9}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_ground_slam_state_a8e101212e18c306b31f191678880b5ba}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a14569e2fdc566e5bcf74f1fcdde8fadd}\label{class_ziz_ground_slam_state_a14569e2fdc566e5bcf74f1fcdde8fadd} 
+static \mbox{\hyperlink{class_ziz_ground_slam_state}{Ziz\+Ground\+Slam\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_ad4e11fe55f3d7602d7ccf7f5bc5e17ad}\label{class_ziz_ground_slam_state_ad4e11fe55f3d7602d7ccf7f5bc5e17ad} 
+void {\bfseries select\+Target} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_abead1bac261acc34656f84650a1f8981}\label{class_ziz_ground_slam_state_abead1bac261acc34656f84650a1f8981} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz} = nullptr
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a4c1db31057c771d8c51d5473cd06ce76}\label{class_ziz_ground_slam_state_a4c1db31057c771d8c51d5473cd06ce76} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player} = nullptr
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a95d186dd61a738d78f605aeea2e3bcb7}\label{class_ziz_ground_slam_state_a95d186dd61a738d78f605aeea2e3bcb7} 
+\mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}} \texorpdfstring{$\ast$}{*} {\bfseries attack\+Collider} = nullptr
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a6743948e11bd8520ee5d1d4d87a58838}\label{class_ziz_ground_slam_state_a6743948e11bd8520ee5d1d4d87a58838} 
+bool {\bfseries has\+Launched} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_ab387648f18d0c6147d15fa0a46ffbed5}\label{class_ziz_ground_slam_state_ab387648f18d0c6147d15fa0a46ffbed5} 
+bool {\bfseries peak\+Reached} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a14ba563b8983335f5f3e47bc595e676b}\label{class_ziz_ground_slam_state_a14ba563b8983335f5f3e47bc595e676b} 
+bool {\bfseries is\+Descending} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a644ff655abe8b605da114b752d46f85a}\label{class_ziz_ground_slam_state_a644ff655abe8b605da114b752d46f85a} 
+bool {\bfseries has\+Impacted} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a938b28518c189618032069278c92ed08}\label{class_ziz_ground_slam_state_a938b28518c189618032069278c92ed08} 
+bool {\bfseries too\+Close} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a0f78c87548bfdc1c408e24542a337d49}\label{class_ziz_ground_slam_state_a0f78c87548bfdc1c408e24542a337d49} 
+bool {\bfseries way\+Too\+Close} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_ac6a484408537cb181e307d5f1087beee}\label{class_ziz_ground_slam_state_ac6a484408537cb181e307d5f1087beee} 
+bool {\bfseries has\+Start\+Up} = false
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a74c7ae9f83fbd203b03289c350df075a}\label{class_ziz_ground_slam_state_a74c7ae9f83fbd203b03289c350df075a} 
+float {\bfseries startup\+Time}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_abd7c3da3d61a8dd7fc818ca6b9f474df}\label{class_ziz_ground_slam_state_abd7c3da3d61a8dd7fc818ca6b9f474df} 
+float {\bfseries flyup\+Time}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_ab6fe53203b7a0a87dc6fe3bb51de9dcc}\label{class_ziz_ground_slam_state_ab6fe53203b7a0a87dc6fe3bb51de9dcc} 
+float {\bfseries hover\+Time}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_add2384872d9d255a098ee8ad8328d844}\label{class_ziz_ground_slam_state_add2384872d9d255a098ee8ad8328d844} 
+float {\bfseries slam\+Timer}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_aafd06c73a682bc594b809e3efdc8e37a}\label{class_ziz_ground_slam_state_aafd06c73a682bc594b809e3efdc8e37a} 
+float {\bfseries descend\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_ziz_ground_slam_state_ae87f710cb8cd87acad37e9743dd2a2d9}\label{class_ziz_ground_slam_state_ae87f710cb8cd87acad37e9743dd2a2d9} 
+float {\bfseries recover\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a5d1b4e825a536748061a9c6e5faea6d0}\label{class_ziz_ground_slam_state_a5d1b4e825a536748061a9c6e5faea6d0} 
+glm\+::vec3 {\bfseries startup\+Position}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a241647dcda907f2f5a2d5ba092e69d41}\label{class_ziz_ground_slam_state_a241647dcda907f2f5a2d5ba092e69d41} 
+glm\+::vec3 {\bfseries midair\+Target}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a21aa0148cbecc32c30ded6ba32f63b32}\label{class_ziz_ground_slam_state_a21aa0148cbecc32c30ded6ba32f63b32} 
+glm\+::vec3 {\bfseries slam\+Start\+Pos}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_a8fad78673786ab3c21f00deb32357c9c}\label{class_ziz_ground_slam_state_a8fad78673786ab3c21f00deb32357c9c} 
+glm\+::vec3 {\bfseries impact\+Position}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ground_slam_state_aa263032346d2f97712a606f4fc1d3058}\label{class_ziz_ground_slam_state_aa263032346d2f97712a606f4fc1d3058} 
+static \mbox{\hyperlink{class_ziz_ground_slam_state}{Ziz\+Ground\+Slam\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_ground_slam_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_ground_slam_state_ad1f10c8d46fa36e1380f8d2b5f9d8656}\index{ZizGroundSlamState@{ZizGroundSlamState}!enter@{enter}}
+\index{enter@{enter}!ZizGroundSlamState@{ZizGroundSlamState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_ground_slam_state_ad1f10c8d46fa36e1380f8d2b5f9d8656} 
+void Ziz\+Ground\+Slam\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_ground_slam_state_a8e101212e18c306b31f191678880b5ba}\index{ZizGroundSlamState@{ZizGroundSlamState}!exit@{exit}}
+\index{exit@{exit}!ZizGroundSlamState@{ZizGroundSlamState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_ground_slam_state_a8e101212e18c306b31f191678880b5ba} 
+void Ziz\+Ground\+Slam\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_ground_slam_state_a621c2ca292c3ed1348f85ae7c1b113f9}\index{ZizGroundSlamState@{ZizGroundSlamState}!update@{update}}
+\index{update@{update}!ZizGroundSlamState@{ZizGroundSlamState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_ground_slam_state_a621c2ca292c3ed1348f85ae7c1b113f9} 
+void Ziz\+Ground\+Slam\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Ground\+Slam\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Ground\+Slam\+State.\+cpp\end{DoxyCompactItemize}

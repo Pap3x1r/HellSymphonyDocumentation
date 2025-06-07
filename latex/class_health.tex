@@ -1,0 +1,169 @@
+\doxysection{Health Class Reference}
+\hypertarget{class_health}{}\label{class_health}\index{Health@{Health}}
+
+
+Manages health, wither health, and health-\/related mechanics such as healing and damage.  
+
+
+
+
+{\ttfamily \#include $<$Health.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_health_aa5c65edb5d6115709d9ff899117f63ba}\label{class_health_aa5c65edb5d6115709d9ff899117f63ba} 
+{\bfseries Health} (float health, float wither, float max\+Health\+\_\+)
+\begin{DoxyCompactList}\small\item\em Full constructor with health, wither health, and max health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_ab559b6c5228dec698c973e3ee03b2fdd}\label{class_health_ab559b6c5228dec698c973e3ee03b2fdd} 
+{\bfseries Health} (float health, float wither)
+\begin{DoxyCompactList}\small\item\em Constructor with health and wither health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a26d3f40321e474cfa03b3eb53112d469}\label{class_health_a26d3f40321e474cfa03b3eb53112d469} 
+{\bfseries Health} (float health)
+\begin{DoxyCompactList}\small\item\em Constructor with only current health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a77101343908172726817e9160c9877bf}\label{class_health_a77101343908172726817e9160c9877bf} 
+void {\bfseries health\+Update} ()
+\begin{DoxyCompactList}\small\item\em Updates health status, handles recovery and health limits. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_health_ac02da65737fa96f02b291082daca08f6}{check\+HP}} ()
+\begin{DoxyCompactList}\small\item\em Checks current health and handles death logic. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_aef1caa06509b36e8d859391c2db1e575}\label{class_health_aef1caa06509b36e8d859391c2db1e575} 
+void {\bfseries set\+HP} (float value)
+\begin{DoxyCompactList}\small\item\em Sets current health directly. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a4825901d16cb4b2a8f74f4c8252276d3}\label{class_health_a4825901d16cb4b2a8f74f4c8252276d3} 
+void {\bfseries set\+Wither\+HP} (float value)
+\begin{DoxyCompactList}\small\item\em Sets wither health directly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_a2c27f43e5e1c7ff02026991018a653a9}{take\+Damage}} (float amount)
+\begin{DoxyCompactList}\small\item\em Applies damage and decreases wither health based on configured percentage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_aaff5ea10f9bf746f5c39f23bcb1e29cf}{take\+Damage}} (float amount, float wither\+Percent)
+\begin{DoxyCompactList}\small\item\em Applies damage and adds wither damage based on wither percentage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_a5ec7861b530e84310f0f033589dfc9e6}{heal}} (float amount)
+\begin{DoxyCompactList}\small\item\em Heals current health and optionally reduces wither health. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_health_a704b0e101c27469d86406cd0e1f4d185}{heal\+Wither}} (float amount)
+\begin{DoxyCompactList}\small\item\em Heals only wither health by converting it back to regular health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a8174b7c41f4f46c604207c8feeca08c5}\label{class_health_a8174b7c41f4f46c604207c8feeca08c5} 
+float {\bfseries get\+Real\+HP} ()
+\begin{DoxyCompactList}\small\item\em Returns real health (current -\/ wither). \end{DoxyCompactList}\item 
+\Hypertarget{class_health_ad9fef2444a48903f52dd970c988641b5}\label{class_health_ad9fef2444a48903f52dd970c988641b5} 
+float {\bfseries get\+Current\+HP} ()
+\begin{DoxyCompactList}\small\item\em Returns current visible health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a5a2798a18962efe24375944923805af9}\label{class_health_a5a2798a18962efe24375944923805af9} 
+float \texorpdfstring{$\ast$}{*} {\bfseries get\+Current\+HPAddress} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to current health (useful for Im\+Gui binding). \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a1faa06b2fb41c69b91e3e85e2047b172}\label{class_health_a1faa06b2fb41c69b91e3e85e2047b172} 
+float {\bfseries get\+Max\+HP} ()
+\begin{DoxyCompactList}\small\item\em Returns max health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_ab3a1044fc4fc233abcc104910c793d29}\label{class_health_ab3a1044fc4fc233abcc104910c793d29} 
+float {\bfseries get\+Wither\+HP} ()
+\begin{DoxyCompactList}\small\item\em Returns wither health. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_health_aba7083c5cc3d7e2a06403606b8423ff9}\label{class_health_aba7083c5cc3d7e2a06403606b8423ff9} 
+float {\bfseries real\+Health}
+\begin{DoxyCompactList}\small\item\em Real health = current -\/ wither. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a1ec88e75ca54f907f553b80eef2976a3}\label{class_health_a1ec88e75ca54f907f553b80eef2976a3} 
+float {\bfseries current\+Health}
+\begin{DoxyCompactList}\small\item\em Current visible health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a4572b68ddda670028184010d150b326b}\label{class_health_a4572b68ddda670028184010d150b326b} 
+float {\bfseries max\+Health} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em Maximum health capacity. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_ad1a03c97f650907bfb16f6541a23c137}\label{class_health_ad1a03c97f650907bfb16f6541a23c137} 
+float {\bfseries wither\+Health}
+\begin{DoxyCompactList}\small\item\em Wither health, representing delayed or persistent damage. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a99a31a2d90b5a11fd391822cde14e248}\label{class_health_a99a31a2d90b5a11fd391822cde14e248} 
+float {\bfseries wither\+Recover\+Rate}
+\begin{DoxyCompactList}\small\item\em Rate at which wither health recovers. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_a69ee167b56c243d18b625e28d50669fa}\label{class_health_a69ee167b56c243d18b625e28d50669fa} 
+float {\bfseries wither\+Decrease\+Percent} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Percentage of damage that affects wither health. \end{DoxyCompactList}\item 
+\Hypertarget{class_health_ae16f316d666da592233e9f20f3c5dd25}\label{class_health_ae16f316d666da592233e9f20f3c5dd25} 
+bool {\bfseries destroy\+On\+Dead}
+\begin{DoxyCompactList}\small\item\em Whether to destroy the object on death. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages health, wither health, and health-\/related mechanics such as healing and damage. 
+
+\label{doc-func-members}
+\Hypertarget{class_health_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_health_ac02da65737fa96f02b291082daca08f6}\index{Health@{Health}!checkHP@{checkHP}}
+\index{checkHP@{checkHP}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{checkHP()}{checkHP()}}
+{\footnotesize\ttfamily \label{class_health_ac02da65737fa96f02b291082daca08f6} 
+float Health\+::check\+HP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks current health and handles death logic. 
+
+\begin{DoxyReturn}{Returns}
+Current health. 
+\end{DoxyReturn}
+\Hypertarget{class_health_a5ec7861b530e84310f0f033589dfc9e6}\index{Health@{Health}!heal@{heal}}
+\index{heal@{heal}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{heal()}{heal()}}
+{\footnotesize\ttfamily \label{class_health_a5ec7861b530e84310f0f033589dfc9e6} 
+void Health\+::heal (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Heals current health and optionally reduces wither health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to heal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_health_a704b0e101c27469d86406cd0e1f4d185}\index{Health@{Health}!healWither@{healWither}}
+\index{healWither@{healWither}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{healWither()}{healWither()}}
+{\footnotesize\ttfamily \label{class_health_a704b0e101c27469d86406cd0e1f4d185} 
+void Health\+::heal\+Wither (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Heals only wither health by converting it back to regular health. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to heal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_health_a2c27f43e5e1c7ff02026991018a653a9}\index{Health@{Health}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_health_a2c27f43e5e1c7ff02026991018a653a9} 
+void Health\+::take\+Damage (\begin{DoxyParamCaption}\item[{float}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applies damage and decreases wither health based on configured percentage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount of damage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_health_aaff5ea10f9bf746f5c39f23bcb1e29cf}\index{Health@{Health}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Health@{Health}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_health_aaff5ea10f9bf746f5c39f23bcb1e29cf} 
+void Health\+::take\+Damage (\begin{DoxyParamCaption}\item[{float}]{amount}{, }\item[{float}]{wither\+Percent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applies damage and adds wither damage based on wither percentage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount of damage. \\
+\hline
+{\em wither\+Percent} & Percent of damage converted to wither. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Health.\+h\end{DoxyCompactItemize}

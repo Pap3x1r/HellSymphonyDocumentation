@@ -1,0 +1,309 @@
+\doxysection{Storm\+Rise Class Reference}
+\hypertarget{class_storm_rise}{}\label{class_storm_rise}\index{StormRise@{StormRise}}
+
+
+Inheritance diagram for Storm\+Rise\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_storm_rise__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Storm\+Rise\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_storm_rise__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_storm_rise_a42f300a008f3de2d8acf4f4b492d0dfb}\label{class_storm_rise_a42f300a008f3de2d8acf4f4b492d0dfb} 
+void {\bfseries update} (float dt)
+\item 
+void \mbox{\hyperlink{class_storm_rise_adb8a882161117052198bb95e21f5e612}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_storm_rise_a99a5d1f0ce70dcf65af090e8bf46a106}{on\+Collision\+Stay}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_storm_rise_a3f7961a03344b8f537af93c913fbe05e}{on\+Collision\+Exit}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_storm_rise_af478383e54443987e2cf783bc7e5c1a3}{on\+Trigger\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_storm_rise_a146a53ad1e0db5f4a8371c38cdf1f43b}{on\+Trigger\+Stay}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_storm_rise_adf1b291869a99108aa121ff55f895c18}{on\+Trigger\+Exit}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+\Hypertarget{class_storm_rise_a653711ad3bab391d5f241df35c949edb}\label{class_storm_rise_a653711ad3bab391d5f241df35c949edb} 
+void {\bfseries set\+Player} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}playr)
+\item 
+\Hypertarget{class_storm_rise_a7c6e87ea90c2dad0ba38fe4f5433b079}\label{class_storm_rise_a7c6e87ea90c2dad0ba38fe4f5433b079} 
+bool {\bfseries get\+Can\+Anim} ()
+\item 
+\Hypertarget{class_storm_rise_ab48c60a8c0e09305120756c73e9bad22}\label{class_storm_rise_ab48c60a8c0e09305120756c73e9bad22} 
+void {\bfseries set\+Anim\+Storm} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Enemy\+Attack\+Collider} (float damage\+\_\+)
+\item 
+{\bfseries Enemy\+Attack\+Collider} (float damage\+\_\+, float force, float duration)
+\item 
+void {\bfseries reset\+Hit} ()
+\item 
+void {\bfseries set\+Player\+Inside} (bool inside)
+\item 
+bool {\bfseries get\+Player\+Inside} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_textured_object}{Textured\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_storm_rise_aab92cb23e65bd5d09703a5c59dee54c3}\label{class_storm_rise_aab92cb23e65bd5d09703a5c59dee54c3} 
+bool {\bfseries player\+Is\+Inside}
+\item 
+\Hypertarget{class_storm_rise_a646e5f66ec74f3f038eb08d5c2e34368}\label{class_storm_rise_a646e5f66ec74f3f038eb08d5c2e34368} 
+bool {\bfseries has\+Hit}
+\item 
+\Hypertarget{class_storm_rise_a8999ba4820be81d06522ad563463724e}\label{class_storm_rise_a8999ba4820be81d06522ad563463724e} 
+bool {\bfseries is\+Active}
+\item 
+\Hypertarget{class_storm_rise_ac84745d5c3e76aa9d922dc0fb4380559}\label{class_storm_rise_ac84745d5c3e76aa9d922dc0fb4380559} 
+bool {\bfseries is\+Buffering}
+\item 
+\Hypertarget{class_storm_rise_a50a1161b22fceee517984cbf128ccc70}\label{class_storm_rise_a50a1161b22fceee517984cbf128ccc70} 
+bool {\bfseries is\+Recovering}
+\item 
+\Hypertarget{class_storm_rise_a586d702707dccfc1ba63dfed58c6556e}\label{class_storm_rise_a586d702707dccfc1ba63dfed58c6556e} 
+bool {\bfseries can\+Anim}
+\item 
+\Hypertarget{class_storm_rise_aecae6912eca70b8177e2cfb0aeb99a85}\label{class_storm_rise_aecae6912eca70b8177e2cfb0aeb99a85} 
+float {\bfseries speed}
+\item 
+\Hypertarget{class_storm_rise_a4177873e9c011078fa277d6e64cc8f9e}\label{class_storm_rise_a4177873e9c011078fa277d6e64cc8f9e} 
+float {\bfseries damage}
+\item 
+\Hypertarget{class_storm_rise_ab14d082e03d66c32a227748bd4a1a722}\label{class_storm_rise_ab14d082e03d66c32a227748bd4a1a722} 
+float {\bfseries countdown\+Timer}
+\item 
+\Hypertarget{class_storm_rise_ad212e06c8448f8455147667a387d02d6}\label{class_storm_rise_ad212e06c8448f8455147667a387d02d6} 
+float {\bfseries active\+Timer}
+\item 
+\Hypertarget{class_storm_rise_ad406860ecb4d366713b3350bfd3448e8}\label{class_storm_rise_ad406860ecb4d366713b3350bfd3448e8} 
+float {\bfseries recovery\+Timer}
+\item 
+\Hypertarget{class_storm_rise_adda0900fae01b49e4f0a7cd95140e8eb}\label{class_storm_rise_adda0900fae01b49e4f0a7cd95140e8eb} 
+float {\bfseries buffer\+Timer}
+\item 
+\Hypertarget{class_storm_rise_a2c663b16d5a055e893769aac4a2341e0}\label{class_storm_rise_a2c663b16d5a055e893769aac4a2341e0} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_storm_rise_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_storm_rise_adb8a882161117052198bb95e21f5e612}\index{StormRise@{StormRise}!onCollisionEnter@{onCollisionEnter}}
+\index{onCollisionEnter@{onCollisionEnter}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onCollisionEnter()}{onCollisionEnter()}}
+{\footnotesize\ttfamily \label{class_storm_rise_adb8a882161117052198bb95e21f5e612} 
+void Storm\+Rise\+::on\+Collision\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+For implementation in derived class ///. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider_a285162718819ca512a7231c4acdc8182}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_storm_rise_a3f7961a03344b8f537af93c913fbe05e}\index{StormRise@{StormRise}!onCollisionExit@{onCollisionExit}}
+\index{onCollisionExit@{onCollisionExit}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onCollisionExit()}{onCollisionExit()}}
+{\footnotesize\ttfamily \label{class_storm_rise_a3f7961a03344b8f537af93c913fbe05e} 
+void Storm\+Rise\+::on\+Collision\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_storm_rise_a99a5d1f0ce70dcf65af090e8bf46a106}\index{StormRise@{StormRise}!onCollisionStay@{onCollisionStay}}
+\index{onCollisionStay@{onCollisionStay}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onCollisionStay()}{onCollisionStay()}}
+{\footnotesize\ttfamily \label{class_storm_rise_a99a5d1f0ce70dcf65af090e8bf46a106} 
+void Storm\+Rise\+::on\+Collision\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_storm_rise_af478383e54443987e2cf783bc7e5c1a3}\index{StormRise@{StormRise}!onTriggerEnter@{onTriggerEnter}}
+\index{onTriggerEnter@{onTriggerEnter}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onTriggerEnter()}{onTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_storm_rise_af478383e54443987e2cf783bc7e5c1a3} 
+void Storm\+Rise\+::on\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_storm_rise_adf1b291869a99108aa121ff55f895c18}\index{StormRise@{StormRise}!onTriggerExit@{onTriggerExit}}
+\index{onTriggerExit@{onTriggerExit}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onTriggerExit()}{onTriggerExit()}}
+{\footnotesize\ttfamily \label{class_storm_rise_adf1b291869a99108aa121ff55f895c18} 
+void Storm\+Rise\+::on\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_storm_rise_a146a53ad1e0db5f4a8371c38cdf1f43b}\index{StormRise@{StormRise}!onTriggerStay@{onTriggerStay}}
+\index{onTriggerStay@{onTriggerStay}!StormRise@{StormRise}}
+\doxysubsubsection{\texorpdfstring{onTriggerStay()}{onTriggerStay()}}
+{\footnotesize\ttfamily \label{class_storm_rise_a146a53ad1e0db5f4a8371c38cdf1f43b} 
+void Storm\+Rise\+::on\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Storm\+Rise.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Storm\+Rise.\+cpp\end{DoxyCompactItemize}

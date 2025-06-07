@@ -1,0 +1,11 @@
+<map id="PlayerAttackCollider" name="PlayerAttackCollider">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,155,163,181"/>
+<area shape="rect" id="Node000004" href="$class_arrow.html" title=" " alt="" coords="5,229,61,256"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="75,195,45,231,41,227,71,192"/>
+<area shape="rect" id="Node000005" href="$class_bow_ultimate_collider.html" title=" " alt="" coords="84,229,224,256"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="115,192,146,227,142,231,111,195"/>
+<area shape="rect" id="Node000002" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="38,80,148,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,122,96,154,90,154,90,122"/>
+<area shape="rect" id="Node000003" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="36,5,150,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,48,96,80,90,80,90,48"/>
+</map>

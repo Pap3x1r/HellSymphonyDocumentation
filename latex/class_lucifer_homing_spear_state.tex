@@ -1,0 +1,106 @@
+\doxysection{Lucifer\+Homing\+Spear\+State Class Reference}
+\hypertarget{class_lucifer_homing_spear_state}{}\label{class_lucifer_homing_spear_state}\index{LuciferHomingSpearState@{LuciferHomingSpearState}}
+
+
+Inheritance diagram for Lucifer\+Homing\+Spear\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_lucifer_homing_spear_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lucifer\+Homing\+Spear\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lucifer_homing_spear_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lucifer_homing_spear_state_a40dfb2d3fca7bac2f847a6af2dce57eb}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_lucifer_homing_spear_state_a834a8ff7754b90c71150c82ade29901d}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_lucifer_homing_spear_state_a01b0db7261ffe30978101ecd51f3dcb3}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_ab5dc6b44c9c8b327b2dd3e5e34905813}\label{class_lucifer_homing_spear_state_ab5dc6b44c9c8b327b2dd3e5e34905813} 
+static \mbox{\hyperlink{class_lucifer_homing_spear_state}{Lucifer\+Homing\+Spear\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_a9f449cd69dc8f4adc50f08e104699304}\label{class_lucifer_homing_spear_state_a9f449cd69dc8f4adc50f08e104699304} 
+\mbox{\hyperlink{class_lucifer}{Lucifer}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_a2f7be6d66202c7f7e4a53298a447542d}\label{class_lucifer_homing_spear_state_a2f7be6d66202c7f7e4a53298a447542d} 
+float {\bfseries timer}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_ad8d14a2b3808d53984a9f181eab7824f}\label{class_lucifer_homing_spear_state_ad8d14a2b3808d53984a9f181eab7824f} 
+std\+::vector$<$ float $>$ {\bfseries slot\+Positions}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_a53fd12782c06974f54ab2c52a3e339ce}\label{class_lucifer_homing_spear_state_a53fd12782c06974f54ab2c52a3e339ce} 
+int {\bfseries next\+Spear\+Index} = 0
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_a309a1e8cd9cb53bd425ead153335818a}\label{class_lucifer_homing_spear_state_a309a1e8cd9cb53bd425ead153335818a} 
+float {\bfseries spawn\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_aabfb5fc2b1047d651a6fd35cc1e2f1b4}\label{class_lucifer_homing_spear_state_aabfb5fc2b1047d651a6fd35cc1e2f1b4} 
+float {\bfseries delay\+Between\+Spears} = 0.\+4f
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_ae4f9bd4d96e0bca6c705d200bd38d509}\label{class_lucifer_homing_spear_state_ae4f9bd4d96e0bca6c705d200bd38d509} 
+float {\bfseries total\+Duration} = 4.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_homing_spear_state_acb6bd15fa77854fe91169ce65bcf68be}\label{class_lucifer_homing_spear_state_acb6bd15fa77854fe91169ce65bcf68be} 
+static \mbox{\hyperlink{class_lucifer_homing_spear_state}{Lucifer\+Homing\+Spear\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_lucifer_homing_spear_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lucifer_homing_spear_state_a40dfb2d3fca7bac2f847a6af2dce57eb}\index{LuciferHomingSpearState@{LuciferHomingSpearState}!enter@{enter}}
+\index{enter@{enter}!LuciferHomingSpearState@{LuciferHomingSpearState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_lucifer_homing_spear_state_a40dfb2d3fca7bac2f847a6af2dce57eb} 
+void Lucifer\+Homing\+Spear\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_homing_spear_state_a01b0db7261ffe30978101ecd51f3dcb3}\index{LuciferHomingSpearState@{LuciferHomingSpearState}!exit@{exit}}
+\index{exit@{exit}!LuciferHomingSpearState@{LuciferHomingSpearState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_lucifer_homing_spear_state_a01b0db7261ffe30978101ecd51f3dcb3} 
+void Lucifer\+Homing\+Spear\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_homing_spear_state_a834a8ff7754b90c71150c82ade29901d}\index{LuciferHomingSpearState@{LuciferHomingSpearState}!update@{update}}
+\index{update@{update}!LuciferHomingSpearState@{LuciferHomingSpearState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_lucifer_homing_spear_state_a834a8ff7754b90c71150c82ade29901d} 
+void Lucifer\+Homing\+Spear\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Homing\+Spear\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Homing\+Spear\+State.\+cpp\end{DoxyCompactItemize}

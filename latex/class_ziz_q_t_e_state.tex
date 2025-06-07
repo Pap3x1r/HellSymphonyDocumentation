@@ -1,0 +1,154 @@
+\doxysection{Ziz\+QTEState Class Reference}
+\hypertarget{class_ziz_q_t_e_state}{}\label{class_ziz_q_t_e_state}\index{ZizQTEState@{ZizQTEState}}
+
+
+Inheritance diagram for Ziz\+QTEState\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_ziz_q_t_e_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+QTEState\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_q_t_e_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_q_t_e_state_a2adcaccc30c80d24973fb3f1ba407b97}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_q_t_e_state_a73b2c5e07eebe96231bca19ab67f4cb7}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_q_t_e_state_af6e09787369d37418fe68f17b7e29535}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+\Hypertarget{class_ziz_q_t_e_state_abe56ee1e04f7287e93a80fec115373f0}\label{class_ziz_q_t_e_state_abe56ee1e04f7287e93a80fec115373f0} 
+void {\bfseries random\+QTETarget} ()
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a81304b353c86f1db19edca4bdec25914}\label{class_ziz_q_t_e_state_a81304b353c86f1db19edca4bdec25914} 
+void {\bfseries random\+QTESequence} ()
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a4896f366a99e48d87fc1a6201b90b354}\label{class_ziz_q_t_e_state_a4896f366a99e48d87fc1a6201b90b354} 
+void {\bfseries start\+QTE} (int target)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_aa560688eedc7f537a611aac488bcfd67}\label{class_ziz_q_t_e_state_aa560688eedc7f537a611aac488bcfd67} 
+static \mbox{\hyperlink{class_ziz_q_t_e_state}{Ziz\+QTEState}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a34d67f4cb3fabd119a8afae8e6b89653}\label{class_ziz_q_t_e_state_a34d67f4cb3fabd119a8afae8e6b89653} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_abbb23572dd9cb1d62543e595b673ed30}\label{class_ziz_q_t_e_state_abbb23572dd9cb1d62543e595b673ed30} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a27dd3dccad94d6b7abddfe3c5495840d}\label{class_ziz_q_t_e_state_a27dd3dccad94d6b7abddfe3c5495840d} 
+float {\bfseries buffer\+Timer\+Failure}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a7518656bffd34c3b00fad2927975e807}\label{class_ziz_q_t_e_state_a7518656bffd34c3b00fad2927975e807} 
+float {\bfseries buffer\+Timer\+Success}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a799248e4b74cdee0bf772cf76b47778c}\label{class_ziz_q_t_e_state_a799248e4b74cdee0bf772cf76b47778c} 
+bool {\bfseries posing\+Before\+QTE}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a98f77798933287efd80c54ad4f4e1025}\label{class_ziz_q_t_e_state_a98f77798933287efd80c54ad4f4e1025} 
+float {\bfseries timerbefore\+QTE}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_ab8b2da50f80e9806f69ab596575b6c47}\label{class_ziz_q_t_e_state_ab8b2da50f80e9806f69ab596575b6c47} 
+bool {\bfseries need\+To\+Pose}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_ac9121a246d7285f4f3e9c497fa112070}\label{class_ziz_q_t_e_state_ac9121a246d7285f4f3e9c497fa112070} 
+bool {\bfseries recovery\+Posed}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a6e63616342a39628d16a667a8688d957}\label{class_ziz_q_t_e_state_a6e63616342a39628d16a667a8688d957} 
+float {\bfseries timer\+After\+QTE}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a113eb09392fca4e3937cf8143fd5b79d}\label{class_ziz_q_t_e_state_a113eb09392fca4e3937cf8143fd5b79d} 
+float {\bfseries timer}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a5c98393c53cd5b565976a6bc9f2ab806}\label{class_ziz_q_t_e_state_a5c98393c53cd5b565976a6bc9f2ab806} 
+float {\bfseries timer1}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a43a09332d438433859f1e76d151cc4b7}\label{class_ziz_q_t_e_state_a43a09332d438433859f1e76d151cc4b7} 
+float {\bfseries timer2}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a4160fdeb25d38fd2fdac0d0ed0961eb3}\label{class_ziz_q_t_e_state_a4160fdeb25d38fd2fdac0d0ed0961eb3} 
+float {\bfseries timer3}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a51e770b4ef2c83e7f5065908309131c3}\label{class_ziz_q_t_e_state_a51e770b4ef2c83e7f5065908309131c3} 
+bool {\bfseries failed\+Any}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a559747dfedfe3e913ff225b78d3ec377}\label{class_ziz_q_t_e_state_a559747dfedfe3e913ff225b78d3ec377} 
+int {\bfseries current\+Seq}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_ad29b8c7d1cb392a02b5d5ba14f10d261}\label{class_ziz_q_t_e_state_ad29b8c7d1cb392a02b5d5ba14f10d261} 
+int {\bfseries QTETarget}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_af2d58c857dbeb20bd3fee8e89acafe79}\label{class_ziz_q_t_e_state_af2d58c857dbeb20bd3fee8e89acafe79} 
+int {\bfseries QTETarget1}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a4a8930f2793fee61123c746762314fec}\label{class_ziz_q_t_e_state_a4a8930f2793fee61123c746762314fec} 
+int {\bfseries QTETarget2}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a4b653c492b15a2587f790d0dbcb476ca}\label{class_ziz_q_t_e_state_a4b653c492b15a2587f790d0dbcb476ca} 
+int {\bfseries QTETarget3}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_ae4bbc14bb19ffdcc9c90a776fedc2871}\label{class_ziz_q_t_e_state_ae4bbc14bb19ffdcc9c90a776fedc2871} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qte\+Button\+UI}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_q_t_e_state_a0a5af7dd04c58af9c249850d8c1d2b8b}\label{class_ziz_q_t_e_state_a0a5af7dd04c58af9c249850d8c1d2b8b} 
+static \mbox{\hyperlink{class_ziz_q_t_e_state}{Ziz\+QTEState}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_q_t_e_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_q_t_e_state_a2adcaccc30c80d24973fb3f1ba407b97}\index{ZizQTEState@{ZizQTEState}!enter@{enter}}
+\index{enter@{enter}!ZizQTEState@{ZizQTEState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_q_t_e_state_a2adcaccc30c80d24973fb3f1ba407b97} 
+void Ziz\+QTEState\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_q_t_e_state_af6e09787369d37418fe68f17b7e29535}\index{ZizQTEState@{ZizQTEState}!exit@{exit}}
+\index{exit@{exit}!ZizQTEState@{ZizQTEState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_q_t_e_state_af6e09787369d37418fe68f17b7e29535} 
+void Ziz\+QTEState\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_q_t_e_state_a73b2c5e07eebe96231bca19ab67f4cb7}\index{ZizQTEState@{ZizQTEState}!update@{update}}
+\index{update@{update}!ZizQTEState@{ZizQTEState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_q_t_e_state_a73b2c5e07eebe96231bca19ab67f4cb7} 
+void Ziz\+QTEState\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+QTEState.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+QTEState.\+cpp\end{DoxyCompactItemize}

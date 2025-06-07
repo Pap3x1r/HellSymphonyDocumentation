@@ -1,0 +1,304 @@
+\doxysection{Drawable\+Object Class Reference}
+\hypertarget{class_drawable_object}{}\label{class_drawable_object}\index{DrawableObject@{DrawableObject}}
+
+
+Base class for any renderable and interactable game object.  
+
+
+
+
+{\ttfamily \#include $<$Drawable\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Drawable\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_drawable_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Drawable\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_drawable_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_object_ad513f5d33b502e91a5a4f703f31e385b}\label{class_drawable_object_ad513f5d33b502e91a5a4f703f31e385b} 
+string {\bfseries get\+Name} ()
+\item 
+\Hypertarget{class_drawable_object_a161fb9a7fb43fd8c7e8cb8b4b8d9f1f4}\label{class_drawable_object_a161fb9a7fb43fd8c7e8cb8b4b8d9f1f4} 
+void {\bfseries set\+Name} (string name)
+\item 
+\Hypertarget{class_drawable_object_a9ee57744c938de1281185145cd54061a}\label{class_drawable_object_a9ee57744c938de1281185145cd54061a} 
+Tag {\bfseries get\+Tag} () const
+\item 
+\Hypertarget{class_drawable_object_a04d6dde64c5177a5327efc46b72feb34}\label{class_drawable_object_a04d6dde64c5177a5327efc46b72feb34} 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\Hypertarget{class_drawable_object_a78ddebebf1da5e0d948ae8454141ab9a}\label{class_drawable_object_a78ddebebf1da5e0d948ae8454141ab9a} 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+\Hypertarget{class_drawable_object_aba0579fa6e716ab76a1c2399cf221335}\label{class_drawable_object_aba0579fa6e716ab76a1c2399cf221335} 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\Hypertarget{class_drawable_object_abd25b3f326728b763e3cda4559ba7885}\label{class_drawable_object_abd25b3f326728b763e3cda4559ba7885} 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\Hypertarget{class_drawable_object_a4ed642a84caafe9b8446440c3d4681aa}\label{class_drawable_object_a4ed642a84caafe9b8446440c3d4681aa} 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+\Hypertarget{class_drawable_object_a867afb7b0018e3bbf3d1783a0f2cacac}\label{class_drawable_object_a867afb7b0018e3bbf3d1783a0f2cacac} 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+\Hypertarget{class_drawable_object_a4f8fd0f2be8ac036d4a4c659095ba081}\label{class_drawable_object_a4f8fd0f2be8ac036d4a4c659095ba081} 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+\Hypertarget{class_drawable_object_aa54938e4b148c95b0d98283b85272c35}\label{class_drawable_object_aa54938e4b148c95b0d98283b85272c35} 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+\Hypertarget{class_drawable_object_ae4ffbe809def1e7c49a2abc97b8e18e1}\label{class_drawable_object_ae4ffbe809def1e7c49a2abc97b8e18e1} 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+\Hypertarget{class_drawable_object_a02a8e8074de374bfefc08f6260a1ceef}\label{class_drawable_object_a02a8e8074de374bfefc08f6260a1ceef} 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+\Hypertarget{class_drawable_object_a0847bdf23b490648521b688e9e1f8993}\label{class_drawable_object_a0847bdf23b490648521b688e9e1f8993} 
+virtual void {\bfseries update} ()
+\item 
+\Hypertarget{class_drawable_object_aa469ab84966fe30c746f5ac196a956f5}\label{class_drawable_object_aa469ab84966fe30c746f5ac196a956f5} 
+void {\bfseries update} (float dt)
+\item 
+\Hypertarget{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}\label{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0} 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_drawable_object_a669754ecba2536b212fb9a212691c934}\label{class_drawable_object_a669754ecba2536b212fb9a212691c934} 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_drawable_object_a4f324725016a6a5ad312eff92e6f4576}\label{class_drawable_object_a4f324725016a6a5ad312eff92e6f4576} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}{render}} (glm\+::mat4 global\+Model\+Transform)=0
+\begin{DoxyCompactList}\small\item\em Abstract render function to be overridden by derived classes. \end{DoxyCompactList}\item 
+\Hypertarget{class_drawable_object_a000147951cf661b9f1f6b75ff41c3695}\label{class_drawable_object_a000147951cf661b9f1f6b75ff41c3695} 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+\Hypertarget{class_drawable_object_a9c1ca7252e5dc237225420c949a4b8ec}\label{class_drawable_object_a9c1ca7252e5dc237225420c949a4b8ec} 
+void {\bfseries set\+Draw} (bool value)
+\item 
+\Hypertarget{class_drawable_object_a72778b4efedc134b0cd8811f46b9d114}\label{class_drawable_object_a72778b4efedc134b0cd8811f46b9d114} 
+void {\bfseries draw\+Collider} ()
+\item 
+\Hypertarget{class_drawable_object_ad129f10bced48b88c13658b236954871}\label{class_drawable_object_ad129f10bced48b88c13658b236954871} 
+void {\bfseries set\+Active} (bool value)
+\item 
+\Hypertarget{class_drawable_object_a8b446106e225648539331442be4e6ec6}\label{class_drawable_object_a8b446106e225648539331442be4e6ec6} 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+\Hypertarget{class_drawable_object_a96f8f2b2032cca6a68e02e05eae64dd1}\label{class_drawable_object_a96f8f2b2032cca6a68e02e05eae64dd1} 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+\Hypertarget{class_drawable_object_aec378238b167496ef239bd34f26f8ea2}\label{class_drawable_object_aec378238b167496ef239bd34f26f8ea2} 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+\Hypertarget{class_drawable_object_ab7a662604f9184e4b38d1b2eefa28add}\label{class_drawable_object_ab7a662604f9184e4b38d1b2eefa28add} 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+\Hypertarget{class_drawable_object_a9f457ae04d506c17baf60d0a80becd09}\label{class_drawable_object_a9f457ae04d506c17baf60d0a80becd09} 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+\Hypertarget{class_drawable_object_ab906aa6672ddac66ccbcc6b3409532aa}\label{class_drawable_object_ab906aa6672ddac66ccbcc6b3409532aa} 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+\Hypertarget{class_drawable_object_aae397dabbe794bb95855a622b2c4941a}\label{class_drawable_object_aae397dabbe794bb95855a622b2c4941a} 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+\Hypertarget{class_drawable_object_ab528c9ab14a6dd6848b17133b3d8ba6f}\label{class_drawable_object_ab528c9ab14a6dd6848b17133b3d8ba6f} 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+\Hypertarget{class_drawable_object_acdd2f6dbf45f4e815ea4452dd5c731ef}\label{class_drawable_object_acdd2f6dbf45f4e815ea4452dd5c731ef} 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+\Hypertarget{class_drawable_object_a5a82c70f1f4a08575a19c86822fc335c}\label{class_drawable_object_a5a82c70f1f4a08575a19c86822fc335c} 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_a274f60054bad4e77100d2d2dbf691458}{set\+Alpha}} (float value)
+\item 
+virtual float \mbox{\hyperlink{class_drawable_object_a49db5ebe33539bfd2bdf4e133919d7c0}{get\+Alpha}} () const
+\item 
+\Hypertarget{class_drawable_object_adf9f2ff4351cfff9b218c4101b682760}\label{class_drawable_object_adf9f2ff4351cfff9b218c4101b682760} 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+\Hypertarget{class_drawable_object_ab0b9d4b67fbdbd3a6755d4be72569521}\label{class_drawable_object_ab0b9d4b67fbdbd3a6755d4be72569521} 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_object_ae53dadd4ba46f09d4e53b181d68e2b2a}\label{class_drawable_object_ae53dadd4ba46f09d4e53b181d68e2b2a} 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+\Hypertarget{class_drawable_object_a15b6476bde407e53027fad60fe5c1c43}\label{class_drawable_object_a15b6476bde407e53027fad60fe5c1c43} 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+\Hypertarget{class_drawable_object_aa388ee4f948895868c4a757fea1e5198}\label{class_drawable_object_aa388ee4f948895868c4a757fea1e5198} 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+\Hypertarget{class_drawable_object_af18fdee1289bcaece72ecea794b5ccec}\label{class_drawable_object_af18fdee1289bcaece72ecea794b5ccec} 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+\Hypertarget{class_drawable_object_aa6e78f1b6ed366822e8fb7994a84645d}\label{class_drawable_object_aa6e78f1b6ed366822e8fb7994a84645d} 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+\Hypertarget{class_drawable_object_a8127f0547723392bf03c17f8c493bf04}\label{class_drawable_object_a8127f0547723392bf03c17f8c493bf04} 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_object_aee7ce05d39e374ddfb8bbc331b1c0046}\label{class_drawable_object_aee7ce05d39e374ddfb8bbc331b1c0046} 
+string {\bfseries name} = "{}Object"{}
+\item 
+\Hypertarget{class_drawable_object_a899d8b2f1ba4b9489a9a958a402b7564}\label{class_drawable_object_a899d8b2f1ba4b9489a9a958a402b7564} 
+Tag {\bfseries tag}
+\item 
+\Hypertarget{class_drawable_object_aadfec880f96c80ea0b1a572be7fed85e}\label{class_drawable_object_aadfec880f96c80ea0b1a572be7fed85e} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\Hypertarget{class_drawable_object_aeca8d62cbf56669c06cd8278a493ede2}\label{class_drawable_object_aeca8d62cbf56669c06cd8278a493ede2} 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\Hypertarget{class_drawable_object_a42047aa1dc18d254a5db06c48616bf71}\label{class_drawable_object_a42047aa1dc18d254a5db06c48616bf71} 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_object_a3f70b16ef183b6603f1d4954a0fba2e9}\label{class_drawable_object_a3f70b16ef183b6603f1d4954a0fba2e9} 
+void {\bfseries process\+Collider} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_object_a04ab5f5ded1078ae82d9d71d019ca5e9}\label{class_drawable_object_a04ab5f5ded1078ae82d9d71d019ca5e9} 
+bool {\bfseries can\+Draw\+Collider\+New}
+\item 
+\Hypertarget{class_drawable_object_a3f3ee1ee75bc87be5b34454586a82455}\label{class_drawable_object_a3f3ee1ee75bc87be5b34454586a82455} 
+bool {\bfseries can\+Draw\+Collider}
+\item 
+\Hypertarget{class_drawable_object_a69c59d4416c89143f44906109d799bcc}\label{class_drawable_object_a69c59d4416c89143f44906109d799bcc} 
+bool {\bfseries can\+Draw}
+\item 
+\Hypertarget{class_drawable_object_afcf3afff7117d18ffa65e64a0c207fbf}\label{class_drawable_object_afcf3afff7117d18ffa65e64a0c207fbf} 
+bool {\bfseries is\+Active}
+\item 
+\Hypertarget{class_drawable_object_aed034974cebbce45d5ccd9f79c20557e}\label{class_drawable_object_aed034974cebbce45d5ccd9f79c20557e} 
+bool {\bfseries is\+Marked\+For\+Delete}
+\item 
+\Hypertarget{class_drawable_object_ae85ddd87b80003b2233699a4ef510d70}\label{class_drawable_object_ae85ddd87b80003b2233699a4ef510d70} 
+Menu\+State {\bfseries menu\+State} = Menu\+State\+::\+NONE
+\item 
+\Hypertarget{class_drawable_object_a18bbd6549c8901a6f86ce05b32eb5839}\label{class_drawable_object_a18bbd6549c8901a6f86ce05b32eb5839} 
+vector$<$ Menu\+State $>$ {\bfseries menu\+State\+Vec}
+\item 
+\Hypertarget{class_drawable_object_a2c28f6aa459a425bd8fd644633889af1}\label{class_drawable_object_a2c28f6aa459a425bd8fd644633889af1} 
+float {\bfseries alpha} = 1.\+0f
+\item 
+\Hypertarget{class_drawable_object_a72c2d9169baff7c6e5505e3cf6afdb7e}\label{class_drawable_object_a72c2d9169baff7c6e5505e3cf6afdb7e} 
+float {\bfseries maximum\+Alpha} = 1.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for any renderable and interactable game object. 
+
+Contains logic for drawing, updating, collision, physics, and menu state tracking. 
+
+\label{doc-func-members}
+\Hypertarget{class_drawable_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}\index{DrawableObject@{DrawableObject}!destroyObject@{destroyObject}}
+\index{destroyObject@{destroyObject}!DrawableObject@{DrawableObject}}
+\doxysubsubsection{\texorpdfstring{destroyObject()}{destroyObject()}}
+{\footnotesize\ttfamily \label{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca} 
+void Drawable\+Object\+::destroy\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Marks the object for deletion and destroys it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to \doxylink{class_drawable_object}{Drawable\+Object} to destroy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_drawable_object_a49db5ebe33539bfd2bdf4e133919d7c0}\index{DrawableObject@{DrawableObject}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!DrawableObject@{DrawableObject}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily \label{class_drawable_object_a49db5ebe33539bfd2bdf4e133919d7c0} 
+float Drawable\+Object\+::get\+Alpha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_simple_object_aa4f2594377437b446a55228051a9c7e5}{Simple\+Object}}, and \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{Textured\+Object}}.
+
+\Hypertarget{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}\index{DrawableObject@{DrawableObject}!onCollisionEnter@{onCollisionEnter}}
+\index{onCollisionEnter@{onCollisionEnter}!DrawableObject@{DrawableObject}}
+\doxysubsubsection{\texorpdfstring{onCollisionEnter()}{onCollisionEnter()}}
+{\footnotesize\ttfamily \label{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495} 
+void Drawable\+Object\+::on\+Collision\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+For implementation in derived class ///. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_arrow_a9fb597371a801b56bcd61016cb4201b9}{Arrow}}, \mbox{\hyperlink{class_bow_ultimate_collider_a69d75556317c1caa813295cda12a8a2f}{Bow\+Ultimate\+Collider}}, \mbox{\hyperlink{class_enemy_attack_collider_a285162718819ca512a7231c4acdc8182}{Enemy\+Attack\+Collider}}, \mbox{\hyperlink{class_ground_checker_abb9ad7e8478a499c7b709a9480e60689}{Ground\+Checker}}, \mbox{\hyperlink{class_gust_a46bf3185c617cefed5246eeb6d9c9d33}{Gust}}, \mbox{\hyperlink{class_ice_bomb_ad6b24cc2b03bec19dc45c748a6e2c80e}{Ice\+Bomb}}, \mbox{\hyperlink{class_ice_spear_a3e320730182dfad69e83deeafda79d53}{Ice\+Spear}}, \mbox{\hyperlink{class_interactable_object_a7c930df5569955ac4ad92dbbb2d2a4dc}{Interactable\+Object}}, \mbox{\hyperlink{class_player_attack_collider_af0dce47311a1c4e636391570f2300b41}{Player\+Attack\+Collider}}, \mbox{\hyperlink{class_storm_rise_adb8a882161117052198bb95e21f5e612}{Storm\+Rise}}, and \mbox{\hyperlink{class_vertical_ice_beam_abb38557eaac0ee55154a2f658bfa5db8}{Vertical\+Ice\+Beam}}.
+
+\Hypertarget{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}\index{DrawableObject@{DrawableObject}!render@{render}}
+\index{render@{render}!DrawableObject@{DrawableObject}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e} 
+virtual void Drawable\+Object\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{global\+Model\+Transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract render function to be overridden by derived classes. 
+
+
+
+Implemented in \mbox{\hyperlink{class_combine_object_a8e0e24d0cfdb11724d45d0e97bc60e6d}{Combine\+Object}}, \mbox{\hyperlink{class_parallax_object_a48b1eb36edd2fb52a42ac3facf94aa3a}{Parallax\+Object}}, \mbox{\hyperlink{class_simple_object_ad63c6116b878da58952cec0fd87d22e2}{Simple\+Object}}, \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{Textured\+Object}}, and \mbox{\hyperlink{class_u_i_text_a24ff5c16de1d6d2e269e00cb2385bfb5}{UIText}}.
+
+\Hypertarget{class_drawable_object_a274f60054bad4e77100d2d2dbf691458}\index{DrawableObject@{DrawableObject}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!DrawableObject@{DrawableObject}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily \label{class_drawable_object_a274f60054bad4e77100d2d2dbf691458} 
+void Drawable\+Object\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_simple_object_a24689c8ec6c945892b6aed433d46c5d7}{Simple\+Object}}, \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{Textured\+Object}}, and \mbox{\hyperlink{class_u_i_text_af461cbda1037cc9d30c588d5b457f319}{UIText}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Drawable\+Object.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Drawable\+Object.\+cpp\end{DoxyCompactItemize}

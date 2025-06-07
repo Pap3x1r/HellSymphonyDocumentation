@@ -1,0 +1,291 @@
+\doxysection{Slider\+Object Class Reference}
+\hypertarget{class_slider_object}{}\label{class_slider_object}\index{SliderObject@{SliderObject}}
+
+
+Represents a UI slider with background, fill, and handle components.  
+
+
+
+
+{\ttfamily \#include $<$Slider\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Slider\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_slider_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_slider_object_a3681e233addbb43a30b69d9e7245bda9}\label{class_slider_object_a3681e233addbb43a30b69d9e7245bda9} 
+{\bfseries Slider\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes the slider with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_slider_object_a086c010a901cdff6eb5556a7a2d92928}{Slider\+Object}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor initializes the slider with a given name. \end{DoxyCompactList}\item 
+\Hypertarget{class_slider_object_aee61b551f2ac4d417e8432c118316b5a}\label{class_slider_object_aee61b551f2ac4d417e8432c118316b5a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Slider\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor to clean up any allocated resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_a6737540fe973d02bd357be694c919cd9}{update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates the slider state, typically called every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_a3bfc97454cf2197bb76d7041c9050c65}{set\+Position}} (glm\+::vec3 position, int type)
+\begin{DoxyCompactList}\small\item\em Sets the slider\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_ae058ad0910a6b55327e1e253e229f0c4}{set\+Color}} (glm\+::vec3 color, int type)
+\begin{DoxyCompactList}\small\item\em Sets the color of a slider component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_a496c8f272a198cf1cdff5d32e3cbf4a0}{set\+Scale}} (glm\+::vec3 scale, int type)
+\begin{DoxyCompactList}\small\item\em Sets the scale of a slider component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_a79e3953dfc7a2f749b091dc181f9df5e}{set\+Value}} (float v)
+\begin{DoxyCompactList}\small\item\em Sets the current value of the slider. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_slider_object_af51a9e83c5c3319fb2f8144d549f0ef4}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current slider value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slider_object_a62d53dc33efa0b006e987b40d29f7a72}{set\+Menu\+State}} (Menu\+State state)
+\begin{DoxyCompactList}\small\item\em Sets the current menu state (possibly affects appearance or behavior). \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_slider_object_a660c898738f9e6a4354d59a86183f435}{get\+Objects\+List}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of drawable objects associated with the slider. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_slider_object_a918dd5a7e94932157ae3b287b6756e3c}{get\+Object}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets a drawable object by index. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_slider_object_a7b3eeb72cb7bd668fc3cc65591444aa7}{get\+Original\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the original width (scale) of the slider. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_slider_object_a525047188d1e5321b6ce2ec9e01675f7}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the slider\textquotesingle{}s name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_slider_object_a2b46b4f10e1672c156dd8dcb03641a7c}\label{class_slider_object_a2b46b4f10e1672c156dd8dcb03641a7c} 
+string {\bfseries name} = "{}Slider Object"{}
+\item 
+\Hypertarget{class_slider_object_a97c39da59975e40e83dd7ad15a08dbee}\label{class_slider_object_a97c39da59975e40e83dd7ad15a08dbee} 
+float {\bfseries value}
+\item 
+\Hypertarget{class_slider_object_a98e66222850ae630b231dfab8386adc3}\label{class_slider_object_a98e66222850ae630b231dfab8386adc3} 
+glm\+::vec3 {\bfseries bg\+Color}
+\item 
+\Hypertarget{class_slider_object_aa4342b4c74e7c2ab1c2b6cc65d297a6f}\label{class_slider_object_aa4342b4c74e7c2ab1c2b6cc65d297a6f} 
+glm\+::vec3 {\bfseries fill\+Color}
+\item 
+\Hypertarget{class_slider_object_ac0e7fc10580ab30c6856b7ca2e1452a6}\label{class_slider_object_ac0e7fc10580ab30c6856b7ca2e1452a6} 
+glm\+::vec3 {\bfseries position}
+\item 
+\Hypertarget{class_slider_object_a31afd9ab5f4d5561014263cda16fdb21}\label{class_slider_object_a31afd9ab5f4d5561014263cda16fdb21} 
+glm\+::vec3 {\bfseries original\+Width}
+\item 
+\Hypertarget{class_slider_object_ab581652f6dd2eeffa961d0096fd95ac9}\label{class_slider_object_ab581652f6dd2eeffa961d0096fd95ac9} 
+glm\+::vec3 {\bfseries base\+Position}
+\item 
+\Hypertarget{class_slider_object_ace8b6b2106784929d95d1f2375054828}\label{class_slider_object_ace8b6b2106784929d95d1f2375054828} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries slider\+Background}
+\item 
+\Hypertarget{class_slider_object_a368d57993f60482bb4f6234dbd249ebe}\label{class_slider_object_a368d57993f60482bb4f6234dbd249ebe} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries slider\+Fill}
+\item 
+\Hypertarget{class_slider_object_a95515d7e6cd0655ee31f56db3acd7872}\label{class_slider_object_a95515d7e6cd0655ee31f56db3acd7872} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries slider\+Handle}
+\item 
+\Hypertarget{class_slider_object_a3b5e52ca5ce0e7c3e33ffee44ae56f72}\label{class_slider_object_a3b5e52ca5ce0e7c3e33ffee44ae56f72} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a UI slider with background, fill, and handle components. 
+
+Manages slider value, colors, position, scale, and related drawable objects. 
+
+\label{doc-constructors}
+\Hypertarget{class_slider_object_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_slider_object_a086c010a901cdff6eb5556a7a2d92928}\index{SliderObject@{SliderObject}!SliderObject@{SliderObject}}
+\index{SliderObject@{SliderObject}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{SliderObject()}{SliderObject()}}
+{\footnotesize\ttfamily \label{class_slider_object_a086c010a901cdff6eb5556a7a2d92928} 
+Slider\+Object\+::\+Slider\+Object (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor initializes the slider with a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to assign to the slider. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_slider_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_slider_object_a525047188d1e5321b6ce2ec9e01675f7}\index{SliderObject@{SliderObject}!getName@{getName}}
+\index{getName@{getName}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_slider_object_a525047188d1e5321b6ce2ec9e01675f7} 
+string Slider\+Object\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the slider\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+Slider name string. 
+\end{DoxyReturn}
+\Hypertarget{class_slider_object_a918dd5a7e94932157ae3b287b6756e3c}\index{SliderObject@{SliderObject}!getObject@{getObject}}
+\index{getObject@{getObject}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{getObject()}{getObject()}}
+{\footnotesize\ttfamily \label{class_slider_object_a918dd5a7e94932157ae3b287b6756e3c} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} Slider\+Object\+::get\+Object (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Gets a drawable object by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index in the drawable objects list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_drawable_object}{Drawable\+Object} at given index. 
+\end{DoxyReturn}
+\Hypertarget{class_slider_object_a660c898738f9e6a4354d59a86183f435}\index{SliderObject@{SliderObject}!getObjectsList@{getObjectsList}}
+\index{getObjectsList@{getObjectsList}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{getObjectsList()}{getObjectsList()}}
+{\footnotesize\ttfamily \label{class_slider_object_a660c898738f9e6a4354d59a86183f435} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ Slider\+Object\+::get\+Objects\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the list of drawable objects associated with the slider. 
+
+\begin{DoxyReturn}{Returns}
+List of \doxylink{class_drawable_object}{Drawable\+Object} pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_slider_object_a7b3eeb72cb7bd668fc3cc65591444aa7}\index{SliderObject@{SliderObject}!getOriginalWidth@{getOriginalWidth}}
+\index{getOriginalWidth@{getOriginalWidth}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{getOriginalWidth()}{getOriginalWidth()}}
+{\footnotesize\ttfamily \label{class_slider_object_a7b3eeb72cb7bd668fc3cc65591444aa7} 
+glm\+::vec3 Slider\+Object\+::get\+Original\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the original width (scale) of the slider. 
+
+\begin{DoxyReturn}{Returns}
+Original width as glm\+::vec3. 
+\end{DoxyReturn}
+\Hypertarget{class_slider_object_af51a9e83c5c3319fb2f8144d549f0ef4}\index{SliderObject@{SliderObject}!getValue@{getValue}}
+\index{getValue@{getValue}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{class_slider_object_af51a9e83c5c3319fb2f8144d549f0ef4} 
+float Slider\+Object\+::get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the current slider value. 
+
+\begin{DoxyReturn}{Returns}
+Slider value as float. 
+\end{DoxyReturn}
+\Hypertarget{class_slider_object_ae058ad0910a6b55327e1e253e229f0c4}\index{SliderObject@{SliderObject}!setColor@{setColor}}
+\index{setColor@{setColor}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_slider_object_ae058ad0910a6b55327e1e253e229f0c4} 
+void Slider\+Object\+::set\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{color}{, }\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the color of a slider component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Color vector (RGB) to set. \\
+\hline
+{\em type} & Type or part of slider to set color for (e.\+g. background, fill). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slider_object_a62d53dc33efa0b006e987b40d29f7a72}\index{SliderObject@{SliderObject}!setMenuState@{setMenuState}}
+\index{setMenuState@{setMenuState}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{setMenuState()}{setMenuState()}}
+{\footnotesize\ttfamily \label{class_slider_object_a62d53dc33efa0b006e987b40d29f7a72} 
+void Slider\+Object\+::set\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current menu state (possibly affects appearance or behavior). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The menu state to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slider_object_a3bfc97454cf2197bb76d7041c9050c65}\index{SliderObject@{SliderObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_slider_object_a3bfc97454cf2197bb76d7041c9050c65} 
+void Slider\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{position}{, }\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the slider\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & New position as a glm\+::vec3. \\
+\hline
+{\em type} & Type or part of slider to set position for (e.\+g. background, fill, handle). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slider_object_a496c8f272a198cf1cdff5d32e3cbf4a0}\index{SliderObject@{SliderObject}!setScale@{setScale}}
+\index{setScale@{setScale}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily \label{class_slider_object_a496c8f272a198cf1cdff5d32e3cbf4a0} 
+void Slider\+Object\+::set\+Scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{scale}{, }\item[{int}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the scale of a slider component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & Scale vector to apply. \\
+\hline
+{\em type} & Type or part of slider to scale (e.\+g. background, fill, handle). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slider_object_a79e3953dfc7a2f749b091dc181f9df5e}\index{SliderObject@{SliderObject}!setValue@{setValue}}
+\index{setValue@{setValue}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily \label{class_slider_object_a79e3953dfc7a2f749b091dc181f9df5e} 
+void Slider\+Object\+::set\+Value (\begin{DoxyParamCaption}\item[{float}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current value of the slider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & New value for the slider. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slider_object_a6737540fe973d02bd357be694c919cd9}\index{SliderObject@{SliderObject}!update@{update}}
+\index{update@{update}!SliderObject@{SliderObject}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_slider_object_a6737540fe973d02bd357be694c919cd9} 
+void Slider\+Object\+::update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the slider state, typically called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time since last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Slider\+Object.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Slider\+Object.\+cpp\end{DoxyCompactItemize}

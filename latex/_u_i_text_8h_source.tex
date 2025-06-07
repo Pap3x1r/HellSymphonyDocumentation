@@ -1,0 +1,200 @@
+\doxysection{UIText.\+h}
+\hypertarget{_u_i_text_8h_source}{}\label{_u_i_text_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/UIText.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/UIText.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameEngine.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SquareMeshVbo.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}gtc/matrix\_transform.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}gtc/type\_ptr.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL\_ttf.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}imgui.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i_text_a15dd95be500776895430e0d80ddc3493}{UIText}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ name;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ texture;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ text;}
+\DoxyCodeLine{00029\ \ \ \ \ SDL\_Color\ color;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ fontSize;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ alpha\ =\ 1.0f;}
+\DoxyCodeLine{00032\ \ \ \ \ glm::vec3\ textOffset\ =\ \{\ 0.0f,0.0f,0.0f\ \};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ xPosition;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ yPosition;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ xScale;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ yScale;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_u_i_text_a15dd95be500776895430e0d80ddc3493}{UIText}}(\textcolor{keywordtype}{string}\ name)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ setTag(Tag::UI);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_u_i_text_ab675aed394119e92a853abec341df06d}{\string~UIText}}()\ \{\}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_a24ff5c16de1d6d2e269e00cb2385bfb5}{render}}(glm::mat4\ globalModelTransform)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_square_mesh_vbo}{SquareMeshVbo}}*\ squareMesh\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_square_mesh_vbo}{SquareMeshVbo}}*\textcolor{keyword}{>}(}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>\mbox{\hyperlink{class_g_l_renderer_aa9d1263cbc1fdb43f2145d9e0103facb}{getMesh}}(SquareMeshVbo::MESH\_NAME));}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ GLuint\ modelMatrixId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getModelMatrixAttrId();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ GLuint\ renderModeId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getModeUniformId();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ GLuint\ colorId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getColorUniformId();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ GLuint\ alphaOverrideId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getAlphaOverrideUniformId();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ GLuint\ offsetXId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getOffsetXUniformId();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ GLuint\ offsetYId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getOffsetYUniformId();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ GLuint\ scaleXId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getScaleXUniformId();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ GLuint\ scaleYId\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}()-\/>getScaleYUniformId();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!squareMesh\ ||\ modelMatrixId\ ==\ -\/1\ ||\ renderModeId\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}UIText\ render\ setup\ error"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ transparency}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ glEnable(GL\_BLEND);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ glBlendFunc(GL\_SRC\_ALPHA,\ GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ uniforms}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ glm::mat4\ currentMatrix\ =\ transform.getTransformMat4();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ currentMatrix\ =\ glm::translate(currentMatrix,\ textOffset);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ currentMatrix\ =\ globalModelTransform\ *\ currentMatrix;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ glUniformMatrix4fv(modelMatrixId,\ 1,\ GL\_FALSE,\ glm::value\_ptr(currentMatrix));}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ glUniform1i(renderModeId,\ 1);\ \ \textcolor{comment}{//\ Textured\ render\ mode}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ glUniform4f(colorId,\ 1.0f,\ 1.0f,\ 1.0f,\ 1.0f);\ \ \textcolor{comment}{//\ Pure\ white\ color}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ glUniform1f(alphaOverrideId,\ alpha);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ texture}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ glActiveTexture(GL\_TEXTURE0);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ glBindTexture(GL\_TEXTURE\_2D,\ texture);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Render\ mesh}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ squareMesh-\/>render();}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_af962f9a544720de395b138b9128c3c42}{update}}(\textcolor{keywordtype}{float}\ dt)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Alpha:\ "{}\ <<\ alpha\ <<\ endl;}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}scale\ x:\ "{}\ <<\ getColliderComponent()-\/>getTransform().getScale().x\ <<\ "{}\ scale\ y:\ "{}\ <<\ getColliderComponent()-\/>getTransform().getScale().y\ <<\ endl;}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//offsetX\ =\ getTransform().getScale().x\ *\ 0.25f;}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//offsetY\ =\ -\/getTransform().getScale().y\ *\ 0.25f;}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}offsetX:\ "{}\ <<\ offsetX\ <<\ "{}\ offsetY:\ "{}\ <<\ offsetY\ <<\ endl;}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ stateNames[]\ =\ \{\ \textcolor{stringliteral}{"{}NONE"{}},\ \textcolor{stringliteral}{"{}MAIN"{}},\ \textcolor{stringliteral}{"{}OPTIONS"{}},\ \textcolor{stringliteral}{"{}AUDIO"{}},\ \textcolor{stringliteral}{"{}CONTROLS"{}},\ \textcolor{stringliteral}{"{}CREDITS"{}},\ \textcolor{stringliteral}{"{}IGNORE"{}}\};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ stateIndex\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(getMenuState());}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ glm::vec3\ pos\ =\ getTransform().getPosition();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ xPosition\ =\ pos.x;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ yPosition\ =\ pos.y;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ glm::vec3\ scale\ =\ getTransform().getScale();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ xScale\ =\ scale.x;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ yScale\ =\ scale.y;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}{loadText}}(\textcolor{keywordtype}{string}\ text,\ SDL\_Color\ textColor,\ \textcolor{keywordtype}{int}\ fontSize,\ \textcolor{keywordtype}{bool}\ bold\ =\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ this-\/>text\ =\ text;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ this-\/>color\ =\ textColor;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ this-\/>fontSize\ =\ fontSize;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//this-\/>alpha\ =\ static\_cast<float>(textColor.a)\ /\ 255.0f;}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ TTF\_Font*\ font\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bold)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ font\ =\ TTF\_OpenFont(\textcolor{stringliteral}{"{}../Resource/Font/EBGaramond-\/Bold.ttf"{}},\ fontSize);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ font\ =\ TTF\_OpenFont(\textcolor{stringliteral}{"{}../Resource/Font/EBGaramond.ttf"{}},\ fontSize);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!font)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ load\ font:\ "{}}\ <<\ TTF\_GetError()\ <<\ endl;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ SDL\_Surface*\ textSurface\ =\ TTF\_RenderText\_Blended(font,\ text.c\_str(),\ textColor);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!textSurface)\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ render\ text:\ "{}}\ <<\ TTF\_GetError()\ <<\ endl;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ TTF\_CloseFont(font);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ potW\ =\ 1;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ potH\ =\ 1;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (potW\ <\ textSurface-\/>w)\ potW\ <<=\ 1;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (potH\ <\ textSurface-\/>h)\ potH\ <<=\ 1;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ SDL\_Surface*\ potSurface\ =\ SDL\_CreateRGBSurface(0,\ potW,\ potH,\ 32,}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00FF0000,\ 0x0000FF00,\ 0x000000FF,\ 0xFF000000);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!potSurface)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ create\ POT\ surface."{}}\ <<\ endl;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ SDL\_FreeSurface(textSurface);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ TTF\_CloseFont(font);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ SDL\_BlitSurface(textSurface,\ \textcolor{keyword}{nullptr},\ potSurface,\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (texture\ !=\ 0)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ glDeleteTextures(1,\ \&texture);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ glGenTextures(1,\ \&texture);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ glBindTexture(GL\_TEXTURE\_2D,\ texture);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ glPixelStorei(GL\_UNPACK\_ALIGNMENT,\ 1);\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MIN\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_MAG\_FILTER,\ GL\_LINEAR);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_WRAP\_S,\ GL\_CLAMP\_TO\_EDGE);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ glTexParameteri(GL\_TEXTURE\_2D,\ GL\_TEXTURE\_WRAP\_T,\ GL\_CLAMP\_TO\_EDGE);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ glTexImage2D(GL\_TEXTURE\_2D,\ 0,\ GL\_RGBA,\ potW,\ potH,\ 0,\ GL\_RGBA,\ GL\_UNSIGNED\_BYTE,\ potSurface-\/>pixels);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ glm::vec3\ currentScale\ =\ getTransform().getScale();}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentScale\ ==\ glm::vec3(1.0f))\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ w\ =\ textSurface-\/>w\ /\ 100.0f;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ h\ =\ textSurface-\/>h\ /\ 100.0f;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>getTransform().setScale(glm::vec3(w,\ h,\ 1.0f));}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ SDL\_FreeSurface(textSurface);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ SDL\_FreeSurface(potSurface);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ TTF\_CloseFont(font);}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_aa6c9842508d2947a622c29297803d6e6}{setText}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ newText)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newText\ !=\ text)\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}{loadText}}(newText,\ color,\ fontSize);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_a188c21cf56014b3bfe0aa1d01d61ef18}{setColor}}(\textcolor{keyword}{const}\ SDL\_Color\&\ newColor)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newColor.r\ !=\ color.r\ ||\ newColor.g\ !=\ color.g\ ||\ newColor.b\ !=\ color.b\ ||\ newColor.a\ !=\ color.a)\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}{loadText}}(text,\ newColor,\ fontSize);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_a38f2a0d1d2a5ab8aa0fb37312d1454ea}{setFont}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ newSize)\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newSize\ !=\ fontSize)\ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}{loadText}}(text,\ color,\ newSize);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_af461cbda1037cc9d30c588d5b457f319}{setAlpha}}(\textcolor{keywordtype}{float}\ newAlpha)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ alpha\ =\ newAlpha;}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_text_a5820bd1716c772d47e92091b3582e1b2}{setOffset}}(\textcolor{keyword}{const}\ glm::vec3\&\ newVec)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ textOffset\ =\ newVec;}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \};}
+
+\end{DoxyCode}

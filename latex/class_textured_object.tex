@@ -1,0 +1,444 @@
+\doxysection{Textured\+Object Class Reference}
+\hypertarget{class_textured_object}{}\label{class_textured_object}\index{TexturedObject@{TexturedObject}}
+
+
+A renderable game object that uses a texture and supports animation.  
+
+
+
+
+{\ttfamily \#include $<$Textured\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Textured\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_textured_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Textured\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_textured_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}\label{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9} 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_a91555408caedf9d4aa60960648936b40}\label{class_textured_object_a91555408caedf9d4aa60960648936b40} 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_a2210dc8d166b41575127a91e6458b49a}\label{class_textured_object_a2210dc8d166b41575127a91e6458b49a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_textured_object_a1b446d3ea57b0d1e01874019f9751f2a}\label{class_textured_object_a1b446d3ea57b0d1e01874019f9751f2a} 
+glm\+::vec3 {\bfseries sprite\+Offset}
+\begin{DoxyCompactList}\small\item\em Offset to apply to sprite rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_aa8af589e4da53dd9cc3a83ce81225887}\label{class_textured_object_aa8af589e4da53dd9cc3a83ce81225887} 
+unsigned int {\bfseries texture}
+\begin{DoxyCompactList}\small\item\em Open\+GL texture ID. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_a04ee2e8e26b44de77f935cab40ea9e56}\label{class_textured_object_a04ee2e8e26b44de77f935cab40ea9e56} 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} {\bfseries animation}
+\begin{DoxyCompactList}\small\item\em Pointer to the object\textquotesingle{}s animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_aeca411a89f07e730bbd2c32b87cd0fa6}\label{class_textured_object_aeca411a89f07e730bbd2c32b87cd0fa6} 
+float {\bfseries hit\+Effect\+Strength} = 0
+\begin{DoxyCompactList}\small\item\em Strength of the hit visual effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_aee243a5f6ce082dd4e5c7cdb199d0195}\label{class_textured_object_aee243a5f6ce082dd4e5c7cdb199d0195} 
+float {\bfseries alpha} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Transparency level. \end{DoxyCompactList}\item 
+\Hypertarget{class_textured_object_a64dd195d86c6af9b01ae27c57793f349}\label{class_textured_object_a64dd195d86c6af9b01ae27c57793f349} 
+glm\+::vec4 {\bfseries new\+Color} = \{ 1.\+0f, 0.\+0f, 0.\+0f, 1.\+0f \}
+\begin{DoxyCompactList}\small\item\em Color override (RGBA) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A renderable game object that uses a texture and supports animation. 
+
+Inherits from \doxylink{class_drawable_object}{Drawable\+Object} and adds texture mapping, animation handling, sprite offsetting, hit effect, and color override features. 
+
+\label{doc-func-members}
+\Hypertarget{class_textured_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_textured_object_a3dee67e7305c475297b4115274954ebe}\index{TexturedObject@{TexturedObject}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily \label{class_textured_object_a3dee67e7305c475297b4115274954ebe} 
+float Textured\+Object\+::get\+Alpha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current alpha value. 
+
+\begin{DoxyReturn}{Returns}
+Alpha transparency as a float. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}.
+
+\Hypertarget{class_textured_object_a159fcd470b04372aa28fdd795a29713f}\index{TexturedObject@{TexturedObject}!getAnimationComponent@{getAnimationComponent}}
+\index{getAnimationComponent@{getAnimationComponent}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{getAnimationComponent()}{getAnimationComponent()}}
+{\footnotesize\ttfamily \label{class_textured_object_a159fcd470b04372aa28fdd795a29713f} 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} Textured\+Object\+::get\+Animation\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the animation component. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_animation}{Animation} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}\index{TexturedObject@{TexturedObject}!getHitEffectStrength@{getHitEffectStrength}}
+\index{getHitEffectStrength@{getHitEffectStrength}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{getHitEffectStrength()}{getHitEffectStrength()}}
+{\footnotesize\ttfamily \label{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383} 
+float Textured\+Object\+::get\+Hit\+Effect\+Strength (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the strength of the hit effect. 
+
+\begin{DoxyReturn}{Returns}
+Float value representing the strength. 
+\end{DoxyReturn}
+\Hypertarget{class_textured_object_a02eba34316a3b9714b872158c92b59d1}\index{TexturedObject@{TexturedObject}!getNewColor@{getNewColor}}
+\index{getNewColor@{getNewColor}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{getNewColor()}{getNewColor()}}
+{\footnotesize\ttfamily \label{class_textured_object_a02eba34316a3b9714b872158c92b59d1} 
+glm\+::vec4 Textured\+Object\+::get\+New\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the override color. 
+
+\begin{DoxyReturn}{Returns}
+RGBA color vector. 
+\end{DoxyReturn}
+\Hypertarget{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}\index{TexturedObject@{TexturedObject}!initAnimation@{initAnimation}}
+\index{initAnimation@{initAnimation}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{initAnimation()}{initAnimation()}}
+{\footnotesize\ttfamily \label{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092} 
+void Textured\+Object\+::init\+Animation (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})}
+
+
+
+Initializes animation with a given grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Number of rows. \\
+\hline
+{\em column} & Number of columns. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_a13b2464d520ab26555805c143cfc5a38}\index{TexturedObject@{TexturedObject}!isAnimated@{isAnimated}}
+\index{isAnimated@{isAnimated}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{isAnimated()}{isAnimated()}}
+{\footnotesize\ttfamily \label{class_textured_object_a13b2464d520ab26555805c143cfc5a38} 
+bool Textured\+Object\+::is\+Animated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the object has an animation. 
+
+\begin{DoxyReturn}{Returns}
+True if animated, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}\index{TexturedObject@{TexturedObject}!render@{render}}
+\index{render@{render}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3} 
+void Textured\+Object\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{global\+Model\+Transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the object with its texture and animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+Model\+Transform} & Combined world/model transform matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}{Drawable\+Object}}.
+
+\Hypertarget{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}\index{TexturedObject@{TexturedObject}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily \label{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff} 
+void Textured\+Object\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the object\textquotesingle{}s alpha (transparency). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Alpha value \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}.
+
+\Hypertarget{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}\index{TexturedObject@{TexturedObject}!setHitEffectStrength@{setHitEffectStrength}}
+\index{setHitEffectStrength@{setHitEffectStrength}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setHitEffectStrength()}{setHitEffectStrength()}}
+{\footnotesize\ttfamily \label{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012} 
+void Textured\+Object\+::set\+Hit\+Effect\+Strength (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the strength of the hit effect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Hit effect intensity. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}\index{TexturedObject@{TexturedObject}!setNewColor@{setNewColor}}
+\index{setNewColor@{setNewColor}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setNewColor()}{setNewColor()}}
+{\footnotesize\ttfamily \label{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8} 
+void Textured\+Object\+::set\+New\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{v4}{}\end{DoxyParamCaption})}
+
+
+
+Sets the override color for the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v4} & RGBA color vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}\index{TexturedObject@{TexturedObject}!setSpriteOffset@{setSpriteOffset}}
+\index{setSpriteOffset@{setSpriteOffset}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setSpriteOffset()}{setSpriteOffset()}}
+{\footnotesize\ttfamily \label{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0} 
+void Textured\+Object\+::set\+Sprite\+Offset (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{vector3}{}\end{DoxyParamCaption})}
+
+
+
+Sets an offset to the sprite rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector3} & Offset as a vec3. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}\index{TexturedObject@{TexturedObject}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f} 
+void Textured\+Object\+::set\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Sets a static texture (non-\/animated). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the texture file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}\index{TexturedObject@{TexturedObject}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_textured_object_a35babc707cb8a0be94a96b4455b7f074} 
+void Textured\+Object\+::set\+Texture (\begin{DoxyParamCaption}\item[{string}]{path}{, }\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{int}]{start\+Frame}{}\end{DoxyParamCaption})}
+
+
+
+Sets up an animated texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to sprite sheet. \\
+\hline
+{\em row} & Number of rows in the sprite sheet. \\
+\hline
+{\em col} & Number of columns in the sprite sheet. \\
+\hline
+{\em start\+Frame} & Initial frame to start on. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_textured_object_a8d7ff4954af019c543791e639c406d3e}\index{TexturedObject@{TexturedObject}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!TexturedObject@{TexturedObject}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_textured_object_a8d7ff4954af019c543791e639c406d3e} 
+void Textured\+Object\+::set\+Texture (\begin{DoxyParamCaption}\item[{string}]{path}{, }\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{int}]{start\+Frame}{, }\item[{bool}]{loop}{}\end{DoxyParamCaption})}
+
+
+
+Sets up an animated texture with loop option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to sprite sheet. \\
+\hline
+{\em row} & Number of rows. \\
+\hline
+{\em col} & Number of columns. \\
+\hline
+{\em start\+Frame} & Starting frame. \\
+\hline
+{\em loop} & Whether the animation should loop. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Textured\+Object.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Textured\+Object.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\doxysection{Ziz\+Ult\+State Class Reference}
+\hypertarget{class_ziz_ult_state}{}\label{class_ziz_ult_state}\index{ZizUltState@{ZizUltState}}
+
+
+Inheritance diagram for Ziz\+Ult\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_ziz_ult_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Ult\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_ult_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_ult_state_a9b0fdd90b1e1b4c5eb3ed2c9f65c0963}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_ult_state_a96c87c34e59e07e5ff03730fe30a14b6}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_ult_state_a8bfd4fbfde4b8db490612426822839ad}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ult_state_a039f9e6c22f9103dc9d444fd7d5cd7b3}\label{class_ziz_ult_state_a039f9e6c22f9103dc9d444fd7d5cd7b3} 
+static \mbox{\hyperlink{class_ziz_ult_state}{Ziz\+Ult\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ult_state_a514bb66ea9026c6b865985efbe45c66c}\label{class_ziz_ult_state_a514bb66ea9026c6b865985efbe45c66c} 
+bool {\bfseries has\+Flew}
+\item 
+\Hypertarget{class_ziz_ult_state_a2039f06c7be1bf7cd1c2b3e5bf1e92c1}\label{class_ziz_ult_state_a2039f06c7be1bf7cd1c2b3e5bf1e92c1} 
+bool {\bfseries is\+Off\+Screen}
+\item 
+\Hypertarget{class_ziz_ult_state_ad94ac574736e852c2f0fa12b413d2ba9}\label{class_ziz_ult_state_ad94ac574736e852c2f0fa12b413d2ba9} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ult\+Ziz\+On\+BG}
+\item 
+\Hypertarget{class_ziz_ult_state_a0ba0239e50020f5158fe0fabfdf36be2}\label{class_ziz_ult_state_a0ba0239e50020f5158fe0fabfdf36be2} 
+float {\bfseries fly\+Up\+Timer}
+\item 
+\Hypertarget{class_ziz_ult_state_aa50d3bed167a99b77784065f9aa1f6e8}\label{class_ziz_ult_state_aa50d3bed167a99b77784065f9aa1f6e8} 
+float {\bfseries active\+Lightning}
+\item 
+\Hypertarget{class_ziz_ult_state_ac79bf4f84c36cf427b93ccaae07cc1e6}\label{class_ziz_ult_state_ac79bf4f84c36cf427b93ccaae07cc1e6} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_ult_state_a00c5bcb0b2a257145bee3d7a4aba7b67}\label{class_ziz_ult_state_a00c5bcb0b2a257145bee3d7a4aba7b67} 
+static \mbox{\hyperlink{class_ziz_ult_state}{Ziz\+Ult\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_ult_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_ult_state_a9b0fdd90b1e1b4c5eb3ed2c9f65c0963}\index{ZizUltState@{ZizUltState}!enter@{enter}}
+\index{enter@{enter}!ZizUltState@{ZizUltState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_ult_state_a9b0fdd90b1e1b4c5eb3ed2c9f65c0963} 
+void Ziz\+Ult\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_ult_state_a8bfd4fbfde4b8db490612426822839ad}\index{ZizUltState@{ZizUltState}!exit@{exit}}
+\index{exit@{exit}!ZizUltState@{ZizUltState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_ult_state_a8bfd4fbfde4b8db490612426822839ad} 
+void Ziz\+Ult\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_ult_state_a96c87c34e59e07e5ff03730fe30a14b6}\index{ZizUltState@{ZizUltState}!update@{update}}
+\index{update@{update}!ZizUltState@{ZizUltState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_ult_state_a96c87c34e59e07e5ff03730fe30a14b6} 
+void Ziz\+Ult\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Ult\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Ult\+State.\+cpp\end{DoxyCompactItemize}

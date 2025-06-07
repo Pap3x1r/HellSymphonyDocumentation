@@ -1,0 +1,316 @@
+\doxysection{Level\+Loader Class Reference}
+\hypertarget{class_level_loader}{}\label{class_level_loader}\index{LevelLoader@{LevelLoader}}
+
+
+Inheritance diagram for Level\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_level_loader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_loader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_loader_acf157b1e306f011791dd8c6ccf11921d}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a9d15cbfb61c9aa34c86d841d1fba2bf2}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a0e52523e28f8f072556495a2e74ad969}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a1a0f32304680e757c7d1d01cf1eb8746}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a245c8242a3083f25758b2cad20debe21}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a0cb0e4f4e0c7386f92f57aefe523baff}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a2e2a5723c030cb0ffb6565cee7fddbc1}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_ab8aa1e8144ebc87e38dfc8dfdfd03379}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a6fe5775087755f1457497cfb50c89271}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_ab29eb9a0a05b5a67f233a27b3da893ba}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_loader_a21c88d2582bafd4f3c3cb4c7891afae2}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_loader_a2d85010414120d453ef247ea13739db0}\label{class_level_loader_a2d85010414120d453ef247ea13739db0} 
+void {\bfseries reset\+Level} ()
+\item 
+\Hypertarget{class_level_loader_acb73ead64d7c9af9ecfa84a0a38b0158}\label{class_level_loader_acb73ead64d7c9af9ecfa84a0a38b0158} 
+void {\bfseries configure} (const std\+::vector$<$ std\+::string $>$ \&dirs, Game\+State next\+State\+\_\+)
+\item 
+\Hypertarget{class_level_loader_ac4021dc87e4c2f6e2bbbcf243087c967}\label{class_level_loader_ac4021dc87e4c2f6e2bbbcf243087c967} 
+void {\bfseries gather\+Textures\+From\+Dirs} (const std\+::vector$<$ std\+::string $>$ \&dirs)
+\item 
+\Hypertarget{class_level_loader_aaf9ae585720866044078d16419f8736b}\label{class_level_loader_aaf9ae585720866044078d16419f8736b} 
+void {\bfseries load\+One\+Texture\+Per\+Frame} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+virtual Menu\+State \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_loader_a8e7ea05169b9c2f90bb99f67b03e78b4}\label{class_level_loader_a8e7ea05169b9c2f90bb99f67b03e78b4} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_loader_a1041a0bfd110da8bf10c1092683857b8}\label{class_level_loader_a1041a0bfd110da8bf10c1092683857b8} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_loader_afe405dbbbcebac63049e87c36a977291}\label{class_level_loader_afe405dbbbcebac63049e87c36a977291} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_loader_a5d7eda877becfeb9fa52844878efef29}\label{class_level_loader_a5d7eda877becfeb9fa52844878efef29} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_loader_adc3b7d00981bfefce43b026ec3e1c96c}\label{class_level_loader_adc3b7d00981bfefce43b026ec3e1c96c} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Sprite\+Walking} = nullptr
+\item 
+\Hypertarget{class_level_loader_a206fe351c1387537b6217963bbc7b215}\label{class_level_loader_a206fe351c1387537b6217963bbc7b215} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_loader_a0e086e49a206a1713a2b0c851fa15a01}\label{class_level_loader_a0e086e49a206a1713a2b0c851fa15a01} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_loader_a02f4236b945fb604d04b4ae88e5404b8}\label{class_level_loader_a02f4236b945fb604d04b4ae88e5404b8} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_loader_ac452c2a57f6943d38593d3ac6f1b02ad}\label{class_level_loader_ac452c2a57f6943d38593d3ac6f1b02ad} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_loader_a0f0cc6d12b880ed3c77e00b2aee51826}\label{class_level_loader_a0f0cc6d12b880ed3c77e00b2aee51826} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_loader_a1b62f86127a3dc95afb83814b1a6324e}\label{class_level_loader_a1b62f86127a3dc95afb83814b1a6324e} 
+bool {\bfseries textures\+Loaded} = false
+\item 
+\Hypertarget{class_level_loader_a39b625c35463eb91275fc6b886c161cc}\label{class_level_loader_a39b625c35463eb91275fc6b886c161cc} 
+int {\bfseries current\+Texture\+Index} = 0
+\item 
+\Hypertarget{class_level_loader_ae04d4665e152262aa17341edc8df2fcc}\label{class_level_loader_ae04d4665e152262aa17341edc8df2fcc} 
+vector$<$ string $>$ {\bfseries texture\+Dirs\+To\+Load}
+\item 
+\Hypertarget{class_level_loader_a2cd5f871c6e768563511316fc41ce91f}\label{class_level_loader_a2cd5f871c6e768563511316fc41ce91f} 
+vector$<$ string $>$ {\bfseries texture\+Paths\+To\+Load}
+\item 
+\Hypertarget{class_level_loader_ab1efeecf809775a248a371f17a01332e}\label{class_level_loader_ab1efeecf809775a248a371f17a01332e} 
+Game\+State {\bfseries next\+State} = Game\+State\+::\+GS\+\_\+\+MAINMENU
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_loader_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_loader_a21c88d2582bafd4f3c3cb4c7891afae2}\index{LevelLoader@{LevelLoader}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_loader_a21c88d2582bafd4f3c3cb4c7891afae2} 
+void Level\+Loader\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_loader_ab29eb9a0a05b5a67f233a27b3da893ba}\index{LevelLoader@{LevelLoader}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_loader_ab29eb9a0a05b5a67f233a27b3da893ba} 
+void Level\+Loader\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_loader_ab8aa1e8144ebc87e38dfc8dfdfd03379}\index{LevelLoader@{LevelLoader}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_loader_ab8aa1e8144ebc87e38dfc8dfdfd03379} 
+void Level\+Loader\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_loader_a2e2a5723c030cb0ffb6565cee7fddbc1}\index{LevelLoader@{LevelLoader}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_loader_a2e2a5723c030cb0ffb6565cee7fddbc1} 
+void Level\+Loader\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_loader_a6fe5775087755f1457497cfb50c89271}\index{LevelLoader@{LevelLoader}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_loader_a6fe5775087755f1457497cfb50c89271} 
+void Level\+Loader\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_loader_a1a0f32304680e757c7d1d01cf1eb8746}\index{LevelLoader@{LevelLoader}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_loader_a1a0f32304680e757c7d1d01cf1eb8746} 
+void Level\+Loader\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_loader_a245c8242a3083f25758b2cad20debe21}\index{LevelLoader@{LevelLoader}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_loader_a245c8242a3083f25758b2cad20debe21} 
+void Level\+Loader\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_loader_a9d15cbfb61c9aa34c86d841d1fba2bf2}\index{LevelLoader@{LevelLoader}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_loader_a9d15cbfb61c9aa34c86d841d1fba2bf2} 
+void Level\+Loader\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_loader_acf157b1e306f011791dd8c6ccf11921d}\index{LevelLoader@{LevelLoader}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_loader_acf157b1e306f011791dd8c6ccf11921d} 
+void Level\+Loader\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_loader_a0cb0e4f4e0c7386f92f57aefe523baff}\index{LevelLoader@{LevelLoader}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_loader_a0cb0e4f4e0c7386f92f57aefe523baff} 
+void Level\+Loader\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_loader_a0e52523e28f8f072556495a2e74ad969}\index{LevelLoader@{LevelLoader}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelLoader@{LevelLoader}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_loader_a0e52523e28f8f072556495a2e74ad969} 
+void Level\+Loader\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Loader.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Loader.\+cpp\end{DoxyCompactItemize}

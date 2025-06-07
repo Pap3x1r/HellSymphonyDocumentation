@@ -1,0 +1,34 @@
+\doxysection{Ziz\+Gust\+State.\+h}
+\hypertarget{_ziz_gust_state_8h_source}{}\label{_ziz_gust_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizGustState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizGustState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Gust.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_gust_state}{ZizGustState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_gust_state}{ZizGustState}}*\ instance;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ timer;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ startupTimer;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ recoveryTimer;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ currentState;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_gust_state}{ZizGustState}}*\ getInstance();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

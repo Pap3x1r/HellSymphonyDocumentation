@@ -1,0 +1,101 @@
+\doxysection{Player\+Movement\+State.\+h}
+\hypertarget{_player_movement_state_8h_source}{}\label{_player_movement_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/PlayerMovementState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/PlayerMovementState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}StateM.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//Idle}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_idle_state}{PlayerIdleState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_m}{StateM}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ time;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_idle_state}{PlayerIdleState}}*\ instance;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_idle_state}{PlayerIdleState}}*\ getInstance()\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_player_idle_state}{PlayerIdleState}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//Walk}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_walk_state}{PlayerWalkState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_m}{StateM}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ time;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_walk_state}{PlayerWalkState}}*\ instance;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_walk_state}{PlayerWalkState}}*\ getInstance()\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_player_walk_state}{PlayerWalkState}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//JumpUp}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_jump_up_state}{PlayerJumpUpState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_m}{StateM}}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ time;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_jump_up_state}{PlayerJumpUpState}}*\ instance;}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_jump_up_state}{PlayerJumpUpState}}*\ getInstance()\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_player_jump_up_state}{PlayerJumpUpState}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//FallDown}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_fall_down_state}{PlayerFallDownState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_m}{StateM}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ time;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_fall_down_state}{PlayerFallDownState}}*\ instance;}
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_fall_down_state}{PlayerFallDownState}}*\ getInstance()\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_player_fall_down_state}{PlayerFallDownState}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{//FallDown}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_dash_state}{PlayerDashState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_state_m}{StateM}}\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ time;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_dash_state}{PlayerDashState}}*\ instance;}
+\DoxyCodeLine{00083\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_dash_state}{PlayerDashState}}*\ getInstance()\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_player_dash_state}{PlayerDashState}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ \};}
+
+\end{DoxyCode}

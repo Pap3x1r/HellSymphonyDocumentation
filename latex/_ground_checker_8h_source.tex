@@ -1,0 +1,26 @@
+\doxysection{Ground\+Checker.\+h}
+\hypertarget{_ground_checker_8h_source}{}\label{_ground_checker_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/GroundChecker.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/GroundChecker.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SimpleObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }GroundChecker\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_simple_object_ac896d1529367b4a17367018a172b5867}{SimpleObject}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ GroundChecker();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayer(\mbox{\hyperlink{class_player}{Player}}*\ player\_);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ground_checker_abb9ad7e8478a499c7b709a9480e60689}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{/*void\ onTriggerEnter(Collider*\ collider)\ override;}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ void\ onTriggerStay(Collider*\ collider)\ override;*/}}
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}

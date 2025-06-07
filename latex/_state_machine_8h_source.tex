@@ -1,0 +1,22 @@
+\doxysection{State\+Machine.\+h}
+\hypertarget{_state_machine_8h_source}{}\label{_state_machine_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/StateMachine.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/StateMachine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_state_m}{StateM}};}
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_state_machine_a2fb07002510ea9141019559750acfab8}{StateMachine}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_state_m}{StateM}}*\ \mbox{\hyperlink{class_state_machine_aa4b52c764252812e1197715e33686d9a}{currentState}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_state_machine_a2fb07002510ea9141019559750acfab8}{StateMachine}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_state_machine_a93d66cb2a89b186789d655a08b02674e}{\string~StateMachine}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_machine_a78f67e03a7de8ff77b80f099a5731d31}{changeState}}(\mbox{\hyperlink{class_state_m}{StateM}}*\ newState,\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{override}\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_state_machine_a70b1fda53e76055297cc915f759eb20e}{update}}(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_state_m}{StateM}}*\ \mbox{\hyperlink{class_state_machine_a9cfdf365d1f7beb0268135bca9eae7dc}{getCurrentState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

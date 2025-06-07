@@ -1,0 +1,465 @@
+\doxysection{Level\+Main\+Menu Class Reference}
+\hypertarget{class_level_main_menu}{}\label{class_level_main_menu}\index{LevelMainMenu@{LevelMainMenu}}
+
+
+Inheritance diagram for Level\+Main\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_level_main_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Main\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_main_menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a0bbfc9f2cbb53c063731b751088eff82}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a3f5c06262c9bda20ca906f97eaba3fcb}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a48000719870662dc0c2921ffc87624d5}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a949dd3f5527e0c247704b347b53dfd27}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_af111d7c9e10b20226291db8b35a38d54}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_aac75ff8022b70cafd07c047c7ef93e0a}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_aa4b3b780eac4dfcc0e42132c65be4ad6}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a6f65d42aa8aa7eba0da65221774151a4}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a622c091959ea1f4cbb3072a299cb3513}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a3daf9baea05307a6ee9f44dcb632a294}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a31e84b3e073d161c735b88fd6220f144}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_main_menu_a546442652e578c12ba716e0784365025}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_main_menu_af3747232b9d3bc99e8011aad19c8be6b}\label{class_level_main_menu_af3747232b9d3bc99e8011aad19c8be6b} 
+void {\bfseries reset\+Level} ()
+\item 
+void \mbox{\hyperlink{class_level_main_menu_a659a48d68c920b9ded4e36dc427bbb66}{change\+Menu\+State}} (Menu\+State target\+State) override
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+Menu\+State \mbox{\hyperlink{class_level_main_menu_a3dcca482d499cf148e368046f9a318f1}{get\+Menu\+State}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_main_menu_adcde169787878f5dfe085cdeb6b93d22}\label{class_level_main_menu_adcde169787878f5dfe085cdeb6b93d22} 
+void {\bfseries change\+Selection} (int direction)
+\item 
+\Hypertarget{class_level_main_menu_a9efde98f0c479ad40bfb766fa918a979}\label{class_level_main_menu_a9efde98f0c479ad40bfb766fa918a979} 
+void {\bfseries start\+New\+Game\+Transition} ()
+\item 
+\Hypertarget{class_level_main_menu_a924b10db68a4ba5561f0552b4e2e9b70}\label{class_level_main_menu_a924b10db68a4ba5561f0552b4e2e9b70} 
+void {\bfseries new\+Game} ()
+\item 
+\Hypertarget{class_level_main_menu_a5791b8717f4eb9476e59b0b260ab2966}\label{class_level_main_menu_a5791b8717f4eb9476e59b0b260ab2966} 
+void {\bfseries load\+Game} ()
+\item 
+\Hypertarget{class_level_main_menu_a3286fb423200b4028b277bff7d04fde8}\label{class_level_main_menu_a3286fb423200b4028b277bff7d04fde8} 
+void {\bfseries quit\+Game} ()
+\item 
+\Hypertarget{class_level_main_menu_a010997d9fe804038df9f4e87879626a1}\label{class_level_main_menu_a010997d9fe804038df9f4e87879626a1} 
+glm\+::vec2 {\bfseries convert\+Mouse\+To\+Game\+Space} (int mouseX, int mouseY)
+\item 
+\Hypertarget{class_level_main_menu_afb1fcaf644edcfa4f51882f757dbb92d}\label{class_level_main_menu_afb1fcaf644edcfa4f51882f757dbb92d} 
+bool {\bfseries file\+Exists} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_main_menu_ab3227d710fcd43c5431a67f9355ef599}\label{class_level_main_menu_ab3227d710fcd43c5431a67f9355ef599} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Button} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_afde7d5d1a898b5b1c418b9b96fe1b952}\label{class_level_main_menu_afde7d5d1a898b5b1c418b9b96fe1b952} 
+int {\bfseries selected\+Index} = -\/1
+\item 
+\Hypertarget{class_level_main_menu_a7aa47257790f16859a45ece6946efc26}\label{class_level_main_menu_a7aa47257790f16859a45ece6946efc26} 
+int {\bfseries hovered\+Index} = -\/1
+\item 
+\Hypertarget{class_level_main_menu_a3b17a7674bddeac93548e956389efa14}\label{class_level_main_menu_a3b17a7674bddeac93548e956389efa14} 
+bool {\bfseries control\+By\+Mouse} = false
+\item 
+\Hypertarget{class_level_main_menu_a49038316fb5315711a09abec12205d1b}\label{class_level_main_menu_a49038316fb5315711a09abec12205d1b} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_main_menu_a29cff1098320b27fe8dd763ffaf8dcf9}\label{class_level_main_menu_a29cff1098320b27fe8dd763ffaf8dcf9} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_main_menu_a7f6d6367aad7ed60cbae515a6206336f}\label{class_level_main_menu_a7f6d6367aad7ed60cbae515a6206336f} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries main\+Buttons}
+\item 
+\Hypertarget{class_level_main_menu_a4de048c6af9063c9c213baf84275f5d0}\label{class_level_main_menu_a4de048c6af9063c9c213baf84275f5d0} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries options\+Buttons}
+\item 
+\Hypertarget{class_level_main_menu_afaf74391be1ff33c243e39cfe47d15c6}\label{class_level_main_menu_afaf74391be1ff33c243e39cfe47d15c6} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries audio\+Buttons}
+\item 
+\Hypertarget{class_level_main_menu_a13dae8ab8a395d96957f9e9d33846083}\label{class_level_main_menu_a13dae8ab8a395d96957f9e9d33846083} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries controller\+Buttons}
+\item 
+\Hypertarget{class_level_main_menu_a2ffbb6eb4457f36524c0d75173fe9ddf}\label{class_level_main_menu_a2ffbb6eb4457f36524c0d75173fe9ddf} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries keyboard\+Buttons}
+\item 
+\Hypertarget{class_level_main_menu_ac91e581de6906ad243e3fb59117500c3}\label{class_level_main_menu_ac91e581de6906ad243e3fb59117500c3} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries credits\+Button}
+\item 
+\Hypertarget{class_level_main_menu_a6577d3b56c9e387767c5dc6fbd920c98}\label{class_level_main_menu_a6577d3b56c9e387767c5dc6fbd920c98} 
+list$<$ \mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries sliders\+List}
+\item 
+\Hypertarget{class_level_main_menu_abefdeac9f9be12517b31bfaaf57aeda8}\label{class_level_main_menu_abefdeac9f9be12517b31bfaaf57aeda8} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries master\+Slider}
+\item 
+\Hypertarget{class_level_main_menu_a6d38ef80cb48315961006bcbf022a198}\label{class_level_main_menu_a6d38ef80cb48315961006bcbf022a198} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
+\item 
+\Hypertarget{class_level_main_menu_a8560c580fd73816363c8384ccc44318f}\label{class_level_main_menu_a8560c580fd73816363c8384ccc44318f} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sfx\+Slider}
+\item 
+\Hypertarget{class_level_main_menu_acccff3a3941cd7b53c5df17cb1ef9b34}\label{class_level_main_menu_acccff3a3941cd7b53c5df17cb1ef9b34} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ambient\+Slider}
+\item 
+\Hypertarget{class_level_main_menu_afa3da4086f61a44427b2e387de0d01a9}\label{class_level_main_menu_afa3da4086f61a44427b2e387de0d01a9} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Handle} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_a667cbff711c36a4a4cce4b8f4e47a954}\label{class_level_main_menu_a667cbff711c36a4a4cce4b8f4e47a954} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries controller\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_acbf479760f469ab5edb12fd5edfa2017}\label{class_level_main_menu_acbf479760f469ab5edb12fd5edfa2017} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries kb\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_a4d0f7794f22cea4c2c721ea1cbaf410a}\label{class_level_main_menu_a4d0f7794f22cea4c2c721ea1cbaf410a} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_main_menu_a70ff1425318cecc33dd8d3838d8c24c5}\label{class_level_main_menu_a70ff1425318cecc33dd8d3838d8c24c5} 
+float {\bfseries transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_main_menu_a0fb5c7e5f911f35fcd428d2422f72274}\label{class_level_main_menu_a0fb5c7e5f911f35fcd428d2422f72274} 
+float {\bfseries transition\+Duration} = 0.\+5f
+\item 
+\Hypertarget{class_level_main_menu_a1a7a4ff4c2c42fdb43ec6485a6e8f8c3}\label{class_level_main_menu_a1a7a4ff4c2c42fdb43ec6485a6e8f8c3} 
+bool {\bfseries transitioning} = false
+\item 
+\Hypertarget{class_level_main_menu_a229decc6e36f93176d277627463d56b3}\label{class_level_main_menu_a229decc6e36f93176d277627463d56b3} 
+float {\bfseries hold\+Button\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_level_main_menu_ad901adcbb743cc5c7980745992e2bd0f}\label{class_level_main_menu_ad901adcbb743cc5c7980745992e2bd0f} 
+float {\bfseries hold\+Button\+Threshold} = 0.\+5f
+\item 
+\Hypertarget{class_level_main_menu_a09bd42a03fdaae5e3bc4be56fb316946}\label{class_level_main_menu_a09bd42a03fdaae5e3bc4be56fb316946} 
+float {\bfseries new\+Game\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_main_menu_a3e65f35a42f3f8b693bd07e2b7559c4e}\label{class_level_main_menu_a3e65f35a42f3f8b693bd07e2b7559c4e} 
+float {\bfseries new\+Game\+Transition\+Duration\+First} = 2.\+0f
+\item 
+\Hypertarget{class_level_main_menu_a35b872a1b4f1891ee478e0ad00c0bc0b}\label{class_level_main_menu_a35b872a1b4f1891ee478e0ad00c0bc0b} 
+float {\bfseries new\+Game\+Transition\+Duration\+Second} = 7.\+5f
+\item 
+\Hypertarget{class_level_main_menu_a7829c6e779f1f31b50ba7fd2dfac52a9}\label{class_level_main_menu_a7829c6e779f1f31b50ba7fd2dfac52a9} 
+bool {\bfseries new\+Game\+Transitioning} = false
+\item 
+\Hypertarget{class_level_main_menu_a07cf27b1a0b1cf83a1f73f070f887dd6}\label{class_level_main_menu_a07cf27b1a0b1cf83a1f73f070f887dd6} 
+bool {\bfseries new\+Game\+Transitioning\+Complete} = false
+\item 
+\Hypertarget{class_level_main_menu_aa03a94d5f88d34c87f5dda4dcab56320}\label{class_level_main_menu_aa03a94d5f88d34c87f5dda4dcab56320} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries Text\+Message} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_a49d42f306f438d53d9ce565e6eec85f4}\label{class_level_main_menu_a49d42f306f438d53d9ce565e6eec85f4} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_main_menu_ac063bb034e1e43afb848fcdc075a1436}\label{class_level_main_menu_ac063bb034e1e43afb848fcdc075a1436} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_main_menu_af9ee42a5749eb5df1f4b09ac01ff6ccf}\label{class_level_main_menu_af9ee42a5749eb5df1f4b09ac01ff6ccf} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_main_menu_a8b54e4b4682ef16ef09f6052eb6d304a}\label{class_level_main_menu_a8b54e4b4682ef16ef09f6052eb6d304a} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_a0d9fd9dafdb43440c0f98739aa9e2855}\label{class_level_main_menu_a0d9fd9dafdb43440c0f98739aa9e2855} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries continue\+Button} = nullptr
+\item 
+\Hypertarget{class_level_main_menu_a1411e1c9cee87c11556ada4e5b441fe2}\label{class_level_main_menu_a1411e1c9cee87c11556ada4e5b441fe2} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_main_menu_afeabdcb761e964580f55d5425412ed11}\label{class_level_main_menu_afeabdcb761e964580f55d5425412ed11} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_main_menu_ac3fcacd3f33093ad61bca7978b19be37}\label{class_level_main_menu_ac3fcacd3f33093ad61bca7978b19be37} 
+bool {\bfseries is\+Holding}
+\item 
+\Hypertarget{class_level_main_menu_aa4a7f213d8a5e36a966e8d250544ab12}\label{class_level_main_menu_aa4a7f213d8a5e36a966e8d250544ab12} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_main_menu_a435c82687cbd839ee13596601967dc7d}\label{class_level_main_menu_a435c82687cbd839ee13596601967dc7d} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_main_menu_adf47ef245075be2eb885f6321f524539}\label{class_level_main_menu_adf47ef245075be2eb885f6321f524539} 
+int {\bfseries tempx}
+\item 
+\Hypertarget{class_level_main_menu_af42ccc2db6a924f63136d325cc3a8e15}\label{class_level_main_menu_af42ccc2db6a924f63136d325cc3a8e15} 
+int {\bfseries tempx2}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_main_menu_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_main_menu_a546442652e578c12ba716e0784365025}\index{LevelMainMenu@{LevelMainMenu}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a546442652e578c12ba716e0784365025} 
+void Level\+Main\+Menu\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_main_menu_a659a48d68c920b9ded4e36dc427bbb66}\index{LevelMainMenu@{LevelMainMenu}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a659a48d68c920b9ded4e36dc427bbb66} 
+void Level\+Main\+Menu\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{Level}}.
+
+\Hypertarget{class_level_main_menu_a3dcca482d499cf148e368046f9a318f1}\index{LevelMainMenu@{LevelMainMenu}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a3dcca482d499cf148e368046f9a318f1} 
+Menu\+State Level\+Main\+Menu\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{Level}}.
+
+\Hypertarget{class_level_main_menu_a3daf9baea05307a6ee9f44dcb632a294}\index{LevelMainMenu@{LevelMainMenu}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a3daf9baea05307a6ee9f44dcb632a294} 
+void Level\+Main\+Menu\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_main_menu_a6f65d42aa8aa7eba0da65221774151a4}\index{LevelMainMenu@{LevelMainMenu}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a6f65d42aa8aa7eba0da65221774151a4} 
+void Level\+Main\+Menu\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_main_menu_aa4b3b780eac4dfcc0e42132c65be4ad6}\index{LevelMainMenu@{LevelMainMenu}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_aa4b3b780eac4dfcc0e42132c65be4ad6} 
+void Level\+Main\+Menu\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_main_menu_a622c091959ea1f4cbb3072a299cb3513}\index{LevelMainMenu@{LevelMainMenu}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a622c091959ea1f4cbb3072a299cb3513} 
+void Level\+Main\+Menu\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_main_menu_a31e84b3e073d161c735b88fd6220f144}\index{LevelMainMenu@{LevelMainMenu}!isReceivingNoInputs@{isReceivingNoInputs}}
+\index{isReceivingNoInputs@{isReceivingNoInputs}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{isReceivingNoInputs()}{isReceivingNoInputs()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a31e84b3e073d161c735b88fd6220f144} 
+void Level\+Main\+Menu\+::is\+Receiving\+No\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when no input is currently being received. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{Level}}.
+
+\Hypertarget{class_level_main_menu_a949dd3f5527e0c247704b347b53dfd27}\index{LevelMainMenu@{LevelMainMenu}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a949dd3f5527e0c247704b347b53dfd27} 
+void Level\+Main\+Menu\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_main_menu_af111d7c9e10b20226291db8b35a38d54}\index{LevelMainMenu@{LevelMainMenu}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_af111d7c9e10b20226291db8b35a38d54} 
+void Level\+Main\+Menu\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_main_menu_a3f5c06262c9bda20ca906f97eaba3fcb}\index{LevelMainMenu@{LevelMainMenu}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a3f5c06262c9bda20ca906f97eaba3fcb} 
+void Level\+Main\+Menu\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_main_menu_a0bbfc9f2cbb53c063731b751088eff82}\index{LevelMainMenu@{LevelMainMenu}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a0bbfc9f2cbb53c063731b751088eff82} 
+void Level\+Main\+Menu\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_main_menu_aac75ff8022b70cafd07c047c7ef93e0a}\index{LevelMainMenu@{LevelMainMenu}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_aac75ff8022b70cafd07c047c7ef93e0a} 
+void Level\+Main\+Menu\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_main_menu_a48000719870662dc0c2921ffc87624d5}\index{LevelMainMenu@{LevelMainMenu}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelMainMenu@{LevelMainMenu}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_main_menu_a48000719870662dc0c2921ffc87624d5} 
+void Level\+Main\+Menu\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Main\+Menu.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Main\+Menu.\+cpp\end{DoxyCompactItemize}

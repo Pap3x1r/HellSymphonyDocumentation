@@ -1,0 +1,207 @@
+\doxysection{Health.\+h}
+\hypertarget{_health_8h_source}{}\label{_health_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Health.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Health.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameEngine.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_health_aa5c65edb5d6115709d9ff899117f63ba}{Health}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}}\ =\ 100.0f;\ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a99a31a2d90b5a11fd391822cde14e248}{witherRecoverRate}};\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a69ee167b56c243d18b625e28d50669fa}{witherDecreasePercent}}\ =\ 0.0f;\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_health_ae16f316d666da592233e9f20f3c5dd25}{destroyOnDead}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_health_aa5c65edb5d6115709d9ff899117f63ba}{Health}}(\textcolor{keywordtype}{float}\ health,\ \textcolor{keywordtype}{float}\ wither,\ \textcolor{keywordtype}{float}\ maxHealth\_)}
+\DoxyCodeLine{00023\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}}\ =\ maxHealth\_;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}}\ =\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ health;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ wither;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_health_ab559b6c5228dec698c973e3ee03b2fdd}{Health}}(\textcolor{keywordtype}{float}\ health,\ \textcolor{keywordtype}{float}\ wither)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}}\ =\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ health;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ wither;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_health_a26d3f40321e474cfa03b3eb53112d469}{Health}}(\textcolor{keywordtype}{float}\ health)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}}\ =\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ health;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_a77101343908172726817e9160c9877bf}{healthUpdate}}()}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ recovering\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}}\ =\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ -\/\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ 0)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ recovering\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ <\ 0)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})\ \textcolor{comment}{//Adjust\ wither\ health\ if\ currentHealth\ exceeds\ max}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}}\ -\/\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recovering)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ -\/=\ \mbox{\hyperlink{class_health_a99a31a2d90b5a11fd391822cde14e248}{witherRecoverRate}}\ *\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a276e16e0d15d9d6ba85b1c79eaf79f02}{getTime}}()-\/>\mbox{\hyperlink{class_time_a405c7642c4ba0ee719a8d0491099102a}{getDeltaTime}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ <=\ 0)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ recovering\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ac02da65737fa96f02b291082daca08f6}{checkHP}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_ac02da65737fa96f02b291082daca08f6}{checkHP}}()}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}}\ <=\ 0)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ae16f316d666da592233e9f20f3c5dd25}{destroyOnDead}})}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Destroy\ object}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_aef1caa06509b36e8d859391c2db1e575}{setHP}}(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ value;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_a4825901d16cb4b2a8f74f4c8252276d3}{setWitherHP}}(\textcolor{keywordtype}{float}\ value)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ value;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_a2c27f43e5e1c7ff02026991018a653a9}{takeDamage}}(\textcolor{keywordtype}{float}\ amount)}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ decreaseAmount\ =\ amount\ *\ (\mbox{\hyperlink{class_health_a69ee167b56c243d18b625e28d50669fa}{witherDecreasePercent}}\ /\ 100.0f);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (decreaseAmount\ >\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}})\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0;\ \ \textcolor{comment}{//\ Prevent\ negative\ wither\ health}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ -\/=\ decreaseAmount;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ -\/=\ amount;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ <\ 0)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ 0;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prevent\ total\ health\ (current\ +\ wither)\ exceeds\ maxHealth}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}}\ -\/\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_aaff5ea10f9bf746f5c39f23bcb1e29cf}{takeDamage}}(\textcolor{keywordtype}{float}\ amount,\ \textcolor{keywordtype}{float}\ witherPercent)}
+\DoxyCodeLine{00147\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ decreaseAmount\ =\ amount\ *\ (\mbox{\hyperlink{class_health_a69ee167b56c243d18b625e28d50669fa}{witherDecreasePercent}}\ /\ 100.0f);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (decreaseAmount\ >\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}})\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0;\ \ \textcolor{comment}{//\ Prevent\ negative\ wither\ health}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ -\/=\ decreaseAmount;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convert\ part\ of\ damage\ into\ wither\ health}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ witherGain\ =\ amount\ *\ (witherPercent\ /\ 100.0f);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ +=\ witherGain;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Take\ full\ damage\ to\ real\ health}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ -\/=\ amount;}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prevent\ negative\ health}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ <\ 0)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ 0;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}}\ -\/\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_a5ec7861b530e84310f0f033589dfc9e6}{heal}}(\textcolor{keywordtype}{float}\ amount)}
+\DoxyCodeLine{00180\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +\ amount\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +=\ amount;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ 0)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >=\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}})}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0.0f;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ -\/=\ amount;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_health_a704b0e101c27469d86406cd0e1f4d185}{healWither}}(\textcolor{keywordtype}{float}\ amount)}
+\DoxyCodeLine{00208\ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ >\ 0)}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ drained\ =\ 0.0f;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ >\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}})}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drained\ =\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}};}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ =\ 0.0f;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ drained\ =\ amount;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}}\ -\/=\ amount;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +\ drained\ >\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}})}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ =\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}};}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}}\ +=\ drained;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a8174b7c41f4f46c604207c8feeca08c5}{getRealHP}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_health_aba7083c5cc3d7e2a06403606b8423ff9}{realHealth}};\ \}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_ad9fef2444a48903f52dd970c988641b5}{getCurrentHP}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};\ \}}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_health_a5a2798a18962efe24375944923805af9}{getCurrentHPAddress}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{class_health_a1ec88e75ca54f907f553b80eef2976a3}{currentHealth}};\ \}}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_a1faa06b2fb41c69b91e3e85e2047b172}{getMaxHP}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_health_a4572b68ddda670028184010d150b326b}{maxHealth}};\ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_health_ab3a1044fc4fc233abcc104910c793d29}{getWitherHP}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_health_ad1a03c97f650907bfb16f6541a23c137}{witherHealth}};\ \}}
+\DoxyCodeLine{00245\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="PlayerLightBowAttack" name="PlayerLightBowAttack">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,156,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="172,87,182,95,174,102,157,104,156,99,172,97,177,95,170,92"/>
+<area shape="rect" id="Node000002" href="$class_state_m.html" title=" " alt="" coords="49,5,112,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,47,83,81,78,81,78,47"/>
+</map>

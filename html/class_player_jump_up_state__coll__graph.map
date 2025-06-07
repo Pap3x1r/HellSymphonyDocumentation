@@ -1,0 +1,6 @@
+<map id="PlayerJumpUpState" name="PlayerJumpUpState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,144,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="160,87,170,95,162,102,144,104,144,99,160,97,165,95,158,92"/>
+<area shape="rect" id="Node000002" href="$class_state_m.html" title=" " alt="" coords="43,5,106,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,47,77,81,72,81,72,47"/>
+</map>

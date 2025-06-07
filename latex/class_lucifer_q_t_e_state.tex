@@ -1,0 +1,142 @@
+\doxysection{Lucifer\+QTEState Class Reference}
+\hypertarget{class_lucifer_q_t_e_state}{}\label{class_lucifer_q_t_e_state}\index{LuciferQTEState@{LuciferQTEState}}
+
+
+Inheritance diagram for Lucifer\+QTEState\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_lucifer_q_t_e_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lucifer\+QTEState\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lucifer_q_t_e_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lucifer_q_t_e_state_ae275a5ceec5262f41a020b33e1f1b6c6}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_lucifer_q_t_e_state_a6f3a2225921c86d2362328bcde28abf1}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_lucifer_q_t_e_state_a736da6e42fe284d1e17bc1b9af5b1717}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a6541d37d2a6fbea2f158fe4d71629ecf}\label{class_lucifer_q_t_e_state_a6541d37d2a6fbea2f158fe4d71629ecf} 
+void {\bfseries random\+QTETarget} ()
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_ac3ee83aff4863366d9c0e3abb8ae936c}\label{class_lucifer_q_t_e_state_ac3ee83aff4863366d9c0e3abb8ae936c} 
+void {\bfseries random\+QTESequence} ()
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a0306cce0c0754ada3a958ee0f22d5340}\label{class_lucifer_q_t_e_state_a0306cce0c0754ada3a958ee0f22d5340} 
+void {\bfseries start\+QTE} (int target)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_ae5ca2a911f25a4d7dd29a6e77f9ed399}\label{class_lucifer_q_t_e_state_ae5ca2a911f25a4d7dd29a6e77f9ed399} 
+static \mbox{\hyperlink{class_lucifer_q_t_e_state}{Lucifer\+QTEState}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a0f33bcab3b7cb7d6ec74b43bab70c646}\label{class_lucifer_q_t_e_state_a0f33bcab3b7cb7d6ec74b43bab70c646} 
+\mbox{\hyperlink{class_lucifer}{Lucifer}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_aa4f35c100073ca4efef84a39c273647a}\label{class_lucifer_q_t_e_state_aa4f35c100073ca4efef84a39c273647a} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_aaf47670047f1f9dd7ca4ab3e853368d0}\label{class_lucifer_q_t_e_state_aaf47670047f1f9dd7ca4ab3e853368d0} 
+float {\bfseries buffer\+Timer\+Failure}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a912ea5ac0c52c56ad231eb676fd72f6f}\label{class_lucifer_q_t_e_state_a912ea5ac0c52c56ad231eb676fd72f6f} 
+float {\bfseries buffer\+Timer\+Success}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a9909bba5aff9e1ae36b78806e30dcda3}\label{class_lucifer_q_t_e_state_a9909bba5aff9e1ae36b78806e30dcda3} 
+float {\bfseries timer}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a73b3671a91c94ec3d84715a5cc4f06da}\label{class_lucifer_q_t_e_state_a73b3671a91c94ec3d84715a5cc4f06da} 
+float {\bfseries timer1}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a11b68fd472e5b6cfab04f6af36f99046}\label{class_lucifer_q_t_e_state_a11b68fd472e5b6cfab04f6af36f99046} 
+float {\bfseries timer2}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_af59958bc419488fad47da2a3ef5eb8af}\label{class_lucifer_q_t_e_state_af59958bc419488fad47da2a3ef5eb8af} 
+float {\bfseries timer3}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_af71179c822525e1456c7b403b806a1bc}\label{class_lucifer_q_t_e_state_af71179c822525e1456c7b403b806a1bc} 
+bool {\bfseries failed\+Any}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a4168af5f693eff13eac8b7df18c4f34d}\label{class_lucifer_q_t_e_state_a4168af5f693eff13eac8b7df18c4f34d} 
+int {\bfseries current\+Seq}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a9fd9f2176f74774bfd221e2497582b9f}\label{class_lucifer_q_t_e_state_a9fd9f2176f74774bfd221e2497582b9f} 
+int {\bfseries QTETarget}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a329ebbbbae3086cda7895dad771d288e}\label{class_lucifer_q_t_e_state_a329ebbbbae3086cda7895dad771d288e} 
+int {\bfseries QTETarget1}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_aa4b91b6abd6ef8de8663d2822dd456d9}\label{class_lucifer_q_t_e_state_aa4b91b6abd6ef8de8663d2822dd456d9} 
+int {\bfseries QTETarget2}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a5e96035282e1a4ea299ec78755527ebe}\label{class_lucifer_q_t_e_state_a5e96035282e1a4ea299ec78755527ebe} 
+int {\bfseries QTETarget3}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_a0aaee0730b90681956e51c34bb59a363}\label{class_lucifer_q_t_e_state_a0aaee0730b90681956e51c34bb59a363} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qte\+Button\+UI}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_aec56eb4245365731ceeb8a71a6499e3e}\label{class_lucifer_q_t_e_state_aec56eb4245365731ceeb8a71a6499e3e} 
+float {\bfseries wait\+Spear}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_q_t_e_state_aea7e8fa4431fdc7a4ddf437892fd3ba4}\label{class_lucifer_q_t_e_state_aea7e8fa4431fdc7a4ddf437892fd3ba4} 
+static \mbox{\hyperlink{class_lucifer_q_t_e_state}{Lucifer\+QTEState}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_lucifer_q_t_e_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lucifer_q_t_e_state_ae275a5ceec5262f41a020b33e1f1b6c6}\index{LuciferQTEState@{LuciferQTEState}!enter@{enter}}
+\index{enter@{enter}!LuciferQTEState@{LuciferQTEState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_lucifer_q_t_e_state_ae275a5ceec5262f41a020b33e1f1b6c6} 
+void Lucifer\+QTEState\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_q_t_e_state_a736da6e42fe284d1e17bc1b9af5b1717}\index{LuciferQTEState@{LuciferQTEState}!exit@{exit}}
+\index{exit@{exit}!LuciferQTEState@{LuciferQTEState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_lucifer_q_t_e_state_a736da6e42fe284d1e17bc1b9af5b1717} 
+void Lucifer\+QTEState\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_q_t_e_state_a6f3a2225921c86d2362328bcde28abf1}\index{LuciferQTEState@{LuciferQTEState}!update@{update}}
+\index{update@{update}!LuciferQTEState@{LuciferQTEState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_lucifer_q_t_e_state_a6f3a2225921c86d2362328bcde28abf1} 
+void Lucifer\+QTEState\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+QTEState.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+QTEState.\+cpp\end{DoxyCompactItemize}

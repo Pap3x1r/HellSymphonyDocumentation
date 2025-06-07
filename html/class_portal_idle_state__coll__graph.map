@@ -1,0 +1,6 @@
+<map id="PortalIdleState" name="PortalIdleState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,113,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="130,87,139,95,131,102,113,104,113,99,129,97,134,95,127,92"/>
+<area shape="rect" id="Node000002" href="$class_interact_state_m.html" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,47,62,81,56,81,56,47"/>
+</map>

@@ -1,0 +1,35 @@
+\doxysection{Level\+Collision\+Test.\+h}
+\hypertarget{_level_collision_test_8h_source}{}\label{_level_collision_test_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelCollisionTest.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelCollisionTest.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MapLoader.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_collision_test}{LevelCollisionTest}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ player;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ ground;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ background;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_map_loader}{MapLoader}}\ mapLoader;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a250dfe4bab37df4629bf7b6cdec94b8b}{levelLoad}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a2d5dcada5ca04801e503df4b2970e589}{levelInit}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_aa70b3a7e5ed21162f94a21c4ad0ac1d4}{levelUpdate}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_aeabb691ec60efaf2bb0af0ddb923c995}{levelDraw}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a720af062c5f9c75b1b2b259576e57806}{levelFree}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a47508050ea7249f614375259c12dec70}{levelUnload}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a7ec840a95e6d90f0e3968ea492752050}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_collision_test_a3dc794da2f0bc420b383827c233f3a39}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \{\}\ \textcolor{comment}{//\ temporary\ fix\ to\ disable\ mouse}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ triggerTest(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj1,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj2);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ printCollisionState(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj1,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj2);}
+
+\end{DoxyCode}

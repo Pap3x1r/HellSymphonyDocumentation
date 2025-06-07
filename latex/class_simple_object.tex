@@ -1,0 +1,277 @@
+\doxysection{Simple\+Object Class Reference}
+\hypertarget{class_simple_object}{}\label{class_simple_object}\index{SimpleObject@{SimpleObject}}
+
+
+A simple drawable object with color and transparency support.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Simple\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_simple_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Simple\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_simple_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_simple_object_ac896d1529367b4a17367018a172b5867}\label{class_simple_object_ac896d1529367b4a17367018a172b5867} 
+{\bfseries Simple\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes a \doxylink{class_simple_object}{Simple\+Object} with default settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simple_object_ad653f323156a9b0a31abc24f72e23165}{Simple\+Object}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with a name. \end{DoxyCompactList}\item 
+\Hypertarget{class_simple_object_aa4223f47628fe1849cb2bc3d0afa289c}\label{class_simple_object_aa4223f47628fe1849cb2bc3d0afa289c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Simple\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_object_a13a3f7b0fc47df690401dc36fd598dad}{set\+Color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Sets the RGB color of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_object_ad63c6116b878da58952cec0fd87d22e2}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with a given global transformation matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_object_a24689c8ec6c945892b6aed433d46c5d7}{set\+Alpha}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the alpha (transparency) value. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_simple_object_aa4f2594377437b446a55228051a9c7e5}{get\+Alpha}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current alpha (transparency) value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_simple_object_a54c0496f238700e4e6f92c6cca4d5767}\label{class_simple_object_a54c0496f238700e4e6f92c6cca4d5767} 
+glm\+::vec3 {\bfseries color}
+\item 
+\Hypertarget{class_simple_object_a24685abfc7620826d8b623ad2b607ec1}\label{class_simple_object_a24685abfc7620826d8b623ad2b607ec1} 
+float {\bfseries alpha} = 1.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple drawable object with color and transparency support. 
+
+Extends \doxylink{class_drawable_object}{Drawable\+Object} to include color and alpha (transparency) properties. 
+
+\label{doc-constructors}
+\Hypertarget{class_simple_object_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_simple_object_ad653f323156a9b0a31abc24f72e23165}\index{SimpleObject@{SimpleObject}!SimpleObject@{SimpleObject}}
+\index{SimpleObject@{SimpleObject}!SimpleObject@{SimpleObject}}
+\doxysubsubsection{\texorpdfstring{SimpleObject()}{SimpleObject()}}
+{\footnotesize\ttfamily \label{class_simple_object_ad653f323156a9b0a31abc24f72e23165} 
+Simple\+Object\+::\+Simple\+Object (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name identifier for the object. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_simple_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_simple_object_aa4f2594377437b446a55228051a9c7e5}\index{SimpleObject@{SimpleObject}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!SimpleObject@{SimpleObject}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily \label{class_simple_object_aa4f2594377437b446a55228051a9c7e5} 
+float Simple\+Object\+::get\+Alpha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current alpha (transparency) value. 
+
+\begin{DoxyReturn}{Returns}
+The alpha value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}.
+
+\Hypertarget{class_simple_object_ad63c6116b878da58952cec0fd87d22e2}\index{SimpleObject@{SimpleObject}!render@{render}}
+\index{render@{render}!SimpleObject@{SimpleObject}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_simple_object_ad63c6116b878da58952cec0fd87d22e2} 
+void Simple\+Object\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{global\+Model\+Transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the object with a given global transformation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+Model\+Transform} & The global model transformation matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}{Drawable\+Object}}.
+
+\Hypertarget{class_simple_object_a24689c8ec6c945892b6aed433d46c5d7}\index{SimpleObject@{SimpleObject}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!SimpleObject@{SimpleObject}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily \label{class_simple_object_a24689c8ec6c945892b6aed433d46c5d7} 
+void Simple\+Object\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the alpha (transparency) value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Alpha value between 0.\+0 (fully transparent) and 1.\+0 (fully opaque). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}.
+
+\Hypertarget{class_simple_object_a13a3f7b0fc47df690401dc36fd598dad}\index{SimpleObject@{SimpleObject}!setColor@{setColor}}
+\index{setColor@{setColor}!SimpleObject@{SimpleObject}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_simple_object_a13a3f7b0fc47df690401dc36fd598dad} 
+void Simple\+Object\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Sets the RGB color of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red component (0.\+0 to 1.\+0). \\
+\hline
+{\em g} & Green component (0.\+0 to 1.\+0). \\
+\hline
+{\em b} & Blue component (0.\+0 to 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Simple\+Object.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Simple\+Object.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\doxysection{Ziz\+Claw\+Slash\+State.\+h}
+\hypertarget{_ziz_claw_slash_state_8h_source}{}\label{_ziz_claw_slash_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizClawSlashState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizClawSlashState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_claw_slash_state}{ZizClawSlashState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_claw_slash_state}{ZizClawSlashState}}*\ instance;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ facingDirection;\ \textcolor{comment}{//-\/1\ for\ facing\ left,\ 1\ for\ facing\ right}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ slashCount;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSlashing;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSlashed;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPreparing;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isStartingUp;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ attackOffSet;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer1;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer1;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ pauseTimer1;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer2;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer2;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ pauseTimer2;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer3;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer3;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ pauseTimer3;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ recoveryTimer;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ mapXLimit;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider1;\ \textcolor{comment}{//slash\ 1}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider2;\ \textcolor{comment}{//slash\ 2}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider3;\ \textcolor{comment}{//slash\ 3}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_claw_slash_state}{ZizClawSlashState}}*\ getInstance();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ findPlayer();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

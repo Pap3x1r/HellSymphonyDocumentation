@@ -1,0 +1,41 @@
+\doxysection{Player\+Attack\+Collider.\+h}
+\hypertarget{_player_attack_collider_8h_source}{}\label{_player_attack_collider_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/PlayerAttackCollider.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/PlayerAttackCollider.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}InteractableObject.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }PlayerAttackCollider\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ damage;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasHit\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ ultGainPercentage;}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ lockInPlace\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_shield}{Shield}}*\ shieldParent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ PlayerAttackCollider();}
+\DoxyCodeLine{00016\ \ \ \ \ PlayerAttackCollider(\textcolor{keywordtype}{float}\ damage\_);}
+\DoxyCodeLine{00017\ \ \ \ \ PlayerAttackCollider(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultPercentage\_);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_attack_collider_af0dce47311a1c4e636391570f2300b41}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerEnter(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ resetHit();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayer(\mbox{\hyperlink{class_player}{Player}}*\ p);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ setLock(\textcolor{keywordtype}{bool}\ v)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ lockInPlace\ =\ v;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ getLock()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lockInPlace;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setShieldParent(\mbox{\hyperlink{class_shield}{Shield}}*\ s);}
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}

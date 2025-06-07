@@ -1,0 +1,27 @@
+\doxysection{Lightning\+Warning.\+h}
+\hypertarget{_lightning_warning_8h_source}{}\label{_lightning_warning_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LightningWarning.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LightningWarning.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }LightningWarning\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ timer\ =\ 0.08f\ *\ 12\ *\ 4;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ LightningWarning()\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(\textcolor{stringliteral}{"{}../Resource/Ziz/Swoop\ Warning.png"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ getTransform().setPosition(glm::vec3(-\/7.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ timer\ -\/=\ dt;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Timer:\ "{}\ <<\ timer\ <<\ endl;}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (timer\ <=\ 0)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{DrawableObject::destroyObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

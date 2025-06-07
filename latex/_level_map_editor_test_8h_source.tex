@@ -1,0 +1,30 @@
+\doxysection{Level\+Map\+Editor\+Test.\+h}
+\hypertarget{_level_map_editor_test_8h_source}{}\label{_level_map_editor_test_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelMapEditorTest.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelMapEditorTest.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}MapLoader.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_map_editor_test}{LevelMapEditorTest}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ player;}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_map_loader}{MapLoader}}\ mapLoader;}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ background;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a90f44ea59225ed0ed43bdb906717d934}{levelLoad}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a0e3fd125f7bdedd74311a698f0d47dca}{levelInit}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a3ecda7bb82e8109ccad27f1c790b24e4}{levelUpdate}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_ab8198d1501974b2a3574924edd9c090e}{levelDraw}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a711b1833fc7d768a4d726ab9103abe83}{levelFree}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a6d5bbb3496b20fca569bdcf7c4c6d66a}{levelUnload}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a6dd4f7221abf34edf016f3688a4fb9b9}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_map_editor_test_a42642346af6386fdb792a4848cc78f53}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ handleAnalogStick(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{float}\ amount);}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

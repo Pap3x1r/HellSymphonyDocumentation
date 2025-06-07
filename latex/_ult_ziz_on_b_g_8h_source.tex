@@ -1,0 +1,51 @@
+\doxysection{Ult\+Ziz\+On\+BG.\+h}
+\hypertarget{_ult_ziz_on_b_g_8h_source}{}\label{_ult_ziz_on_b_g_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/UltZizOnBG.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/UltZizOnBG.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UltZizOnBG\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ enteredScreen;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSummonedLightning;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasExited;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ readyToExit;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpDuration;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ delayBeforeLightning;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ exitTimer;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ exitDuration;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ delayAfterLightning;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ timesSummonedLightining;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ 12\ =\ 1\ sec}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ t;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ glm::vec3\ startPos;}
+\DoxyCodeLine{00027\ \ \ \ \ glm::vec3\ endPos;}
+\DoxyCodeLine{00028\ \ \ \ \ glm::vec3\ newPos;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ glm::vec3\ startPos2;}
+\DoxyCodeLine{00031\ \ \ \ \ glm::vec3\ endPos2;}
+\DoxyCodeLine{00032\ \ \ \ \ glm::vec3\ newPos2;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ unordered\_set<int>\ usedXPositions;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ generateUniqueXPosition(\textcolor{keywordtype}{float}\ minX,\ \textcolor{keywordtype}{float}\ maxX,\ \textcolor{keywordtype}{float}\ step);}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ UltZizOnBG();}
+\DoxyCodeLine{00042\ \ \ \ \ UltZizOnBG(\mbox{\hyperlink{class_ziz}{Ziz}}*\ boss);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00045\ \};}
+
+\end{DoxyCode}

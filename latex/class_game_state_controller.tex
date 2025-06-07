@@ -1,0 +1,190 @@
+\doxysection{Game\+State\+Controller Class Reference}
+\hypertarget{class_game_state_controller}{}\label{class_game_state_controller}\index{GameStateController@{GameStateController}}
+
+
+Controls transitions between game states and manages the current level.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State\+Controller.\+h$>$}
+
+
+
+Collaboration diagram for Game\+State\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_state_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_state_controller_a9a3b16878733c7e4b5ee82f553e1e448}\label{class_game_state_controller_a9a3b16878733c7e4b5ee82f553e1e448} 
+{\bfseries Game\+State\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_game_state_controller}{Game\+State\+Controller}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_controller_a11f8894058e0679d97dcd4fb12919902}{init}} (Game\+State game\+State\+Init)
+\begin{DoxyCompactList}\small\item\em Initializes the game state controller with a starting state. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a81ab82a44d1022a78df79873a157c636}\label{class_game_state_controller_a81ab82a44d1022a78df79873a157c636} 
+void {\bfseries load\+Level} ()
+\begin{DoxyCompactList}\small\item\em Loads the current level resources. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a31b16ea562161aad263c78c62070f2ea}\label{class_game_state_controller_a31b16ea562161aad263c78c62070f2ea} 
+void {\bfseries init\+Level} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level logic and assets. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a01e9d3248a36a2af0858dd51e8bf7e3f}\label{class_game_state_controller_a01e9d3248a36a2af0858dd51e8bf7e3f} 
+void {\bfseries update\+Level} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a5a2777bbb1cd26e813056d6ee443daa0}\label{class_game_state_controller_a5a2777bbb1cd26e813056d6ee443daa0} 
+void {\bfseries draw\+Level} ()
+\begin{DoxyCompactList}\small\item\em Draws the level visuals. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a3c3a1263ce5f78ae3186e510f2be92e6}\label{class_game_state_controller_a3c3a1263ce5f78ae3186e510f2be92e6} 
+void {\bfseries freelevel} ()
+\begin{DoxyCompactList}\small\item\em Frees level resources without unloading. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a732dfce9c13ec4a36a64cd4ad0ba8bc4}\label{class_game_state_controller_a732dfce9c13ec4a36a64cd4ad0ba8bc4} 
+void {\bfseries unload\+Level} ()
+\begin{DoxyCompactList}\small\item\em Unloads the level and cleans up. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_controller_afaef0ac44278859f1f6863781709f246}{handle\+Key\+Level}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for the current level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_controller_a2fd8b1da898386cfd1bb4351abbe36dc}{handle\+Controller\+Button\+Level}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input for the current level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_controller_a2807490384a382ccb864b8b0076b726d}{handle\+Mouse\+Level}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input for the current level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_state_controller_a88d5f6c40ba43690c37355ba00e64c75}{handle\+Analog\+Level}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick or trigger input. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a529fd067b089c04a03adfbd75d19bf0d}\label{class_game_state_controller_a529fd067b089c04a03adfbd75d19bf0d} 
+void {\bfseries handle\+Not\+Receiving\+Inputs} ()
+\begin{DoxyCompactList}\small\item\em Called when inputs should not be processed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_state_controller_a05cbc7c7c9996a8d16edf9419665429e}{get\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the current level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_state_controller_a29921f0c8d663997d7335a127fffe4f6}\label{class_game_state_controller_a29921f0c8d663997d7335a127fffe4f6} 
+Game\+State {\bfseries game\+State\+Curr}
+\begin{DoxyCompactList}\small\item\em Current game state. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_afb6a7127932213c43aca54102d9803d4}\label{class_game_state_controller_afb6a7127932213c43aca54102d9803d4} 
+Game\+State {\bfseries game\+State\+Prev}
+\begin{DoxyCompactList}\small\item\em Previous game state. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8}\label{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8} 
+Game\+State {\bfseries game\+State\+Next}
+\begin{DoxyCompactList}\small\item\em Next game state to transition to. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}\label{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092} 
+\mbox{\hyperlink{struct_load_info}{Load\+Info}} {\bfseries pending\+Load}
+\begin{DoxyCompactList}\small\item\em Pending load information for transitioning. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_state_controller_ad5ead3faf493165dd7b17ddf0b061468}\label{class_game_state_controller_ad5ead3faf493165dd7b17ddf0b061468} 
+\mbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} {\bfseries current\+Level}
+\begin{DoxyCompactList}\small\item\em Pointer to the current level instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls transitions between game states and manages the current level. 
+
+Responsible for initializing, updating, drawing, and unloading levels, as well as handling user inputs during gameplay. 
+
+\label{doc-func-members}
+\Hypertarget{class_game_state_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_state_controller_a05cbc7c7c9996a8d16edf9419665429e}\index{GameStateController@{GameStateController}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_a05cbc7c7c9996a8d16edf9419665429e} 
+\mbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} Game\+State\+Controller\+::get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a pointer to the current level. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_level}{Level} object. 
+\end{DoxyReturn}
+\Hypertarget{class_game_state_controller_a88d5f6c40ba43690c37355ba00e64c75}\index{GameStateController@{GameStateController}!handleAnalogLevel@{handleAnalogLevel}}
+\index{handleAnalogLevel@{handleAnalogLevel}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{handleAnalogLevel()}{handleAnalogLevel()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_a88d5f6c40ba43690c37355ba00e64c75} 
+void Game\+State\+Controller\+::handle\+Analog\+Level (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Handles analog stick or trigger input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Input type. \\
+\hline
+{\em key} & Identifier for the analog input. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_state_controller_a2fd8b1da898386cfd1bb4351abbe36dc}\index{GameStateController@{GameStateController}!handleControllerButtonLevel@{handleControllerButtonLevel}}
+\index{handleControllerButtonLevel@{handleControllerButtonLevel}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{handleControllerButtonLevel()}{handleControllerButtonLevel()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_a2fd8b1da898386cfd1bb4351abbe36dc} 
+void Game\+State\+Controller\+::handle\+Controller\+Button\+Level (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Handles controller button input for the current level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_state_controller_afaef0ac44278859f1f6863781709f246}\index{GameStateController@{GameStateController}!handleKeyLevel@{handleKeyLevel}}
+\index{handleKeyLevel@{handleKeyLevel}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{handleKeyLevel()}{handleKeyLevel()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_afaef0ac44278859f1f6863781709f246} 
+void Game\+State\+Controller\+::handle\+Key\+Level (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for the current level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_state_controller_a2807490384a382ccb864b8b0076b726d}\index{GameStateController@{GameStateController}!handleMouseLevel@{handleMouseLevel}}
+\index{handleMouseLevel@{handleMouseLevel}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{handleMouseLevel()}{handleMouseLevel()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_a2807490384a382ccb864b8b0076b726d} 
+void Game\+State\+Controller\+::handle\+Mouse\+Level (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Handles mouse input for the current level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of mouse event. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_state_controller_a11f8894058e0679d97dcd4fb12919902}\index{GameStateController@{GameStateController}!init@{init}}
+\index{init@{init}!GameStateController@{GameStateController}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_game_state_controller_a11f8894058e0679d97dcd4fb12919902} 
+void Game\+State\+Controller\+::init (\begin{DoxyParamCaption}\item[{Game\+State}]{game\+State\+Init}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the game state controller with a starting state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+State\+Init} & Initial game state. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Game\+State\+Controller.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Game\+State\+Controller.\+cpp\end{DoxyCompactItemize}

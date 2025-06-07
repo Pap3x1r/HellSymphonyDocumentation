@@ -1,0 +1,6 @@
+<map id="VergilIdleState" name="VergilIdleState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,81,112,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="129,87,138,95,130,102,112,104,112,99,128,97,133,95,126,92"/>
+<area shape="rect" id="Node000002" href="$class_interact_state_m.html" title=" " alt="" coords="5,5,113,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,47,62,81,56,81,56,47"/>
+</map>

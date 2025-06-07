@@ -1,0 +1,215 @@
+\doxysection{Lightning Class Reference}
+\hypertarget{class_lightning}{}\label{class_lightning}\index{Lightning@{Lightning}}
+
+
+Inheritance diagram for Lightning\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_lightning__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lightning\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lightning__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lightning_a917ba8e61d46a3a6e743027dd2fcb95a}\label{class_lightning_a917ba8e61d46a3a6e743027dd2fcb95a} 
+{\bfseries Lightning} (\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+\Hypertarget{class_lightning_afa25814f59eae7a282cf7d172f2ec910}\label{class_lightning_afa25814f59eae7a282cf7d172f2ec910} 
+{\bfseries Lightning} (\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*}boss, float x)
+\item 
+\Hypertarget{class_lightning_aed653c8fb206396ef2e54ad272a6e157}\label{class_lightning_aed653c8fb206396ef2e54ad272a6e157} 
+void {\bfseries update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_textured_object}{Textured\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lightning_a2f431d37760b8e0a1ac28ac1a0d2fbd8}\label{class_lightning_a2f431d37760b8e0a1ac28ac1a0d2fbd8} 
+bool {\bfseries has\+Struck}
+\item 
+\Hypertarget{class_lightning_ad6c9443b085e7b893743ec6f9c15f571}\label{class_lightning_ad6c9443b085e7b893743ec6f9c15f571} 
+bool {\bfseries deleted\+Atk}
+\item 
+\Hypertarget{class_lightning_a55a2263bf238789ab378eb462c897b1d}\label{class_lightning_a55a2263bf238789ab378eb462c897b1d} 
+float {\bfseries timer}
+\item 
+\Hypertarget{class_lightning_adc82b0c175e71d9babd776333d1f41bd}\label{class_lightning_adc82b0c175e71d9babd776333d1f41bd} 
+float {\bfseries attack\+Timer}
+\item 
+\Hypertarget{class_lightning_a0659c70cdeae1fbaa58fed9f7971f869}\label{class_lightning_a0659c70cdeae1fbaa58fed9f7971f869} 
+float {\bfseries attack\+Duration\+Timer}
+\item 
+\Hypertarget{class_lightning_a1213ea6b4577189a74ae2051bc3c09de}\label{class_lightning_a1213ea6b4577189a74ae2051bc3c09de} 
+\mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}} \texorpdfstring{$\ast$}{*} {\bfseries attack\+Collider}
+\item 
+\Hypertarget{class_lightning_a8990aa371311b15343be8ab667b7efc4}\label{class_lightning_a8990aa371311b15343be8ab667b7efc4} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_lightning_acd5b74bdd3c6e77b5b7d7c35ec3b2570}\label{class_lightning_acd5b74bdd3c6e77b5b7d7c35ec3b2570} 
+std\+::mt19937 {\bfseries gen}
+\item 
+\Hypertarget{class_lightning_a20f0d6b8f910f632820a08aa935817d1}\label{class_lightning_a20f0d6b8f910f632820a08aa935817d1} 
+std\+::uniform\+\_\+real\+\_\+distribution {\bfseries randomX}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lightning.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lightning.\+cpp\end{DoxyCompactItemize}

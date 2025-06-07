@@ -1,0 +1,402 @@
+\doxysection{Input\+Manager Class Reference}
+\hypertarget{class_input_manager}{}\label{class_input_manager}\index{InputManager@{InputManager}}
+
+
+Manages input from keyboard, mouse, and controllers.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}\label{class_input_manager_a97d401bc0a71863f466e9525ecf0d520} 
+enum \mbox{\hyperlink{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}{Key\+State}} \{ {\bfseries KEY\+\_\+\+IDLE}
+, {\bfseries KEY\+\_\+\+PRESSED}
+, {\bfseries KEY\+\_\+\+HELD}
+, {\bfseries KEY\+\_\+\+RELEASED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for tracking the state of a key or button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_input_manager_a8be46886da639b26d67181c29dab6d6c}\label{class_input_manager_a8be46886da639b26d67181c29dab6d6c} 
+{\bfseries Input\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_input_manager}{Input\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_input_manager_af518290877dd183606709d5852db5491}\label{class_input_manager_af518290877dd183606709d5852db5491} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Input\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_input_manager}{Input\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_input_manager_a1803c060ad2c92696eff31319ffa81f3}\label{class_input_manager_a1803c060ad2c92696eff31319ffa81f3} 
+void {\bfseries update\+Input} ()
+\begin{DoxyCompactList}\small\item\em Updates all input states. Should be called once per frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a3559c8fe485b466eb68774b715b84bda}{get\+Button\+Down}} (SDL\+\_\+\+Keycode key)
+\begin{DoxyCompactList}\small\item\em Checks if a key was just pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a6cc22cbe5af59a8811778a2f8518067c}{get\+Button}} (SDL\+\_\+\+Keycode key)
+\begin{DoxyCompactList}\small\item\em Checks if a key is held down. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_aa233c664d51b31b4b39a028d01c8e7e8}{get\+Button\+Up}} (SDL\+\_\+\+Keycode key)
+\begin{DoxyCompactList}\small\item\em Checks if a key was just released. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a0887b18202868f3cfddecda56c7f52a9}{get\+Mouse\+Button\+Down}} (int button)
+\begin{DoxyCompactList}\small\item\em Checks if a mouse button was just pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a04cb7ed663078d7f3366012a40174daf}{get\+Mouse\+Button}} (int button)
+\begin{DoxyCompactList}\small\item\em Checks if a mouse button is held. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a5a628d6467b95e2969f0befea7cc8b09}{get\+Mouse\+Button\+Up}} (int button)
+\begin{DoxyCompactList}\small\item\em Checks if a mouse button was just released. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a11b290340ef80563c1fb2ffa63b62531}{get\+Controller\+Button\+Down}} (Uint8 button)
+\begin{DoxyCompactList}\small\item\em Checks if a controller button was just pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_add53eb0419d6de3344907f74525bccc7}{get\+Controller\+Button}} (Uint8 button)
+\begin{DoxyCompactList}\small\item\em Checks if a controller button is held. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a44cfbb9a7df3a31f785ade86862c330a}{get\+Controller\+Button\+Up}} (Uint8 button)
+\begin{DoxyCompactList}\small\item\em Checks if a controller button was just released. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_input_manager_a841cdbb7b2716ff4e6e0792b58effadb}{get\+Controller\+Analog\+StickX}} ()
+\begin{DoxyCompactList}\small\item\em Gets X-\/axis value of the analog stick. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_input_manager_a2984307dff0b4ad63e62383fa5334d10}{get\+Controller\+Analog\+StickY}} ()
+\begin{DoxyCompactList}\small\item\em Gets Y-\/axis value of the analog stick. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_input_manager_a2ccfd1f234397ec4afcb8a17c75ce253}{get\+Controller\+Left\+Trigger}} ()
+\begin{DoxyCompactList}\small\item\em Gets value of the left trigger. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_input_manager_a2573afdc934f80c6ad7841f0bc3edd0d}{get\+Controller\+Right\+Trigger}} ()
+\begin{DoxyCompactList}\small\item\em Gets value of the right trigger. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_input_manager_a60fedb42fd7273db969ddebd559da916}{get\+MouseX}} () const
+\begin{DoxyCompactList}\small\item\em Gets current mouse X coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_input_manager_a51b3f558039a5d4cb2811d0d6f9fd748}{get\+MouseY}} () const
+\begin{DoxyCompactList}\small\item\em Gets current mouse Y coordinate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_a452946fa07e1f9c791b0607d6e474b59}{is\+Movement\+Input\+Idle}} ()
+\begin{DoxyCompactList}\small\item\em Checks if any input is currently idle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_a88d64e2c7be9d05d75212e50e7131831}{set\+Last\+Input}} (Input\+Device device)
+\begin{DoxyCompactList}\small\item\em Sets the last active input device. \end{DoxyCompactList}\item 
+Input\+Device \mbox{\hyperlink{class_input_manager_ae31efd9a011ed020d860441fbd4af7a9}{get\+Last\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Gets the last active input device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_input_manager_af7b8f80103d1cea8f1ca5e747de81927}\label{class_input_manager_af7b8f80103d1cea8f1ca5e747de81927} 
+std\+::unordered\+\_\+map$<$ SDL\+\_\+\+Keycode, \mbox{\hyperlink{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}{Key\+State}} $>$ {\bfseries key\+States}
+\item 
+\Hypertarget{class_input_manager_a4cdd960541343e79b008a4fff481c1d5}\label{class_input_manager_a4cdd960541343e79b008a4fff481c1d5} 
+std\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}{Key\+State}} $>$ {\bfseries mouse\+Button\+States}
+\item 
+\Hypertarget{class_input_manager_a4b01267ec85c76eb06229361c096b8bd}\label{class_input_manager_a4b01267ec85c76eb06229361c096b8bd} 
+std\+::unordered\+\_\+map$<$ Uint8, \mbox{\hyperlink{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}{Key\+State}} $>$ {\bfseries button\+States}
+\item 
+\Hypertarget{class_input_manager_a29fddcf9d741e4de04492ad76b7cb3af}\label{class_input_manager_a29fddcf9d741e4de04492ad76b7cb3af} 
+int {\bfseries mouseX}
+\item 
+\Hypertarget{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e}\label{class_input_manager_afb189c58dd5ee470a3202c685c5c7f1e} 
+int {\bfseries mouseY}
+\item 
+\Hypertarget{class_input_manager_ae54070fc6b0b5b6ebf21f9103760e059}\label{class_input_manager_ae54070fc6b0b5b6ebf21f9103760e059} 
+SDL\+\_\+\+Game\+Controller \texorpdfstring{$\ast$}{*} {\bfseries controller}
+\item 
+\Hypertarget{class_input_manager_a73f852b989e7a7c77f00cccf963d6d91}\label{class_input_manager_a73f852b989e7a7c77f00cccf963d6d91} 
+std\+::pair$<$ float, float $>$ {\bfseries analog\+Stick}
+\item 
+\Hypertarget{class_input_manager_ab7ef2594bfd7760bfcfe4d1dc4f82f8c}\label{class_input_manager_ab7ef2594bfd7760bfcfe4d1dc4f82f8c} 
+float {\bfseries left\+Trigger}
+\item 
+\Hypertarget{class_input_manager_a5ca5e884be378b21c54fd4580020aaf3}\label{class_input_manager_a5ca5e884be378b21c54fd4580020aaf3} 
+float {\bfseries right\+Trigger}
+\item 
+\Hypertarget{class_input_manager_a2d11f6c863e0a69aeae41a6177e93c97}\label{class_input_manager_a2d11f6c863e0a69aeae41a6177e93c97} 
+Input\+Device {\bfseries last\+Input} = Input\+Device\+::\+CONTROLLER
+\item 
+\Hypertarget{class_input_manager_aa21f738c1940684b47054f852f88ccb2}\label{class_input_manager_aa21f738c1940684b47054f852f88ccb2} 
+bool {\bfseries last\+Frame\+Change} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages input from keyboard, mouse, and controllers. 
+
+Provides functions similar to Unity-\/style input handling, including polling, state tracking (pressed/held/released), and support for SDL-\/based input and controllers. 
+
+\label{doc-func-members}
+\Hypertarget{class_input_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_manager_a6cc22cbe5af59a8811778a2f8518067c}\index{InputManager@{InputManager}!getButton@{getButton}}
+\index{getButton@{getButton}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getButton()}{getButton()}}
+{\footnotesize\ttfamily \label{class_input_manager_a6cc22cbe5af59a8811778a2f8518067c} 
+bool Input\+Manager\+::get\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a key is held down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if currently held. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a3559c8fe485b466eb68774b715b84bda}\index{InputManager@{InputManager}!getButtonDown@{getButtonDown}}
+\index{getButtonDown@{getButtonDown}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getButtonDown()}{getButtonDown()}}
+{\footnotesize\ttfamily \label{class_input_manager_a3559c8fe485b466eb68774b715b84bda} 
+bool Input\+Manager\+::get\+Button\+Down (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a key was just pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pressed this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_aa233c664d51b31b4b39a028d01c8e7e8}\index{InputManager@{InputManager}!getButtonUp@{getButtonUp}}
+\index{getButtonUp@{getButtonUp}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getButtonUp()}{getButtonUp()}}
+{\footnotesize\ttfamily \label{class_input_manager_aa233c664d51b31b4b39a028d01c8e7e8} 
+bool Input\+Manager\+::get\+Button\+Up (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Keycode}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a key was just released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & SDL\+\_\+\+Keycode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if released this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a841cdbb7b2716ff4e6e0792b58effadb}\index{InputManager@{InputManager}!getControllerAnalogStickX@{getControllerAnalogStickX}}
+\index{getControllerAnalogStickX@{getControllerAnalogStickX}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerAnalogStickX()}{getControllerAnalogStickX()}}
+{\footnotesize\ttfamily \label{class_input_manager_a841cdbb7b2716ff4e6e0792b58effadb} 
+float Input\+Manager\+::get\+Controller\+Analog\+StickX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets X-\/axis value of the analog stick. 
+
+\begin{DoxyReturn}{Returns}
+Float between -\/1 and 1. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a2984307dff0b4ad63e62383fa5334d10}\index{InputManager@{InputManager}!getControllerAnalogStickY@{getControllerAnalogStickY}}
+\index{getControllerAnalogStickY@{getControllerAnalogStickY}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerAnalogStickY()}{getControllerAnalogStickY()}}
+{\footnotesize\ttfamily \label{class_input_manager_a2984307dff0b4ad63e62383fa5334d10} 
+float Input\+Manager\+::get\+Controller\+Analog\+StickY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Y-\/axis value of the analog stick. 
+
+\begin{DoxyReturn}{Returns}
+Float between -\/1 and 1. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_add53eb0419d6de3344907f74525bccc7}\index{InputManager@{InputManager}!getControllerButton@{getControllerButton}}
+\index{getControllerButton@{getControllerButton}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerButton()}{getControllerButton()}}
+{\footnotesize\ttfamily \label{class_input_manager_add53eb0419d6de3344907f74525bccc7} 
+bool Input\+Manager\+::get\+Controller\+Button (\begin{DoxyParamCaption}\item[{Uint8}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a controller button is held. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Controller button ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if currently held. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a11b290340ef80563c1fb2ffa63b62531}\index{InputManager@{InputManager}!getControllerButtonDown@{getControllerButtonDown}}
+\index{getControllerButtonDown@{getControllerButtonDown}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerButtonDown()}{getControllerButtonDown()}}
+{\footnotesize\ttfamily \label{class_input_manager_a11b290340ef80563c1fb2ffa63b62531} 
+bool Input\+Manager\+::get\+Controller\+Button\+Down (\begin{DoxyParamCaption}\item[{Uint8}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a controller button was just pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Controller button ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pressed this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a44cfbb9a7df3a31f785ade86862c330a}\index{InputManager@{InputManager}!getControllerButtonUp@{getControllerButtonUp}}
+\index{getControllerButtonUp@{getControllerButtonUp}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerButtonUp()}{getControllerButtonUp()}}
+{\footnotesize\ttfamily \label{class_input_manager_a44cfbb9a7df3a31f785ade86862c330a} 
+bool Input\+Manager\+::get\+Controller\+Button\+Up (\begin{DoxyParamCaption}\item[{Uint8}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a controller button was just released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Controller button ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if released this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a2ccfd1f234397ec4afcb8a17c75ce253}\index{InputManager@{InputManager}!getControllerLeftTrigger@{getControllerLeftTrigger}}
+\index{getControllerLeftTrigger@{getControllerLeftTrigger}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerLeftTrigger()}{getControllerLeftTrigger()}}
+{\footnotesize\ttfamily \label{class_input_manager_a2ccfd1f234397ec4afcb8a17c75ce253} 
+float Input\+Manager\+::get\+Controller\+Left\+Trigger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets value of the left trigger. 
+
+\begin{DoxyReturn}{Returns}
+Float trigger value. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a2573afdc934f80c6ad7841f0bc3edd0d}\index{InputManager@{InputManager}!getControllerRightTrigger@{getControllerRightTrigger}}
+\index{getControllerRightTrigger@{getControllerRightTrigger}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getControllerRightTrigger()}{getControllerRightTrigger()}}
+{\footnotesize\ttfamily \label{class_input_manager_a2573afdc934f80c6ad7841f0bc3edd0d} 
+float Input\+Manager\+::get\+Controller\+Right\+Trigger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets value of the right trigger. 
+
+\begin{DoxyReturn}{Returns}
+Float trigger value. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_ae31efd9a011ed020d860441fbd4af7a9}\index{InputManager@{InputManager}!getLastInput@{getLastInput}}
+\index{getLastInput@{getLastInput}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getLastInput()}{getLastInput()}}
+{\footnotesize\ttfamily \label{class_input_manager_ae31efd9a011ed020d860441fbd4af7a9} 
+Input\+Device Input\+Manager\+::get\+Last\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the last active input device. 
+
+\begin{DoxyReturn}{Returns}
+Last used Input\+Device. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a04cb7ed663078d7f3366012a40174daf}\index{InputManager@{InputManager}!getMouseButton@{getMouseButton}}
+\index{getMouseButton@{getMouseButton}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseButton()}{getMouseButton()}}
+{\footnotesize\ttfamily \label{class_input_manager_a04cb7ed663078d7f3366012a40174daf} 
+bool Input\+Manager\+::get\+Mouse\+Button (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a mouse button is held. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Mouse button index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if currently held. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a0887b18202868f3cfddecda56c7f52a9}\index{InputManager@{InputManager}!getMouseButtonDown@{getMouseButtonDown}}
+\index{getMouseButtonDown@{getMouseButtonDown}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseButtonDown()}{getMouseButtonDown()}}
+{\footnotesize\ttfamily \label{class_input_manager_a0887b18202868f3cfddecda56c7f52a9} 
+bool Input\+Manager\+::get\+Mouse\+Button\+Down (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a mouse button was just pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Mouse button index (e.\+g. SDL\+\_\+\+BUTTON\+\_\+\+LEFT) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pressed this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a5a628d6467b95e2969f0befea7cc8b09}\index{InputManager@{InputManager}!getMouseButtonUp@{getMouseButtonUp}}
+\index{getMouseButtonUp@{getMouseButtonUp}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseButtonUp()}{getMouseButtonUp()}}
+{\footnotesize\ttfamily \label{class_input_manager_a5a628d6467b95e2969f0befea7cc8b09} 
+bool Input\+Manager\+::get\+Mouse\+Button\+Up (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a mouse button was just released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Mouse button index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if released this frame. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a60fedb42fd7273db969ddebd559da916}\index{InputManager@{InputManager}!getMouseX@{getMouseX}}
+\index{getMouseX@{getMouseX}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseX()}{getMouseX()}}
+{\footnotesize\ttfamily \label{class_input_manager_a60fedb42fd7273db969ddebd559da916} 
+int Input\+Manager\+::get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current mouse X coordinate. 
+
+\begin{DoxyReturn}{Returns}
+X position. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a51b3f558039a5d4cb2811d0d6f9fd748}\index{InputManager@{InputManager}!getMouseY@{getMouseY}}
+\index{getMouseY@{getMouseY}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getMouseY()}{getMouseY()}}
+{\footnotesize\ttfamily \label{class_input_manager_a51b3f558039a5d4cb2811d0d6f9fd748} 
+int Input\+Manager\+::get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current mouse Y coordinate. 
+
+\begin{DoxyReturn}{Returns}
+Y position. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a452946fa07e1f9c791b0607d6e474b59}\index{InputManager@{InputManager}!isMovementInputIdle@{isMovementInputIdle}}
+\index{isMovementInputIdle@{isMovementInputIdle}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{isMovementInputIdle()}{isMovementInputIdle()}}
+{\footnotesize\ttfamily \label{class_input_manager_a452946fa07e1f9c791b0607d6e474b59} 
+bool Input\+Manager\+::is\+Movement\+Input\+Idle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if any input is currently idle. 
+
+\begin{DoxyReturn}{Returns}
+True if no keys/buttons are active. 
+\end{DoxyReturn}
+\Hypertarget{class_input_manager_a88d64e2c7be9d05d75212e50e7131831}\index{InputManager@{InputManager}!setLastInput@{setLastInput}}
+\index{setLastInput@{setLastInput}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{setLastInput()}{setLastInput()}}
+{\footnotesize\ttfamily \label{class_input_manager_a88d64e2c7be9d05d75212e50e7131831} 
+void Input\+Manager\+::set\+Last\+Input (\begin{DoxyParamCaption}\item[{Input\+Device}]{device}{}\end{DoxyParamCaption})}
+
+
+
+Sets the last active input device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Input device type. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Input\+Manager.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Input\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\doxysection{Ziz\+Impale\+State Class Reference}
+\hypertarget{class_ziz_impale_state}{}\label{class_ziz_impale_state}\index{ZizImpaleState@{ZizImpaleState}}
+
+
+Inheritance diagram for Ziz\+Impale\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_ziz_impale_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Impale\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_impale_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_impale_state_a47a889d69f7a6f553cde1687f304ca91}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_impale_state_a95d182f31bafa07dd65fe1d396ce460c}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_impale_state_a32b23d87fb4d8c9739118cbbc4a0560c}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_impale_state_ae4d2ccb117f2efae32ffd17f9987c5d6}\label{class_ziz_impale_state_ae4d2ccb117f2efae32ffd17f9987c5d6} 
+static \mbox{\hyperlink{class_ziz_impale_state}{Ziz\+Impale\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_impale_state_a5a6d07ce241a0c8f5ca27be2d43da1dc}\label{class_ziz_impale_state_a5a6d07ce241a0c8f5ca27be2d43da1dc} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_impale_state_ad639a3e9542b553be1f3b16037cdc014}\label{class_ziz_impale_state_ad639a3e9542b553be1f3b16037cdc014} 
+float {\bfseries delay\+Before\+Impale}
+\item 
+\Hypertarget{class_ziz_impale_state_a5843785b6170866d4bf1dcb62b607214}\label{class_ziz_impale_state_a5843785b6170866d4bf1dcb62b607214} 
+bool {\bfseries has\+Impaled}
+\item 
+\Hypertarget{class_ziz_impale_state_a5cf60475ce9699bcba42c336f88265ec}\label{class_ziz_impale_state_a5cf60475ce9699bcba42c336f88265ec} 
+int {\bfseries times\+Summoned\+Impale}
+\item 
+\Hypertarget{class_ziz_impale_state_a5aa115fa2af5a17be4e1c3f551e76739}\label{class_ziz_impale_state_a5aa115fa2af5a17be4e1c3f551e76739} 
+float {\bfseries delay\+After\+Impale}
+\item 
+\Hypertarget{class_ziz_impale_state_ab5a0eafef1d2d180c5ace81820376ab8}\label{class_ziz_impale_state_ab5a0eafef1d2d180c5ace81820376ab8} 
+float {\bfseries pose\+Timer}
+\item 
+\Hypertarget{class_ziz_impale_state_af1ee2bfee281580a3d4680d4cd85213f}\label{class_ziz_impale_state_af1ee2bfee281580a3d4680d4cd85213f} 
+bool {\bfseries has\+Recovered}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_impale_state_af640058bccab3aff3d274f181bef1417}\label{class_ziz_impale_state_af640058bccab3aff3d274f181bef1417} 
+static \mbox{\hyperlink{class_ziz_impale_state}{Ziz\+Impale\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_impale_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_impale_state_a47a889d69f7a6f553cde1687f304ca91}\index{ZizImpaleState@{ZizImpaleState}!enter@{enter}}
+\index{enter@{enter}!ZizImpaleState@{ZizImpaleState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_impale_state_a47a889d69f7a6f553cde1687f304ca91} 
+void Ziz\+Impale\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_impale_state_a32b23d87fb4d8c9739118cbbc4a0560c}\index{ZizImpaleState@{ZizImpaleState}!exit@{exit}}
+\index{exit@{exit}!ZizImpaleState@{ZizImpaleState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_impale_state_a32b23d87fb4d8c9739118cbbc4a0560c} 
+void Ziz\+Impale\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_impale_state_a95d182f31bafa07dd65fe1d396ce460c}\index{ZizImpaleState@{ZizImpaleState}!update@{update}}
+\index{update@{update}!ZizImpaleState@{ZizImpaleState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_impale_state_a95d182f31bafa07dd65fe1d396ce460c} 
+void Ziz\+Impale\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Impale\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Impale\+State.\+cpp\end{DoxyCompactItemize}

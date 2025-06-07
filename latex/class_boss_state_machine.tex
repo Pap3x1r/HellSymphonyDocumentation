@@ -1,0 +1,47 @@
+\doxysection{Boss\+State\+Machine Class Reference}
+\hypertarget{class_boss_state_machine}{}\label{class_boss_state_machine}\index{BossStateMachine@{BossStateMachine}}
+
+
+Collaboration diagram for Boss\+State\+Machine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_boss_state_machine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_boss_state_machine_a98ab03a6f853f5cd18b4be006a37f906}\label{class_boss_state_machine_a98ab03a6f853f5cd18b4be006a37f906} 
+void {\bfseries change\+State} (\mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}} \texorpdfstring{$\ast$}{*}new\+State, \mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+\Hypertarget{class_boss_state_machine_abf07fec73c9425f9d3613d0ce92d7113}\label{class_boss_state_machine_abf07fec73c9425f9d3613d0ce92d7113} 
+void {\bfseries update} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt)
+\item 
+\Hypertarget{class_boss_state_machine_a7afbe47626d374629ef3efccff0e53f2}\label{class_boss_state_machine_a7afbe47626d374629ef3efccff0e53f2} 
+void {\bfseries interrupt\+Phase\+Change} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+\Hypertarget{class_boss_state_machine_a1499821b35c30a72673d336dda59a056}\label{class_boss_state_machine_a1499821b35c30a72673d336dda59a056} 
+void {\bfseries interrupt\+Death} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+\Hypertarget{class_boss_state_machine_a1443afe1523d5fed6eea17ee05325703}\label{class_boss_state_machine_a1443afe1523d5fed6eea17ee05325703} 
+void {\bfseries interrupt\+Into\+Phase} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+\Hypertarget{class_boss_state_machine_a70b96c62da18c1bbe7774c46cfcf75a8}\label{class_boss_state_machine_a70b96c62da18c1bbe7774c46cfcf75a8} 
+\mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Current\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_boss_state_machine_afa289113d50a2d2d50fbd953dfed1c51}\label{class_boss_state_machine_afa289113d50a2d2d50fbd953dfed1c51} 
+\mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}} \texorpdfstring{$\ast$}{*} {\bfseries current\+State} = nullptr
+\item 
+\Hypertarget{class_boss_state_machine_a58cd1dddabf451a736dd4f4090dd6d3d}\label{class_boss_state_machine_a58cd1dddabf451a736dd4f4090dd6d3d} 
+\mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}} \texorpdfstring{$\ast$}{*} {\bfseries next\+State} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Boss\+State\+Machine.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Boss\+State\+Machine.\+cpp\end{DoxyCompactItemize}

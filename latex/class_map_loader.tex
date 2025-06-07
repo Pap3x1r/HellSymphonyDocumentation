@@ -1,0 +1,97 @@
+\doxysection{Map\+Loader Class Reference}
+\hypertarget{class_map_loader}{}\label{class_map_loader}\index{MapLoader@{MapLoader}}
+
+
+Collaboration diagram for Map\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{class_map_loader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_map_loader_1_1_object_property}{Object\+Property}}
+\item 
+struct \mbox{\hyperlink{struct_map_loader_1_1_raw_map_data}{Raw\+Map\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_map_loader_a2975d3f840feac9ea881d08c140e4db0}\label{class_map_loader_a2975d3f840feac9ea881d08c140e4db0} 
+void {\bfseries read\+Data} (string file\+Name)
+\item 
+\Hypertarget{class_map_loader_a711508985dd7d82b05e0c64c1b8d890b}\label{class_map_loader_a711508985dd7d82b05e0c64c1b8d890b} 
+void {\bfseries load\+Data\+To\+Scene} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&object\+List, \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}\&player)
+\item 
+\Hypertarget{class_map_loader_af7e121fbece18eabe0599c3fc3182649}\label{class_map_loader_af7e121fbece18eabe0599c3fc3182649} 
+void {\bfseries append\+Data\+To\+Scene} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&object\+List, \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}\&player)
+\item 
+\Hypertarget{class_map_loader_a202077191a611a26b4f0ccf229d57a9d}\label{class_map_loader_a202077191a611a26b4f0ccf229d57a9d} 
+void {\bfseries offset\+Map} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&object\+List, glm\+::vec3 offset)
+\item 
+\Hypertarget{class_map_loader_a1f01d46ad94bd22f99a4dc9b3bdffc15}\label{class_map_loader_a1f01d46ad94bd22f99a4dc9b3bdffc15} 
+void {\bfseries offset\+Map\+To\+Center} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&object\+List)
+\item 
+\Hypertarget{class_map_loader_ae68975091c681e3ae42d10db8caa215a}\label{class_map_loader_ae68975091c681e3ae42d10db8caa215a} 
+void {\bfseries clear\+Data} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_map_loader_a36723b68d7fad91732b5b57b53ec8841}\label{class_map_loader_a36723b68d7fad91732b5b57b53ec8841} 
+enum {\bfseries Object\+Type} \{ \newline
+{\bfseries AIR} = 0
+, {\bfseries GROUND}
+, {\bfseries PLAYER}
+, {\bfseries PHYSICS\+\_\+\+OBJ}
+, \newline
+{\bfseries PROCESSED}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_map_loader_a4c4bc0aaecd5b31147658bf3d7399608}\label{class_map_loader_a4c4bc0aaecd5b31147658bf3d7399608} 
+void {\bfseries align\+Data} (int length)
+\begin{DoxyCompactList}\small\item\em Helper functions ///. \end{DoxyCompactList}\item 
+pair$<$ pair$<$ int, int $>$, pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_map_loader_a9a81fd4879b1e5fce9e153d862feed78}{get\+Object\+Range}} (int x, int y, Object\+Type type)
+\item 
+\Hypertarget{class_map_loader_ac48b4d485a4110350086b907c0c118cf}\label{class_map_loader_ac48b4d485a4110350086b907c0c118cf} 
+void {\bfseries mark\+As\+Processed} (int startX, int endX, int startY, int endY, Object\+Type type)
+\item 
+\mbox{\hyperlink{struct_map_loader_1_1_object_property}{Object\+Property}} \mbox{\hyperlink{class_map_loader_ad2b796cf7b75f7c63522af5b0f31d42c}{get\+Object\+Property}} (int x, int y, Object\+Type type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_map_loader_adb39715f46775766d39bf6974409793d}\label{class_map_loader_adb39715f46775766d39bf6974409793d} 
+\mbox{\hyperlink{struct_map_loader_1_1_raw_map_data}{Raw\+Map\+Data}} {\bfseries raw\+Map\+Data}
+\item 
+\Hypertarget{class_map_loader_a2694db89cc90ed1ee0229478619b041a}\label{class_map_loader_a2694db89cc90ed1ee0229478619b041a} 
+vector$<$ \mbox{\hyperlink{struct_map_loader_1_1_object_property}{Object\+Property}} $>$ {\bfseries processed\+Map\+Data}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_map_loader_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_map_loader_ad2b796cf7b75f7c63522af5b0f31d42c}\index{MapLoader@{MapLoader}!getObjectProperty@{getObjectProperty}}
+\index{getObjectProperty@{getObjectProperty}!MapLoader@{MapLoader}}
+\doxysubsubsection{\texorpdfstring{getObjectProperty()}{getObjectProperty()}}
+{\footnotesize\ttfamily \label{class_map_loader_ad2b796cf7b75f7c63522af5b0f31d42c} 
+\mbox{\hyperlink{struct_map_loader_1_1_object_property}{Map\+Loader\+::\+Object\+Property}} Map\+Loader\+::get\+Object\+Property (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{Object\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Assuming a rectangular object ///\Hypertarget{class_map_loader_a9a81fd4879b1e5fce9e153d862feed78}\index{MapLoader@{MapLoader}!getObjectRange@{getObjectRange}}
+\index{getObjectRange@{getObjectRange}!MapLoader@{MapLoader}}
+\doxysubsubsection{\texorpdfstring{getObjectRange()}{getObjectRange()}}
+{\footnotesize\ttfamily \label{class_map_loader_a9a81fd4879b1e5fce9e153d862feed78} 
+pair$<$ pair$<$ int, int $>$, pair$<$ int, int $>$ $>$ Map\+Loader\+::get\+Object\+Range (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{Object\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Assuming a rectangle object ///
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Map\+Loader.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Map\+Loader.\+cpp\end{DoxyCompactItemize}

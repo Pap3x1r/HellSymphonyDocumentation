@@ -1,0 +1,31 @@
+\doxysection{Level\+Anim\+Test.\+h}
+\hypertarget{_level_anim_test_8h_source}{}\label{_level_anim_test_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelAnimTest.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelAnimTest.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Audio.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_anim_test}{LevelAnimTest}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}\ *\ player;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//AudioEngine\ *\ audio;}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ d\ =\ 0;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ row\ =\ 0;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ col\ =\ 0;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_a5d60a263fb90af33eb372b9b53d72a4a}{levelLoad}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_ade05d4273625fa43a68f79195bbffd84}{levelInit}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_a1c5ce98777e573844ae825b572302a39}{levelUpdate}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_afa94bae6e4366e59b7f7042226219403}{levelDraw}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_aacc95ab0f2f7c1d7f4824943d0af5635}{levelFree}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_ad979ecdf33ea3135e616ef86fbac8272}{levelUnload}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_a076950656abd58d95d12e7a70311b186}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_anim_test_a7b8136827b3e4495664df771e7d57b78}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ handleAnalogStick(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{float}\ amount);}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,106 @@
+\doxysection{Lucifer\+Ice\+Bomb\+State Class Reference}
+\hypertarget{class_lucifer_ice_bomb_state}{}\label{class_lucifer_ice_bomb_state}\index{LuciferIceBombState@{LuciferIceBombState}}
+
+
+Inheritance diagram for Lucifer\+Ice\+Bomb\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_lucifer_ice_bomb_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lucifer\+Ice\+Bomb\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lucifer_ice_bomb_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lucifer_ice_bomb_state_aee7d375a5692e16a02e96ec5074e7d91}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_lucifer_ice_bomb_state_a21e6ed2367125ff39e1c03bebd807ccd}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_lucifer_ice_bomb_state_a2517d2ef332b8aedff8028eed1a959da}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_abd440c75953a167891ca8c26b7644f29}\label{class_lucifer_ice_bomb_state_abd440c75953a167891ca8c26b7644f29} 
+static \mbox{\hyperlink{class_lucifer_ice_bomb_state}{Lucifer\+Ice\+Bomb\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_ac6f22ab73ea9f37538f1a01d75f9f620}\label{class_lucifer_ice_bomb_state_ac6f22ab73ea9f37538f1a01d75f9f620} 
+std\+::vector$<$ float $>$ {\bfseries slot\+Positions}
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_a6afd08effedab6e1f0a1f523a5105b71}\label{class_lucifer_ice_bomb_state_a6afd08effedab6e1f0a1f523a5105b71} 
+int {\bfseries next\+Bomb\+Index} = 0
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_ac8a06afee1f7cafac5f34d9c688dcf78}\label{class_lucifer_ice_bomb_state_ac8a06afee1f7cafac5f34d9c688dcf78} 
+float {\bfseries spawn\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_ae2f20545dbc9f5dc545155dd00ff34bb}\label{class_lucifer_ice_bomb_state_ae2f20545dbc9f5dc545155dd00ff34bb} 
+float {\bfseries delay\+Between\+Bombs} = 0.\+4f
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_a69b329bcb404c59cea8e1ddf9382f666}\label{class_lucifer_ice_bomb_state_a69b329bcb404c59cea8e1ddf9382f666} 
+float {\bfseries total\+Duration} = 4.\+0f
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_a8b1fe40dfd4dbb42e0d3e0624a0f6c68}\label{class_lucifer_ice_bomb_state_a8b1fe40dfd4dbb42e0d3e0624a0f6c68} 
+\mbox{\hyperlink{class_lucifer}{Lucifer}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer}
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_a419210f80ad108bea8c1e722c06cb885}\label{class_lucifer_ice_bomb_state_a419210f80ad108bea8c1e722c06cb885} 
+float {\bfseries timer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_ice_bomb_state_a26779a974c7681e55b79d7dedd01a3d2}\label{class_lucifer_ice_bomb_state_a26779a974c7681e55b79d7dedd01a3d2} 
+static \mbox{\hyperlink{class_lucifer_ice_bomb_state}{Lucifer\+Ice\+Bomb\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_lucifer_ice_bomb_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lucifer_ice_bomb_state_aee7d375a5692e16a02e96ec5074e7d91}\index{LuciferIceBombState@{LuciferIceBombState}!enter@{enter}}
+\index{enter@{enter}!LuciferIceBombState@{LuciferIceBombState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_lucifer_ice_bomb_state_aee7d375a5692e16a02e96ec5074e7d91} 
+void Lucifer\+Ice\+Bomb\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_ice_bomb_state_a2517d2ef332b8aedff8028eed1a959da}\index{LuciferIceBombState@{LuciferIceBombState}!exit@{exit}}
+\index{exit@{exit}!LuciferIceBombState@{LuciferIceBombState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_lucifer_ice_bomb_state_a2517d2ef332b8aedff8028eed1a959da} 
+void Lucifer\+Ice\+Bomb\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_ice_bomb_state_a21e6ed2367125ff39e1c03bebd807ccd}\index{LuciferIceBombState@{LuciferIceBombState}!update@{update}}
+\index{update@{update}!LuciferIceBombState@{LuciferIceBombState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_lucifer_ice_bomb_state_a21e6ed2367125ff39e1c03bebd807ccd} 
+void Lucifer\+Ice\+Bomb\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Ice\+Bomb\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Ice\+Bomb\+State.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\doxysection{Bow\+Ultimate\+Collider.\+h}
+\hypertarget{_bow_ultimate_collider_8h_source}{}\label{_bow_ultimate_collider_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/BowUltimateCollider.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/BowUltimateCollider.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}PlayerAttackCollider.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Lucifer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Bow.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }BowUltimateCollider\ :\ \textcolor{keyword}{public}\ PlayerAttackCollider\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ damage;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ timeElapsed\ =\ 0.0f;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasHit\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ ultGainPercentage;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ xOffset\ =\ 0.0f;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ isEnable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ timeEnabled\ =\ 0.0f;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ timeLimit\ =\ 3.0f;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ hitCooldown\ =\ 0.083f\ *\ 3;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ defaultPosition\ =\ \{\ 0.0f,0.0f,0.0f\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ BowUltimateCollider();}
+\DoxyCodeLine{00028\ \ \ \ \ BowUltimateCollider(\textcolor{keywordtype}{float}\ damage\_);}
+\DoxyCodeLine{00029\ \ \ \ \ BowUltimateCollider(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultPercentage\_);}
+\DoxyCodeLine{00030\ \ \ \ \ BowUltimateCollider(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultPercentage\_,\ \textcolor{keywordtype}{float}\ xOffset\_);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bow_ultimate_collider_a69d75556317c1caa813295cda12a8a2f}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerEnter(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ getXOffset()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ resetHit();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayer(\mbox{\hyperlink{class_player}{Player}}*\ p);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setEnable(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setTimeLimit(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ setHitCooldown(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

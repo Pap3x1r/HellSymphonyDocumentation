@@ -1,0 +1,21 @@
+<map id="LuciferHeartBeat" name="LuciferHeartBeat">
+<area shape="rect" id="Node000001" title=" " alt="" coords="250,301,370,328"/>
+<area shape="poly" id="edge11_Node000001_Node000001" title=" " alt="" coords="387,306,396,315,388,323,371,326,370,321,386,318,391,315,383,310"/>
+<area shape="rect" id="Node000002" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="197,203,306,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,238,294,252,305,277,311,300,306,302,300,279,289,255,278,242"/>
+<area shape="rect" id="Node000007" href="$class_animation.html" title="Handles sprite sheet animations and state management for animated objects." alt="" coords="112,301,191,328"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="243,245,219,279,183,303,180,299,215,275,238,242"/>
+<area shape="rect" id="Node000003" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="141,104,255,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,140,238,153,248,179,253,202,248,203,243,180,233,156,223,143"/>
+<area shape="rect" id="Node000006" href="$class_collider.html" title="Manages collision properties and state for a DrawableObject." alt="" coords="82,203,147,229"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="129,139,109,156,105,167,105,178,111,201,106,203,99,179,100,166,105,153,125,135"/>
+<area shape="rect" id="Node000004" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="37,5,117,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,42,131,78,170,101,167,106,128,82,93,46"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="71,47,65,87,68,130,86,170,107,201,102,204,81,173,63,131,60,87,66,47"/>
+<area shape="rect" id="Node000005" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="164,5,232,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="201,48,201,104,196,104,196,48"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="140,190,153,177,188,130,193,133,158,180,144,194"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="143,286,144,269,151,252,171,234,195,223,198,228,174,238,155,255,149,270,148,286"/>
+<area shape="rect" id="Node000008" href="$struct_state.html" title="Represents an animation state with a name, row index, and frame count." alt="" coords="5,203,58,229"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="43,243,51,260,64,275,87,291,112,302,110,306,84,296,60,279,47,263,38,246"/>
+</map>

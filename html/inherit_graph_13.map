@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_interact_state_m.html" title=" " alt="" coords="5,56,113,83"/>
+<area shape="rect" id="Node000001" href="$class_portal_idle_state.html" title=" " alt="" coords="177,5,284,32"/>
+<area shape="poly" id="edge64_Node000000_Node000001" title=" " alt="" coords="120,48,182,30,183,35,122,54"/>
+<area shape="rect" id="Node000002" href="$class_vergil_hightlight_state.html" title=" " alt="" coords="161,56,300,83"/>
+<area shape="poly" id="edge65_Node000000_Node000002" title=" " alt="" coords="128,67,160,67,160,72,128,72"/>
+<area shape="rect" id="Node000003" href="$class_vergil_idle_state.html" title=" " alt="" coords="178,107,283,133"/>
+<area shape="poly" id="edge66_Node000000_Node000003" title=" " alt="" coords="122,85,183,104,182,109,120,90"/>
+</map>

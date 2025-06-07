@@ -1,0 +1,9 @@
+<map id="InteractStateM" name="InteractStateM">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,5,261,32"/>
+<area shape="rect" id="Node000002" href="$class_portal_idle_state.html" title=" " alt="" coords="5,80,113,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,42,86,82,84,77,166,37"/>
+<area shape="rect" id="Node000003" href="$class_vergil_hightlight_state.html" title=" " alt="" coords="137,80,277,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,48,210,80,204,80,204,48"/>
+<area shape="rect" id="Node000004" href="$class_vergil_idle_state.html" title=" " alt="" coords="301,80,406,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="247,37,329,77,327,82,245,42"/>
+</map>

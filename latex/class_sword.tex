@@ -1,0 +1,110 @@
+\doxysection{Sword Class Reference}
+\hypertarget{class_sword}{}\label{class_sword}\index{Sword@{Sword}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sword_a11273b81321ff14cb80241d9f1fd5f32}\label{class_sword_a11273b81321ff14cb80241d9f1fd5f32} 
+void {\bfseries update} (float dt, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player\+Object)
+\item 
+\Hypertarget{class_sword_a5f40b8949f4d50c8d279eecdb3d27f42}\label{class_sword_a5f40b8949f4d50c8d279eecdb3d27f42} 
+void {\bfseries flip\+Offset} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player\+Object)
+\item 
+\Hypertarget{class_sword_ad175bbd5617c14844c93c59e1323ef20}\label{class_sword_ad175bbd5617c14844c93c59e1323ef20} 
+void {\bfseries chain\+Attack} ()
+\item 
+\Hypertarget{class_sword_af43de7838cc9aa58d8291d8d827fa5fb}\label{class_sword_af43de7838cc9aa58d8291d8d827fa5fb} 
+std\+::list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Chain\+Attack\+List} () const
+\item 
+\Hypertarget{class_sword_a9637758266af598e7d469e810d11f89c}\label{class_sword_a9637758266af598e7d469e810d11f89c} 
+void {\bfseries set\+Current\+Chain\+Attack} (int i)
+\item 
+\Hypertarget{class_sword_ab382179f2156ad7477abaa8cc89c5381}\label{class_sword_ab382179f2156ad7477abaa8cc89c5381} 
+int {\bfseries get\+Current\+Chain\+Attack} () const
+\item 
+\Hypertarget{class_sword_a4d6ceb129cd6689dde164a6bae89c6fe}\label{class_sword_a4d6ceb129cd6689dde164a6bae89c6fe} 
+void {\bfseries set\+In\+Chain\+Attack} (bool s)
+\item 
+\Hypertarget{class_sword_a1ad023940e10ea4ddac263f1d936ee4b}\label{class_sword_a1ad023940e10ea4ddac263f1d936ee4b} 
+bool {\bfseries get\+In\+Chain\+Attack} () const
+\item 
+\Hypertarget{class_sword_ac4142b24b6c8cd75a55f40062e84f005}\label{class_sword_ac4142b24b6c8cd75a55f40062e84f005} 
+void {\bfseries set\+Input\+Buffer} (bool s)
+\item 
+\Hypertarget{class_sword_a5fad1abe48e489cc90cb5fe152f88145}\label{class_sword_a5fad1abe48e489cc90cb5fe152f88145} 
+bool {\bfseries get\+Input\+Buffer} () const
+\item 
+\Hypertarget{class_sword_a032dfa5b28a132b2a2b965a8c8be44e9}\label{class_sword_a032dfa5b28a132b2a2b965a8c8be44e9} 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+\Hypertarget{class_sword_a2ff29aca746979fd2320c855eacc1aa0}\label{class_sword_a2ff29aca746979fd2320c855eacc1aa0} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Chain\+Attack\+Object} (int index)
+\item 
+\Hypertarget{class_sword_a287cfd7fdc8ccda964a07d9e926bfc0d}\label{class_sword_a287cfd7fdc8ccda964a07d9e926bfc0d} 
+void {\bfseries set\+Small\+Ult\+Ready} (bool v)
+\item 
+\Hypertarget{class_sword_a66a8f3a65726aeb54a7c49eb115fb6b4}\label{class_sword_a66a8f3a65726aeb54a7c49eb115fb6b4} 
+bool {\bfseries get\+Small\+Ult\+Ready} () const
+\item 
+\Hypertarget{class_sword_ab6439d0d13f5a8b18acbc9fecb4a7095}\label{class_sword_ab6439d0d13f5a8b18acbc9fecb4a7095} 
+void {\bfseries set\+Big\+Ult\+Ready} (bool v)
+\item 
+\Hypertarget{class_sword_a90c40d982bfd74bded4c92020f0fbcb1}\label{class_sword_a90c40d982bfd74bded4c92020f0fbcb1} 
+bool {\bfseries get\+Big\+Ult\+Ready} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sword_a15212a2dbccd1ae90955e3e8799dacd5}\label{class_sword_a15212a2dbccd1ae90955e3e8799dacd5} 
+int {\bfseries current\+Chain\+Attack} = 0
+\item 
+\Hypertarget{class_sword_a15592968b816fb57fd294b6288ba9064}\label{class_sword_a15592968b816fb57fd294b6288ba9064} 
+int {\bfseries max\+Chain\+Attack} = 5
+\item 
+\Hypertarget{class_sword_a48397e4406db7f80d2b6caad54b4ddd1}\label{class_sword_a48397e4406db7f80d2b6caad54b4ddd1} 
+float {\bfseries attack\+Time\+Elapsed} = 0.\+0f
+\item 
+\Hypertarget{class_sword_ab7fe9804da36b3467f283036e5202430}\label{class_sword_ab7fe9804da36b3467f283036e5202430} 
+float {\bfseries attack\+Time\+Window} = 0.\+5f
+\item 
+\Hypertarget{class_sword_a5b837bea970c4dc34c39e6c2cc7a3f16}\label{class_sword_a5b837bea970c4dc34c39e6c2cc7a3f16} 
+bool {\bfseries in\+Chain\+Attack} = false
+\item 
+\Hypertarget{class_sword_a43342ab19525753761ed2181c88748e8}\label{class_sword_a43342ab19525753761ed2181c88748e8} 
+bool {\bfseries input\+Buffer} = false
+\item 
+\Hypertarget{class_sword_ab78b28956886fb6a0282160cffc08027}\label{class_sword_ab78b28956886fb6a0282160cffc08027} 
+glm\+::vec3 {\bfseries attack1\+Offset} = \{ 1.\+35f, -\/0.\+65f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a062e285beba97a3b384cb842dcdab76f}\label{class_sword_a062e285beba97a3b384cb842dcdab76f} 
+glm\+::vec3 {\bfseries attack2\+Offset} = \{ 1.\+35f, -\/0.\+5f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a926f8b2d529061e4b6579374a1ff91da}\label{class_sword_a926f8b2d529061e4b6579374a1ff91da} 
+glm\+::vec3 {\bfseries attack3\+Offset} = \{ 1.\+4f, -\/0.\+75f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a0ab806d63e064efba4b0e0d1f2452cea}\label{class_sword_a0ab806d63e064efba4b0e0d1f2452cea} 
+glm\+::vec3 {\bfseries heavy\+Attack\+Offset} = \{ 1.\+0f, -\/0.\+75f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a6feff69dc8f33f9215d11940776dcee0}\label{class_sword_a6feff69dc8f33f9215d11940776dcee0} 
+glm\+::vec3 {\bfseries small\+Ult\+Offset} = \{ -\/1.\+0f, -\/1.\+5f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a245f45aa4a0b73cb5e4f7d9b5a852a5d}\label{class_sword_a245f45aa4a0b73cb5e4f7d9b5a852a5d} 
+glm\+::vec3 {\bfseries big\+Ult\+Offset} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\item 
+\Hypertarget{class_sword_a16822ab21c22614f83661e98ab6f1e6a}\label{class_sword_a16822ab21c22614f83661e98ab6f1e6a} 
+std\+::list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries chain\+Attack\+List}
+\item 
+\Hypertarget{class_sword_aa127c5972b2991737d56c892dadf2d67}\label{class_sword_aa127c5972b2991737d56c892dadf2d67} 
+bool {\bfseries can\+Draw\+Collider} = false
+\item 
+\Hypertarget{class_sword_aa6c2c42569aad3c915123b0acb7fa044}\label{class_sword_aa6c2c42569aad3c915123b0acb7fa044} 
+bool {\bfseries small\+Ult\+Ready} = true
+\item 
+\Hypertarget{class_sword_a6250f637eded58495dd30391cd62cdbe}\label{class_sword_a6250f637eded58495dd30391cd62cdbe} 
+bool {\bfseries big\+Ult\+Ready} = true
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Sword.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Sword.\+cpp\end{DoxyCompactItemize}

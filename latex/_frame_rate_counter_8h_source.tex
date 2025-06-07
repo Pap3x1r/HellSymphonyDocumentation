@@ -1,0 +1,34 @@
+\doxysection{Frame\+Rate\+Counter.\+h}
+\hypertarget{_frame_rate_counter_8h_source}{}\label{_frame_rate_counter_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/FrameRateCounter.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/FrameRateCounter.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_frame_rate_counter}{FrameRateCounter}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ Uint32\ lastTime\ =\ 0;\ \ \textcolor{comment}{//\ Time\ at\ the\ last\ frame}}
+\DoxyCodeLine{00008\ \ \ \ \ Uint32\ currentTime\ =\ 0;\ \ \textcolor{comment}{//\ Time\ at\ the\ current\ frame}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ frameCount\ =\ 0;\ \ \textcolor{comment}{//\ Number\ of\ frames\ rendered}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{float}\ fps\ =\ 0.0f;\ \ \textcolor{comment}{//\ Current\ FPS\ value}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ update()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ currentTime\ =\ SDL\_GetTicks();\ \ \textcolor{comment}{//\ Get\ current\ time\ in\ milliseconds}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ frameCount++;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ a\ second\ has\ passed,\ update\ the\ FPS\ and\ reset\ the\ frame\ count}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentTime\ -\/\ lastTime\ >=\ 1000)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ fps\ =\ frameCount;\ \ \textcolor{comment}{//\ FPS\ is\ the\ number\ of\ frames\ per\ second}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ frameCount\ =\ 0;\ \ \textcolor{comment}{//\ Reset\ frame\ count\ for\ next\ second}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ lastTime\ =\ currentTime;\ \ \textcolor{comment}{//\ Update\ the\ last\ time}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ displayFPS()\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FPS:\ "{}}\ <<\ fps\ <<\ std::endl;\ \ \textcolor{comment}{//\ Print\ FPS}}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

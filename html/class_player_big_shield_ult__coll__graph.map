@@ -1,0 +1,6 @@
+<map id="PlayerBigShieldUlt" name="PlayerBigShieldUlt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,136,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="153,87,162,95,154,102,137,104,136,99,152,97,157,95,150,92"/>
+<area shape="rect" id="Node000002" href="$class_state_m.html" title=" " alt="" coords="39,5,102,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,47,73,81,68,81,68,47"/>
+</map>

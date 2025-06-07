@@ -1,0 +1,40 @@
+\doxysection{Swoop\+Warning.\+h}
+\hypertarget{_swoop_warning_8h_source}{}\label{_swoop_warning_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/SwoopWarning.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/SwoopWarning.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }SwoopWarning\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timer\ =\ 2.0f;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ SwoopWarning()\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(\textcolor{stringliteral}{"{}../Resource/Ziz/Swoop\ Warning.png"{}});}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ getTransform().setPosition(glm::vec3(-\/7.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ getTransform().setScale(glm::vec3(2.0f,\ 12.0f,\ 1.0f));}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}made\ Warning"{}}\ <<\ endl;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ SwoopWarning(\textcolor{keywordtype}{int}\ side)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(\textcolor{stringliteral}{"{}../Resource/Ziz/Swoop\ Warning.png"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (side\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getTransform().setPosition(glm::vec3(-\/7.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (side\ ==\ 1)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getTransform().setPosition(glm::vec3(7.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ getTransform().setScale(glm::vec3(2.0f,\ 12.0f,\ 1.0f));}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ timer\ -\/=\ dt;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}Timer:\ "{}\ <<\ timer\ <<\ endl;}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (timer\ <=\ 0)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{DrawableObject::destroyObject}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

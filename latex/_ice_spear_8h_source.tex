@@ -1,0 +1,71 @@
+\doxysection{Ice\+Spear.\+h}
+\hypertarget{_ice_spear_8h_source}{}\label{_ice_spear_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/IceSpear.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/IceSpear.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Boss.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Shield.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}\ FacingDirection\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ down\ =\ 0,}
+\DoxyCodeLine{00012\ \ \ \ \ right,}
+\DoxyCodeLine{00013\ \ \ \ \ left,}
+\DoxyCodeLine{00014\ \ \ \ \ tracking}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }IceSpear\ :\ \textcolor{keyword}{public}\ EnemyAttackCollider\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ moveDirection;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ speed;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasHit;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ damage;}
+\DoxyCodeLine{00025\ \ \ \ \ FacingDirection\ facingDirection;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInPlace;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ prepareDuration;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ prepareTimer;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasLaunched;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ delayBeforeLaunch;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ delayBeforeLaunch2;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//tracking\ spear}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTracking\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ \ \ \ \ glm::vec3\ trackingDirection;}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ targetPlayer\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00040\ \ \ \ \ glm::vec3\ direction;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ currentAngle\ =\ 0.0f;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ angularVelocity;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//normal\ spear}}
+\DoxyCodeLine{00047\ \ \ \ \ glm::vec3\ startPos;}
+\DoxyCodeLine{00048\ \ \ \ \ glm::vec3\ targetPos;}
+\DoxyCodeLine{00049\ \ \ \ \ glm::vec3\ newPos;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ IceSpear();}
+\DoxyCodeLine{00053\ \ \ \ \ IceSpear(FacingDirection\ fd);}
+\DoxyCodeLine{00054\ \ \ \ \ IceSpear(FacingDirection\ fd,\ \textcolor{keywordtype}{float}\ pos);}
+\DoxyCodeLine{00055\ \ \ \ \ IceSpear(\mbox{\hyperlink{class_player}{Player}}*\ target);}
+\DoxyCodeLine{00056\ \ \ \ \ IceSpear(\mbox{\hyperlink{class_player}{Player}}*\ target,\ \textcolor{keywordtype}{float}\ startPos);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ checkOffMap();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ice_spear_a3e320730182dfad69e83deeafda79d53}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ onCollisionExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerEnter(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ onTriggerExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{Boss\+State\+Machine.\+h}
+\hypertarget{_boss_state_machine_8h_source}{}\label{_boss_state_machine_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/BossStateMachine.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/BossStateMachine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_boss_state_m}{BossStateM}};}
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_boss}{Boss}};}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }BossStateMachine\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}*\ currentState\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}*\ nextState\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ BossStateMachine();}
+\DoxyCodeLine{00013\ \ \ \ \ \string~BossStateMachine();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ changeState(\mbox{\hyperlink{class_boss_state_m}{BossStateM}}*\ newState,\ \mbox{\hyperlink{class_boss}{Boss}}*\ boss);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptPhaseChange(\mbox{\hyperlink{class_boss}{Boss}}*\ boss);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptDeath(\mbox{\hyperlink{class_boss}{Boss}}*\ boss);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptIntoPhase(\mbox{\hyperlink{class_boss}{Boss}}*\ boss);}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}*\ getCurrentState();}
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}

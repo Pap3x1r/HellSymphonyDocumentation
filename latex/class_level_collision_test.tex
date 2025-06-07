@@ -1,0 +1,213 @@
+\doxysection{Level\+Collision\+Test Class Reference}
+\hypertarget{class_level_collision_test}{}\label{class_level_collision_test}\index{LevelCollisionTest@{LevelCollisionTest}}
+
+
+Inheritance diagram for Level\+Collision\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_level_collision_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Collision\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_collision_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_a250dfe4bab37df4629bf7b6cdec94b8b}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_a2d5dcada5ca04801e503df4b2970e589}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_aa70b3a7e5ed21162f94a21c4ad0ac1d4}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_aeabb691ec60efaf2bb0af0ddb923c995}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_a720af062c5f9c75b1b2b259576e57806}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_a47508050ea7249f614375259c12dec70}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_collision_test_a7ec840a95e6d90f0e3968ea492752050}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_collision_test_a3dc794da2f0bc420b383827c233f3a39}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+virtual Menu\+State \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_collision_test_aec2dad1cc23c2ddcf33b0b6daaebe31a}\label{class_level_collision_test_aec2dad1cc23c2ddcf33b0b6daaebe31a} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_collision_test_ad8b47a2b3b7da610b849eeb38aa5777d}\label{class_level_collision_test_ad8b47a2b3b7da610b849eeb38aa5777d} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_collision_test_a694dc37577a7ab594ebb60ed07c87fb0}\label{class_level_collision_test_a694dc37577a7ab594ebb60ed07c87fb0} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ground}
+\item 
+\Hypertarget{class_level_collision_test_ab4501b27ddcef81a93eaad40e8e3fa60}\label{class_level_collision_test_ab4501b27ddcef81a93eaad40e8e3fa60} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries background}
+\item 
+\Hypertarget{class_level_collision_test_a2ad817800df43d3a59744b5b655c0006}\label{class_level_collision_test_a2ad817800df43d3a59744b5b655c0006} 
+\mbox{\hyperlink{class_map_loader}{Map\+Loader}} {\bfseries map\+Loader}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_collision_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_collision_test_a7ec840a95e6d90f0e3968ea492752050}\index{LevelCollisionTest@{LevelCollisionTest}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a7ec840a95e6d90f0e3968ea492752050} 
+void Level\+Collision\+Test\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_collision_test_a3dc794da2f0bc420b383827c233f3a39}\index{LevelCollisionTest@{LevelCollisionTest}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a3dc794da2f0bc420b383827c233f3a39} 
+void Level\+Collision\+Test\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_collision_test_aeabb691ec60efaf2bb0af0ddb923c995}\index{LevelCollisionTest@{LevelCollisionTest}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_aeabb691ec60efaf2bb0af0ddb923c995} 
+void Level\+Collision\+Test\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_collision_test_a720af062c5f9c75b1b2b259576e57806}\index{LevelCollisionTest@{LevelCollisionTest}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a720af062c5f9c75b1b2b259576e57806} 
+void Level\+Collision\+Test\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_collision_test_a2d5dcada5ca04801e503df4b2970e589}\index{LevelCollisionTest@{LevelCollisionTest}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a2d5dcada5ca04801e503df4b2970e589} 
+void Level\+Collision\+Test\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_collision_test_a250dfe4bab37df4629bf7b6cdec94b8b}\index{LevelCollisionTest@{LevelCollisionTest}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a250dfe4bab37df4629bf7b6cdec94b8b} 
+void Level\+Collision\+Test\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_collision_test_a47508050ea7249f614375259c12dec70}\index{LevelCollisionTest@{LevelCollisionTest}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_a47508050ea7249f614375259c12dec70} 
+void Level\+Collision\+Test\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_collision_test_aa70b3a7e5ed21162f94a21c4ad0ac1d4}\index{LevelCollisionTest@{LevelCollisionTest}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelCollisionTest@{LevelCollisionTest}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_collision_test_aa70b3a7e5ed21162f94a21c4ad0ac1d4} 
+void Level\+Collision\+Test\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Collision\+Test.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Collision\+Test.\+cpp\end{DoxyCompactItemize}

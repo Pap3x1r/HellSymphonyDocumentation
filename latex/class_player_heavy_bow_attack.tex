@@ -1,0 +1,100 @@
+\doxysection{Player\+Heavy\+Bow\+Attack Class Reference}
+\hypertarget{class_player_heavy_bow_attack}{}\label{class_player_heavy_bow_attack}\index{PlayerHeavyBowAttack@{PlayerHeavyBowAttack}}
+
+
+Inheritance diagram for Player\+Heavy\+Bow\+Attack\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_player_heavy_bow_attack__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Heavy\+Bow\+Attack\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_player_heavy_bow_attack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_heavy_bow_attack_a80c63ec95ca83ae0cc77f8bd4161acdf}{enter}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\item 
+void \mbox{\hyperlink{class_player_heavy_bow_attack_ac38d886cba25b24f12f2d431791614c7}{update}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float dt\+\_\+) override
+\item 
+void \mbox{\hyperlink{class_player_heavy_bow_attack_a4851a5e1dcb83e526d5edac4bfdd16a9}{exit}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_heavy_bow_attack_a5494ba1f10c3544ffc37534e6f65fe5b}\label{class_player_heavy_bow_attack_a5494ba1f10c3544ffc37534e6f65fe5b} 
+static \mbox{\hyperlink{class_player_heavy_bow_attack}{Player\+Heavy\+Bow\+Attack}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_heavy_bow_attack_a1580f27bb4e7e4bd5f20f663c6b14b11}\label{class_player_heavy_bow_attack_a1580f27bb4e7e4bd5f20f663c6b14b11} 
+enum {\bfseries Phase} \{ {\bfseries STARTUP}
+, {\bfseries ACTIVE}
+, {\bfseries RECOVERY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_heavy_bow_attack_acf8988beb81313158e9fd6903b04e2c3}\label{class_player_heavy_bow_attack_acf8988beb81313158e9fd6903b04e2c3} 
+float {\bfseries time}
+\item 
+\Hypertarget{class_player_heavy_bow_attack_a3f7be31b03736baf604efe466c6fe233}\label{class_player_heavy_bow_attack_a3f7be31b03736baf604efe466c6fe233} 
+Phase {\bfseries current\+Phase}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_heavy_bow_attack_a2e7e639d8084ad02df0b442be2378913}\label{class_player_heavy_bow_attack_a2e7e639d8084ad02df0b442be2378913} 
+static \mbox{\hyperlink{class_player_heavy_bow_attack}{Player\+Heavy\+Bow\+Attack}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_heavy_bow_attack_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_heavy_bow_attack_a80c63ec95ca83ae0cc77f8bd4161acdf}\index{PlayerHeavyBowAttack@{PlayerHeavyBowAttack}!enter@{enter}}
+\index{enter@{enter}!PlayerHeavyBowAttack@{PlayerHeavyBowAttack}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_player_heavy_bow_attack_a80c63ec95ca83ae0cc77f8bd4161acdf} 
+void Player\+Heavy\+Bow\+Attack\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_heavy_bow_attack_a4851a5e1dcb83e526d5edac4bfdd16a9}\index{PlayerHeavyBowAttack@{PlayerHeavyBowAttack}!exit@{exit}}
+\index{exit@{exit}!PlayerHeavyBowAttack@{PlayerHeavyBowAttack}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_player_heavy_bow_attack_a4851a5e1dcb83e526d5edac4bfdd16a9} 
+void Player\+Heavy\+Bow\+Attack\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_heavy_bow_attack_ac38d886cba25b24f12f2d431791614c7}\index{PlayerHeavyBowAttack@{PlayerHeavyBowAttack}!update@{update}}
+\index{update@{update}!PlayerHeavyBowAttack@{PlayerHeavyBowAttack}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_heavy_bow_attack_ac38d886cba25b24f12f2d431791614c7} 
+void Player\+Heavy\+Bow\+Attack\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{float}]{dt\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Bow\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Bow\+State.\+cpp\end{DoxyCompactItemize}

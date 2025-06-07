@@ -1,0 +1,224 @@
+\doxysection{Enemy\+Object Class Reference}
+\hypertarget{class_enemy_object}{}\label{class_enemy_object}\index{EnemyObject@{EnemyObject}}
+
+
+Inheritance diagram for Enemy\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_enemy_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_enemy_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_enemy_object_a9ad9851e35c3a3dac766f4bdb0a7e802}\label{class_enemy_object_a9ad9851e35c3a3dac766f4bdb0a7e802} 
+{\bfseries Enemy\+Object} (int health, int damage)
+\item 
+\Hypertarget{class_enemy_object_a446f78d4ed2ea463e4a1fdb15cc0bff5}\label{class_enemy_object_a446f78d4ed2ea463e4a1fdb15cc0bff5} 
+int {\bfseries get\+Damage} () const
+\item 
+\Hypertarget{class_enemy_object_ae3ea25a931e7216526fffd18a6270863}\label{class_enemy_object_ae3ea25a931e7216526fffd18a6270863} 
+void {\bfseries set\+Damage} (int damage)
+\item 
+\Hypertarget{class_enemy_object_a4bf11f3bd5e190f77a9e8491f6ebe7cb}\label{class_enemy_object_a4bf11f3bd5e190f77a9e8491f6ebe7cb} 
+void {\bfseries attack} (\mbox{\hyperlink{class_living_entity}{Living\+Entity}} \&target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_living_entity}{Living\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Living\+Entity} (int hp)
+\item 
+void {\bfseries set\+HP} (int hp)
+\item 
+int {\bfseries get\+HP} ()
+\item 
+bool {\bfseries get\+Is\+Dead} ()
+\item 
+void {\bfseries add\+Status} (\mbox{\hyperlink{struct_living_entity_1_1status}{status}} add)
+\item 
+bool {\bfseries find\+Status} (\mbox{\hyperlink{struct_living_entity_1_1status}{status}} find)
+\item 
+std\+::list$<$ \mbox{\hyperlink{struct_living_entity_1_1status}{status}} $>$ {\bfseries get\+Status\+List} ()
+\item 
+void {\bfseries applied\+Status} ()
+\item 
+void {\bfseries take\+Damage} (int damage)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_textured_object}{Textured\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_enemy_object_aff8ad222660a28c33828e277e04c6fdc}\label{class_enemy_object_aff8ad222660a28c33828e277e04c6fdc} 
+int {\bfseries damage}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_living_entity}{Living\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_living_entity_aa7bd3383737bc7b344237fd2168f7d24}\label{class_living_entity_aa7bd3383737bc7b344237fd2168f7d24} 
+enum {\bfseries status\+Type} \{ {\bfseries stun}
+, {\bfseries wet}
+, {\bfseries moodeng}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Enemy\+Object.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Enemy\+Object.\+cpp\end{DoxyCompactItemize}

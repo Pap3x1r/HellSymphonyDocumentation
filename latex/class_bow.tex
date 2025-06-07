@@ -1,0 +1,104 @@
+\doxysection{Bow Class Reference}
+\hypertarget{class_bow}{}\label{class_bow}\index{Bow@{Bow}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bow_a54b5d86b43f186063896cf36005f7eb2}\label{class_bow_a54b5d86b43f186063896cf36005f7eb2} 
+void {\bfseries update} (float dt, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\item 
+\Hypertarget{class_bow_a27fbcecc19ac652e15c0f3ba5b8a719b}\label{class_bow_a27fbcecc19ac652e15c0f3ba5b8a719b} 
+void {\bfseries set\+Enable\+Debug} ()
+\item 
+\Hypertarget{class_bow_a62ddc9cd58623e431cf51019595e9249}\label{class_bow_a62ddc9cd58623e431cf51019595e9249} 
+void {\bfseries set\+Is\+Shooting} (bool value)
+\item 
+\Hypertarget{class_bow_a1ef8c5ecf7c34af94799484c7d8fdbe8}\label{class_bow_a1ef8c5ecf7c34af94799484c7d8fdbe8} 
+bool {\bfseries get\+Is\+Shooting} () const
+\item 
+\Hypertarget{class_bow_acd222d56adac95dd614a0eff46b4924f}\label{class_bow_acd222d56adac95dd614a0eff46b4924f} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries arrow\+Shot} (float damage\+\_\+, float ult\+Percentage\+\_\+, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float speed)
+\item 
+\Hypertarget{class_bow_ab89ff4277494ab4c40cd2d11bcb62eaa}\label{class_bow_ab89ff4277494ab4c40cd2d11bcb62eaa} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries arrow\+Shot} (float damage\+\_\+, float ult\+Percentage\+\_\+, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float speed, float overheat)
+\item 
+\Hypertarget{class_bow_a622dc523f9e1e0e5469c67ce63175c06}\label{class_bow_a622dc523f9e1e0e5469c67ce63175c06} 
+bool {\bfseries get\+Rapid\+Shot\+Ready} () const
+\item 
+\Hypertarget{class_bow_a5f3dedb63f31c20a75bd22a2a8375292}\label{class_bow_a5f3dedb63f31c20a75bd22a2a8375292} 
+bool {\bfseries get\+Is\+Overheat} () const
+\item 
+\Hypertarget{class_bow_a185f601fe26f36eea6b07f25b69bc300}\label{class_bow_a185f601fe26f36eea6b07f25b69bc300} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Chain\+Attack\+List} () const
+\item 
+\Hypertarget{class_bow_aa22d7e5bd1e59ea965e3a67fc74e4c22}\label{class_bow_aa22d7e5bd1e59ea965e3a67fc74e4c22} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Chain\+Attack\+Object} (int index)
+\item 
+\Hypertarget{class_bow_a00c81d002dfbfaa3b91a62c8cb3d9abb}\label{class_bow_a00c81d002dfbfaa3b91a62c8cb3d9abb} 
+void {\bfseries set\+Small\+Ult\+Ready} (bool v)
+\item 
+\Hypertarget{class_bow_aebf188a4f2fbe3001bfe8c27e4424741}\label{class_bow_aebf188a4f2fbe3001bfe8c27e4424741} 
+bool {\bfseries get\+Small\+Ult\+Ready} () const
+\item 
+\Hypertarget{class_bow_a32ed79574ef0b6d1f5cc3151d38158ea}\label{class_bow_a32ed79574ef0b6d1f5cc3151d38158ea} 
+void {\bfseries set\+Big\+Ult\+Ready} (bool v)
+\item 
+\Hypertarget{class_bow_ac57f61920445518960df18c4afe52218}\label{class_bow_ac57f61920445518960df18c4afe52218} 
+bool {\bfseries get\+Big\+Ult\+Ready} () const
+\item 
+\Hypertarget{class_bow_a507ad4366f5ad65ee6f621eb02e6eeeb}\label{class_bow_a507ad4366f5ad65ee6f621eb02e6eeeb} 
+float {\bfseries get\+Current\+Overheat} ()
+\item 
+\Hypertarget{class_bow_adf3e43710361ef631d76b0119f211ace}\label{class_bow_adf3e43710361ef631d76b0119f211ace} 
+float {\bfseries get\+Max\+Overheat} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bow_a7538124ff8b2308c2c0873fe44d4d9a3}\label{class_bow_a7538124ff8b2308c2c0873fe44d4d9a3} 
+float {\bfseries rapid\+Shot\+Timer} = 0.\+15f
+\item 
+\Hypertarget{class_bow_ac6b0941459c01782cf88f617f9940278}\label{class_bow_ac6b0941459c01782cf88f617f9940278} 
+float {\bfseries rapid\+Shot\+Time\+Elapsed} = rapid\+Shot\+Timer
+\item 
+\Hypertarget{class_bow_adb02e1885a90dbe010086be12800a689}\label{class_bow_adb02e1885a90dbe010086be12800a689} 
+bool {\bfseries rapid\+Shot\+Ready} = false
+\item 
+\Hypertarget{class_bow_a9fa77a5281e5723b501851a7c3f1167a}\label{class_bow_a9fa77a5281e5723b501851a7c3f1167a} 
+float {\bfseries current\+Rapid\+Overheat} = 0.\+0f
+\item 
+\Hypertarget{class_bow_af2851f1b2e6a17162d587bc9afc230cf}\label{class_bow_af2851f1b2e6a17162d587bc9afc230cf} 
+float {\bfseries max\+Rapid\+Overheat} = 100.\+0f
+\item 
+\Hypertarget{class_bow_ad0607289c0a8b7edbb5acec00579b470}\label{class_bow_ad0607289c0a8b7edbb5acec00579b470} 
+float {\bfseries overheat\+Per\+Arrow} = 20.\+0f
+\item 
+\Hypertarget{class_bow_a02f56379654b3dd3dc2bbfb1f76fefd2}\label{class_bow_a02f56379654b3dd3dc2bbfb1f76fefd2} 
+float {\bfseries normal\+Decrease\+Rate} = 25.\+0f
+\item 
+\Hypertarget{class_bow_a2c5c9e88e73f01d3a3748aa219cb4c35}\label{class_bow_a2c5c9e88e73f01d3a3748aa219cb4c35} 
+float {\bfseries overheat\+Decrease\+Rate} = 22.\+5f
+\item 
+\Hypertarget{class_bow_a6e24caaaaba8000686fc92b5e3b54358}\label{class_bow_a6e24caaaaba8000686fc92b5e3b54358} 
+bool {\bfseries is\+Overheat} = false
+\item 
+\Hypertarget{class_bow_a5472986ef251acbb8bb89fb5d1db3680}\label{class_bow_a5472986ef251acbb8bb89fb5d1db3680} 
+bool {\bfseries is\+Shooting} = false
+\item 
+\Hypertarget{class_bow_a1d0593cbda5d9f3134a62d73a42f9213}\label{class_bow_a1d0593cbda5d9f3134a62d73a42f9213} 
+bool {\bfseries rapid\+Shot\+Debug\+Mode} = false
+\item 
+\Hypertarget{class_bow_a91e4a06b1d73da8c260663e643a85cd8}\label{class_bow_a91e4a06b1d73da8c260663e643a85cd8} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries chain\+Attack\+List}
+\item 
+\Hypertarget{class_bow_a337312913f8de6d4e434e19e788b6738}\label{class_bow_a337312913f8de6d4e434e19e788b6738} 
+bool {\bfseries small\+Ult\+Ready} = true
+\item 
+\Hypertarget{class_bow_a07566a6afe8a82560b18f9cbb733814b}\label{class_bow_a07566a6afe8a82560b18f9cbb733814b} 
+bool {\bfseries big\+Ult\+Ready} = true
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Bow.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Bow.\+cpp\end{DoxyCompactItemize}

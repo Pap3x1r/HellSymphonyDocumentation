@@ -1,0 +1,18 @@
+<map id="Animation" name="Animation">
+<area shape="rect" id="Node000001" title="Handles sprite sheet animations and state management for animated objects." alt="" coords="278,104,357,131"/>
+<area shape="rect" id="Node000003" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="212,203,322,229"/>
+<area shape="poly" id="edge9_Node000003_Node000001" title=" " alt="" coords="277,141,265,156,261,179,265,202,260,203,255,179,260,154,273,138"/>
+<area shape="rect" id="Node000002" href="$struct_state.html" title="Represents an animation state with a name, row index, and frame count." alt="" coords="291,5,344,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,48,320,104,315,104,315,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="316,192,330,177,333,166,332,155,323,132,328,130,337,153,339,167,334,180,320,196"/>
+<area shape="rect" id="Node000004" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="110,104,224,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,140,256,200,252,204,189,143"/>
+<area shape="rect" id="Node000007" href="$class_collider.html" title="Manages collision properties and state for a DrawableObject." alt="" coords="48,203,113,229"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="97,139,78,156,74,167,73,179,78,202,73,203,68,179,68,166,74,153,94,135"/>
+<area shape="rect" id="Node000005" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="5,5,86,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="65,42,100,78,139,101,136,106,97,82,62,46"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="40,47,34,87,37,130,54,170,73,201,69,204,49,172,32,131,29,87,35,47"/>
+<area shape="rect" id="Node000006" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="133,5,201,32"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="170,48,170,104,164,104,164,48"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="107,191,122,177,157,129,162,132,126,180,111,195"/>
+</map>

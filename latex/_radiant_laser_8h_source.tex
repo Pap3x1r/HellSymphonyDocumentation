@@ -1,0 +1,33 @@
+\doxysection{Radiant\+Laser.\+h}
+\hypertarget{_radiant_laser_8h_source}{}\label{_radiant_laser_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/RadiantLaser.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/RadiantLaser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Lucifer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }RadiantLaser\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_lucifer}{Lucifer}}*\ lucifer;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ timer;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ spawnedAtk;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ delay;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ atkCollider1;}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ atkCollider2;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ atkCollider3;}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ atkCollider4;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ atkCollider5;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ RadiantLaser();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

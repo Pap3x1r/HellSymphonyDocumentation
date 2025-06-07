@@ -1,0 +1,5 @@
+<map id="LevelMapEditorTest" name="LevelMapEditorTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,142,107"/>
+<area shape="rect" id="Node000002" href="$class_level.html" title="Base class representing a game level with lifecycle and input handling." alt="" coords="47,5,100,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,48,76,80,71,80,71,48"/>
+</map>

@@ -1,0 +1,477 @@
+\doxysection{Game\+Engine Class Reference}
+\hypertarget{class_game_engine}{}\label{class_game_engine}\index{GameEngine@{GameEngine}}
+
+
+Collaboration diagram for Game\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_l_renderer}{GLRenderer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{get\+Renderer}} ()
+\item 
+\mbox{\hyperlink{class_game_state_controller}{Game\+State\+Controller}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_ab9de585905759a0b70da07a5b147fb91}{get\+State\+Controller}} ()
+\item 
+\mbox{\hyperlink{class_time}{Time}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_a276e16e0d15d9d6ba85b1c79eaf79f02}{get\+Time}} ()
+\item 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_a067eede910f751576805e59d73ea9b58}{get\+Input\+Handler}} ()
+\item 
+void \mbox{\hyperlink{class_game_engine_acdbc0c0d1c34ce663a3d621488a03614}{init}} (int width, int height)
+\item 
+void \mbox{\hyperlink{class_game_engine_ae2ea677ce0df14694dd7e01269887a18}{set\+Draw\+Area}} (float left, float right, float bottom, float top)
+\item 
+void \mbox{\hyperlink{class_game_engine_a323c7f8f225a664e9c67ae955176c33d}{set\+Background\+Color}} (float r, float g, float b)
+\item 
+void \mbox{\hyperlink{class_game_engine_afa21dfc5072c5d9b3472098393118170}{add\+Mesh}} (string name, \mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*}mesh)
+\item 
+void \mbox{\hyperlink{class_game_engine_a866d20b051a1b4b6d51d5059a5044c12}{clear\+Mesh}} ()
+\item 
+void \mbox{\hyperlink{class_game_engine_a6c9b69629ac995f990f798309badfdd8}{render}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ render\+Objects)
+\item 
+int \mbox{\hyperlink{class_game_engine_a49a076634ec10f20d011f50df23bae2c}{get\+Window\+Width}} ()
+\item 
+int \mbox{\hyperlink{class_game_engine_a284ceb0d777bba27468b22bafd43bfcd}{get\+Window\+Height}} ()
+\item 
+void \mbox{\hyperlink{class_game_engine_ae8b1c69a78fb25add1892139aed02f9c}{set\+Window\+Width}} (int w)
+\item 
+void \mbox{\hyperlink{class_game_engine_afecbc6d743dc9c0ae8fb5b40e5b3df45}{set\+Window\+Height}} (int h)
+\item 
+void \mbox{\hyperlink{class_game_engine_a43e9ca4376d41800bb021bfc98a71a92}{freeze\+Game\+For\+Second}} (float duration)
+\item 
+void \mbox{\hyperlink{class_game_engine_aaed28d1383adc09a538633fe49adfdcc}{save\+Player\+Data}} (const \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_game_engine_af3b531825b371a616fb08437d4ca77de}{save\+Player\+Data}} (int current\+HP, int wither\+HP, int lives, const std\+::string \&filename)
+\item 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_a75080f4a5a551f626dabe0b0e499a8b0}{load\+Player\+Data}} (const string \&filepath)
+\item 
+void \mbox{\hyperlink{class_game_engine_a800e36367ceb78c46c68c0eb8e5e32f0}{save\+Game\+State}} (Game\+State state, const std\+::string \&filename)
+\item 
+Game\+State \mbox{\hyperlink{class_game_engine_a4033392f8388cf77a9795211170476d0}{load\+Game\+State}} (const std\+::string \&filename, bool new\+Game)
+\item 
+void \mbox{\hyperlink{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8}{save\+Player\+Weapon\+Type}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, const std\+::string \&filepath)
+\item 
+Weapon\+Type \mbox{\hyperlink{class_game_engine_a4d4d5a4cf019a80ac64f7ccb63a5c351}{load\+Player\+Weapon\+Type}} (const std\+::string \&filename, bool new\+Game)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_engine}{Game\+Engine}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_engine_ad93bbc6461fc151959bc4ec110b27584}\label{class_game_engine_ad93bbc6461fc151959bc4ec110b27584} 
+bool {\bfseries is\+New\+Game} = false
+\item 
+\Hypertarget{class_game_engine_acfcc6f9c493e40d41f4ba4ee08ebcc8f}\label{class_game_engine_acfcc6f9c493e40d41f4ba4ee08ebcc8f} 
+glm\+::vec3 {\bfseries player\+Pos} = glm\+::vec3(0.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_engine_a0ed4aa9b880967d62efd6fe5a1f7d7e0}\label{class_game_engine_a0ed4aa9b880967d62efd6fe5a1f7d7e0} 
+int {\bfseries win\+Width}
+\item 
+\Hypertarget{class_game_engine_a2e52b2d9fa508a39184562e0a4f2ec1c}\label{class_game_engine_a2e52b2d9fa508a39184562e0a4f2ec1c} 
+int {\bfseries win\+Height}
+\item 
+\Hypertarget{class_game_engine_acdd0856735729c0e7472fa1ec98f7615}\label{class_game_engine_acdd0856735729c0e7472fa1ec98f7615} 
+\mbox{\hyperlink{class_g_l_renderer}{GLRenderer}} \texorpdfstring{$\ast$}{*} {\bfseries renderer}
+\item 
+\Hypertarget{class_game_engine_ac926ae2ebf78e0b0970273471b732320}\label{class_game_engine_ac926ae2ebf78e0b0970273471b732320} 
+\mbox{\hyperlink{class_game_state_controller}{Game\+State\+Controller}} \texorpdfstring{$\ast$}{*} {\bfseries state\+Controller}
+\item 
+\Hypertarget{class_game_engine_a4141f558f84c1e31e670ad0a1ab7fc27}\label{class_game_engine_a4141f558f84c1e31e670ad0a1ab7fc27} 
+\mbox{\hyperlink{class_time}{Time}} \texorpdfstring{$\ast$}{*} {\bfseries time}
+\item 
+\Hypertarget{class_game_engine_ab21acd907d3df41366461eb04d800aaa}\label{class_game_engine_ab21acd907d3df41366461eb04d800aaa} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries input\+Handler}
+\item 
+\Hypertarget{class_game_engine_ab3755d18be79f5168276e42c0967f143}\label{class_game_engine_ab3755d18be79f5168276e42c0967f143} 
+vector$<$ string $>$ {\bfseries texture\+Paths}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_engine_ab94694ada3dd9b7dc6ad7749c24c64f0}\label{class_game_engine_ab94694ada3dd9b7dc6ad7749c24c64f0} 
+static \mbox{\hyperlink{class_game_engine}{Game\+Engine}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_game_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_engine_afa21dfc5072c5d9b3472098393118170}\index{GameEngine@{GameEngine}!addMesh@{addMesh}}
+\index{addMesh@{addMesh}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addMesh()}{addMesh()}}
+{\footnotesize\ttfamily \label{class_game_engine_afa21dfc5072c5d9b3472098393118170} 
+void Game\+Engine\+::add\+Mesh (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{\mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*}}]{mesh}{}\end{DoxyParamCaption})}
+
+Add a new mesh to the renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of a mesh. \\
+\hline
+{\em mesh} & The mesh with its attribute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a866d20b051a1b4b6d51d5059a5044c12}\index{GameEngine@{GameEngine}!clearMesh@{clearMesh}}
+\index{clearMesh@{clearMesh}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{clearMesh()}{clearMesh()}}
+{\footnotesize\ttfamily \label{class_game_engine_a866d20b051a1b4b6d51d5059a5044c12} 
+void Game\+Engine\+::clear\+Mesh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Clear every meshes from the renderer.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a43e9ca4376d41800bb021bfc98a71a92}\index{GameEngine@{GameEngine}!freezeGameForSecond@{freezeGameForSecond}}
+\index{freezeGameForSecond@{freezeGameForSecond}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{freezeGameForSecond()}{freezeGameForSecond()}}
+{\footnotesize\ttfamily \label{class_game_engine_a43e9ca4376d41800bb021bfc98a71a92} 
+void Game\+Engine\+::freeze\+Game\+For\+Second (\begin{DoxyParamCaption}\item[{float}]{duration}{}\end{DoxyParamCaption})}
+
+Freeze the game for a duration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & in seconds.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a067eede910f751576805e59d73ea9b58}\index{GameEngine@{GameEngine}!getInputHandler@{getInputHandler}}
+\index{getInputHandler@{getInputHandler}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getInputHandler()}{getInputHandler()}}
+{\footnotesize\ttfamily \label{class_game_engine_a067eede910f751576805e59d73ea9b58} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::get\+Input\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Get the Input Manager.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_input_manager}{Input\+Manager} A manager for managing player inputs. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}\index{GameEngine@{GameEngine}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61} 
+\mbox{\hyperlink{class_game_engine}{Game\+Engine}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the \doxylink{class_game_engine}{Game\+Engine} instance.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_game_engine}{Game\+Engine} An instance for \doxylink{class_game_engine}{Game\+Engine} singleton. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a580352127369a5f9a91967364100c615}\index{GameEngine@{GameEngine}!getRenderer@{getRenderer}}
+\index{getRenderer@{getRenderer}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getRenderer()}{getRenderer()}}
+{\footnotesize\ttfamily \label{class_game_engine_a580352127369a5f9a91967364100c615} 
+\mbox{\hyperlink{class_g_l_renderer}{GLRenderer}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::get\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Get the \doxylink{class_g_l_renderer}{GLRenderer}.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_g_l_renderer}{GLRenderer} A renderer for rendering game objects. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_ab9de585905759a0b70da07a5b147fb91}\index{GameEngine@{GameEngine}!getStateController@{getStateController}}
+\index{getStateController@{getStateController}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getStateController()}{getStateController()}}
+{\footnotesize\ttfamily \label{class_game_engine_ab9de585905759a0b70da07a5b147fb91} 
+\mbox{\hyperlink{class_game_state_controller}{Game\+State\+Controller}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::get\+State\+Controller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Get the \doxylink{struct_state}{State} Controller.
+
+\begin{DoxyReturn}{Returns}
+State\+Controller A manager for managing game levels. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a276e16e0d15d9d6ba85b1c79eaf79f02}\index{GameEngine@{GameEngine}!getTime@{getTime}}
+\index{getTime@{getTime}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{class_game_engine_a276e16e0d15d9d6ba85b1c79eaf79f02} 
+\mbox{\hyperlink{class_time}{Time}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Get the \doxylink{class_time}{Time}.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_time}{Time} A manager for managing in-\/game time. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a284ceb0d777bba27468b22bafd43bfcd}\index{GameEngine@{GameEngine}!getWindowHeight@{getWindowHeight}}
+\index{getWindowHeight@{getWindowHeight}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getWindowHeight()}{getWindowHeight()}}
+{\footnotesize\ttfamily \label{class_game_engine_a284ceb0d777bba27468b22bafd43bfcd} 
+int Game\+Engine\+::get\+Window\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Set new window width.
+
+\begin{DoxyReturn}{Returns}
+int The height of window in pixel. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a49a076634ec10f20d011f50df23bae2c}\index{GameEngine@{GameEngine}!getWindowWidth@{getWindowWidth}}
+\index{getWindowWidth@{getWindowWidth}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{getWindowWidth()}{getWindowWidth()}}
+{\footnotesize\ttfamily \label{class_game_engine_a49a076634ec10f20d011f50df23bae2c} 
+int Game\+Engine\+::get\+Window\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Set new window width.
+
+\begin{DoxyReturn}{Returns}
+int The width of window in pixel. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_acdbc0c0d1c34ce663a3d621488a03614}\index{GameEngine@{GameEngine}!init@{init}}
+\index{init@{init}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_game_engine_acdbc0c0d1c34ce663a3d621488a03614} 
+void Game\+Engine\+::init (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+Initialize the game engine and its dependacies.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the window. \\
+\hline
+{\em height} & The height of the window.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a4033392f8388cf77a9795211170476d0}\index{GameEngine@{GameEngine}!loadGameState@{loadGameState}}
+\index{loadGameState@{loadGameState}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{loadGameState()}{loadGameState()}}
+{\footnotesize\ttfamily \label{class_game_engine_a4033392f8388cf77a9795211170476d0} 
+Game\+State Game\+Engine\+::load\+Game\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{bool}]{new\+Game}{}\end{DoxyParamCaption})}
+
+Load the player\textquotesingle{}s game state from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file where data will be loaded. \\
+\hline
+{\em new\+Game} & If true, the game will load to the first level, if not, the game will load from the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game\+State The player game state for load. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a75080f4a5a551f626dabe0b0e499a8b0}\index{GameEngine@{GameEngine}!loadPlayerData@{loadPlayerData}}
+\index{loadPlayerData@{loadPlayerData}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{loadPlayerData()}{loadPlayerData()}}
+{\footnotesize\ttfamily \label{class_game_engine_a75080f4a5a551f626dabe0b0e499a8b0} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} Game\+Engine\+::load\+Player\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+Load the player\textquotesingle{}s current health, wither health, and lives from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file where data will be loaded.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_player}{Player} The player data for load. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a4d4d5a4cf019a80ac64f7ccb63a5c351}\index{GameEngine@{GameEngine}!loadPlayerWeaponType@{loadPlayerWeaponType}}
+\index{loadPlayerWeaponType@{loadPlayerWeaponType}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{loadPlayerWeaponType()}{loadPlayerWeaponType()}}
+{\footnotesize\ttfamily \label{class_game_engine_a4d4d5a4cf019a80ac64f7ccb63a5c351} 
+Weapon\+Type Game\+Engine\+::load\+Player\+Weapon\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{bool}]{new\+Game}{}\end{DoxyParamCaption})}
+
+Load the player\textquotesingle{}s weapon type from a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the file where data will be loaded. \\
+\hline
+{\em new\+Game} & If true, the game will load player with no weapon, if not, the game will load from the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Weapon\+Type The type of weapon player is holding. 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a6c9b69629ac995f990f798309badfdd8}\index{GameEngine@{GameEngine}!render@{render}}
+\index{render@{render}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_game_engine_a6c9b69629ac995f990f798309badfdd8} 
+void Game\+Engine\+::render (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$}]{render\+Objects}{}\end{DoxyParamCaption})}
+
+Send a list of object to the renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Objects} & A list of object that can be rendered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a800e36367ceb78c46c68c0eb8e5e32f0}\index{GameEngine@{GameEngine}!saveGameState@{saveGameState}}
+\index{saveGameState@{saveGameState}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{saveGameState()}{saveGameState()}}
+{\footnotesize\ttfamily \label{class_game_engine_a800e36367ceb78c46c68c0eb8e5e32f0} 
+void Game\+Engine\+::save\+Game\+State (\begin{DoxyParamCaption}\item[{Game\+State}]{state}{, }\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+Save the player\textquotesingle{}s game state to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The current level of the game. \\
+\hline
+{\em filename} & The path to the file where data will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_aaed28d1383adc09a538633fe49adfdcc}\index{GameEngine@{GameEngine}!savePlayerData@{savePlayerData}}
+\index{savePlayerData@{savePlayerData}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{savePlayerData()}{savePlayerData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_game_engine_aaed28d1383adc09a538633fe49adfdcc} 
+void Game\+Engine\+::save\+Player\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+Saves the player\textquotesingle{}s current health, wither health, and lives to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player character. \\
+\hline
+{\em filename} & The path to the file where data will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This will overwrite the file if it already exists. 
+\end{DoxyNote}
+\Hypertarget{class_game_engine_af3b531825b371a616fb08437d4ca77de}\index{GameEngine@{GameEngine}!savePlayerData@{savePlayerData}}
+\index{savePlayerData@{savePlayerData}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{savePlayerData()}{savePlayerData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_game_engine_af3b531825b371a616fb08437d4ca77de} 
+void Game\+Engine\+::save\+Player\+Data (\begin{DoxyParamCaption}\item[{int}]{current\+HP}{, }\item[{int}]{wither\+HP}{, }\item[{int}]{lives}{, }\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+Saves the player\textquotesingle{}s current health, wither health, and lives to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+HP} & The player\textquotesingle{}s current health value. \\
+\hline
+{\em wither\+HP} & The player\textquotesingle{}s current wither health. \\
+\hline
+{\em lives} & Number of lives the player has. \\
+\hline
+{\em filename} & The path to the file where data will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This will overwrite the file if it already exists. 
+\end{DoxyNote}
+\Hypertarget{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8}\index{GameEngine@{GameEngine}!savePlayerWeaponType@{savePlayerWeaponType}}
+\index{savePlayerWeaponType@{savePlayerWeaponType}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{savePlayerWeaponType()}{savePlayerWeaponType()}}
+{\footnotesize\ttfamily \label{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8} 
+void Game\+Engine\+::save\+Player\+Weapon\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{const std\+::string \&}]{filepath}{}\end{DoxyParamCaption})}
+
+Save the player\textquotesingle{}s weapon type to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The data for player. \\
+\hline
+{\em filename} & The path to the file where data will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_a323c7f8f225a664e9c67ae955176c33d}\index{GameEngine@{GameEngine}!setBackgroundColor@{setBackgroundColor}}
+\index{setBackgroundColor@{setBackgroundColor}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColor()}{setBackgroundColor()}}
+{\footnotesize\ttfamily \label{class_game_engine_a323c7f8f225a664e9c67ae955176c33d} 
+void Game\+Engine\+::set\+Background\+Color (\begin{DoxyParamCaption}\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{}\end{DoxyParamCaption})}
+
+Set new background color for the renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red value. \\
+\hline
+{\em g} & The green value. \\
+\hline
+{\em b} & the blue value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_ae2ea677ce0df14694dd7e01269887a18}\index{GameEngine@{GameEngine}!setDrawArea@{setDrawArea}}
+\index{setDrawArea@{setDrawArea}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setDrawArea()}{setDrawArea()}}
+{\footnotesize\ttfamily \label{class_game_engine_ae2ea677ce0df14694dd7e01269887a18} 
+void Game\+Engine\+::set\+Draw\+Area (\begin{DoxyParamCaption}\item[{float}]{left}{, }\item[{float}]{right}{, }\item[{float}]{bottom}{, }\item[{float}]{top}{}\end{DoxyParamCaption})}
+
+Set new ortho projection for the renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left-\/most value of the world space. \\
+\hline
+{\em right} & The right-\/most value of the world space. \\
+\hline
+{\em bottom} & The bottom-\/most value of the world space. \\
+\hline
+{\em top} & The top-\/most value of the world space.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_afecbc6d743dc9c0ae8fb5b40e5b3df45}\index{GameEngine@{GameEngine}!setWindowHeight@{setWindowHeight}}
+\index{setWindowHeight@{setWindowHeight}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setWindowHeight()}{setWindowHeight()}}
+{\footnotesize\ttfamily \label{class_game_engine_afecbc6d743dc9c0ae8fb5b40e5b3df45} 
+void Game\+Engine\+::set\+Window\+Height (\begin{DoxyParamCaption}\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+Set new window height.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & New height for window in pixel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_game_engine_ae8b1c69a78fb25add1892139aed02f9c}\index{GameEngine@{GameEngine}!setWindowWidth@{setWindowWidth}}
+\index{setWindowWidth@{setWindowWidth}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{setWindowWidth()}{setWindowWidth()}}
+{\footnotesize\ttfamily \label{class_game_engine_ae8b1c69a78fb25add1892139aed02f9c} 
+void Game\+Engine\+::set\+Window\+Width (\begin{DoxyParamCaption}\item[{int}]{w}{}\end{DoxyParamCaption})}
+
+Set new window width.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & New width for window in pixel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Game\+Engine.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/\mbox{\hyperlink{_game_engine_8cpp}{Game\+Engine.\+cpp}}\end{DoxyCompactItemize}

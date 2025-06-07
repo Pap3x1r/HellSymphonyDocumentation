@@ -1,0 +1,11 @@
+<map id="DrawableObject" name="DrawableObject">
+<area shape="rect" id="Node000001" title="Base class for any renderable and interactable game object." alt="" coords="110,104,224,131"/>
+<area shape="rect" id="Node000004" href="$class_collider.html" title="Manages collision properties and state for a DrawableObject." alt="" coords="54,203,120,229"/>
+<area shape="poly" id="edge4_Node000004_Node000001" title=" " alt="" coords="159,147,140,180,111,204,108,200,135,177,155,144"/>
+<area shape="rect" id="Node000002" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="5,5,86,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,42,100,78,139,101,136,106,97,82,62,46"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="40,47,33,87,33,109,37,130,56,170,78,201,74,204,51,172,32,131,28,109,28,87,35,47"/>
+<area shape="rect" id="Node000003" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="133,5,201,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,48,170,104,164,104,164,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="79,187,80,170,86,153,100,139,117,129,119,133,103,143,91,156,85,171,84,187"/>
+</map>

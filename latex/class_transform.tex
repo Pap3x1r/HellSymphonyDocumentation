@@ -1,0 +1,179 @@
+\doxysection{Transform Class Reference}
+\hypertarget{class_transform}{}\label{class_transform}\index{Transform@{Transform}}
+
+
+Represents the position, rotation, and scale of an object in 2D/3D space.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_aa08ca4266efabc768973cdeea51945ab}\label{class_transform_aa08ca4266efabc768973cdeea51945ab} 
+{\bfseries Transform} ()
+\begin{DoxyCompactList}\small\item\em Default constructor (position\+: 0, rotation\+: 0, scale\+: 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_transform_a5ff589c99101b718c0b6410e2d610c28}{get\+Global\+Transform}} (\mbox{\hyperlink{class_transform}{Transform}} \&object\+Transform)
+\begin{DoxyCompactList}\small\item\em Computes a global transform by combining with another \doxylink{class_transform}{Transform} (\doxylink{class_collider}{Collider}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Setters}\par
+{\em Parameterized constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Initial position. \\
+\hline
+{\em rotation} & Initial rotation (in radians). \\
+\hline
+{\em scale} & Initial scale. \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_aad1ea2f52e5d6fa5fe8cda8021050fba}\label{class_transform_aad1ea2f52e5d6fa5fe8cda8021050fba} 
+{\bfseries Transform} (glm\+::vec3 \mbox{\hyperlink{class_transform_aa357f8eb780f4ef195027d1c636baa36}{position}}, float \mbox{\hyperlink{class_transform_ac67a2ceb0bd5a73a9360dbcfec232bb3}{rotation}}, glm\+::vec3 \mbox{\hyperlink{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}{scale}})
+\item 
+\Hypertarget{class_transform_a740f389e20c0190c52bcb893aeaa0490}\label{class_transform_a740f389e20c0190c52bcb893aeaa0490} 
+void {\bfseries set\+Position} (glm\+::vec3 \mbox{\hyperlink{class_transform_aa357f8eb780f4ef195027d1c636baa36}{position}})
+\item 
+\Hypertarget{class_transform_a7e9e7e5291025b63a536aece9cbe2580}\label{class_transform_a7e9e7e5291025b63a536aece9cbe2580} 
+void {\bfseries set\+Position} (float x, float y)
+\item 
+\Hypertarget{class_transform_a754d1f065b31cb81dd42eea1f0ce0d79}\label{class_transform_a754d1f065b31cb81dd42eea1f0ce0d79} 
+void {\bfseries set\+Rotation\+Rad} (float \mbox{\hyperlink{class_transform_ac67a2ceb0bd5a73a9360dbcfec232bb3}{rotation}})
+\item 
+\Hypertarget{class_transform_ae3dda4e53f2b4c98c453dcc7f2ebdb4f}\label{class_transform_ae3dda4e53f2b4c98c453dcc7f2ebdb4f} 
+void {\bfseries set\+Rotation\+Deg} (float \mbox{\hyperlink{class_transform_ac67a2ceb0bd5a73a9360dbcfec232bb3}{rotation}})
+\item 
+\Hypertarget{class_transform_aa49c655c1eb2725050b15b7f4b452889}\label{class_transform_aa49c655c1eb2725050b15b7f4b452889} 
+void {\bfseries set\+Rotation} (float angle)
+\item 
+\Hypertarget{class_transform_a4a273ac58f45b6ee9cf2b37cf661daac}\label{class_transform_a4a273ac58f45b6ee9cf2b37cf661daac} 
+void {\bfseries set\+Scale} (glm\+::vec3 \mbox{\hyperlink{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}{scale}})
+\item 
+\Hypertarget{class_transform_a498d685b66e2f73b88d3583ce55461c8}\label{class_transform_a498d685b66e2f73b88d3583ce55461c8} 
+void {\bfseries set\+Scale} (float \mbox{\hyperlink{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}{scale}})
+\item 
+\Hypertarget{class_transform_a65adcbb49fc1c7869d2e298cb149d0eb}\label{class_transform_a65adcbb49fc1c7869d2e298cb149d0eb} 
+void {\bfseries set\+Scale} (float scaleX, float scaleY)
+\item 
+\Hypertarget{class_transform_a4c36b64b6b9ceb6f583d67daccabd1d5}\label{class_transform_a4c36b64b6b9ceb6f583d67daccabd1d5} 
+void {\bfseries scales} (glm\+::vec3 \mbox{\hyperlink{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}{scale}})
+\item 
+\Hypertarget{class_transform_a9f3a8409165a2f3cc298bded25a7726b}\label{class_transform_a9f3a8409165a2f3cc298bded25a7726b} 
+void {\bfseries scales} (float \mbox{\hyperlink{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}{scale}})
+\item 
+\Hypertarget{class_transform_ab48b5607e63532f535fec65c952d7fda}\label{class_transform_ab48b5607e63532f535fec65c952d7fda} 
+void {\bfseries scales} (float scaleX, float scaleY)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Transformation Modifiers}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_ada4efe77a89dbeea3f371c52c02fb93a}\label{class_transform_ada4efe77a89dbeea3f371c52c02fb93a} 
+void {\bfseries translate} (glm\+::vec3 translate)
+\item 
+\Hypertarget{class_transform_a99b08e3f6b2f69377ec02d77da6b72f4}\label{class_transform_a99b08e3f6b2f69377ec02d77da6b72f4} 
+void {\bfseries translate} (float x, float y)
+\item 
+\Hypertarget{class_transform_a23b772e03df25f05e970e679e2c2706a}\label{class_transform_a23b772e03df25f05e970e679e2c2706a} 
+void {\bfseries rotate\+Rad} (float rad)
+\item 
+\Hypertarget{class_transform_a72e73bb01d0e1dd2ab4b41827eb368d5}\label{class_transform_a72e73bb01d0e1dd2ab4b41827eb368d5} 
+void {\bfseries rotate\+Deg} (float deg)
+\item 
+\Hypertarget{class_transform_aa0832aa302869727fd601cf61ccdadff}\label{class_transform_aa0832aa302869727fd601cf61ccdadff} 
+void {\bfseries rotate} (float angle)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_a0b21f641e72d7b55f3a630b986d0b106}\label{class_transform_a0b21f641e72d7b55f3a630b986d0b106} 
+glm\+::vec3 {\bfseries get\+Position} ()
+\item 
+\Hypertarget{class_transform_a3d4ca6bad3007598ad6e73dec2c6a91f}\label{class_transform_a3d4ca6bad3007598ad6e73dec2c6a91f} 
+float {\bfseries get\+Rotation\+Rad} ()
+\item 
+\Hypertarget{class_transform_a41df01ce5d8fdac6379d8b0c7cb19ac6}\label{class_transform_a41df01ce5d8fdac6379d8b0c7cb19ac6} 
+float {\bfseries get\+Rotation\+Deg} ()
+\item 
+\Hypertarget{class_transform_ab15164f1690929c45e636514c0dafb7f}\label{class_transform_ab15164f1690929c45e636514c0dafb7f} 
+float {\bfseries get\+Rotation} ()
+\item 
+\Hypertarget{class_transform_ae1ccab585f6fba9fe6c2641b55118e85}\label{class_transform_ae1ccab585f6fba9fe6c2641b55118e85} 
+glm\+::vec3 {\bfseries get\+Scale} () const
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_transform_a3a680a93deb23797aaebee51f21285b8}{get\+Transform\+Mat4}} ()
+\begin{DoxyCompactList}\small\item\em Gets the 4x4 transformation matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Operators}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_ad36f640bb9570410c495298c4af9e6c8}\label{class_transform_ad36f640bb9570410c495298c4af9e6c8} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries operator+} (const \mbox{\hyperlink{class_transform}{Transform}} \&other)
+\item 
+\Hypertarget{class_transform_adb7e19a43bf7db3014129922df2d8636}\label{class_transform_adb7e19a43bf7db3014129922df2d8636} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries operator-\/} (const \mbox{\hyperlink{class_transform}{Transform}} \&other)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_aa357f8eb780f4ef195027d1c636baa36}\label{class_transform_aa357f8eb780f4ef195027d1c636baa36} 
+glm\+::vec3 {\bfseries position}
+\begin{DoxyCompactList}\small\item\em Position in world/local space. \end{DoxyCompactList}\item 
+\Hypertarget{class_transform_ac67a2ceb0bd5a73a9360dbcfec232bb3}\label{class_transform_ac67a2ceb0bd5a73a9360dbcfec232bb3} 
+float {\bfseries rotation}
+\begin{DoxyCompactList}\small\item\em Rotation in radians. \end{DoxyCompactList}\item 
+\Hypertarget{class_transform_acf6ab53778448fd2f2d8a367c14e7f95}\label{class_transform_acf6ab53778448fd2f2d8a367c14e7f95} 
+glm\+::vec3 {\bfseries scale}
+\begin{DoxyCompactList}\small\item\em Scaling factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the position, rotation, and scale of an object in 2D/3D space. 
+
+Provides utilities for modifying and combining object transformations. 
+
+\label{doc-func-members}
+\Hypertarget{class_transform_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transform_a5ff589c99101b718c0b6410e2d610c28}\index{Transform@{Transform}!getGlobalTransform@{getGlobalTransform}}
+\index{getGlobalTransform@{getGlobalTransform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getGlobalTransform()}{getGlobalTransform()}}
+{\footnotesize\ttfamily \label{class_transform_a5ff589c99101b718c0b6410e2d610c28} 
+\mbox{\hyperlink{class_transform}{Transform}} Transform\+::get\+Global\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{object\+Transform}{}\end{DoxyParamCaption})}
+
+
+
+Computes a global transform by combining with another \doxylink{class_transform}{Transform} (\doxylink{class_collider}{Collider}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+Transform} & Another \doxylink{class_transform}{Transform} to combine with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Combined \doxylink{class_transform}{Transform}. 
+\end{DoxyReturn}
+\Hypertarget{class_transform_a3a680a93deb23797aaebee51f21285b8}\index{Transform@{Transform}!getTransformMat4@{getTransformMat4}}
+\index{getTransformMat4@{getTransformMat4}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{getTransformMat4()}{getTransformMat4()}}
+{\footnotesize\ttfamily \label{class_transform_a3a680a93deb23797aaebee51f21285b8} 
+glm\+::mat4 Transform\+::get\+Transform\+Mat4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the 4x4 transformation matrix. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 representing translation, rotation, and scale. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Transform.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Transform.\+cpp\end{DoxyCompactItemize}

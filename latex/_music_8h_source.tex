@@ -1,0 +1,27 @@
+\doxysection{Music.\+h}
+\hypertarget{_music_8h_source}{}\label{_music_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Music.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Music.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL\_mixer.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }Music\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAmbient;}
+\DoxyCodeLine{00010\ \ \ \ \ Mix\_Music*\ music;\ \ \textcolor{comment}{//\ For\ background\ music}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ Music(\textcolor{keyword}{const}\ std::string\&\ filePath);}
+\DoxyCodeLine{00014\ \ \ \ \ \string~Music();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ Play(\textcolor{keywordtype}{bool}\ isLoop\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ Stop();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ SetVolume(\textcolor{keywordtype}{int}\ volume);\ \ \textcolor{comment}{//\ Volume\ range:\ 0\ -\/\ 128}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ getAmbient()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ setAmbient(\textcolor{keywordtype}{bool}\ ambient);}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

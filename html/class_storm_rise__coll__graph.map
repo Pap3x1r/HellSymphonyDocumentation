@@ -1,0 +1,52 @@
+<map id="StormRise" name="StormRise">
+<area shape="rect" id="Node000001" title=" " alt="" coords="378,403,461,429"/>
+<area shape="rect" id="Node000002" href="$class_enemy_attack_collider.html" title=" " alt="" coords="370,304,514,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="438,346,425,403,420,402,433,345"/>
+<area shape="rect" id="Node000003" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="278,203,388,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,238,430,302,427,306,356,242"/>
+<area shape="rect" id="Node000008" href="$class_animation.html" title="Handles sprite sheet animations and state management for animated objects." alt="" coords="101,304,180,331"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="263,231,182,245,139,255,134,266,133,278,138,303,133,304,127,279,128,264,135,251,180,239,262,225"/>
+<area shape="rect" id="Node000010" href="$class_player.html" title=" " alt="" coords="601,304,659,331"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="377,233,495,277,601,307,600,312,493,283,375,238"/>
+<area shape="rect" id="Node000011" href="$class_level.html" title="Base class representing a game level with lifecycle and input handling." alt="" coords="399,501,451,528"/>
+<area shape="poly" id="edge19_Node000011_Node000003" title=" " alt="" coords="334,245,335,283,339,330,350,380,369,428,393,468,417,499,412,502,389,471,364,431,345,382,334,331,330,283,329,245"/>
+<area shape="rect" id="Node000013" href="$class_living_entity.html" title=" " alt="" coords="204,304,294,331"/>
+<area shape="poly" id="edge18_Node000013_Node000003" title=" " alt="" coords="315,243,283,282,262,305,258,302,279,278,311,240"/>
+<area shape="rect" id="Node000004" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="249,104,363,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,143,333,154,337,180,337,202,332,202,332,180,328,155,323,145"/>
+<area shape="rect" id="Node000007" href="$class_collider.html" title="Manages collision properties and state for a DrawableObject." alt="" coords="174,203,239,229"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="236,133,218,142,204,156,199,167,199,179,204,202,198,203,193,179,194,166,200,153,215,138,233,128"/>
+<area shape="rect" id="Node000021" href="$class_simple_object.html" title="A simple drawable object with color and transparency support." alt="" coords="756,253,856,280"/>
+<area shape="poly" id="edge28_Node000021_Node000004" title=" " alt="" coords="379,115,460,120,557,133,658,158,708,177,754,200,783,225,801,251,797,255,779,229,751,205,706,182,657,163,556,138,460,125,379,120"/>
+<area shape="rect" id="Node000005" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="145,5,225,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,42,239,78,278,101,275,106,236,82,201,46"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="181,48,175,87,176,130,188,169,202,201,197,203,183,171,171,131,170,87,176,47"/>
+<area shape="rect" id="Node000006" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="272,5,340,32"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="309,48,309,104,304,104,304,48"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="232,191,248,177,294,129,297,133,252,181,236,195"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="168,292,184,278,196,264,210,251,243,235,277,225,279,230,245,240,213,256,200,268,188,282,171,296"/>
+<area shape="rect" id="Node000009" href="$struct_state.html" title="Represents an animation state with a name, row index, and frame count." alt="" coords="5,203,58,229"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="28,244,28,262,35,279,48,292,64,301,101,311,100,316,62,306,45,296,30,281,23,264,23,245"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="586,324,530,334,501,344,474,357,448,379,429,404,425,400,444,376,471,352,499,339,529,329,585,319"/>
+<area shape="poly" id="edge15_Node000011_Node000010" title=" " alt="" coords="633,347,628,389,620,411,608,431,573,464,530,487,488,502,452,511,451,506,486,497,528,482,569,459,604,428,615,409,623,387,628,346"/>
+<area shape="rect" id="Node000020" href="$class_ground_checker.html" title=" " alt="" coords="747,403,860,429"/>
+<area shape="poly" id="edge29_Node000020_Node000010" title=" " alt="" coords="676,318,726,328,752,338,776,353,794,377,803,401,798,403,789,379,772,357,750,343,725,333,675,323"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="443,488,525,401,612,329,615,333,529,405,447,491"/>
+<area shape="rect" id="Node000012" href="$class_enemy_object.html" title=" " alt="" coords="195,403,295,429"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="252,444,258,461,269,475,300,494,334,506,369,511,399,512,398,517,368,516,333,511,297,499,265,479,253,464,247,446"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="250,347,248,403,243,402,245,346"/>
+<area shape="rect" id="Node000014" href="$class_health.html" title="Manages health, wither health, and health&#45;related mechanics such as healing and damage." alt="" coords="446,203,505,229"/>
+<area shape="poly" id="edge20_Node000010_Node000014" title=" " alt="" coords="493,241,508,260,527,278,564,297,601,308,600,313,562,302,524,282,504,264,489,244"/>
+<area shape="rect" id="Node000015" href="$class_state_machine.html" title="Manages the player&#39;s current state and transitions between different states." alt="" coords="836,203,937,229"/>
+<area shape="poly" id="edge21_Node000010_Node000015" title=" " alt="" coords="882,246,873,265,858,282,822,297,768,308,660,317,660,312,767,302,820,292,855,278,869,262,877,243"/>
+<area shape="rect" id="Node000016" href="$class_state_m.html" title=" " alt="" coords="854,104,918,131"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="889,146,889,202,884,202,884,146"/>
+<area shape="rect" id="Node000017" href="$class_bow.html" title=" " alt="" coords="529,203,576,229"/>
+<area shape="poly" id="edge23_Node000010_Node000017" title=" " alt="" coords="569,241,595,278,617,302,614,305,591,282,565,244"/>
+<area shape="rect" id="Node000018" href="$class_sword.html" title=" " alt="" coords="601,203,659,229"/>
+<area shape="poly" id="edge24_Node000010_Node000018" title=" " alt="" coords="633,245,633,304,628,304,628,245"/>
+<area shape="rect" id="Node000019" href="$class_shield.html" title=" " alt="" coords="683,203,740,229"/>
+<area shape="poly" id="edge25_Node000010_Node000019" title=" " alt="" coords="703,245,680,282,653,305,649,301,676,278,698,242"/>
+<area shape="poly" id="edge26_Node000010_Node000020" title=" " alt="" coords="732,405,703,395,677,381,652,357,635,333,639,330,656,354,680,377,705,390,733,400"/>
+<area shape="poly" id="edge27_Node000020_Node000021" title=" " alt="" coords="826,292,844,333,847,357,842,380,834,393,823,404,819,400,829,390,837,378,841,356,838,334,821,294"/>
+</map>

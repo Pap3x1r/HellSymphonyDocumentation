@@ -1,0 +1,220 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+Represents a 2D camera for view transformations using glm.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a01f94c3543f56ede7af49dc778f19331}\label{class_camera_a01f94c3543f56ede7af49dc778f19331} 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes the camera with default position, target, and up vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_camera_a629e8f136bc671a3656e0e4076d91e20}{Camera}} (float fov, float aspect, float near, float far)
+\begin{DoxyCompactList}\small\item\em Constructor with perspective settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ab7ebcdd5020d8057f1df3bdb33bac456}{set\+Position}} (const glm\+::vec3 \&pos)
+\begin{DoxyCompactList}\small\item\em Sets the camera\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ae3610aa10f9d7ca38d1337782c10fef7}{set\+Target}} (const glm\+::vec3 \&target\+Pos)
+\begin{DoxyCompactList}\small\item\em Sets the camera\textquotesingle{}s target (look-\/at point). \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_camera_aa9dc951f8d6e7082233786438139c51d}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current camera position. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a4998f3f7c69c92e233e84e8d838845f9}{get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current camera target point. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_a5569ca5967e01d3344fbf6aba36d9820}{get\+View\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Computes the view matrix based on current camera vectors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ad78a8afb9b45dbb9df9373f532eacc1a}{move\+Left}} (float distance)
+\begin{DoxyCompactList}\small\item\em Moves the camera left by a given distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ae8bf125bd503889807c1bb5f4b500a5f}{move\+Right}} (float distance)
+\begin{DoxyCompactList}\small\item\em Moves the camera right by a given distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_af199337adf68066275c51f3eb8461b6e}{move\+Up}} (float distance)
+\begin{DoxyCompactList}\small\item\em Moves the camera up by a given distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a8916c8a3d674474c6f6c86f50a1dc023}{move\+Down}} (float distance)
+\begin{DoxyCompactList}\small\item\em Moves the camera down by a given distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}\label{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5} 
+glm\+::vec3 {\bfseries position}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_camera}{Camera} position in world space. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a6d091a64fbeaf78315a902a3ad9b1010}\label{class_camera_a6d091a64fbeaf78315a902a3ad9b1010} 
+glm\+::vec3 {\bfseries target}
+\begin{DoxyCompactList}\small\item\em Target point the camera is looking at. \end{DoxyCompactList}\item 
+\Hypertarget{class_camera_a3fe5f351380fb118ffc600591769f049}\label{class_camera_a3fe5f351380fb118ffc600591769f049} 
+glm\+::vec3 {\bfseries up}
+\begin{DoxyCompactList}\small\item\em Up direction of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 2D camera for view transformations using glm. 
+
+Manages camera position, target, and orientation, and computes a view matrix for rendering scenes from the camera\textquotesingle{}s perspective. 
+
+\label{doc-constructors}
+\Hypertarget{class_camera_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_a629e8f136bc671a3656e0e4076d91e20}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily \label{class_camera_a629e8f136bc671a3656e0e4076d91e20} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{float}]{fov}{, }\item[{float}]{aspect}{, }\item[{float}]{near}{, }\item[{float}]{far}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with perspective settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & Field of view in degrees. \\
+\hline
+{\em aspect} & Aspect ratio of the view. \\
+\hline
+{\em near} & Near clipping plane distance. \\
+\hline
+{\em far} & Far clipping plane distance. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_camera_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_aa9dc951f8d6e7082233786438139c51d}\index{Camera@{Camera}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_camera_aa9dc951f8d6e7082233786438139c51d} 
+glm\+::vec3 Camera\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current camera position. 
+
+\begin{DoxyReturn}{Returns}
+The position vector. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a4998f3f7c69c92e233e84e8d838845f9}\index{Camera@{Camera}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily \label{class_camera_a4998f3f7c69c92e233e84e8d838845f9} 
+glm\+::vec3 Camera\+::get\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current camera target point. 
+
+\begin{DoxyReturn}{Returns}
+The target vector. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a5569ca5967e01d3344fbf6aba36d9820}\index{Camera@{Camera}!getViewMatrix@{getViewMatrix}}
+\index{getViewMatrix@{getViewMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getViewMatrix()}{getViewMatrix()}}
+{\footnotesize\ttfamily \label{class_camera_a5569ca5967e01d3344fbf6aba36d9820} 
+glm\+::mat4 Camera\+::get\+View\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Computes the view matrix based on current camera vectors. 
+
+\begin{DoxyReturn}{Returns}
+A 4x4 view matrix. 
+\end{DoxyReturn}
+\Hypertarget{class_camera_a8916c8a3d674474c6f6c86f50a1dc023}\index{Camera@{Camera}!moveDown@{moveDown}}
+\index{moveDown@{moveDown}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveDown()}{moveDown()}}
+{\footnotesize\ttfamily \label{class_camera_a8916c8a3d674474c6f6c86f50a1dc023} 
+void Camera\+::move\+Down (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Moves the camera down by a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & Amount to move. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ad78a8afb9b45dbb9df9373f532eacc1a}\index{Camera@{Camera}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveLeft()}{moveLeft()}}
+{\footnotesize\ttfamily \label{class_camera_ad78a8afb9b45dbb9df9373f532eacc1a} 
+void Camera\+::move\+Left (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Moves the camera left by a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & Amount to move. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ae8bf125bd503889807c1bb5f4b500a5f}\index{Camera@{Camera}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveRight()}{moveRight()}}
+{\footnotesize\ttfamily \label{class_camera_ae8bf125bd503889807c1bb5f4b500a5f} 
+void Camera\+::move\+Right (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Moves the camera right by a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & Amount to move. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_af199337adf68066275c51f3eb8461b6e}\index{Camera@{Camera}!moveUp@{moveUp}}
+\index{moveUp@{moveUp}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{moveUp()}{moveUp()}}
+{\footnotesize\ttfamily \label{class_camera_af199337adf68066275c51f3eb8461b6e} 
+void Camera\+::move\+Up (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Moves the camera up by a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & Amount to move. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ab7ebcdd5020d8057f1df3bdb33bac456}\index{Camera@{Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_camera_ab7ebcdd5020d8057f1df3bdb33bac456} 
+void Camera\+::set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets the camera\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The new position as a vec3. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_ae3610aa10f9d7ca38d1337782c10fef7}\index{Camera@{Camera}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
+{\footnotesize\ttfamily \label{class_camera_ae3610aa10f9d7ca38d1337782c10fef7} 
+void Camera\+::set\+Target (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{target\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets the camera\textquotesingle{}s target (look-\/at point). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Pos} & The new target position. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Camera.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Camera.\+cpp\end{DoxyCompactItemize}

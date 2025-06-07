@@ -1,0 +1,83 @@
+\doxysection{Bow.\+h}
+\hypertarget{_bow_8h_source}{}\label{_bow_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Bow.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Bow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Arrow.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}BowUltimateCollider.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Bow\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ rapidShotTimer\ =\ 0.15f;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ rapidShotTimeElapsed\ =\ rapidShotTimer;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ rapidShotReady\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ currentRapidOverheat\ =\ 0.0f;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{float}\ maxRapidOverheat\ =\ 100.0f;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ overheatPerArrow\ =\ 20.0f;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ normalDecreaseRate\ =\ 25.0f;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ overheatDecreaseRate\ =\ 22.5f;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOverheat\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isShooting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ rapidShotDebugMode\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ list<DrawableObject*>\ chainAttackList;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ smallUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ bigUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ Bow();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt,\ \mbox{\hyperlink{class_player}{Player}}*\ player);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ setEnableDebug();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsShooting(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ isShooting\ =\ value;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsShooting()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isShooting;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ arrowShot(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultPercentage\_,\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ arrowShot(\textcolor{keywordtype}{float}\ damage\_,\ \textcolor{keywordtype}{float}\ ultPercentage\_,\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{float}\ speed,\ \textcolor{keywordtype}{float}\ overheat);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ getRapidShotReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsOverheat()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ list<DrawableObject*>\ getChainAttackList()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chainAttackList;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ getChainAttackObject(\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0\ ||\ index\ >=\ chainAttackList.size())\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ chainAttackList.begin();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::advance(it,\ index);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *it;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ setSmallUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ getSmallUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ setBigUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ getBigUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ getCurrentOverheat()\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentRapidOverheat;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ getMaxOverheat()\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ maxRapidOverheat;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \};}
+
+\end{DoxyCode}

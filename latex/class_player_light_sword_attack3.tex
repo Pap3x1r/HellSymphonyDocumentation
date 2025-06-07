@@ -1,0 +1,100 @@
+\doxysection{Player\+Light\+Sword\+Attack3 Class Reference}
+\hypertarget{class_player_light_sword_attack3}{}\label{class_player_light_sword_attack3}\index{PlayerLightSwordAttack3@{PlayerLightSwordAttack3}}
+
+
+Inheritance diagram for Player\+Light\+Sword\+Attack3\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{class_player_light_sword_attack3__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Light\+Sword\+Attack3\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_player_light_sword_attack3__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_light_sword_attack3_a2a1865120b4ae77fc45e4e5f28877d9d}{enter}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\item 
+void \mbox{\hyperlink{class_player_light_sword_attack3_ac72a35c6eac1baa6d612fbfb5f0fec7c}{update}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float dt\+\_\+) override
+\item 
+void \mbox{\hyperlink{class_player_light_sword_attack3_afc56185bfa2ec798ac27fe130b4037da}{exit}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_sword_attack3_a0157b683ef47c38ce7f9ead1e1fe8b61}\label{class_player_light_sword_attack3_a0157b683ef47c38ce7f9ead1e1fe8b61} 
+static \mbox{\hyperlink{class_player_light_sword_attack3}{Player\+Light\+Sword\+Attack3}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_sword_attack3_ac7099cb2bf7732dcca41f7f7282a1b16}\label{class_player_light_sword_attack3_ac7099cb2bf7732dcca41f7f7282a1b16} 
+enum {\bfseries Phase} \{ {\bfseries STARTUP}
+, {\bfseries ACTIVE}
+, {\bfseries RECOVERY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_sword_attack3_af03f4075fe471c7a9fcba227798b3fcf}\label{class_player_light_sword_attack3_af03f4075fe471c7a9fcba227798b3fcf} 
+float {\bfseries time}
+\item 
+\Hypertarget{class_player_light_sword_attack3_a70be2ec949eb7c7627192eb8fb38e316}\label{class_player_light_sword_attack3_a70be2ec949eb7c7627192eb8fb38e316} 
+Phase {\bfseries current\+Phase}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_light_sword_attack3_a0946712b8be2f7dbadb4e90470ddf56b}\label{class_player_light_sword_attack3_a0946712b8be2f7dbadb4e90470ddf56b} 
+static \mbox{\hyperlink{class_player_light_sword_attack3}{Player\+Light\+Sword\+Attack3}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_light_sword_attack3_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_light_sword_attack3_a2a1865120b4ae77fc45e4e5f28877d9d}\index{PlayerLightSwordAttack3@{PlayerLightSwordAttack3}!enter@{enter}}
+\index{enter@{enter}!PlayerLightSwordAttack3@{PlayerLightSwordAttack3}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_player_light_sword_attack3_a2a1865120b4ae77fc45e4e5f28877d9d} 
+void Player\+Light\+Sword\+Attack3\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_light_sword_attack3_afc56185bfa2ec798ac27fe130b4037da}\index{PlayerLightSwordAttack3@{PlayerLightSwordAttack3}!exit@{exit}}
+\index{exit@{exit}!PlayerLightSwordAttack3@{PlayerLightSwordAttack3}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_player_light_sword_attack3_afc56185bfa2ec798ac27fe130b4037da} 
+void Player\+Light\+Sword\+Attack3\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_light_sword_attack3_ac72a35c6eac1baa6d612fbfb5f0fec7c}\index{PlayerLightSwordAttack3@{PlayerLightSwordAttack3}!update@{update}}
+\index{update@{update}!PlayerLightSwordAttack3@{PlayerLightSwordAttack3}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_light_sword_attack3_ac72a35c6eac1baa6d612fbfb5f0fec7c} 
+void Player\+Light\+Sword\+Attack3\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{float}]{dt\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Sword\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Sword\+State.\+cpp\end{DoxyCompactItemize}

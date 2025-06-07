@@ -1,0 +1,36 @@
+\doxysection{Collision\+Handler.\+h}
+\hypertarget{_collision_handler_8h_source}{}\label{_collision_handler_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/CollisionHandler.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/CollisionHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Collider.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{bool}\ checkCollision(\mbox{\hyperlink{class_collider}{Collider}}*\ col1,\ \mbox{\hyperlink{class_transform}{Transform}}\&\ t1,\ \mbox{\hyperlink{class_collider}{Collider}}*\ col2,\ \mbox{\hyperlink{class_transform}{Transform}}\&\ t2);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{bool}\ checkCollisionPoint(\mbox{\hyperlink{class_collider}{Collider}}*\ col,\ \mbox{\hyperlink{class_transform}{Transform}}\&\ t,\ glm::vec2\ point);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ updateCollisionState(\mbox{\hyperlink{class_collider}{Collider}}*\ col1,\ \mbox{\hyperlink{class_collider}{Collider}}*\ col2,\ \textcolor{keywordtype}{bool}\ collided);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ handleObjectCollision(list<DrawableObject*>\&\ objects);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ resolveCollision(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj1,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj2);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{bool}\ shouldIgnoreCollision(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj1,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj2);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{bool}\ shouldResolveCollision(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj1,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj2);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ swapVariable(T\&\ a,\ T\&\ b)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ T\&\ temp\ =\ a;}
+\DoxyCodeLine{00021\ \ \ \ \ a\ =\ b;}
+\DoxyCodeLine{00022\ \ \ \ \ b\ =\ temp;}
+\DoxyCodeLine{00023\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ swapVariable(T*\ a,\ T*\ b)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ T*\ temp\ =\ a;}
+\DoxyCodeLine{00028\ \ \ \ \ a\ =\ b;}
+\DoxyCodeLine{00029\ \ \ \ \ b\ =\ temp;}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}

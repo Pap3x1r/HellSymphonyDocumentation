@@ -1,0 +1,109 @@
+\doxysection{Ziz\+Wing\+Span\+State Class Reference}
+\hypertarget{class_ziz_wing_span_state}{}\label{class_ziz_wing_span_state}\index{ZizWingSpanState@{ZizWingSpanState}}
+
+
+Inheritance diagram for Ziz\+Wing\+Span\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_ziz_wing_span_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Wing\+Span\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_wing_span_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_wing_span_state_aff011ac2ca1331e869fbf75a06d568bc}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_wing_span_state_af635b0cfdc730c6a9a9f17dc17b4cc42}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_wing_span_state_aa9a7152637cd60bb768babc352558d56}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a027f7175988603bedab2b56c847c9531}\label{class_ziz_wing_span_state_a027f7175988603bedab2b56c847c9531} 
+static \mbox{\hyperlink{class_ziz_wing_span_state}{Ziz\+Wing\+Span\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a7729b9937bec47a4316b9035bb574a7a}\label{class_ziz_wing_span_state_a7729b9937bec47a4316b9035bb574a7a} 
+float {\bfseries startup\+Timer}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a6db3c2dff59de06c58799db8a4248d68}\label{class_ziz_wing_span_state_a6db3c2dff59de06c58799db8a4248d68} 
+float {\bfseries active\+Timer}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a92aafe2968800ad2949dde77ec96fc5b}\label{class_ziz_wing_span_state_a92aafe2968800ad2949dde77ec96fc5b} 
+float {\bfseries recovery\+Timer}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a49d14970432f3c2cad389d419ed98344}\label{class_ziz_wing_span_state_a49d14970432f3c2cad389d419ed98344} 
+bool {\bfseries is\+Curling}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a70981371fcd83b54a2186f81b9cde9f4}\label{class_ziz_wing_span_state_a70981371fcd83b54a2186f81b9cde9f4} 
+bool {\bfseries is\+Attacking}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a0ba8ba94573c52825c8e6af7814ae155}\label{class_ziz_wing_span_state_a0ba8ba94573c52825c8e6af7814ae155} 
+bool {\bfseries has\+Attacked}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a5d9870b4539233bbfd56488af0bc3612}\label{class_ziz_wing_span_state_a5d9870b4539233bbfd56488af0bc3612} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_wing_span_state_aa3e5b1929f9145c9b2799126af0db7de}\label{class_ziz_wing_span_state_aa3e5b1929f9145c9b2799126af0db7de} 
+\mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}} \texorpdfstring{$\ast$}{*} {\bfseries attack\+Collider}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_wing_span_state_a9aae213d6c67212b5782fa0bf43ada25}\label{class_ziz_wing_span_state_a9aae213d6c67212b5782fa0bf43ada25} 
+static \mbox{\hyperlink{class_ziz_wing_span_state}{Ziz\+Wing\+Span\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_wing_span_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_wing_span_state_aff011ac2ca1331e869fbf75a06d568bc}\index{ZizWingSpanState@{ZizWingSpanState}!enter@{enter}}
+\index{enter@{enter}!ZizWingSpanState@{ZizWingSpanState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_wing_span_state_aff011ac2ca1331e869fbf75a06d568bc} 
+void Ziz\+Wing\+Span\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_wing_span_state_aa9a7152637cd60bb768babc352558d56}\index{ZizWingSpanState@{ZizWingSpanState}!exit@{exit}}
+\index{exit@{exit}!ZizWingSpanState@{ZizWingSpanState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_wing_span_state_aa9a7152637cd60bb768babc352558d56} 
+void Ziz\+Wing\+Span\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_wing_span_state_af635b0cfdc730c6a9a9f17dc17b4cc42}\index{ZizWingSpanState@{ZizWingSpanState}!update@{update}}
+\index{update@{update}!ZizWingSpanState@{ZizWingSpanState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_wing_span_state_af635b0cfdc730c6a9a9f17dc17b4cc42} 
+void Ziz\+Wing\+Span\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Wing\+Span\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Wing\+Span\+State.\+cpp\end{DoxyCompactItemize}

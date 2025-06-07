@@ -1,0 +1,100 @@
+\doxysection{Player\+Big\+Shield\+Ult Class Reference}
+\hypertarget{class_player_big_shield_ult}{}\label{class_player_big_shield_ult}\index{PlayerBigShieldUlt@{PlayerBigShieldUlt}}
+
+
+Inheritance diagram for Player\+Big\+Shield\+Ult\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_player_big_shield_ult__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Big\+Shield\+Ult\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_player_big_shield_ult__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_big_shield_ult_a27d061e18552144a4a6a4906803fd7d4}{enter}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\item 
+void \mbox{\hyperlink{class_player_big_shield_ult_a06c214cfb6f62c51d63f5163fe109985}{update}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, float dt\+\_\+) override
+\item 
+void \mbox{\hyperlink{class_player_big_shield_ult_a0bb85487af9342a0a16b149222981946}{exit}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_big_shield_ult_a2bc4b9e7979afccc5fc27d8e8d696e09}\label{class_player_big_shield_ult_a2bc4b9e7979afccc5fc27d8e8d696e09} 
+static \mbox{\hyperlink{class_player_big_shield_ult}{Player\+Big\+Shield\+Ult}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_big_shield_ult_af4dbdb752bd4338ff9b29d312032e6e3}\label{class_player_big_shield_ult_af4dbdb752bd4338ff9b29d312032e6e3} 
+enum {\bfseries Phase} \{ {\bfseries STARTUP}
+, {\bfseries ACTIVE}
+, {\bfseries RECOVERY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_big_shield_ult_a1f887ebaaca1e4620a895519e653c09a}\label{class_player_big_shield_ult_a1f887ebaaca1e4620a895519e653c09a} 
+float {\bfseries time}
+\item 
+\Hypertarget{class_player_big_shield_ult_a10ec8e794b9cc537b9e5265484236ae1}\label{class_player_big_shield_ult_a10ec8e794b9cc537b9e5265484236ae1} 
+Phase {\bfseries current\+Phase}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_big_shield_ult_aee6984635c195d4eb00878354cdbd0a9}\label{class_player_big_shield_ult_aee6984635c195d4eb00878354cdbd0a9} 
+static \mbox{\hyperlink{class_player_big_shield_ult}{Player\+Big\+Shield\+Ult}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_player_big_shield_ult_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_big_shield_ult_a27d061e18552144a4a6a4906803fd7d4}\index{PlayerBigShieldUlt@{PlayerBigShieldUlt}!enter@{enter}}
+\index{enter@{enter}!PlayerBigShieldUlt@{PlayerBigShieldUlt}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_player_big_shield_ult_a27d061e18552144a4a6a4906803fd7d4} 
+void Player\+Big\+Shield\+Ult\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_big_shield_ult_a0bb85487af9342a0a16b149222981946}\index{PlayerBigShieldUlt@{PlayerBigShieldUlt}!exit@{exit}}
+\index{exit@{exit}!PlayerBigShieldUlt@{PlayerBigShieldUlt}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_player_big_shield_ult_a0bb85487af9342a0a16b149222981946} 
+void Player\+Big\+Shield\+Ult\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+\Hypertarget{class_player_big_shield_ult_a06c214cfb6f62c51d63f5163fe109985}\index{PlayerBigShieldUlt@{PlayerBigShieldUlt}!update@{update}}
+\index{update@{update}!PlayerBigShieldUlt@{PlayerBigShieldUlt}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_player_big_shield_ult_a06c214cfb6f62c51d63f5163fe109985} 
+void Player\+Big\+Shield\+Ult\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{float}]{dt\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_state_m}{StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Shield\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Player\+Shield\+State.\+cpp\end{DoxyCompactItemize}

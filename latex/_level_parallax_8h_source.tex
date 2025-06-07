@@ -1,0 +1,62 @@
+\doxysection{Level\+Parallax.\+h}
+\hypertarget{_level_parallax_8h_source}{}\label{_level_parallax_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelParallax.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelParallax.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameEngine.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SquareMeshVbo.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SquareBorderMesh.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}SimpleObject.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ParallaxObject.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_parallax}{LevelParallax}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ player;}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_parallax_object}{ParallaxObject}}*\ spaceShip;}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_parallax_object}{ParallaxObject}}*\ midGround;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ zoomRatio\ =\ 0.05f;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_ac0f2cdd84ba3e0f9a694899eceaf677a}{levelLoad}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_ab161776ebc76f0f66a114b959c80a257}{levelInit}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_af236bb8b3db85c1d3a31adbcca2d63b6}{levelUpdate}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_a87676c3ead2783c5f09f1aaaaf575d9c}{levelDraw}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_a485da048816446a5d8c30a2994e9b650}{levelFree}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_a26d492db8f7e172e9c91723f6e7c8e7f}{levelUnload}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_a6a7bf3ffde2a3f8d0490c18a3ed4306c}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_parallax_a04fab2618907da758f676a9e741b3c34}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ handleAnalogStick(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{float}\ amount);}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\#pragma\ once}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\#include\ "{}Audio.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//class\ LevelAnimTest\ :\ public\ Level}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\{}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ vector<DrawableObject*>\ objectsList;}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ TexturedObject*\ player;}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ AudioEngine*\ audio;}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ int\ d\ =\ 0;}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ \ int\ row\ =\ 0;}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ int\ col\ =\ 0;}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ \ virtual\ void\ levelLoad();}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ \ virtual\ void\ levelInit();}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \ virtual\ void\ levelUpdate();}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \ virtual\ void\ levelDraw();}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ \ virtual\ void\ levelFree();}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \ virtual\ void\ levelUnload();}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ virtual\ void\ handleKey(char\ key);}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ virtual\ void\ handleMouse(int\ type,\ int\ x,\ int\ y);}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ virtual\ void\ handleAnalogStick(int\ type,\ float\ amount);}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\};}}
+
+\end{DoxyCode}

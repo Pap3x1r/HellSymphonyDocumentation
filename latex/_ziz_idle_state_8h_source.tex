@@ -1,0 +1,40 @@
+\doxysection{Ziz\+Idle\+State.\+h}
+\hypertarget{_ziz_idle_state_8h_source}{}\label{_ziz_idle_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizIdleState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizIdleState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ZizGustState.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ZizSwoopState.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ZizGroundSlamState.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ZizWingSpanState.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}ZizClawSlashState.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ZizChompState.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}ZizUltState.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ZizQTEState.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}ZizImpaleState.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_idle_state}{ZizIdleState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_idle_state}{ZizIdleState}}*\ instance;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ idleTimer;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_idle_state}{ZizIdleState}}*\ getInstance();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ pickState();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

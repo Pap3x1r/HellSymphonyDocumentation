@@ -1,0 +1,363 @@
+\doxysection{Level Class Reference}
+\hypertarget{class_level}{}\label{class_level}\index{Level@{Level}}
+
+
+Base class representing a game level with lifecycle and input handling.  
+
+
+
+
+{\ttfamily \#include $<$Level.\+h$>$}
+
+
+
+Inheritance diagram for Level\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_level__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_aa314cf0d21e34ae189088dbf31c20926}\label{class_level_aa314cf0d21e34ae189088dbf31c20926} 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+virtual Menu\+State \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_a360ccd2c1dd127d452842a37f86cde49}\label{class_level_a360ccd2c1dd127d452842a37f86cde49} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\begin{DoxyCompactList}\small\item\em List of drawable objects in the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}\label{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\begin{DoxyCompactList}\small\item\em Pointer to the player object. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_a9a2e270836b6f04b0043841e54ba59db}\label{class_level_a9a2e270836b6f04b0043841e54ba59db} 
+\mbox{\hyperlink{class_enemy_object}{Enemy\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries enemy}
+\begin{DoxyCompactList}\small\item\em Pointer to the enemy object. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_a6564a0ac93a868de138ab81bfc8bbe5f}\label{class_level_a6564a0ac93a868de138ab81bfc8bbe5f} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries background}
+\begin{DoxyCompactList}\small\item\em Background object. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_a78b295dd39f7c6f72cc7305fa62f8c62}\label{class_level_a78b295dd39f7c6f72cc7305fa62f8c62} 
+float {\bfseries transition\+Time} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Timer for transitions. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_a387475e9e898a0752df56a81ddcb6143}\label{class_level_a387475e9e898a0752df56a81ddcb6143} 
+float {\bfseries transition\+Duration} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Duration of the transition. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_afff42d975e0642e1824b5655dbb59def}\label{class_level_afff42d975e0642e1824b5655dbb59def} 
+bool {\bfseries transitioning} = false
+\begin{DoxyCompactList}\small\item\em Flag to indicate if transitioning. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_af6de0498aeac0880453dc7a13677ae21}\label{class_level_af6de0498aeac0880453dc7a13677ae21} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\begin{DoxyCompactList}\small\item\em Current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_af4db809a31f383cb1789e28f79acb9de}\label{class_level_af4db809a31f383cb1789e28f79acb9de} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\begin{DoxyCompactList}\small\item\em Next menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a game level with lifecycle and input handling. 
+
+The \doxylink{class_level}{Level} class manages the core game objects, rendering, input, and transitions. 
+
+\label{doc-func-members}
+\Hypertarget{class_level_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_aef49fbeb779a9fa8d663268413596c97}\index{Level@{Level}!addObject@{addObject}}
+\index{addObject@{addObject}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_aef49fbeb779a9fa8d663268413596c97} 
+void Level\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_ab24de7b0429a0aed680da63e61ac5182}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_aaf3b4e1aaff677379e0cd0631ea21f19}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a81de49885f1614275a94a935391015cb}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_ae47eaa8c578f0e78753ecf5fd2d144a2}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a21c88d2582bafd4f3c3cb4c7891afae2}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a06503d8a207cc4dd0789703097992aa3}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a546442652e578c12ba716e0784365025}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_mem_test_a56a4578488e476815f485c754e309cfb}{Level\+Mem\+Test}}, and \mbox{\hyperlink{class_level_prototype_af94b83a464a1e8841c0e2b481b2bc990}{Level\+Prototype}}.
+
+\Hypertarget{class_level_a820a0dcdd8b865cae0f1e7134a54c972}\index{Level@{Level}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_a820a0dcdd8b865cae0f1e7134a54c972} 
+void Level\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_aa53868b1ebaf4668b1a33abb02e987ce}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_adbadf718ddff13c31c83ddb098611321}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a030efcc20c8abe67e81d71c52850e6f4}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_ae040d166ce1827f58f8117dd8b4ff291}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_lucifer_a50dc99c406a50efc0181088bcdd28635}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a659a48d68c920b9ded4e36dc427bbb66}{Level\+Main\+Menu}}, and \mbox{\hyperlink{class_level_mem_test_a87dbe6f7ee9bc4995691ea78b626e964}{Level\+Mem\+Test}}.
+
+\Hypertarget{class_level_a36bc96d202f04a14396ff2c17fb642c6}\index{Level@{Level}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_a36bc96d202f04a14396ff2c17fb642c6} 
+Menu\+State Level\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_a469e94b4919a6e8bd825b2d11107985a}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_a838c6d4eef154b3e8d6fcd1726a7bfa3}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a2cd77b0037c5ef5b69e4441395bb7bfa}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_a3048e1b47680b7305c32a0e71409b65f}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_lucifer_a357d5c8e72472ed4dad72baeb65204c1}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a3dcca482d499cf148e368046f9a318f1}{Level\+Main\+Menu}}, and \mbox{\hyperlink{class_level_mem_test_a177996b8b72509cbe830e819f1b1135c}{Level\+Mem\+Test}}.
+
+\Hypertarget{class_level_a4bf16fa2345bfc5024218a50a3ebb254}\index{Level@{Level}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_a4bf16fa2345bfc5024218a50a3ebb254} 
+void Level\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_a6d4f732d1dc63f7ec1c11453de0c7c84}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_a4e9b49124713d25226c861d28b2832d8}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a28dd61b4b050b22675422dfede067aba}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_a56994a5b303574ceeb89fd316f87d28a}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_ab29eb9a0a05b5a67f233a27b3da893ba}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_ade15880531f7d0d0e89a18e11b3efca0}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a3daf9baea05307a6ee9f44dcb632a294}{Level\+Main\+Menu}}, and \mbox{\hyperlink{class_level_mem_test_a93887ab706e3eeb987d3318d8e53258e}{Level\+Mem\+Test}}.
+
+\Hypertarget{class_level_af8635a2be12ace76428850089dee82bf}\index{Level@{Level}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_af8635a2be12ace76428850089dee82bf} 
+void Level\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_a450e8deb088cf4b84e980f32545717a0}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_a35c4ddafcfc22a09cfe305574e368c02}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a61d8b61a9aaa430bac6eab8c0c314198}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_ab6547deced45e73b852089b4299cc0b9}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_ab8aa1e8144ebc87e38dfc8dfdfd03379}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a8a619656088c0636080984cd9967fd78}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a6f65d42aa8aa7eba0da65221774151a4}{Level\+Main\+Menu}}, and \mbox{\hyperlink{class_level_mem_test_a2f71c223bf6dfdfcef356116de4459f4}{Level\+Mem\+Test}}.
+
+\Hypertarget{class_level_a335aff777af5f2e664c3bf135802f3ab}\index{Level@{Level}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_a335aff777af5f2e664c3bf135802f3ab} 
+void Level\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_a076950656abd58d95d12e7a70311b186}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_a39cbac3dff9d17004bbc82e5b6666b33}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a7ec840a95e6d90f0e3968ea492752050}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_adc12d91de4685a15b41435f164a309a4}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_ac82c6f8fc997ef96003fa0498a78738d}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_a0b2fe184528659eb09969f08c3271ea2}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a2e2a5723c030cb0ffb6565cee7fddbc1}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a22e608a6cf5466e3fb9ce57bb74136d6}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_aa4b3b780eac4dfcc0e42132c65be4ad6}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a6dd4f7221abf34edf016f3688a4fb9b9}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_a09f5c41184cc2a1100e4f2b9e40efa00}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_a6a7bf3ffde2a3f8d0490c18a3ed4306c}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_ab566669b72e38e5780d7ea0fe45f3344}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_a44da0135ccafad655216e56402e9d8dc}{Level\+UITest}}.
+
+\Hypertarget{class_level_af94de9c1b4b706811dcd137377a48201}\index{Level@{Level}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_af94de9c1b4b706811dcd137377a48201} 
+void Level\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_a7b8136827b3e4495664df771e7d57b78}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_ad8b125b09aa61a7acf294d433e6fd0bd}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a3dc794da2f0bc420b383827c233f3a39}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_a41e1a6f6492054c963eb0a9a4154bbfe}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_aa4a0ae3dd8f90796edf774476f6aa6be}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_adc521b02b90cec8aa69884ed9d4178e6}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a6fe5775087755f1457497cfb50c89271}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a8bd9c5429121e973512d87731a23401b}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a622c091959ea1f4cbb3072a299cb3513}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a42642346af6386fdb792a4848cc78f53}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_a35408f2665603cadca0ab907921c001f}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_a04fab2618907da758f676a9e741b3c34}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_ab32fb5e4dbed646fc1bd07a7f1b66cce}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_a07c6b897318131b148ed2eccd115631a}{Level\+UITest}}.
+
+\Hypertarget{class_level_a791a883a14cb9326a95e1230e8756c73}\index{Level@{Level}!isReceivingNoInputs@{isReceivingNoInputs}}
+\index{isReceivingNoInputs@{isReceivingNoInputs}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{isReceivingNoInputs()}{isReceivingNoInputs()}}
+{\footnotesize\ttfamily \label{class_level_a791a883a14cb9326a95e1230e8756c73} 
+void Level\+::is\+Receiving\+No\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when no input is currently being received. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_boss_test_aeacd92e25ede4b43960a110713cb85cc}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_credits_a6e3e2520655a22238746ff6c3035729d}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a60591442ed39b7a13df4d5fe36cf0be7}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_adb4c84f80327057de47034bbc0b7603e}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_main_menu_a31e84b3e073d161c735b88fd6220f144}{Level\+Main\+Menu}}, and \mbox{\hyperlink{class_level_mem_test_a23bff8f59ca38596962edecaa2c216b0}{Level\+Mem\+Test}}.
+
+\Hypertarget{class_level_ad13ee79561d43ae24e4f50fbcda13d25}\index{Level@{Level}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_ad13ee79561d43ae24e4f50fbcda13d25} 
+void Level\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_afa94bae6e4366e59b7f7042226219403}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_a6948b507c7c8cbe5a829986f6226180e}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_aeabb691ec60efaf2bb0af0ddb923c995}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_ac031df40d01bcda349760f210ea8d049}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a83d6e75a56f39918dee60c75118f2490}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_a17b2600406a91e5e18986caf3c0e1210}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a1a0f32304680e757c7d1d01cf1eb8746}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a325194d0f5794147155a4791c47d1338}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a949dd3f5527e0c247704b347b53dfd27}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_ab8198d1501974b2a3574924edd9c090e}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_a11f27f6d8e5bf36b8dbbf51cbe9e0a36}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_a87676c3ead2783c5f09f1aaaaf575d9c}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_ab3b053a71a71daad422e59d877edccc6}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_aa2c2c23d9734a566e3715bac8df92171}{Level\+UITest}}.
+
+\Hypertarget{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}\index{Level@{Level}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_ae93ec144c275cf24e2e82d20b0efdbdb} 
+void Level\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_aacc95ab0f2f7c1d7f4824943d0af5635}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_a5324a866860c232cad45f42301ecf2f1}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a720af062c5f9c75b1b2b259576e57806}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_a09657fcb38092ebf96e01c253ac83a4f}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a9f9ba5d03506ac8b613b94651565cf18}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_ae40945de4524f35f42aa02d70381aaee}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a245c8242a3083f25758b2cad20debe21}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_aed8f4570b0c6bf7e75ae0d1375207a42}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_af111d7c9e10b20226291db8b35a38d54}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a711b1833fc7d768a4d726ab9103abe83}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_aa7c72246a33c841b836ff94df92b5de6}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_a485da048816446a5d8c30a2994e9b650}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_ac9c17a2c86323ae0fd12e574cb552948}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_ac39f167217833db5ec86ffcea249160c}{Level\+UITest}}.
+
+\Hypertarget{class_level_a6934fe9b9786ad0780672ddc73471939}\index{Level@{Level}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_a6934fe9b9786ad0780672ddc73471939} 
+void Level\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_ade05d4273625fa43a68f79195bbffd84}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_af08af0bf8c4d3edde1fcc20acd19ae88}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a2d5dcada5ca04801e503df4b2970e589}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_a83f9c22ba84db1e63682d56d21756a4d}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_af2999b493cf076641fc3d9fc26a83a8a}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_aca247786220ec5132c1acf1ecfbf1055}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a9d15cbfb61c9aa34c86d841d1fba2bf2}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a3e90d01361527fc4cd8e83057006ba70}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a3f5c06262c9bda20ca906f97eaba3fcb}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a0e3fd125f7bdedd74311a698f0d47dca}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_a9c172ae784fd8ae1b709942ee8b23f97}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_ab161776ebc76f0f66a114b959c80a257}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_abc92c10f95cd5a93062c4e39f23f26b0}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_ae24dd989e08e443ad8328838fa760394}{Level\+UITest}}.
+
+\Hypertarget{class_level_a50b7ab555735b967f2812b8d18b317c3}\index{Level@{Level}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_a50b7ab555735b967f2812b8d18b317c3} 
+void Level\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_a5d60a263fb90af33eb372b9b53d72a4a}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_a517f4b7fd2a954fc8ca0b81057b5b8c8}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a250dfe4bab37df4629bf7b6cdec94b8b}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_a159d7d4c05e46035594b0748f3325e34}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a4720221d8538461311b86085b37643db}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_a6ea1ffc6f58f322937e7a4e640a41729}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_acf157b1e306f011791dd8c6ccf11921d}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a36da04486391f21bd168e75e1b6a6507}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a0bbfc9f2cbb53c063731b751088eff82}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a90f44ea59225ed0ed43bdb906717d934}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_a80162969e949b7652ff3a5e2ea01087d}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_ac0f2cdd84ba3e0f9a694899eceaf677a}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_a207fe1aa2a5de70c8733424d48ed9e2d}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_a66bda50f155a47c9d5b934ae185ce66f}{Level\+UITest}}.
+
+\Hypertarget{class_level_a7cea1904911630093477eb046f0d195c}\index{Level@{Level}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_a7cea1904911630093477eb046f0d195c} 
+void Level\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_ad979ecdf33ea3135e616ef86fbac8272}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_ab11bb0b5fcd3875ac0c795ce1739a629}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_a47508050ea7249f614375259c12dec70}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_aceb69914cb136286dc3d3f4a31df27c6}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_aeed6a4eda2e9f74adea23ce1eacae164}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_acb038abc1d92aa2eb61627e58e266597}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a0cb0e4f4e0c7386f92f57aefe523baff}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_a4d499fbb6e7b1bdd423a26ce9473ba24}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_aac75ff8022b70cafd07c047c7ef93e0a}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a6d5bbb3496b20fca569bdcf7c4c6d66a}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_ac01d315aeb70712a791c7ba228acf115}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_a26d492db8f7e172e9c91723f6e7c8e7f}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_a325bece4138e7034cad0ef804f0fcb59}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_ab0540918c66cfc538657f7e1d9adf83f}{Level\+UITest}}.
+
+\Hypertarget{class_level_aa440723edf7b49ef13c36366293c3e97}\index{Level@{Level}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_aa440723edf7b49ef13c36366293c3e97} 
+void Level\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented in \mbox{\hyperlink{class_level_anim_test_a1c5ce98777e573844ae825b572302a39}{Level\+Anim\+Test}}, \mbox{\hyperlink{class_level_boss_test_a96246f535ec2f4fcd805430313a0a359}{Level\+Boss\+Test}}, \mbox{\hyperlink{class_level_collision_test_aa70b3a7e5ed21162f94a21c4ad0ac1d4}{Level\+Collision\+Test}}, \mbox{\hyperlink{class_level_credits_a6397062013cd427ee8b1c8c4cd6f14d4}{Level\+Credits}}, \mbox{\hyperlink{class_level_limbo1_a98d3160214ceace1237e3e02020c84f4}{Level\+Limbo1}}, \mbox{\hyperlink{class_level_limbo2_afaa0b4cffe079bcebca53e2576b32237}{Level\+Limbo2}}, \mbox{\hyperlink{class_level_loader_a0e52523e28f8f072556495a2e74ad969}{Level\+Loader}}, \mbox{\hyperlink{class_level_lucifer_afc92145aca580f44195ea5cedd7ff2c5}{Level\+Lucifer}}, \mbox{\hyperlink{class_level_main_menu_a48000719870662dc0c2921ffc87624d5}{Level\+Main\+Menu}}, \mbox{\hyperlink{class_level_map_editor_test_a3ecda7bb82e8109ccad27f1c790b24e4}{Level\+Map\+Editor\+Test}}, \mbox{\hyperlink{class_level_mem_test_ae5a8a859d01d1ecfac1d6c2601019786}{Level\+Mem\+Test}}, \mbox{\hyperlink{class_level_parallax_af236bb8b3db85c1d3a31adbcca2d63b6}{Level\+Parallax}}, \mbox{\hyperlink{class_level_prototype_a64d1ebe813c5c165968f305a5efa8fa4}{Level\+Prototype}}, and \mbox{\hyperlink{class_level_u_i_test_a5496230df31b0c89c6d29578bfd36bd1}{Level\+UITest}}.
+
+\Hypertarget{class_level_a47e9ac888f58f1f1b47e4a191e533c27}\index{Level@{Level}!updateObjects@{updateObjects}}
+\index{updateObjects@{updateObjects}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{updateObjects()}{updateObjects()}}
+{\footnotesize\ttfamily \label{class_level_a47e9ac888f58f1f1b47e4a191e533c27} 
+void Level\+::update\+Objects (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{objects\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates all drawable objects in the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects\+List} & List of drawable objects to update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level.\+cpp\end{DoxyCompactItemize}

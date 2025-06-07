@@ -1,0 +1,29 @@
+<map id="SliderObject" name="SliderObject">
+<area shape="rect" id="Node000001" title="Represents a UI slider with background, fill, and handle components." alt="" coords="54,323,147,349"/>
+<area shape="rect" id="Node000007" href="$class_u_i_button.html" title="UI button class with click functionality, hover detection, and optional label and slider." alt="" coords="141,421,215,448"/>
+<area shape="poly" id="edge16_Node000007_Node000001" title=" " alt="" coords="79,362,70,380,70,388,73,396,87,409,104,419,142,429,140,434,102,424,84,414,69,399,65,389,65,379,75,360"/>
+<area shape="rect" id="Node000002" href="$class_simple_object.html" title="A simple drawable object with color and transparency support." alt="" coords="95,203,194,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,241,104,255,99,272,97,290,101,322,95,323,92,290,94,271,100,252,110,238"/>
+<area shape="rect" id="Node000003" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="125,104,239,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,146,191,163,187,180,178,193,167,204,163,200,174,190,182,178,186,162,186,146"/>
+<area shape="rect" id="Node000006" href="$class_collider.html" title="Manages collision properties and state for a DrawableObject." alt="" coords="5,203,71,229"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="111,129,82,140,58,156,45,179,41,203,36,202,40,177,54,153,80,135,109,124"/>
+<area shape="rect" id="Node000008" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="218,203,327,229"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="206,140,263,201,259,204,202,144"/>
+<area shape="rect" id="Node000011" href="$class_u_i_text.html" title="Renders text as a textured quad using SDL_ttf and OpenGL." alt="" coords="528,263,588,289"/>
+<area shape="poly" id="edge15_Node000011_Node000003" title=" " alt="" coords="255,127,365,153,425,173,482,200,521,230,550,260,546,264,518,234,479,205,423,178,364,158,254,132"/>
+<area shape="rect" id="Node000004" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="20,5,101,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="81,42,115,78,154,101,151,106,112,82,77,46"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="57,48,48,97,41,155,40,202,35,202,35,154,43,97,52,47"/>
+<area shape="rect" id="Node000005" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="148,5,216,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="185,48,185,104,179,104,179,48"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="77,193,103,177,129,153,161,129,164,133,132,157,106,181,80,197"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="143,414,128,399,112,374,102,351,107,349,117,372,132,396,147,410"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="262,244,258,254,245,295,238,327,230,360,212,399,193,423,189,419,208,396,225,358,233,326,240,293,253,252,257,242"/>
+<area shape="rect" id="Node000009" href="$class_animation.html" title="Handles sprite sheet animations and state management for animated objects." alt="" coords="308,323,387,349"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="267,244,264,272,266,285,271,297,287,313,308,324,306,328,284,318,266,300,260,286,258,272,261,244"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="339,308,330,281,316,255,291,232,295,228,320,252,335,279,344,306"/>
+<area shape="rect" id="Node000010" href="$struct_state.html" title="Represents an animation state with a name, row index, and frame count." alt="" coords="416,203,468,229"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="438,245,428,273,411,300,395,314,378,325,376,320,392,310,407,297,423,271,433,243"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="522,299,518,301,349,373,215,423,213,418,347,368,516,296,520,294"/>
+</map>

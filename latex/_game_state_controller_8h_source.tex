@@ -1,0 +1,64 @@
+\doxysection{Game\+State\+Controller.\+h}
+\hypertarget{_game_state_controller_8h_source}{}\label{_game_state_controller_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/GameStateController.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/GameStateController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameStateList.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}InputManager.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_load_info}{LoadInfo}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ vector<string>\ \mbox{\hyperlink{struct_load_info_a3260e0359f89eef22205efe331830066}{textureDirs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ GameState\ \mbox{\hyperlink{struct_load_info_ab9479ff4ccefcfa3478f7bc37508b9f4}{nextStateAfterLoad}}\ =\ GameState::GS\_MAINMENU;\ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_state_controller_a9a3b16878733c7e4b5ee82f553e1e448}{GameStateController}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ \mbox{\hyperlink{class_game_state_controller_ad5ead3faf493165dd7b17ddf0b061468}{currentLevel}};\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ GameState\ \mbox{\hyperlink{class_game_state_controller_a29921f0c8d663997d7335a127fffe4f6}{gameStateCurr}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ GameState\ \mbox{\hyperlink{class_game_state_controller_afb6a7127932213c43aca54102d9803d4}{gameStatePrev}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ GameState\ \mbox{\hyperlink{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8}{gameStateNext}};\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{struct_load_info}{LoadInfo}}\ \mbox{\hyperlink{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}{pendingLoad}};\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_game_state_controller_a9a3b16878733c7e4b5ee82f553e1e448}{GameStateController}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a11f8894058e0679d97dcd4fb12919902}{init}}(GameState\ gameStateInit);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a81ab82a44d1022a78df79873a157c636}{loadLevel}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a31b16ea562161aad263c78c62070f2ea}{initLevel}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a01e9d3248a36a2af0858dd51e8bf7e3f}{updateLevel}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a5a2777bbb1cd26e813056d6ee443daa0}{drawLevel}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a3c3a1263ce5f78ae3186e510f2be92e6}{freelevel}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a732dfce9c13ec4a36a64cd4ad0ba8bc4}{unloadLevel}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_afaef0ac44278859f1f6863781709f246}{handleKeyLevel}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a2fd8b1da898386cfd1bb4351abbe36dc}{handleControllerButtonLevel}}(SDL\_GameControllerButton\ button);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a2807490384a382ccb864b8b0076b726d}{handleMouseLevel}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a88d5f6c40ba43690c37355ba00e64c75}{handleAnalogLevel}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_controller_a529fd067b089c04a03adfbd75d19bf0d}{handleNotReceivingInputs}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ \mbox{\hyperlink{class_game_state_controller_a05cbc7c7c9996a8d16edf9419665429e}{getLevel}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_game_state_controller_ad5ead3faf493165dd7b17ddf0b061468}{currentLevel}};}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,229 @@
+\doxysection{Level\+Limbo1.\+h}
+\hypertarget{_level_limbo1_8h_source}{}\label{_level_limbo1_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelLimbo1.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelLimbo1.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Gust.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}StormRise.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ChompTentacle.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}InteractableObject.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Sword.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Bow.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Shield.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}SwoopWarning.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}UltZizOnBG.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}Lightning.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}QTEButtonUI.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}Impale.h"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_limbo1}{LevelLimbo1}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_u_i_button}{UIButton}}*\ focusedButton\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ selectedIndex\ =\ -\/1;\ \textcolor{comment}{//\ Not\ select\ anything}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ hoveredIndex\ =\ -\/1;\ \textcolor{comment}{//Mouse}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ controlByMouse\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ list<UIButton*>\ buttonsList;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Not\ for\ draw\ list}}
+\DoxyCodeLine{00037\ \ \ \ \ list<UIButton*>\ mainButtons;}
+\DoxyCodeLine{00038\ \ \ \ \ list<UIButton*>\ pauseButtons;}
+\DoxyCodeLine{00039\ \ \ \ \ list<UIButton*>\ optionsButtons;}
+\DoxyCodeLine{00040\ \ \ \ \ list<UIButton*>\ audioButtons;}
+\DoxyCodeLine{00041\ \ \ \ \ list<UIButton*>\ controllerButtons;}
+\DoxyCodeLine{00042\ \ \ \ \ list<UIButton*>\ keyboardButtons;}
+\DoxyCodeLine{00043\ \ \ \ \ list<UIButton*>\ creditsButton;}
+\DoxyCodeLine{00044\ \ \ \ \ list<UIButton*>\ quitConfirmButtons;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Slider\ List}}
+\DoxyCodeLine{00047\ \ \ \ \ list<SliderObject*>\ slidersList;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ masterSlider;}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ musicSlider;}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ sfxSlider;}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ ambientSlider;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_u_i_button}{UIButton}}*\ focusedHandle\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//UI}}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ controllerOverlay\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ kbOverlay\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ transitionTime\ =\ 0.0f;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{float}\ transitionDuration\ =\ 0.2f;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ transitioning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ holdButtonTimer\ =\ 0.0f;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ holdButtonThreshold\ =\ 0.5f;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ blackFadeTransitionTime\ =\ 0.0f;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{float}\ blackFadeTransitionDuration\ =\ 1.0f;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ firstStart\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ blackFade\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ MenuState\ currentMenuState\ =\ MenuState::MAIN;}
+\DoxyCodeLine{00074\ \ \ \ \ MenuState\ nextMenuState\ =\ MenuState::MAIN;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ isHolding;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ timeK\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ dt\ =\ 0;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButtonUI}}*\ qbui;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_interactable_object}{InteractableObject}}*\ vergil;}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_interactable_object}{InteractableObject}}*\ bowStatue;}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_interactable_object}{InteractableObject}}*\ swordStatue;}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_interactable_object}{InteractableObject}}*\ shieldStatue;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ bowStatue2;}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ swordStatue2;}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ shieldStatue2;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//ControlType}}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_input_manager}{InputManager}}*\ inputManager;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{enum}\ ControlType\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ keyboard\ =\ 0,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ controller}
+\DoxyCodeLine{00109\ \ \ \ \ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ ControlType\ currentControlType\ =\ ControlType::keyboard;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//UI}}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ playerHealthBar;}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ playerUltimateBar;}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ witherHealthBar;}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ playerOverheatBar;}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ playerOverheatBarBackground\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ playerOverheatBarFrame\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//Skill\ Icon}}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ bowSmallUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ bowSmallUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ bowBigUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ bowBigUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ swordSmallUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ swordSmallUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ swordBigUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ swordBigUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ shieldSmallUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ shieldSmallUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ shieldBigUltIconOff\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ shieldBigUltIconOn\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ dashIcon\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ tutorialOverlay\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ createSkillsIcon();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ updateSkillsIcon();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ playerUltimateInput();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ updateUIBar();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ stateMachineUpdate(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{float}\ playerTimeScale\ =\ 1.0f;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ tempx;}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ tempx2;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a4720221d8538461311b86085b37643db}{levelLoad}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_af2999b493cf076641fc3d9fc26a83a8a}{levelInit}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a98d3160214ceace1237e3e02020c84f4}{levelUpdate}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a83d6e75a56f39918dee60c75118f2490}{levelDraw}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a9f9ba5d03506ac8b613b94651565cf18}{levelFree}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_aeed6a4eda2e9f74adea23ce1eacae164}{levelUnload}}();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_ac82c6f8fc997ef96003fa0498a78738d}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a61d8b61a9aaa430bac6eab8c0c314198}{handleControllerButton}}(SDL\_GameControllerButton\ button);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_aa4a0ae3dd8f90796edf774476f6aa6be}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a28dd61b4b050b22675422dfede067aba}{handleAnalogStick}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a60591442ed39b7a13df4d5fe36cf0be7}{isReceivingNoInputs}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a81de49885f1614275a94a935391015cb}{addObject}}(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ addPlayerToDebug(\mbox{\hyperlink{class_player}{Player}}*\ player);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ resetLevel()\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_ab9de585905759a0b70da07a5b147fb91}{getStateController}}()-\/>\mbox{\hyperlink{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8}{gameStateNext}}\ =\ GameState::GS\_RESTART;}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPausing(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_limbo1_a030efcc20c8abe67e81d71c52850e6f4}{changeMenuState}}(MenuState\ targetState);}
+\DoxyCodeLine{00179\ \ \ \ \ MenuState\ \mbox{\hyperlink{class_level_limbo1_a2cd77b0037c5ef5b69e4441395bb7bfa}{getMenuState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ mouseUIHandling(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ keyboardUIHandling(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ glm::vec2\ convertMouseToGameSpace(\textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ changeSelection(\textcolor{keywordtype}{int}\ direction);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ buttonsFree();}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ UIUpdate();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ switchControlType(ControlType\ ct);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ createPauseUI();}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ controllerUIHandling(SDL\_GameControllerButton\ button);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ toLoadingScreen()\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_state_controller}{GameStateController}}*\ gameStateController\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_ab9de585905759a0b70da07a5b147fb91}{getStateController}}();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a800e36367ceb78c46c68c0eb8e5e32f0}{saveGameState}}(\mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>getStateController()-\/>gameStateCurr,\ \textcolor{stringliteral}{"{}../Resource/Saves/PlayerData/playerGameState.txt"{}});}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8}{savePlayerWeaponType}}(player,\ \textcolor{stringliteral}{"{}../Resource/Saves/PlayerData/playerWeaponTypeData.txt"{}});}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Inserting\ directories\ to\ load\ and\ level\ destination}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}{pendingLoad}}.\mbox{\hyperlink{struct_load_info_a3260e0359f89eef22205efe331830066}{textureDirs}}\ =\ \{\};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}{pendingLoad}}.\mbox{\hyperlink{struct_load_info_ab9479ff4ccefcfa3478f7bc37508b9f4}{nextStateAfterLoad}}\ =\ GameState::GS\_MAINMENU;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Change\ to\ loading\ screen}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8}{gameStateNext}}\ =\ GameState::GS\_LOADINGSCREEN;}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ nextLevel()\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_state_controller}{GameStateController}}*\ gameStateController\ =\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_ab9de585905759a0b70da07a5b147fb91}{getStateController}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{comment}{//GameState\ targetGameState\ =\ GameEngine::getInstance()-\/>loadGameState("{}../Resource/Saves/PlayerData/playerGameState.txt"{},\ 0);}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Inserting\ directories\ to\ load\ and\ level\ destination}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_aaed28d1383adc09a538633fe49adfdcc}{savePlayerData}}(player,\ \textcolor{stringliteral}{"{}../Resource/Saves/PlayerData/playerData.txt"{}});}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>\mbox{\hyperlink{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8}{savePlayerWeaponType}}(player,\ \textcolor{stringliteral}{"{}../Resource/Saves/PlayerData/playerWeaponTypeData.txt"{}});}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}{pendingLoad}}.\mbox{\hyperlink{struct_load_info_a3260e0359f89eef22205efe331830066}{textureDirs}}\ =\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a52f8347db54f540b2781ebfa2566c092}{pendingLoad}}.\mbox{\hyperlink{struct_load_info_ab9479ff4ccefcfa3478f7bc37508b9f4}{nextStateAfterLoad}}\ =\ GameState::GS\_LIMBO2;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{GameEngine::getInstance}}()-\/>isNewGame\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ gameStateController-\/>\mbox{\hyperlink{class_game_state_controller_a571f84a92c0a7bee3fb83e744ee2aee8}{gameStateNext}}\ =\ GameState::GS\_LOADINGSCREEN;}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \};}
+
+\end{DoxyCode}

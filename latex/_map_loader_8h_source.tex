@@ -1,0 +1,61 @@
+\doxysection{Map\+Loader.\+h}
+\hypertarget{_map_loader_8h_source}{}\label{_map_loader_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/MapLoader.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/MapLoader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SimpleObject.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Transform.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ DEFAULT\_SIZE\ =\ 100;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }MapLoader\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ ObjectType\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ AIR\ =\ 0,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ GROUND,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ PLAYER,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ PHYSICS\_OBJ,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ PROCESSED}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }ObjectProperty\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ ObjectProperty(ObjectType\ type,\ \mbox{\hyperlink{class_transform}{Transform}}\ transform,\ \textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ ObjectType\ type;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_transform}{Transform}}\ transform;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ width;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ height;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_map_loader_1_1_raw_map_data}{RawMapData}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ vector<vector<ObjectType>>\ data;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ vector<ObjectType>\&\ operator[](\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_map_loader_1_1_raw_map_data}{RawMapData}}\ rawMapData;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ vector<ObjectProperty>\ processedMapData;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_map_loader_a4c4bc0aaecd5b31147658bf3d7399608}{alignData}}(\textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ pair<pair<int,\ int>,\ pair<int,\ int>>\ \mbox{\hyperlink{class_map_loader_a9a81fd4879b1e5fce9e153d862feed78}{getObjectRange}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ ObjectType\ type);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ markAsProcessed(\textcolor{keywordtype}{int}\ startX,\ \textcolor{keywordtype}{int}\ endX,\ \textcolor{keywordtype}{int}\ startY,\ \textcolor{keywordtype}{int}\ endY,\ ObjectType\ type);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_map_loader_1_1_object_property}{ObjectProperty}}\ \mbox{\hyperlink{class_map_loader_ad2b796cf7b75f7c63522af5b0f31d42c}{getObjectProperty}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ ObjectType\ type);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ MapLoader();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \string~MapLoader();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ readData(\textcolor{keywordtype}{string}\ fileName);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ loadDataToScene(list<DrawableObject*>\&\ objectList,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\&\ player);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ appendDataToScene(list<DrawableObject*>\&\ objectList,\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\&\ player);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ offsetMap(list<DrawableObject*>\&\ objectList,\ glm::vec3\ offset);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ offsetMapToCenter(list<DrawableObject*>\&\ objectList);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clearData();}
+\DoxyCodeLine{00056\ \};}
+
+\end{DoxyCode}

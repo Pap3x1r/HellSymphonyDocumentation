@@ -1,0 +1,578 @@
+\doxysection{Level\+Limbo2 Class Reference}
+\hypertarget{class_level_limbo2}{}\label{class_level_limbo2}\index{LevelLimbo2@{LevelLimbo2}}
+
+
+Inheritance diagram for Level\+Limbo2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_level_limbo2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Limbo2\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_limbo2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_a6ea1ffc6f58f322937e7a4e640a41729}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_aca247786220ec5132c1acf1ecfbf1055}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_afaa0b4cffe079bcebca53e2576b32237}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_a17b2600406a91e5e18986caf3c0e1210}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_ae40945de4524f35f42aa02d70381aaee}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_acb038abc1d92aa2eb61627e58e266597}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_a0b2fe184528659eb09969f08c3271ea2}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_ab6547deced45e73b852089b4299cc0b9}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_adc521b02b90cec8aa69884ed9d4178e6}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_a56994a5b303574ceeb89fd316f87d28a}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_adb4c84f80327057de47034bbc0b7603e}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_limbo2_ae47eaa8c578f0e78753ecf5fd2d144a2}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_limbo2_a0b7d5390b05585616d42503c84e811f0}\label{class_level_limbo2_a0b7d5390b05585616d42503c84e811f0} 
+void {\bfseries add\+Player\+To\+Debug} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}{player}})
+\item 
+\Hypertarget{class_level_limbo2_adb68b45e71e9898247a78285122c61b3}\label{class_level_limbo2_adb68b45e71e9898247a78285122c61b3} 
+void {\bfseries reset\+Level} ()
+\item 
+\Hypertarget{class_level_limbo2_a03c4e75042fbb9afd3531bd00c2ca502}\label{class_level_limbo2_a03c4e75042fbb9afd3531bd00c2ca502} 
+bool {\bfseries is\+Pausing} (float dt)
+\item 
+void \mbox{\hyperlink{class_level_limbo2_ae040d166ce1827f58f8117dd8b4ff291}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+Menu\+State \mbox{\hyperlink{class_level_limbo2_a3048e1b47680b7305c32a0e71409b65f}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_limbo2_aeedc9fa550ea3911810aab133953f4b5}\label{class_level_limbo2_aeedc9fa550ea3911810aab133953f4b5} 
+void {\bfseries mouse\+UIHandling} (int type, float x, float y)
+\item 
+\Hypertarget{class_level_limbo2_a826ea29242f22742d911c378b0e1a6d2}\label{class_level_limbo2_a826ea29242f22742d911c378b0e1a6d2} 
+void {\bfseries keyboard\+UIHandling} (char key)
+\item 
+\Hypertarget{class_level_limbo2_a070ec8f3423cf54dc61638e643c1d308}\label{class_level_limbo2_a070ec8f3423cf54dc61638e643c1d308} 
+glm\+::vec2 {\bfseries convert\+Mouse\+To\+Game\+Space} (int mouseX, int mouseY)
+\item 
+\Hypertarget{class_level_limbo2_a5fe1fd716a59d38a95b55e12bb611af4}\label{class_level_limbo2_a5fe1fd716a59d38a95b55e12bb611af4} 
+void {\bfseries change\+Selection} (int direction)
+\item 
+\Hypertarget{class_level_limbo2_a8a194788e45e32f4817620b6073d5d17}\label{class_level_limbo2_a8a194788e45e32f4817620b6073d5d17} 
+void {\bfseries buttons\+Free} ()
+\item 
+\Hypertarget{class_level_limbo2_a9fd4f15b106efabe44330820dc9dbcea}\label{class_level_limbo2_a9fd4f15b106efabe44330820dc9dbcea} 
+void {\bfseries UIUpdate} ()
+\item 
+\Hypertarget{class_level_limbo2_a2afda5daa80a396ed482e00af24fc335}\label{class_level_limbo2_a2afda5daa80a396ed482e00af24fc335} 
+void {\bfseries switch\+Control\+Type} (Control\+Type ct)
+\item 
+\Hypertarget{class_level_limbo2_aa99eb619f2baa4be148a726fcd1e23ce}\label{class_level_limbo2_aa99eb619f2baa4be148a726fcd1e23ce} 
+void {\bfseries create\+Pause\+UI} ()
+\item 
+\Hypertarget{class_level_limbo2_a014478403d456f604a701ab0892c58c5}\label{class_level_limbo2_a014478403d456f604a701ab0892c58c5} 
+void {\bfseries to\+Loading\+Screen} ()
+\item 
+\Hypertarget{class_level_limbo2_aaf6ebf01e82e49aa8ca84e2e6e307a81}\label{class_level_limbo2_aaf6ebf01e82e49aa8ca84e2e6e307a81} 
+void {\bfseries previous\+Level} ()
+\item 
+\Hypertarget{class_level_limbo2_a847d4470545352eada65b55268134773}\label{class_level_limbo2_a847d4470545352eada65b55268134773} 
+void {\bfseries next\+Level} ()
+\item 
+\Hypertarget{class_level_limbo2_a533ad3823fdd903f6559e456e226386e}\label{class_level_limbo2_a533ad3823fdd903f6559e456e226386e} 
+void {\bfseries controller\+UIHandling} (SDL\+\_\+\+Game\+Controller\+Button button)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_limbo2_a98723012d99c9fdfdc5b2cfc8bc47787}\label{class_level_limbo2_a98723012d99c9fdfdc5b2cfc8bc47787} 
+enum {\bfseries Control\+Type} \{ {\bfseries keyboard} = 0
+, {\bfseries controller}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_limbo2_a6306b9d4900c87aff98e3ab99711f0d4}\label{class_level_limbo2_a6306b9d4900c87aff98e3ab99711f0d4} 
+void {\bfseries create\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_limbo2_ab5c83f410213578731de699d3cb9508a}\label{class_level_limbo2_ab5c83f410213578731de699d3cb9508a} 
+void {\bfseries update\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_limbo2_affdb89db1131cf2bfd4ef4474a97efa7}\label{class_level_limbo2_affdb89db1131cf2bfd4ef4474a97efa7} 
+void {\bfseries player\+Ultimate\+Input} ()
+\item 
+\Hypertarget{class_level_limbo2_ad3228271b8b04caf270d568663b3ed32}\label{class_level_limbo2_ad3228271b8b04caf270d568663b3ed32} 
+void {\bfseries update\+UIBar} ()
+\item 
+\Hypertarget{class_level_limbo2_aefe0356de305817d51a1f60d5077d2ad}\label{class_level_limbo2_aefe0356de305817d51a1f60d5077d2ad} 
+void {\bfseries state\+Machine\+Update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_limbo2_a7765a06a5a4c8b9fef0857517cfaa0fc}\label{class_level_limbo2_a7765a06a5a4c8b9fef0857517cfaa0fc} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Button} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a4c9ed8aac0d9b40e399f6b671ffb99a8}\label{class_level_limbo2_a4c9ed8aac0d9b40e399f6b671ffb99a8} 
+int {\bfseries selected\+Index} = -\/1
+\item 
+\Hypertarget{class_level_limbo2_a63f54c7cac0696c5c625bf5f902c621c}\label{class_level_limbo2_a63f54c7cac0696c5c625bf5f902c621c} 
+int {\bfseries hovered\+Index} = -\/1
+\item 
+\Hypertarget{class_level_limbo2_a01c55ab204a7c15f38b1f730756fcb05}\label{class_level_limbo2_a01c55ab204a7c15f38b1f730756fcb05} 
+bool {\bfseries control\+By\+Mouse} = false
+\item 
+\Hypertarget{class_level_limbo2_a115849f04d9aa0443e568e712fbbcdcd}\label{class_level_limbo2_a115849f04d9aa0443e568e712fbbcdcd} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_limbo2_a8ea24779a35c3fd6aa4e6cbf4c308854}\label{class_level_limbo2_a8ea24779a35c3fd6aa4e6cbf4c308854} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries main\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_a1c43c4b3af174c79be46078bd2e50254}\label{class_level_limbo2_a1c43c4b3af174c79be46078bd2e50254} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries pause\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_a611b3bfa6e75d3a1707064668a242116}\label{class_level_limbo2_a611b3bfa6e75d3a1707064668a242116} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries options\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_af4c9ac24019693ded6f95fa1d69f362b}\label{class_level_limbo2_af4c9ac24019693ded6f95fa1d69f362b} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries audio\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_a1cbcdd4f7743c963a658afd3c4acf70d}\label{class_level_limbo2_a1cbcdd4f7743c963a658afd3c4acf70d} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries controller\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_a6b273c0f84c17fbe564aae7c3de29b1e}\label{class_level_limbo2_a6b273c0f84c17fbe564aae7c3de29b1e} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries keyboard\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_abf55fa07bc9e895d0670a44ee6f254a5}\label{class_level_limbo2_abf55fa07bc9e895d0670a44ee6f254a5} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries credits\+Button}
+\item 
+\Hypertarget{class_level_limbo2_ae565c1ecf73f60e047e48e6f4c8e26b4}\label{class_level_limbo2_ae565c1ecf73f60e047e48e6f4c8e26b4} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries quit\+Confirm\+Buttons}
+\item 
+\Hypertarget{class_level_limbo2_a42fb48b6b66ea8c05def7d56cad5089e}\label{class_level_limbo2_a42fb48b6b66ea8c05def7d56cad5089e} 
+list$<$ \mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries sliders\+List}
+\item 
+\Hypertarget{class_level_limbo2_a1530801545fd5f5f8e4cff8065c73c75}\label{class_level_limbo2_a1530801545fd5f5f8e4cff8065c73c75} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries master\+Slider}
+\item 
+\Hypertarget{class_level_limbo2_a01c88150d32ddddd9b7952b13ab35814}\label{class_level_limbo2_a01c88150d32ddddd9b7952b13ab35814} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
+\item 
+\Hypertarget{class_level_limbo2_af5e99ba37494820a295571f275e31a85}\label{class_level_limbo2_af5e99ba37494820a295571f275e31a85} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sfx\+Slider}
+\item 
+\Hypertarget{class_level_limbo2_a83be44187fbb7a7037bdaa9de56709bc}\label{class_level_limbo2_a83be44187fbb7a7037bdaa9de56709bc} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ambient\+Slider}
+\item 
+\Hypertarget{class_level_limbo2_a0afd4999deedfe07df4c2d8b032a7c6b}\label{class_level_limbo2_a0afd4999deedfe07df4c2d8b032a7c6b} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Handle} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_affbb699ca57f2cbccd383f44246ae52e}\label{class_level_limbo2_affbb699ca57f2cbccd383f44246ae52e} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries controller\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_ab17956e2883808bcd0da340b5c1cadd8}\label{class_level_limbo2_ab17956e2883808bcd0da340b5c1cadd8} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries kb\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a47696fef4ed84e1d5bcf9bdd58618a13}\label{class_level_limbo2_a47696fef4ed84e1d5bcf9bdd58618a13} 
+float {\bfseries transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_limbo2_a2e114c3ec6195829f69ecd5b59a8bf51}\label{class_level_limbo2_a2e114c3ec6195829f69ecd5b59a8bf51} 
+float {\bfseries transition\+Duration} = 0.\+2f
+\item 
+\Hypertarget{class_level_limbo2_a9fe72f8836b889edeeb91e1f8887232e}\label{class_level_limbo2_a9fe72f8836b889edeeb91e1f8887232e} 
+bool {\bfseries transitioning} = false
+\item 
+\Hypertarget{class_level_limbo2_a5212266bd1be5a6b879c08fd64ab23cd}\label{class_level_limbo2_a5212266bd1be5a6b879c08fd64ab23cd} 
+float {\bfseries hold\+Button\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_level_limbo2_a0561b6a933284ef1a53029aed2ebb650}\label{class_level_limbo2_a0561b6a933284ef1a53029aed2ebb650} 
+float {\bfseries hold\+Button\+Threshold} = 0.\+5f
+\item 
+\Hypertarget{class_level_limbo2_a91c6d3d5ebc71060cbf65c90ea9f55e9}\label{class_level_limbo2_a91c6d3d5ebc71060cbf65c90ea9f55e9} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_limbo2_a00270ebb4489a78648ab97ddf69d9b02}\label{class_level_limbo2_a00270ebb4489a78648ab97ddf69d9b02} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_limbo2_a650a8072fbf647387ab2ba6957cd3fcf}\label{class_level_limbo2_a650a8072fbf647387ab2ba6957cd3fcf} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_limbo2_a1a94f8c7e51cb113944152342619fdc8}\label{class_level_limbo2_a1a94f8c7e51cb113944152342619fdc8} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a4272ebe14ca8e77d9fe03be0a328f4c4}\label{class_level_limbo2_a4272ebe14ca8e77d9fe03be0a328f4c4} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_limbo2_ae1619759023a9cca0953098589dfdd44}\label{class_level_limbo2_ae1619759023a9cca0953098589dfdd44} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_limbo2_ae4f594dbeaf541d0706081b18a26e0dc}\label{class_level_limbo2_ae4f594dbeaf541d0706081b18a26e0dc} 
+bool {\bfseries is\+Holding}
+\item 
+\Hypertarget{class_level_limbo2_aee1a6ca1047f057612fba0080071da60}\label{class_level_limbo2_aee1a6ca1047f057612fba0080071da60} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_limbo2_a6cef8c148a806dc82a9a3f72038b00c5}\label{class_level_limbo2_a6cef8c148a806dc82a9a3f72038b00c5} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_limbo2_a1458bbf7d32c83bb33d0000dc1afbcdd}\label{class_level_limbo2_a1458bbf7d32c83bb33d0000dc1afbcdd} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_limbo2_aab67de4b2c91e7d1cc3296ae6b94d883}\label{class_level_limbo2_aab67de4b2c91e7d1cc3296ae6b94d883} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_limbo2_a0e278c7efa85bc3506cb1f78aa5c4d57}\label{class_level_limbo2_a0e278c7efa85bc3506cb1f78aa5c4d57} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qbui}
+\item 
+\Hypertarget{class_level_limbo2_a55ad060d88ed134d0e0ae9c6d80ffac5}\label{class_level_limbo2_a55ad060d88ed134d0e0ae9c6d80ffac5} 
+\mbox{\hyperlink{class_interactable_object}{Interactable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries portal}
+\item 
+\Hypertarget{class_level_limbo2_a7152c8f4335a860d6dac2ec1d038d04d}\label{class_level_limbo2_a7152c8f4335a860d6dac2ec1d038d04d} 
+\mbox{\hyperlink{class_interactable_object}{Interactable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries dummy}
+\item 
+\Hypertarget{class_level_limbo2_acbe2058617457298729b67847f9101d4}\label{class_level_limbo2_acbe2058617457298729b67847f9101d4} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries input\+Manager}
+\item 
+\Hypertarget{class_level_limbo2_a507e7580bb21f426dc459fe54bf3962d}\label{class_level_limbo2_a507e7580bb21f426dc459fe54bf3962d} 
+Control\+Type {\bfseries current\+Control\+Type} = Control\+Type\+::keyboard
+\item 
+\Hypertarget{class_level_limbo2_add432dbd9cba09fe8d79c3164a164079}\label{class_level_limbo2_add432dbd9cba09fe8d79c3164a164079} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Health\+Bar}
+\item 
+\Hypertarget{class_level_limbo2_aaaf547a568398ce94c49dd2af94209c4}\label{class_level_limbo2_aaaf547a568398ce94c49dd2af94209c4} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Ultimate\+Bar}
+\item 
+\Hypertarget{class_level_limbo2_a67e8554e5d47612165c1bc7ab5c93794}\label{class_level_limbo2_a67e8554e5d47612165c1bc7ab5c93794} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries wither\+Health\+Bar}
+\item 
+\Hypertarget{class_level_limbo2_aeb8e49cfcec4f803f3352482b120907d}\label{class_level_limbo2_aeb8e49cfcec4f803f3352482b120907d} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar}
+\item 
+\Hypertarget{class_level_limbo2_aa83c598299cd39d4395a7aeda4b73d44}\label{class_level_limbo2_aa83c598299cd39d4395a7aeda4b73d44} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Background} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a319494794abb1c35740d4887ab8422ff}\label{class_level_limbo2_a319494794abb1c35740d4887ab8422ff} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Frame} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a68b9315e86e4061fef95a045bc71c9af}\label{class_level_limbo2_a68b9315e86e4061fef95a045bc71c9af} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_ac5c78af7140d26592108ee7395a685ce}\label{class_level_limbo2_ac5c78af7140d26592108ee7395a685ce} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_ad4014e104489b30a5f0f68ede37ee395}\label{class_level_limbo2_ad4014e104489b30a5f0f68ede37ee395} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_af97b669aa6bb86441855ebfd945d61fb}\label{class_level_limbo2_af97b669aa6bb86441855ebfd945d61fb} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_af88b2a533ddcc5a2d7087a9e34770bff}\label{class_level_limbo2_af88b2a533ddcc5a2d7087a9e34770bff} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a7735712b1018fc4fb870629b3063089a}\label{class_level_limbo2_a7735712b1018fc4fb870629b3063089a} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_aa88fa52912e71d0d4a9c5a988c3c92e9}\label{class_level_limbo2_aa88fa52912e71d0d4a9c5a988c3c92e9} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a2335b4107f5537243db80417cc80978b}\label{class_level_limbo2_a2335b4107f5537243db80417cc80978b} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_aaa30d37c63d996ae1d2274b7fc8485e4}\label{class_level_limbo2_aaa30d37c63d996ae1d2274b7fc8485e4} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a99cd531289d6ad61cf77eca286ad4ce5}\label{class_level_limbo2_a99cd531289d6ad61cf77eca286ad4ce5} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a45619c1e844585198da1c204e3f1a054}\label{class_level_limbo2_a45619c1e844585198da1c204e3f1a054} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a0cae654679c6e934ccad7fe80d2b8b24}\label{class_level_limbo2_a0cae654679c6e934ccad7fe80d2b8b24} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a20e314b6e449fa09fac4ce9b55e2a3c0}\label{class_level_limbo2_a20e314b6e449fa09fac4ce9b55e2a3c0} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries dash\+Icon} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a10767beec41256fdd1070cc8249bc6a9}\label{class_level_limbo2_a10767beec41256fdd1070cc8249bc6a9} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries tutorial\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a3dedbd074c1fd972d8cc120609dd00c6}\label{class_level_limbo2_a3dedbd074c1fd972d8cc120609dd00c6} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries portal2} = nullptr
+\item 
+\Hypertarget{class_level_limbo2_a7a0285c4c68c4131bba875f8da407d27}\label{class_level_limbo2_a7a0285c4c68c4131bba875f8da407d27} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_limbo2_ade1ec6f66cb405157e7d0f4c78a3bae1}\label{class_level_limbo2_ade1ec6f66cb405157e7d0f4c78a3bae1} 
+int {\bfseries tempx}
+\item 
+\Hypertarget{class_level_limbo2_a895ebe86acfb382915686d52979b16ba}\label{class_level_limbo2_a895ebe86acfb382915686d52979b16ba} 
+int {\bfseries tempx2}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_limbo2_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_limbo2_ae47eaa8c578f0e78753ecf5fd2d144a2}\index{LevelLimbo2@{LevelLimbo2}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_ae47eaa8c578f0e78753ecf5fd2d144a2} 
+void Level\+Limbo2\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_limbo2_ae040d166ce1827f58f8117dd8b4ff291}\index{LevelLimbo2@{LevelLimbo2}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_ae040d166ce1827f58f8117dd8b4ff291} 
+void Level\+Limbo2\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{Level}}.
+
+\Hypertarget{class_level_limbo2_a3048e1b47680b7305c32a0e71409b65f}\index{LevelLimbo2@{LevelLimbo2}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_a3048e1b47680b7305c32a0e71409b65f} 
+Menu\+State Level\+Limbo2\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{Level}}.
+
+\Hypertarget{class_level_limbo2_a56994a5b303574ceeb89fd316f87d28a}\index{LevelLimbo2@{LevelLimbo2}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_a56994a5b303574ceeb89fd316f87d28a} 
+void Level\+Limbo2\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_limbo2_ab6547deced45e73b852089b4299cc0b9}\index{LevelLimbo2@{LevelLimbo2}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_ab6547deced45e73b852089b4299cc0b9} 
+void Level\+Limbo2\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_limbo2_a0b2fe184528659eb09969f08c3271ea2}\index{LevelLimbo2@{LevelLimbo2}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_a0b2fe184528659eb09969f08c3271ea2} 
+void Level\+Limbo2\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_limbo2_adc521b02b90cec8aa69884ed9d4178e6}\index{LevelLimbo2@{LevelLimbo2}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_adc521b02b90cec8aa69884ed9d4178e6} 
+void Level\+Limbo2\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_limbo2_adb4c84f80327057de47034bbc0b7603e}\index{LevelLimbo2@{LevelLimbo2}!isReceivingNoInputs@{isReceivingNoInputs}}
+\index{isReceivingNoInputs@{isReceivingNoInputs}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{isReceivingNoInputs()}{isReceivingNoInputs()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_adb4c84f80327057de47034bbc0b7603e} 
+void Level\+Limbo2\+::is\+Receiving\+No\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when no input is currently being received. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{Level}}.
+
+\Hypertarget{class_level_limbo2_a17b2600406a91e5e18986caf3c0e1210}\index{LevelLimbo2@{LevelLimbo2}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_a17b2600406a91e5e18986caf3c0e1210} 
+void Level\+Limbo2\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_limbo2_ae40945de4524f35f42aa02d70381aaee}\index{LevelLimbo2@{LevelLimbo2}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_ae40945de4524f35f42aa02d70381aaee} 
+void Level\+Limbo2\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_limbo2_aca247786220ec5132c1acf1ecfbf1055}\index{LevelLimbo2@{LevelLimbo2}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_aca247786220ec5132c1acf1ecfbf1055} 
+void Level\+Limbo2\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_limbo2_a6ea1ffc6f58f322937e7a4e640a41729}\index{LevelLimbo2@{LevelLimbo2}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_a6ea1ffc6f58f322937e7a4e640a41729} 
+void Level\+Limbo2\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_limbo2_acb038abc1d92aa2eb61627e58e266597}\index{LevelLimbo2@{LevelLimbo2}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_acb038abc1d92aa2eb61627e58e266597} 
+void Level\+Limbo2\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_limbo2_afaa0b4cffe079bcebca53e2576b32237}\index{LevelLimbo2@{LevelLimbo2}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelLimbo2@{LevelLimbo2}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_limbo2_afaa0b4cffe079bcebca53e2576b32237} 
+void Level\+Limbo2\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Limbo2.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Limbo2.\+cpp\end{DoxyCompactItemize}

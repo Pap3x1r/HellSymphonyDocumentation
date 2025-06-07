@@ -1,0 +1,56 @@
+\doxysection{Textured\+Object.\+h}
+\hypertarget{_textured_object_8h_source}{}\label{_textured_object_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/TexturedObject.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/TexturedObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Animation.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Physics.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}gtc/matrix\_transform.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}gtc/type\_ptr.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}VergilMovementState.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}}
+\DoxyCodeLine{00022\ \{\ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_textured_object_a1b446d3ea57b0d1e01874019f9751f2a}{spriteOffset}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_textured_object_aa8af589e4da53dd9cc3a83ce81225887}{texture}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_animation}{Animation}}*\ \mbox{\hyperlink{class_textured_object_a04ee2e8e26b44de77f935cab40ea9e56}{animation}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_textured_object_aeca411a89f07e730bbd2c32b87cd0fa6}{hitEffectStrength}}\ =\ 0;\ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_textured_object_aee243a5f6ce082dd4e5c7cdb199d0195}{alpha}}\ =\ 1.0f;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ glm::vec4\ \mbox{\hyperlink{class_textured_object_a64dd195d86c6af9b01ae27c57793f349}{newColor}}\ =\ \{\ 1.0f,\ 0.0f,\ 0.0f,\ 1.0f\ \};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*bool\ animated\ =\ false;}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ int\ rowCount;}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ int\ colCount;}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ float\ offsetX;}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ float\ offsetY;*/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_textured_object_a91555408caedf9d4aa60960648936b40}{TexturedObject}}(std::string\ name);}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_textured_object_a2210dc8d166b41575127a91e6458b49a}{\string~TexturedObject}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(std::string\ path);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(\textcolor{keywordtype}{string}\ path,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ startFrame);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{setTexture}}(\textcolor{keywordtype}{string}\ path,\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ startFrame,\ \textcolor{keywordtype}{bool}\ loop);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{initAnimation}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}}(glm::mat4\ globalModelTransform);}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_animation}{Animation}}*\ \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{getAnimationComponent}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{isAnimated}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ setFrame(float\ row,\ float\ column);}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{setSpriteOffset}}(glm::vec3\ vector3);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{setHitEffectStrength}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{getHitEffectStrength}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{setAlpha}}(\textcolor{keywordtype}{float}\ value)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{getAlpha}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{setNewColor}}(glm::vec4\ v4);}
+\DoxyCodeLine{00123\ \ \ \ \ glm::vec4\ \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{getNewColor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00124\ \};}
+
+\end{DoxyCode}

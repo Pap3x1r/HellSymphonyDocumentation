@@ -1,0 +1,216 @@
+\doxysection{Level\+Anim\+Test Class Reference}
+\hypertarget{class_level_anim_test}{}\label{class_level_anim_test}\index{LevelAnimTest@{LevelAnimTest}}
+
+
+Inheritance diagram for Level\+Anim\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_level_anim_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Anim\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_anim_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_a5d60a263fb90af33eb372b9b53d72a4a}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_ade05d4273625fa43a68f79195bbffd84}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_a1c5ce98777e573844ae825b572302a39}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_afa94bae6e4366e59b7f7042226219403}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_aacc95ab0f2f7c1d7f4824943d0af5635}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_ad979ecdf33ea3135e616ef86fbac8272}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_a076950656abd58d95d12e7a70311b186}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_anim_test_a7b8136827b3e4495664df771e7d57b78}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_anim_test_a6c0694a159919ee12a75c22afbfcf0a1}\label{class_level_anim_test_a6c0694a159919ee12a75c22afbfcf0a1} 
+virtual void {\bfseries handle\+Analog\+Stick} (int type, float amount)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+virtual Menu\+State \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_anim_test_a9615e5556de24259e75e650e969174ae}\label{class_level_anim_test_a9615e5556de24259e75e650e969174ae} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_anim_test_a5a1f776e5e99c645752f2ee6841cf319}\label{class_level_anim_test_a5a1f776e5e99c645752f2ee6841cf319} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_anim_test_a701ce80879ed0497ba1a79aaa8959bd1}\label{class_level_anim_test_a701ce80879ed0497ba1a79aaa8959bd1} 
+int {\bfseries d} = 0
+\item 
+\Hypertarget{class_level_anim_test_a366215fd7bc137efa121dfcef36eb573}\label{class_level_anim_test_a366215fd7bc137efa121dfcef36eb573} 
+int {\bfseries row} = 0
+\item 
+\Hypertarget{class_level_anim_test_aab6d8cad7de9bfac7e678245d5502cfe}\label{class_level_anim_test_aab6d8cad7de9bfac7e678245d5502cfe} 
+int {\bfseries col} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_anim_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_anim_test_a076950656abd58d95d12e7a70311b186}\index{LevelAnimTest@{LevelAnimTest}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_a076950656abd58d95d12e7a70311b186} 
+void Level\+Anim\+Test\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_anim_test_a7b8136827b3e4495664df771e7d57b78}\index{LevelAnimTest@{LevelAnimTest}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_a7b8136827b3e4495664df771e7d57b78} 
+void Level\+Anim\+Test\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_anim_test_afa94bae6e4366e59b7f7042226219403}\index{LevelAnimTest@{LevelAnimTest}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_afa94bae6e4366e59b7f7042226219403} 
+void Level\+Anim\+Test\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_anim_test_aacc95ab0f2f7c1d7f4824943d0af5635}\index{LevelAnimTest@{LevelAnimTest}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_aacc95ab0f2f7c1d7f4824943d0af5635} 
+void Level\+Anim\+Test\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_anim_test_ade05d4273625fa43a68f79195bbffd84}\index{LevelAnimTest@{LevelAnimTest}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_ade05d4273625fa43a68f79195bbffd84} 
+void Level\+Anim\+Test\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_anim_test_a5d60a263fb90af33eb372b9b53d72a4a}\index{LevelAnimTest@{LevelAnimTest}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_a5d60a263fb90af33eb372b9b53d72a4a} 
+void Level\+Anim\+Test\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_anim_test_ad979ecdf33ea3135e616ef86fbac8272}\index{LevelAnimTest@{LevelAnimTest}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_ad979ecdf33ea3135e616ef86fbac8272} 
+void Level\+Anim\+Test\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_anim_test_a1c5ce98777e573844ae825b572302a39}\index{LevelAnimTest@{LevelAnimTest}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelAnimTest@{LevelAnimTest}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_anim_test_a1c5ce98777e573844ae825b572302a39} 
+void Level\+Anim\+Test\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Anim\+Test.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Anim\+Test.\+cpp\end{DoxyCompactItemize}

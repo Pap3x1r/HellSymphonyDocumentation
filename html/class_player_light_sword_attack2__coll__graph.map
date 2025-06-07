@@ -1,0 +1,6 @@
+<map id="PlayerLightSwordAttack2" name="PlayerLightSwordAttack2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,174,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="190,88,200,95,192,101,175,104,174,99,190,96,195,95,188,92"/>
+<area shape="rect" id="Node000002" href="$class_state_m.html" title=" " alt="" coords="58,5,121,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,47,92,81,87,81,87,47"/>
+</map>

@@ -1,0 +1,29 @@
+\doxysection{SFX.\+h}
+\hypertarget{_s_f_x_8h_source}{}\label{_s_f_x_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/SFX.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/SFX.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL\_mixer.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }SFX\ }
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAmbient\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00011\ \ \ \ \ Mix\_Chunk*\ chunk;\ \ \textcolor{comment}{//\ For\ sound\ effects}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ SFX(\textcolor{keyword}{const}\ std::string\&\ filePath);}
+\DoxyCodeLine{00016\ \ \ \ \ \string~SFX();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Play(\textcolor{keywordtype}{bool}\ isLoop\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ Stop();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ SetVolume(\textcolor{keywordtype}{int}\ volume);\ \ \textcolor{comment}{//\ Volume\ range:\ 0\ -\/\ 128}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ getAmbient()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ setAmbient(\textcolor{keywordtype}{bool}\ ambient);}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

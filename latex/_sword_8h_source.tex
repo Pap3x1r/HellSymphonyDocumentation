@@ -1,0 +1,68 @@
+\doxysection{Sword.\+h}
+\hypertarget{_sword_8h_source}{}\label{_sword_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Sword.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Sword.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}PlayerAttackCollider.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }Sword\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ currentChainAttack\ =\ 0;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ maxChainAttack\ =\ 5;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimeElapsed\ =\ 0.0f;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimeWindow\ =\ 0.5f;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ inChainAttack\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ inputBuffer\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ glm::vec3\ attack1Offset\ =\ \{\ 1.35f,\ -\/0.65f,\ 0.0f\ \};}
+\DoxyCodeLine{00018\ \ \ \ \ glm::vec3\ attack2Offset\ =\ \{\ 1.35f,\ -\/0.5f,\ 0.0f\ \};}
+\DoxyCodeLine{00019\ \ \ \ \ glm::vec3\ attack3Offset\ =\ \{\ 1.4f,\ -\/0.75f,\ 0.0f\ \};}
+\DoxyCodeLine{00020\ \ \ \ \ glm::vec3\ heavyAttackOffset\ =\ \{\ 1.0f,\ -\/0.75f,\ 0.0f\ \};}
+\DoxyCodeLine{00021\ \ \ \ \ glm::vec3\ smallUltOffset\ =\ \{\ -\/1.0f,\ -\/1.5f,\ 0.0f\ \};}
+\DoxyCodeLine{00022\ \ \ \ \ glm::vec3\ bigUltOffset\ =\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::list<DrawableObject*>\ chainAttackList;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDrawCollider\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ smallUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ bigUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Constructor\ and\ Destructor}}
+\DoxyCodeLine{00033\ \ \ \ \ Sword();}
+\DoxyCodeLine{00034\ \ \ \ \ \string~Sword();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Public\ Methods}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt,\ \mbox{\hyperlink{class_player}{Player}}*\ playerObject);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ flipOffset(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj,\ \mbox{\hyperlink{class_player}{Player}}*\ playerObject);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ chainAttack();}
+\DoxyCodeLine{00040\ \ \ \ \ std::list<DrawableObject*>\ getChainAttackList()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ setCurrentChainAttack(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ getCurrentChainAttack()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ setInChainAttack(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ getInChainAttack()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ setInputBuffer(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ getInputBuffer()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}*\ getCanDrawColliderAddress()\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&canDrawCollider;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ getChainAttackObject(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ setSmallUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ getSmallUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ setBigUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ getBigUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \};}
+
+\end{DoxyCode}

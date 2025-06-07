@@ -1,0 +1,42 @@
+\doxysection{Living\+Entity.\+h}
+\hypertarget{_living_entity_8h_source}{}\label{_living_entity_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LivingEntity.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LivingEntity.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }LivingEntity\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_living_entity_1_1status}{status}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ health;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDead;}
+\DoxyCodeLine{00011\ \ \ \ \ std::list<status>\ statusList;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{enum}\ statusType\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ stun,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ wet,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ moodeng}
+\DoxyCodeLine{00018\ \ \ \ \ \};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{struct\ }status\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ status(statusType\ type,\ \textcolor{keywordtype}{int}\ cooldown);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ statusType\ type;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cooldown;}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ LivingEntity();}
+\DoxyCodeLine{00026\ \ \ \ \ LivingEntity(\textcolor{keywordtype}{int}\ hp);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setHP(\textcolor{keywordtype}{int}\ hp);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ getHP();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsDead();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ addStatus(\mbox{\hyperlink{struct_living_entity_1_1status}{status}}\ add);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ findStatus(\mbox{\hyperlink{struct_living_entity_1_1status}{status}}\ find);}
+\DoxyCodeLine{00033\ \ \ \ \ std::list<status>\ getStatusList();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ appliedStatus();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ takeDamage(\textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

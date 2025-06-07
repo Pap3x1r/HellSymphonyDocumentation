@@ -1,0 +1,178 @@
+\doxysection{Physics Class Reference}
+\hypertarget{class_physics}{}\label{class_physics}\index{Physics@{Physics}}
+
+
+Handles 2D physics calculations including motion, forces, gravity, and drag.  
+
+
+
+
+{\ttfamily \#include $<$Physics.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_physics_ab28f78316c054dff62ff71ea7deed7be}{Physics}} (\mbox{\hyperlink{class_transform}{Transform}} \&transform)
+\begin{DoxyCompactList}\small\item\em Constructor that binds the physics system to a transform. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_ae1fc53c825f97aeb9369694fa21abe99}\label{class_physics_ae1fc53c825f97aeb9369694fa21abe99} 
+void {\bfseries apply\+Gravity} ()
+\begin{DoxyCompactList}\small\item\em Applies gravity to the current force, if gravity is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_abbfbb68b563c37fe711a84715c90ca64}{update}} (\mbox{\hyperlink{class_transform}{Transform}} \&transform)
+\begin{DoxyCompactList}\small\item\em Updates the associated \doxylink{class_transform}{Transform} based on physics simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_physics_a080e0f8def9edc59c0fc6d204823fed0}{update}} (\mbox{\hyperlink{class_transform}{Transform}} \&transform, float dt)
+\begin{DoxyCompactList}\small\item\em Updates the transform using a specific delta time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_physics_ae4bbdaa4272e900ae3b763426f6bbd83}\label{class_physics_ae4bbdaa4272e900ae3b763426f6bbd83} 
+void {\bfseries set\+Velocity} (glm\+::vec2 vel)
+\item 
+\Hypertarget{class_physics_aea6f4209473b5fac7017eaa4b1b12f3a}\label{class_physics_aea6f4209473b5fac7017eaa4b1b12f3a} 
+void {\bfseries set\+Acceleration} (glm\+::vec2 accel)
+\item 
+\Hypertarget{class_physics_a15f5fb62f80984b6e78ac7dfda1313b2}\label{class_physics_a15f5fb62f80984b6e78ac7dfda1313b2} 
+void {\bfseries set\+Gravity} (glm\+::vec2 g)
+\item 
+\Hypertarget{class_physics_a11a66d681e62629d56ff9b0f910a5a64}\label{class_physics_a11a66d681e62629d56ff9b0f910a5a64} 
+void {\bfseries set\+Mass} (float m)
+\item 
+\Hypertarget{class_physics_ad8d73a86753aa26a32c48169b1d85234}\label{class_physics_ad8d73a86753aa26a32c48169b1d85234} 
+void {\bfseries add\+Force} (glm\+::vec2 f)
+\begin{DoxyCompactList}\small\item\em Adds a force vector to the current force. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a443260f18687c91d8908683153fd9fb7}\label{class_physics_a443260f18687c91d8908683153fd9fb7} 
+void {\bfseries set\+Drag} (float \mbox{\hyperlink{class_physics_a50b1ba3fabef04b519f3c15668e076c9}{drag}})
+\item 
+\Hypertarget{class_physics_abbba642f20d945d8acf954fed6967b73}\label{class_physics_abbba642f20d945d8acf954fed6967b73} 
+void {\bfseries set\+Last\+Position} (glm\+::vec3 pos)
+\item 
+\Hypertarget{class_physics_ac1d13b5486e62dfc43fdcf9777e2f780}\label{class_physics_ac1d13b5486e62dfc43fdcf9777e2f780} 
+void {\bfseries set\+Enable\+Physics} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable or disable physics processing. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_acac8b0c880dedd71d043cf5843b610d5}\label{class_physics_acac8b0c880dedd71d043cf5843b610d5} 
+void {\bfseries set\+Enable\+Gravity} (bool flag)
+\begin{DoxyCompactList}\small\item\em Enable or disable gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_physics_a043e7e9112fdac7d5c1ad508cbbea382}\label{class_physics_a043e7e9112fdac7d5c1ad508cbbea382} 
+glm\+::vec3 {\bfseries get\+Last\+Position} ()
+\item 
+\Hypertarget{class_physics_a5f750fd0f894dde56768cb039746c5f7}\label{class_physics_a5f750fd0f894dde56768cb039746c5f7} 
+glm\+::vec2 {\bfseries get\+Velocity} ()
+\item 
+\Hypertarget{class_physics_ad136d46a9a5ed008d83777d5a7895fcd}\label{class_physics_ad136d46a9a5ed008d83777d5a7895fcd} 
+glm\+::vec2 {\bfseries get\+Acceleration} ()
+\item 
+\Hypertarget{class_physics_a005bcd37d1e45556d04f94405b8a020f}\label{class_physics_a005bcd37d1e45556d04f94405b8a020f} 
+glm\+::vec2 {\bfseries get\+Gravity} ()
+\item 
+\Hypertarget{class_physics_a4ce827465a471657b4f4e8973e9f2138}\label{class_physics_a4ce827465a471657b4f4e8973e9f2138} 
+float {\bfseries get\+Mass} ()
+\item 
+\Hypertarget{class_physics_a9b3a3659cdc31d3af7c60745aef7294d}\label{class_physics_a9b3a3659cdc31d3af7c60745aef7294d} 
+glm\+::vec2 {\bfseries get\+Force} ()
+\item 
+\Hypertarget{class_physics_a35d96c9b8b63f432a234ee27ec4052e6}\label{class_physics_a35d96c9b8b63f432a234ee27ec4052e6} 
+float {\bfseries get\+Drag} ()
+\item 
+\Hypertarget{class_physics_ad5584257168c0861888999f75474e280}\label{class_physics_ad5584257168c0861888999f75474e280} 
+bool {\bfseries is\+Gravity\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Check if gravity is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_physics_a8577c954aca855bd9746503e09b508eb}\label{class_physics_a8577c954aca855bd9746503e09b508eb} 
+glm\+::vec3 {\bfseries last\+Pos}
+\begin{DoxyCompactList}\small\item\em Last known position of the object (for interpolation or rollback). \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a76638be5763ded658de7954a9dc05db3}\label{class_physics_a76638be5763ded658de7954a9dc05db3} 
+glm\+::vec2 {\bfseries velocity}
+\begin{DoxyCompactList}\small\item\em Current velocity of the object. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_ac747b0ddf1a4a65e1fd1efa7bab481ce}\label{class_physics_ac747b0ddf1a4a65e1fd1efa7bab481ce} 
+glm\+::vec2 {\bfseries acceleration}
+\begin{DoxyCompactList}\small\item\em Acceleration applied to the object. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_aa49cb13c2e45ee01091b171fe51c6a5e}\label{class_physics_aa49cb13c2e45ee01091b171fe51c6a5e} 
+glm\+::vec2 {\bfseries gravity}
+\begin{DoxyCompactList}\small\item\em Gravity vector. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a8af55ef072a48055b5bfe473c6627423}\label{class_physics_a8af55ef072a48055b5bfe473c6627423} 
+float {\bfseries mass}
+\begin{DoxyCompactList}\small\item\em Mass of the object. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_ace478b50bdbc5b5de0e9d9d9a8a3b00b}\label{class_physics_ace478b50bdbc5b5de0e9d9d9a8a3b00b} 
+glm\+::vec2 {\bfseries force}
+\begin{DoxyCompactList}\small\item\em Net force applied to the object. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a50b1ba3fabef04b519f3c15668e076c9}\label{class_physics_a50b1ba3fabef04b519f3c15668e076c9} 
+float {\bfseries drag}
+\begin{DoxyCompactList}\small\item\em Drag coefficient. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a81246bc16e2477152c4c51374c4a935d}\label{class_physics_a81246bc16e2477152c4c51374c4a935d} 
+bool {\bfseries enable\+Physics}
+\begin{DoxyCompactList}\small\item\em Flag to enable or disable physics updates. \end{DoxyCompactList}\item 
+\Hypertarget{class_physics_a8b67f4529f6e8721fa074926627baea7}\label{class_physics_a8b67f4529f6e8721fa074926627baea7} 
+bool {\bfseries enable\+Gravity}
+\begin{DoxyCompactList}\small\item\em Flag to enable or disable gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles 2D physics calculations including motion, forces, gravity, and drag. 
+
+\label{doc-constructors}
+\Hypertarget{class_physics_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_physics_ab28f78316c054dff62ff71ea7deed7be}\index{Physics@{Physics}!Physics@{Physics}}
+\index{Physics@{Physics}!Physics@{Physics}}
+\doxysubsubsection{\texorpdfstring{Physics()}{Physics()}}
+{\footnotesize\ttfamily \label{class_physics_ab28f78316c054dff62ff71ea7deed7be} 
+Physics\+::\+Physics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{transform}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that binds the physics system to a transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform to be updated by this physics component. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_physics_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_physics_abbfbb68b563c37fe711a84715c90ca64}\index{Physics@{Physics}!update@{update}}
+\index{update@{update}!Physics@{Physics}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_physics_abbfbb68b563c37fe711a84715c90ca64} 
+void Physics\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{transform}{}\end{DoxyParamCaption})}
+
+
+
+Updates the associated \doxylink{class_transform}{Transform} based on physics simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform to be updated. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_physics_a080e0f8def9edc59c0fc6d204823fed0}\index{Physics@{Physics}!update@{update}}
+\index{update@{update}!Physics@{Physics}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_physics_a080e0f8def9edc59c0fc6d204823fed0} 
+void Physics\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{transform}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the transform using a specific delta time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The transform to be updated. \\
+\hline
+{\em dt} & Delta time for the physics step. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Physics.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Physics.\+cpp\end{DoxyCompactItemize}

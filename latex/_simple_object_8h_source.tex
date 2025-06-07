@@ -1,0 +1,34 @@
+\doxysection{Simple\+Object.\+h}
+\hypertarget{_simple_object_8h_source}{}\label{_simple_object_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/SimpleObject.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/SimpleObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}gtc/matrix\_transform.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}gtc/type\_ptr.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simple_object_ac896d1529367b4a17367018a172b5867}{SimpleObject}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ glm::vec3\ color;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ alpha\ =\ 1.0f;\ \textcolor{comment}{//Default\ alpha}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_simple_object_ac896d1529367b4a17367018a172b5867}{SimpleObject}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_simple_object_ac896d1529367b4a17367018a172b5867}{SimpleObject}}(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_simple_object_aa4223f47628fe1849cb2bc3d0afa289c}{\string~SimpleObject}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simple_object_a13a3f7b0fc47df690401dc36fd598dad}{setColor}}(\textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simple_object_ad63c6116b878da58952cec0fd87d22e2}{render}}(glm::mat4\ globalModelTransform);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_simple_object_a24689c8ec6c945892b6aed433d46c5d7}{setAlpha}}(\textcolor{keywordtype}{float}\ value)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ alpha\ =\ value;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_simple_object_aa4f2594377437b446a55228051a9c7e5}{getAlpha}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ alpha;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+
+\end{DoxyCode}

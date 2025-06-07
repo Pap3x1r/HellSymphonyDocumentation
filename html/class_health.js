@@ -1,0 +1,26 @@
+var class_health =
+[
+    [ "Health", "class_health.html#aa5c65edb5d6115709d9ff899117f63ba", null ],
+    [ "Health", "class_health.html#ab559b6c5228dec698c973e3ee03b2fdd", null ],
+    [ "Health", "class_health.html#a26d3f40321e474cfa03b3eb53112d469", null ],
+    [ "checkHP", "class_health.html#ac02da65737fa96f02b291082daca08f6", null ],
+    [ "getCurrentHP", "class_health.html#ad9fef2444a48903f52dd970c988641b5", null ],
+    [ "getCurrentHPAddress", "class_health.html#a5a2798a18962efe24375944923805af9", null ],
+    [ "getMaxHP", "class_health.html#a1faa06b2fb41c69b91e3e85e2047b172", null ],
+    [ "getRealHP", "class_health.html#a8174b7c41f4f46c604207c8feeca08c5", null ],
+    [ "getWitherHP", "class_health.html#ab3a1044fc4fc233abcc104910c793d29", null ],
+    [ "heal", "class_health.html#a5ec7861b530e84310f0f033589dfc9e6", null ],
+    [ "healthUpdate", "class_health.html#a77101343908172726817e9160c9877bf", null ],
+    [ "healWither", "class_health.html#a704b0e101c27469d86406cd0e1f4d185", null ],
+    [ "setHP", "class_health.html#aef1caa06509b36e8d859391c2db1e575", null ],
+    [ "setWitherHP", "class_health.html#a4825901d16cb4b2a8f74f4c8252276d3", null ],
+    [ "takeDamage", "class_health.html#a2c27f43e5e1c7ff02026991018a653a9", null ],
+    [ "takeDamage", "class_health.html#aaff5ea10f9bf746f5c39f23bcb1e29cf", null ],
+    [ "currentHealth", "class_health.html#a1ec88e75ca54f907f553b80eef2976a3", null ],
+    [ "destroyOnDead", "class_health.html#ae16f316d666da592233e9f20f3c5dd25", null ],
+    [ "maxHealth", "class_health.html#a4572b68ddda670028184010d150b326b", null ],
+    [ "realHealth", "class_health.html#aba7083c5cc3d7e2a06403606b8423ff9", null ],
+    [ "witherDecreasePercent", "class_health.html#a69ee167b56c243d18b625e28d50669fa", null ],
+    [ "witherHealth", "class_health.html#ad1a03c97f650907bfb16f6541a23c137", null ],
+    [ "witherRecoverRate", "class_health.html#a99a31a2d90b5a11fd391822cde14e248", null ]
+];

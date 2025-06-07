@@ -1,0 +1,376 @@
+\doxysection{GLRenderer Class Reference}
+\hypertarget{class_g_l_renderer}{}\label{class_g_l_renderer}\index{GLRenderer@{GLRenderer}}
+
+
+Handles Open\+GL-\/based rendering, including mesh drawing, shaders, viewport control, and camera logic.  
+
+
+
+
+{\ttfamily \#include $<$GLRenderer.\+h$>$}
+
+
+
+Collaboration diagram for GLRenderer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_g_l_renderer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_l_renderer_af506bf1e8d531b33cb668adb7c881ae7}{GLRenderer}} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_g_l_renderer}{GLRenderer} with the specified window size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_l_renderer_aa00fad430544fd4e4b08024f7ff092b0}{GLRenderer}} (int w, int h, const \mbox{\hyperlink{class_camera}{Camera}} \&cam)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_g_l_renderer}{GLRenderer} with a custom camera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_l_renderer_aedf1c80dcf7557f8ed88708caf26f6a3}{init\+GL}} (string vertex\+Shader\+File, string fragment\+Shader\+File)
+\begin{DoxyCompactList}\small\item\em Initializes Open\+GL and loads the provided shaders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_l_renderer_adce7d94b3c70bbd27401389cda986290}{add\+Mesh}} (string name, \mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*}shape)
+\begin{DoxyCompactList}\small\item\em Adds a mesh to the internal cache. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_g_l_renderer_aa9d1263cbc1fdb43f2145d9e0103facb}{get\+Mesh}} (string name)
+\begin{DoxyCompactList}\small\item\em Gets a mesh by name. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a79aceb5ec2bad8f75047cc5d72fe2018}\label{class_g_l_renderer_a79aceb5ec2bad8f75047cc5d72fe2018} 
+void {\bfseries clear\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Clears all loaded meshes. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_ad5da817f69b340641532b763aefc698f}\label{class_g_l_renderer_ad5da817f69b340641532b763aefc698f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+GLRenderer} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Cleans up Open\+GL resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_l_renderer_a1cf972f24e118705388646e04f6414be}{increase\+Zoom\+Ratio}} (float new\+Ratio)
+\begin{DoxyCompactList}\small\item\em Increases zoom ratio for the camera view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_l_renderer_af5944cfcfa540aeb2ac8bdd1ff439a81}{decrease\+Zoom\+Ratio}} (float new\+Ratio)
+\begin{DoxyCompactList}\small\item\em Decreases zoom ratio for the camera view. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a312876ac8d2d1b2ab729c7bdd9073b5d}\label{class_g_l_renderer_a312876ac8d2d1b2ab729c7bdd9073b5d} 
+void {\bfseries set\+Ortho\+Projection} (float left, float right, float bottom, float top)
+\begin{DoxyCompactList}\small\item\em Sets up orthographic projection. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a3a535a498b98a9f9834d584281a7ca24}\label{class_g_l_renderer_a3a535a498b98a9f9834d584281a7ca24} 
+void {\bfseries set\+View\+Port} (int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Sets the Open\+GL viewport. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_ab37bddadae4813a112abf72e7c4772e3}\label{class_g_l_renderer_ab37bddadae4813a112abf72e7c4772e3} 
+void {\bfseries set\+Clear\+Color} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Sets the Open\+GL clear (background) color. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a869ec95daf9ddbc9282a5edbcea2c2a5}\label{class_g_l_renderer_a869ec95daf9ddbc9282a5edbcea2c2a5} 
+GLuint {\bfseries get\+Model\+Matrix\+Attr\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a9e6c15d5cb61fbc278ed29d16df56474}\label{class_g_l_renderer_a9e6c15d5cb61fbc278ed29d16df56474} 
+GLuint {\bfseries get\+Projection\+Matrix\+Attr\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_abe8d060ffae8576b012e5a03a2afa5f0}\label{class_g_l_renderer_abe8d060ffae8576b012e5a03a2afa5f0} 
+GLuint {\bfseries get\+Color\+Uniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a845e8a663260db33d366ff782bafc3ac}\label{class_g_l_renderer_a845e8a663260db33d366ff782bafc3ac} 
+GLuint {\bfseries get\+Mode\+Uniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a3f4463ba0809c3f517e33189e3b6f3df}\label{class_g_l_renderer_a3f4463ba0809c3f517e33189e3b6f3df} 
+GLuint {\bfseries get\+Offset\+XUniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a666b22ca7410f43f5df46c48aa6a8a1b}\label{class_g_l_renderer_a666b22ca7410f43f5df46c48aa6a8a1b} 
+GLuint {\bfseries get\+Offset\+YUniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_ac7daa535646e05670dd4c6a31f780f55}\label{class_g_l_renderer_ac7daa535646e05670dd4c6a31f780f55} 
+GLuint {\bfseries get\+Scale\+XUniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_ac04500ccfdbf25d31b76bd9c6879e15e}\label{class_g_l_renderer_ac04500ccfdbf25d31b76bd9c6879e15e} 
+GLuint {\bfseries get\+Scale\+YUniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_ae85f98c74b5f6b90eea3e2cf299668cb}\label{class_g_l_renderer_ae85f98c74b5f6b90eea3e2cf299668cb} 
+GLuint {\bfseries get\+Color\+Override\+Uniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a2976dcf7bc6b76e310c70fe2fe35d430}\label{class_g_l_renderer_a2976dcf7bc6b76e310c70fe2fe35d430} 
+GLuint {\bfseries get\+Hit\+Effect\+Uniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_a0cc350efdb7b5b9c0895b7cf6b09d80f}\label{class_g_l_renderer_a0cc350efdb7b5b9c0895b7cf6b09d80f} 
+GLuint {\bfseries get\+Alpha\+Override\+Uniform\+Id} ()
+\item 
+\Hypertarget{class_g_l_renderer_af06a96f18bcca1ab22a4b02473c72c43}\label{class_g_l_renderer_af06a96f18bcca1ab22a4b02473c72c43} 
+GLuint {\bfseries Load\+Texture} (string path)
+\begin{DoxyCompactList}\small\item\em Loads a texture from file and returns its Open\+GL ID. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a3734479457d3b3a874e664446bd7f236}\label{class_g_l_renderer_a3734479457d3b3a874e664446bd7f236} 
+void {\bfseries set\+View\+Matrix} (const glm\+::mat4 \&view\+Matrix)
+\begin{DoxyCompactList}\small\item\em Sets a custom view matrix. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a3ac6c338e41c0a8bff8f73c0a5ad184a}\label{class_g_l_renderer_a3ac6c338e41c0a8bff8f73c0a5ad184a} 
+void {\bfseries toggle\+Viewport} ()
+\begin{DoxyCompactList}\small\item\em Enables or disables viewport rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a8be1a68c16907e3c1a81bf2738cd053a}\label{class_g_l_renderer_a8be1a68c16907e3c1a81bf2738cd053a} 
+void {\bfseries update\+Viewport} ()
+\begin{DoxyCompactList}\small\item\em Updates the Open\+GL viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_l_renderer_aca377d9a233e43c6b00ac27883773977}{update\+Camera}} (const glm\+::vec3 \&player\+Position)
+\begin{DoxyCompactList}\small\item\em Moves the camera to follow a target position. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_adfbebebb280e411a6496d1cd20c87e59}\label{class_g_l_renderer_adfbebebb280e411a6496d1cd20c87e59} 
+void {\bfseries apply\+View\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Applies the current camera view matrix. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a5f36591fc528f669a2acb8119da58c69}\label{class_g_l_renderer_a5f36591fc528f669a2acb8119da58c69} 
+void {\bfseries render} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&obj\+List)
+\begin{DoxyCompactList}\small\item\em Renders a list of drawable objects. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a009072097bfc5d1748b214267dabd40f}\label{class_g_l_renderer_a009072097bfc5d1748b214267dabd40f} 
+glm\+::vec3 {\bfseries cam\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Gets the current camera position. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_aa3a59da320f592a76f602d09a4e263de}\label{class_g_l_renderer_aa3a59da320f592a76f602d09a4e263de} 
+void {\bfseries draw\+Camera\+Outline} ()
+\begin{DoxyCompactList}\small\item\em Draws a debug outline around the camera viewport. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_ae1e87bb1362b919f534af9fb777e0ac2}\label{class_g_l_renderer_ae1e87bb1362b919f534af9fb777e0ac2} 
+void {\bfseries clear\+Texture\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Clears all cached textures. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a1fb9c165c1299e025ebf7791dc20fff4}\label{class_g_l_renderer_a1fb9c165c1299e025ebf7791dc20fff4} 
+void {\bfseries preload\+Textures} (const vector$<$ string $>$ \&texture\+Paths)
+\begin{DoxyCompactList}\small\item\em Preloads textures from file paths. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_ab87c6db8c584e6e9635e2830d1b45a6e}\label{class_g_l_renderer_ab87c6db8c584e6e9635e2830d1b45a6e} 
+void {\bfseries load\+Texture\+From\+Dir} (const std\+::string \&dir)
+\begin{DoxyCompactList}\small\item\em Loads all textures from a directory. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_ac4d693ae5cc7db8aceb474b2848d438f}\label{class_g_l_renderer_ac4d693ae5cc7db8aceb474b2848d438f} 
+GLuint {\bfseries find\+Texture} (const std\+::string path)
+\begin{DoxyCompactList}\small\item\em Finds a texture in the cache or loads it. \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_a9d0d818b64d723c5d3394b2beec517fb}\label{class_g_l_renderer_a9d0d818b64d723c5d3394b2beec517fb} 
+string {\bfseries normalize\+Path} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Normalizes texture file paths (e.\+g., backslashes to slashes). \end{DoxyCompactList}\item 
+\Hypertarget{class_g_l_renderer_aee4ad8dd2624198280e4450f20be019c}\label{class_g_l_renderer_aee4ad8dd2624198280e4450f20be019c} 
+map$<$ string, GLuint $>$ {\bfseries get\+Texture\+Cache} () const
+\begin{DoxyCompactList}\small\item\em Returns the current texture cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_l_renderer_ae6f5a3cbc0c9d63444794191e1a38659}\label{class_g_l_renderer_ae6f5a3cbc0c9d63444794191e1a38659} 
+void {\bfseries print\+Program\+Log} (GLuint program)
+\item 
+\Hypertarget{class_g_l_renderer_a0f8fc857f780a9d346446056f12ea7f9}\label{class_g_l_renderer_a0f8fc857f780a9d346446056f12ea7f9} 
+bool {\bfseries initialize} (string vertex\+Shader\+File, string fragment\+Shader\+File)
+\item 
+\Hypertarget{class_g_l_renderer_aea6edd8058fb664a02a315b7a339980e}\label{class_g_l_renderer_aea6edd8058fb664a02a315b7a339980e} 
+void {\bfseries set\+Mesh\+Attrib\+Id} (\mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*}shape)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_g_l_renderer_a1fae4b37532321c39d6bffb12863772d}\label{class_g_l_renderer_a1fae4b37532321c39d6bffb12863772d} 
+int {\bfseries win\+Width}
+\item 
+\Hypertarget{class_g_l_renderer_af55df2dabb4398db4ee97fa36599ffdc}\label{class_g_l_renderer_af55df2dabb4398db4ee97fa36599ffdc} 
+int {\bfseries win\+Height}
+\item 
+\Hypertarget{class_g_l_renderer_a0f75b57761d1748a244c444e476584a3}\label{class_g_l_renderer_a0f75b57761d1748a244c444e476584a3} 
+glm\+::mat4 {\bfseries projection\+Matrix}
+\item 
+\Hypertarget{class_g_l_renderer_ab034225a22c0fe89db66a7738b19c8fa}\label{class_g_l_renderer_ab034225a22c0fe89db66a7738b19c8fa} 
+glm\+::mat4 {\bfseries model\+Matrix}
+\item 
+\Hypertarget{class_g_l_renderer_a09f38f61de58340cf1faf46cebf8cb96}\label{class_g_l_renderer_a09f38f61de58340cf1faf46cebf8cb96} 
+GLuint {\bfseries m\+Matrix\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a37b0b6432de0492feff1b4d15fbb26a1}\label{class_g_l_renderer_a37b0b6432de0492feff1b4d15fbb26a1} 
+GLuint {\bfseries p\+Matrix\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a7b554722855f09911aec117675f4c9e3}\label{class_g_l_renderer_a7b554722855f09911aec117675f4c9e3} 
+GLuint {\bfseries color\+Uniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a1e3c7bf91c4bbd175e91a4d9a21b7dc0}\label{class_g_l_renderer_a1e3c7bf91c4bbd175e91a4d9a21b7dc0} 
+GLuint {\bfseries render\+Mode\+Uniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_aa7c1c0f9fa77a32fa72e3c56e2fdac9e}\label{class_g_l_renderer_aa7c1c0f9fa77a32fa72e3c56e2fdac9e} 
+GLuint {\bfseries offset\+XUniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_aedada758fffa9dd4639af0e13b06a7c9}\label{class_g_l_renderer_aedada758fffa9dd4639af0e13b06a7c9} 
+GLuint {\bfseries offset\+YUniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_ac0ad5852f4f91e5f5134fcf5537b93a4}\label{class_g_l_renderer_ac0ad5852f4f91e5f5134fcf5537b93a4} 
+GLuint {\bfseries scale\+XUniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a6e3ab7fb4aed1680ec6771b949c73482}\label{class_g_l_renderer_a6e3ab7fb4aed1680ec6771b949c73482} 
+GLuint {\bfseries scale\+YUniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a6634b0c4724b976aeae99f188b60df2a}\label{class_g_l_renderer_a6634b0c4724b976aeae99f188b60df2a} 
+GLuint {\bfseries color\+Override\+Uniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_aa84caba9f614b16d9d6642a907351155}\label{class_g_l_renderer_aa84caba9f614b16d9d6642a907351155} 
+GLuint {\bfseries hit\+Effect\+Strength\+Uniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a5fc7913b1a3d58b865c69ccd000b747e}\label{class_g_l_renderer_a5fc7913b1a3d58b865c69ccd000b747e} 
+GLuint {\bfseries alpha\+Override\+Uniform\+Id} = -\/1
+\item 
+\Hypertarget{class_g_l_renderer_a1812ff5e7b9523454ee7b48f0cf77789}\label{class_g_l_renderer_a1812ff5e7b9523454ee7b48f0cf77789} 
+GLuint {\bfseries g\+Program\+Id}
+\item 
+\Hypertarget{class_g_l_renderer_ad4de65cd4b61f6111b2b2e1614506296}\label{class_g_l_renderer_ad4de65cd4b61f6111b2b2e1614506296} 
+int {\bfseries g\+Pos2\+DLocation}
+\item 
+\Hypertarget{class_g_l_renderer_a4ddee92fcaca013af522cbee82c96aa4}\label{class_g_l_renderer_a4ddee92fcaca013af522cbee82c96aa4} 
+int {\bfseries g\+Tex2\+DLocation}
+\item 
+\Hypertarget{class_g_l_renderer_acd248faeeac0f69ac9f03caa88b5221c}\label{class_g_l_renderer_acd248faeeac0f69ac9f03caa88b5221c} 
+\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries vertex\+Shader}
+\item 
+\Hypertarget{class_g_l_renderer_aa5b8d710d6ba5cccbc33cb5ffbe850af}\label{class_g_l_renderer_aa5b8d710d6ba5cccbc33cb5ffbe850af} 
+\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*} {\bfseries fragment\+Shader}
+\item 
+\Hypertarget{class_g_l_renderer_ada79855934349882bb784a8c1a15c05c}\label{class_g_l_renderer_ada79855934349882bb784a8c1a15c05c} 
+map$<$ string, \mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries shapes}
+\item 
+\Hypertarget{class_g_l_renderer_a99a85d29668fc618c7e24610db18c5d5}\label{class_g_l_renderer_a99a85d29668fc618c7e24610db18c5d5} 
+\mbox{\hyperlink{class_camera}{Camera}} {\bfseries camera}
+\item 
+\Hypertarget{class_g_l_renderer_a67cba981eba94b7fc822d962a77ef94d}\label{class_g_l_renderer_a67cba981eba94b7fc822d962a77ef94d} 
+bool {\bfseries is\+Viewport\+Enabled}
+\item 
+\Hypertarget{class_g_l_renderer_a2c1ac77de137050935d5bde2bddc6863}\label{class_g_l_renderer_a2c1ac77de137050935d5bde2bddc6863} 
+float {\bfseries zoom\+Ratio} = 3
+\item 
+\Hypertarget{class_g_l_renderer_aa5ed7835beb5580b1aa09784c7c03df7}\label{class_g_l_renderer_aa5ed7835beb5580b1aa09784c7c03df7} 
+map$<$ string, GLuint $>$ {\bfseries texture\+Cache}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles Open\+GL-\/based rendering, including mesh drawing, shaders, viewport control, and camera logic. 
+
+This class encapsulates Open\+GL initialization, shader handling, orthographic projection setup, texture caching, and rendering of 2D drawable objects using VBOs. 
+
+\label{doc-constructors}
+\Hypertarget{class_g_l_renderer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_l_renderer_af506bf1e8d531b33cb668adb7c881ae7}\index{GLRenderer@{GLRenderer}!GLRenderer@{GLRenderer}}
+\index{GLRenderer@{GLRenderer}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{GLRenderer()}{GLRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_af506bf1e8d531b33cb668adb7c881ae7} 
+GLRenderer\+::\+GLRenderer (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_g_l_renderer}{GLRenderer} with the specified window size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Window width. \\
+\hline
+{\em h} & Window height. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_g_l_renderer_aa00fad430544fd4e4b08024f7ff092b0}\index{GLRenderer@{GLRenderer}!GLRenderer@{GLRenderer}}
+\index{GLRenderer@{GLRenderer}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{GLRenderer()}{GLRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_aa00fad430544fd4e4b08024f7ff092b0} 
+GLRenderer\+::\+GLRenderer (\begin{DoxyParamCaption}\item[{int}]{w}{, }\item[{int}]{h}{, }\item[{const \mbox{\hyperlink{class_camera}{Camera}} \&}]{cam}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_g_l_renderer}{GLRenderer} with a custom camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Window width. \\
+\hline
+{\em h} & Window height. \\
+\hline
+{\em cam} & \doxylink{class_camera}{Camera} object to use. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_g_l_renderer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_l_renderer_adce7d94b3c70bbd27401389cda986290}\index{GLRenderer@{GLRenderer}!addMesh@{addMesh}}
+\index{addMesh@{addMesh}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{addMesh()}{addMesh()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_adce7d94b3c70bbd27401389cda986290} 
+void GLRenderer\+::add\+Mesh (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{\mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*}}]{shape}{}\end{DoxyParamCaption})}
+
+
+
+Adds a mesh to the internal cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Unique mesh name. \\
+\hline
+{\em shape} & Pointer to \doxylink{class_mesh_vbo}{Mesh\+Vbo}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_g_l_renderer_af5944cfcfa540aeb2ac8bdd1ff439a81}\index{GLRenderer@{GLRenderer}!decreaseZoomRatio@{decreaseZoomRatio}}
+\index{decreaseZoomRatio@{decreaseZoomRatio}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{decreaseZoomRatio()}{decreaseZoomRatio()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_af5944cfcfa540aeb2ac8bdd1ff439a81} 
+void GLRenderer\+::decrease\+Zoom\+Ratio (\begin{DoxyParamCaption}\item[{float}]{new\+Ratio}{}\end{DoxyParamCaption})}
+
+
+
+Decreases zoom ratio for the camera view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Ratio} & Amount to decrease. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_g_l_renderer_aa9d1263cbc1fdb43f2145d9e0103facb}\index{GLRenderer@{GLRenderer}!getMesh@{getMesh}}
+\index{getMesh@{getMesh}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{getMesh()}{getMesh()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_aa9d1263cbc1fdb43f2145d9e0103facb} 
+\mbox{\hyperlink{class_mesh_vbo}{Mesh\+Vbo}} \texorpdfstring{$\ast$}{*} GLRenderer\+::get\+Mesh (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Gets a mesh by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the mesh. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the mesh if found. 
+\end{DoxyReturn}
+\Hypertarget{class_g_l_renderer_a1cf972f24e118705388646e04f6414be}\index{GLRenderer@{GLRenderer}!increaseZoomRatio@{increaseZoomRatio}}
+\index{increaseZoomRatio@{increaseZoomRatio}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{increaseZoomRatio()}{increaseZoomRatio()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_a1cf972f24e118705388646e04f6414be} 
+void GLRenderer\+::increase\+Zoom\+Ratio (\begin{DoxyParamCaption}\item[{float}]{new\+Ratio}{}\end{DoxyParamCaption})}
+
+
+
+Increases zoom ratio for the camera view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Ratio} & Amount to increase. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_g_l_renderer_aedf1c80dcf7557f8ed88708caf26f6a3}\index{GLRenderer@{GLRenderer}!initGL@{initGL}}
+\index{initGL@{initGL}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{initGL()}{initGL()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_aedf1c80dcf7557f8ed88708caf26f6a3} 
+bool GLRenderer\+::init\+GL (\begin{DoxyParamCaption}\item[{string}]{vertex\+Shader\+File}{, }\item[{string}]{fragment\+Shader\+File}{}\end{DoxyParamCaption})}
+
+
+
+Initializes Open\+GL and loads the provided shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Shader\+File} & Path to vertex shader. \\
+\hline
+{\em fragment\+Shader\+File} & Path to fragment shader. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization is successful. 
+\end{DoxyReturn}
+\Hypertarget{class_g_l_renderer_aca377d9a233e43c6b00ac27883773977}\index{GLRenderer@{GLRenderer}!updateCamera@{updateCamera}}
+\index{updateCamera@{updateCamera}!GLRenderer@{GLRenderer}}
+\doxysubsubsection{\texorpdfstring{updateCamera()}{updateCamera()}}
+{\footnotesize\ttfamily \label{class_g_l_renderer_aca377d9a233e43c6b00ac27883773977} 
+void GLRenderer\+::update\+Camera (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{player\+Position}{}\end{DoxyParamCaption})}
+
+
+
+Moves the camera to follow a target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Position} & The position to follow. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/GLRenderer.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/GLRenderer.\+cpp\end{DoxyCompactItemize}

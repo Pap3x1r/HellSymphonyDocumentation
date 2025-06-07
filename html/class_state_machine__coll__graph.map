@@ -1,0 +1,5 @@
+<map id="StateMachine" name="StateMachine">
+<area shape="rect" id="Node000001" title="Manages the player&#39;s current state and transitions between different states." alt="" coords="5,104,107,131"/>
+<area shape="rect" id="Node000002" href="$class_state_m.html" title=" " alt="" coords="24,5,88,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,48,59,104,53,104,53,48"/>
+</map>

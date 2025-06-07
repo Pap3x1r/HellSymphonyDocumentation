@@ -1,0 +1,85 @@
+\doxysection{Shield.\+h}
+\hypertarget{_shield_8h_source}{}\label{_shield_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Shield.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Shield.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}PlayerAttackCollider.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Shield\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ currentChainAttack\ =\ 0;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isHolding\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//True\ at\ the\ start,\ false\ at\ the\ end\ of\ shield\ animation}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isBlocking\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//Only\ true\ when\ shield\ is\ fully\ up}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPerfect\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//Only\ true\ when\ shield\ is\ fully\ up\ and\ the\ time\ window\ is\ perfect}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimeElapsed\ =\ 0.0f;\ \textcolor{comment}{//\ Do\ not\ change}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimeWindow\ =\ 0.5f;\ \textcolor{comment}{//}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ inChainAttack\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ inputBuffer\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ glm::vec3\ attack1Offset\ =\ \{\ 0.85f,\ -\/1.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00023\ \ \ \ \ glm::vec3\ attack2Offset\ =\ \{\ 1.55f,\ -\/1.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ smallUltOffset\ =\ \{\ 0.0f,\ -\/1.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00025\ \ \ \ \ glm::vec3\ bigUltOffset\ =\ \{\ 0.0f,\ -\/1.0f,\ 0.0f\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Light\ attack\ (left\ click)}}
+\DoxyCodeLine{00028\ \ \ \ \ list<DrawableObject*>\ chainAttackList;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDrawCollider\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ smallUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ bigUltReady\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ Shield();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \string~Shield();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt,\ \mbox{\hyperlink{class_player}{Player}}*\ playerObject);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ flipOffset(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj,\ \mbox{\hyperlink{class_player}{Player}}*\ playerObject);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ chainAttack();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ list<DrawableObject*>\ getChainAttackList()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setCurrentChainAttack(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ getCurrentChainAttack()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setInChainAttack(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ getInChainAttack()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ setInputBuffer(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ getInputBuffer()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ getChainAttackObject(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsHolding(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsHolding()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsBlocking(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsBlocking()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsPerfect(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsPerfect()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}*\ getCanDrawColliderAddress();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ setSmallUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ getSmallUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ setBigUltReady(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ getBigUltReady()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

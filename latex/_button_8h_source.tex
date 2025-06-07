@@ -1,0 +1,55 @@
+\doxysection{Button.\+h}
+\hypertarget{_button_8h_source}{}\label{_button_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Button.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Button.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ "{}Collider.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\#include\ "{}InputManager.h"{}\ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\#include\ <functional>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\#include\ "{}CollisionHandler.h"{}\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//class\ Button\ :\ public\ DrawableObject\ \{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ \ enum\ class\ ButtonState\ \{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ \ \ \ \ NORMAL,}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ \ \ \ \ HOVERED,}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ PRESSED,}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ \ \ \ \ \ RELEASED}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ \ \};}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ \ ButtonState\ state;}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ \ string\ label;}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ \ \ bool\ isHovered;}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ \ \ bool\ isPressed;}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ \ \ Collider\ collider;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ \ \ std::function<void()>\ onClick;}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ \ \ \ std::function<void()>\ onHover;}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ \ \ Button();}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ \ \ \ Button(string\ name,\ string\ label);}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ string\ getLabel()\ const;}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ void\ setLabel(const\ string\&\ newLabel);}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ \ \ \ ButtonState\ getState()\ const;}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ \ \ void\ setState(ButtonState\ newState);}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ \ \ void\ setOnClickCallback(std::function<void()>\ callback);}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ \ \ void\ setOnHoverCallback(std::function<void()>\ callback);}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ \ \ void\ handleMouseInput(int\ mouseX,\ int\ mouseY,\ bool\ isMousePressed);}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ \ \ \ //\ Override\ render()\ to\ make\ Button\ a\ non-\/abstract\ class}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ \ \ \ //void\ render(glm::mat4\ globalModelTransform)\ override;}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//}}
+
+\end{DoxyCode}

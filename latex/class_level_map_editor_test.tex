@@ -1,0 +1,213 @@
+\doxysection{Level\+Map\+Editor\+Test Class Reference}
+\hypertarget{class_level_map_editor_test}{}\label{class_level_map_editor_test}\index{LevelMapEditorTest@{LevelMapEditorTest}}
+
+
+Inheritance diagram for Level\+Map\+Editor\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_level_map_editor_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Map\+Editor\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_map_editor_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a90f44ea59225ed0ed43bdb906717d934}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a0e3fd125f7bdedd74311a698f0d47dca}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a3ecda7bb82e8109ccad27f1c790b24e4}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_ab8198d1501974b2a3574924edd9c090e}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a711b1833fc7d768a4d726ab9103abe83}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a6d5bbb3496b20fca569bdcf7c4c6d66a}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a6dd4f7221abf34edf016f3688a4fb9b9}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_map_editor_test_a42642346af6386fdb792a4848cc78f53}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_map_editor_test_ab9f1b798bc4532df82fe9fe482d16448}\label{class_level_map_editor_test_ab9f1b798bc4532df82fe9fe482d16448} 
+virtual void {\bfseries handle\+Analog\+Stick} (int type, float amount)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+virtual Menu\+State \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_map_editor_test_a1e773f2cf3f55e8c53eccbed491300ec}\label{class_level_map_editor_test_a1e773f2cf3f55e8c53eccbed491300ec} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_map_editor_test_ae862dd34c5f241249f2cfde3332ff059}\label{class_level_map_editor_test_ae862dd34c5f241249f2cfde3332ff059} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_map_editor_test_a043cdd6afad1a9ac7fbbefb507f66814}\label{class_level_map_editor_test_a043cdd6afad1a9ac7fbbefb507f66814} 
+\mbox{\hyperlink{class_map_loader}{Map\+Loader}} {\bfseries map\+Loader}
+\item 
+\Hypertarget{class_level_map_editor_test_ac9fb0d6f6e54030a5e021b94602e4a51}\label{class_level_map_editor_test_ac9fb0d6f6e54030a5e021b94602e4a51} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries background}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_map_editor_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_map_editor_test_a6dd4f7221abf34edf016f3688a4fb9b9}\index{LevelMapEditorTest@{LevelMapEditorTest}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a6dd4f7221abf34edf016f3688a4fb9b9} 
+void Level\+Map\+Editor\+Test\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a42642346af6386fdb792a4848cc78f53}\index{LevelMapEditorTest@{LevelMapEditorTest}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a42642346af6386fdb792a4848cc78f53} 
+void Level\+Map\+Editor\+Test\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_ab8198d1501974b2a3574924edd9c090e}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_ab8198d1501974b2a3574924edd9c090e} 
+void Level\+Map\+Editor\+Test\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a711b1833fc7d768a4d726ab9103abe83}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a711b1833fc7d768a4d726ab9103abe83} 
+void Level\+Map\+Editor\+Test\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a0e3fd125f7bdedd74311a698f0d47dca}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a0e3fd125f7bdedd74311a698f0d47dca} 
+void Level\+Map\+Editor\+Test\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a90f44ea59225ed0ed43bdb906717d934}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a90f44ea59225ed0ed43bdb906717d934} 
+void Level\+Map\+Editor\+Test\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a6d5bbb3496b20fca569bdcf7c4c6d66a}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a6d5bbb3496b20fca569bdcf7c4c6d66a} 
+void Level\+Map\+Editor\+Test\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_map_editor_test_a3ecda7bb82e8109ccad27f1c790b24e4}\index{LevelMapEditorTest@{LevelMapEditorTest}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelMapEditorTest@{LevelMapEditorTest}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_map_editor_test_a3ecda7bb82e8109ccad27f1c790b24e4} 
+void Level\+Map\+Editor\+Test\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Map\+Editor\+Test.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Map\+Editor\+Test.\+cpp\end{DoxyCompactItemize}

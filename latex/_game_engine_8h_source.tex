@@ -1,0 +1,91 @@
+\doxysection{Game\+Engine.\+h}
+\hypertarget{_game_engine_8h_source}{}\label{_game_engine_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/GameEngine.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/GameEngine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GLRenderer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameStateController.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Time.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}InputManager.h"{}}\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SDL\_ttf.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Audio.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}WeaponType.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}SoundManager.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }GameEngine\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ GameEngine*\ instance;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ winWidth,\ winHeight;}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_g_l_renderer}{GLRenderer}}\ *renderer;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_game_state_controller}{GameStateController}}*\ stateController;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_time}{Time}}*\ time;}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_input_manager}{InputManager}}*\ inputHandler;}
+\DoxyCodeLine{00035\ \ \ \ \ vector<string>\ texturePaths;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//AudioEngine*\ audio;}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ GameEngine();}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ isNewGame\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \ \ glm::vec3\ playerPos\ =\ glm::vec3(0.0f);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ GameEngine*\ \mbox{\hyperlink{class_game_engine_a200b68b267f8e858f1a2ff4aedd20e61}{getInstance}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_g_l_renderer}{GLRenderer}}\ *\ \mbox{\hyperlink{class_game_engine_a580352127369a5f9a91967364100c615}{getRenderer}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_game_state_controller}{GameStateController}}*\ \mbox{\hyperlink{class_game_engine_ab9de585905759a0b70da07a5b147fb91}{getStateController}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_time}{Time}}*\ \mbox{\hyperlink{class_game_engine_a276e16e0d15d9d6ba85b1c79eaf79f02}{getTime}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//AudioEngine*\ getAudio();}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_input_manager}{InputManager}}*\ \mbox{\hyperlink{class_game_engine_a067eede910f751576805e59d73ea9b58}{getInputHandler}}();\textcolor{comment}{//\ Getter\ for\ input\ handler}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_acdbc0c0d1c34ce663a3d621488a03614}{init}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_ae2ea677ce0df14694dd7e01269887a18}{setDrawArea}}(\textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a323c7f8f225a664e9c67ae955176c33d}{setBackgroundColor}}(\textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_afa21dfc5072c5d9b3472098393118170}{addMesh}}(\textcolor{keywordtype}{string}\ name,\ \mbox{\hyperlink{class_mesh_vbo}{MeshVbo}}*\ mesh);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a866d20b051a1b4b6d51d5059a5044c12}{clearMesh}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a6c9b69629ac995f990f798309badfdd8}{render}}(list<DrawableObject*>\ renderObjects);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_engine_a49a076634ec10f20d011f50df23bae2c}{getWindowWidth}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_engine_a284ceb0d777bba27468b22bafd43bfcd}{getWindowHeight}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_ae8b1c69a78fb25add1892139aed02f9c}{setWindowWidth}}(\textcolor{keywordtype}{int}\ w);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_afecbc6d743dc9c0ae8fb5b40e5b3df45}{setWindowHeight}}(\textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a43e9ca4376d41800bb021bfc98a71a92}{freezeGameForSecond}}(\textcolor{keywordtype}{float}\ duration);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_aaed28d1383adc09a538633fe49adfdcc}{savePlayerData}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_aaed28d1383adc09a538633fe49adfdcc}{savePlayerData}}(\textcolor{keywordtype}{int}\ currentHP,\ \textcolor{keywordtype}{int}\ witherHP,\ \textcolor{keywordtype}{int}\ lives,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ \mbox{\hyperlink{class_game_engine_a75080f4a5a551f626dabe0b0e499a8b0}{loadPlayerData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filepath);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a800e36367ceb78c46c68c0eb8e5e32f0}{saveGameState}}(GameState\ state,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00235\ \ \ \ \ GameState\ \mbox{\hyperlink{class_game_engine_a4033392f8388cf77a9795211170476d0}{loadGameState}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{bool}\ newGame);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a7c5e9071db2876201b7acf82096f1ff8}{savePlayerWeaponType}}(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keyword}{const}\ std::string\&\ filepath);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00255\ \ \ \ \ WeaponType\ \mbox{\hyperlink{class_game_engine_a4d4d5a4cf019a80ac64f7ccb63a5c351}{loadPlayerWeaponType}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{bool}\ newGame);}
+\DoxyCodeLine{00256\ \};}
+
+\end{DoxyCode}

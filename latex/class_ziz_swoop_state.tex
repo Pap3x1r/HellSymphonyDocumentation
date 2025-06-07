@@ -1,0 +1,154 @@
+\doxysection{Ziz\+Swoop\+State Class Reference}
+\hypertarget{class_ziz_swoop_state}{}\label{class_ziz_swoop_state}\index{ZizSwoopState@{ZizSwoopState}}
+
+
+Inheritance diagram for Ziz\+Swoop\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_ziz_swoop_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Swoop\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_swoop_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_swoop_state_a0618533834b8abc431f14f688918fb69}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_swoop_state_a2b743143a219da2a885a0c1dcc57fe21}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_swoop_state_ae61843b5cf6030fb3cfcaff2e8ec7539}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_swoop_state_a3b1beeb3acb784db1533b3099ae9263f}\label{class_ziz_swoop_state_a3b1beeb3acb784db1533b3099ae9263f} 
+static \mbox{\hyperlink{class_ziz_swoop_state}{Ziz\+Swoop\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_swoop_state_ae08111b2b05f12fc4778beb6b75a92fa}\label{class_ziz_swoop_state_ae08111b2b05f12fc4778beb6b75a92fa} 
+int {\bfseries swoop\+Direction}
+\item 
+\Hypertarget{class_ziz_swoop_state_ac155514e2059cad8f499ca57038750e3}\label{class_ziz_swoop_state_ac155514e2059cad8f499ca57038750e3} 
+bool {\bfseries has\+Flew}
+\item 
+\Hypertarget{class_ziz_swoop_state_a050afb4e92addbe4ea552685f054fbff}\label{class_ziz_swoop_state_a050afb4e92addbe4ea552685f054fbff} 
+bool {\bfseries is\+Off\+Screen}
+\item 
+\Hypertarget{class_ziz_swoop_state_a850f34acb7a4604c02e5523a27ef3052}\label{class_ziz_swoop_state_a850f34acb7a4604c02e5523a27ef3052} 
+bool {\bfseries is\+Displaying\+Warning}
+\item 
+\Hypertarget{class_ziz_swoop_state_a4b1ea99a5903b36c48c576fbae675127}\label{class_ziz_swoop_state_a4b1ea99a5903b36c48c576fbae675127} 
+bool {\bfseries has\+Displayed\+Warning}
+\item 
+\Hypertarget{class_ziz_swoop_state_aa344f8ba01dd3b9199e130f3e5c4b3cc}\label{class_ziz_swoop_state_aa344f8ba01dd3b9199e130f3e5c4b3cc} 
+bool {\bfseries has\+Reached\+Target}
+\item 
+\Hypertarget{class_ziz_swoop_state_ab1dba32032ad75e06dd0537cca0cadc0}\label{class_ziz_swoop_state_ab1dba32032ad75e06dd0537cca0cadc0} 
+float {\bfseries fly\+Up\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a379bf5335f88fd7bde0e15aa945b1248}\label{class_ziz_swoop_state_a379bf5335f88fd7bde0e15aa945b1248} 
+float {\bfseries before\+Warning\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a8784d094e07e2a9e160ef0bb2d4ae7a5}\label{class_ziz_swoop_state_a8784d094e07e2a9e160ef0bb2d4ae7a5} 
+float {\bfseries warning\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a9bf7b6ae1eb93e0120ed3537db87388b}\label{class_ziz_swoop_state_a9bf7b6ae1eb93e0120ed3537db87388b} 
+float {\bfseries swoop\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a1c7f2cabab69a4a53febd3cdff70ecb2}\label{class_ziz_swoop_state_a1c7f2cabab69a4a53febd3cdff70ecb2} 
+float {\bfseries recovery\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a59d6775cb202423447b8e4d815aa8844}\label{class_ziz_swoop_state_a59d6775cb202423447b8e4d815aa8844} 
+float {\bfseries before\+Swoop\+Timer}
+\item 
+\Hypertarget{class_ziz_swoop_state_a076b6b7288f15d27fbf7182a1a65c681}\label{class_ziz_swoop_state_a076b6b7288f15d27fbf7182a1a65c681} 
+const float {\bfseries swoop\+Duration} = 0.\+5f
+\item 
+\Hypertarget{class_ziz_swoop_state_ab4a7931f6d7b227f62c0d915f7dc76d1}\label{class_ziz_swoop_state_ab4a7931f6d7b227f62c0d915f7dc76d1} 
+float {\bfseries t}
+\item 
+\Hypertarget{class_ziz_swoop_state_ab6e8f82afa01991ba716c0ad7a5f6613}\label{class_ziz_swoop_state_ab6e8f82afa01991ba716c0ad7a5f6613} 
+\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries new\+Swoop\+Warning}
+\item 
+\Hypertarget{class_ziz_swoop_state_a03e1e298a24c94db16aafb48033bdad7}\label{class_ziz_swoop_state_a03e1e298a24c94db16aafb48033bdad7} 
+glm\+::vec3 {\bfseries end\+Pos}
+\item 
+\Hypertarget{class_ziz_swoop_state_aa79ba47440c84f1b5148bca815517f1d}\label{class_ziz_swoop_state_aa79ba47440c84f1b5148bca815517f1d} 
+glm\+::vec3 {\bfseries start\+Pos}
+\item 
+\Hypertarget{class_ziz_swoop_state_a53e57f76dcdfdd5b11a9aa786d90d602}\label{class_ziz_swoop_state_a53e57f76dcdfdd5b11a9aa786d90d602} 
+glm\+::vec3 {\bfseries new\+Pos}
+\item 
+\Hypertarget{class_ziz_swoop_state_addacf870b9479e4655f03d659242b8e5}\label{class_ziz_swoop_state_addacf870b9479e4655f03d659242b8e5} 
+glm\+::vec3 {\bfseries end\+Pos\+Up}
+\item 
+\Hypertarget{class_ziz_swoop_state_aaed112db5af82754a4d8e292243cc9b5}\label{class_ziz_swoop_state_aaed112db5af82754a4d8e292243cc9b5} 
+glm\+::vec3 {\bfseries start\+Pos\+Up}
+\item 
+\Hypertarget{class_ziz_swoop_state_a71d51fcd3b29eab1a6b9bff52aee3cd6}\label{class_ziz_swoop_state_a71d51fcd3b29eab1a6b9bff52aee3cd6} 
+glm\+::vec3 {\bfseries new\+Pos\+Up}
+\item 
+\Hypertarget{class_ziz_swoop_state_ae0b154185a2b5150451965be9e2cb1ca}\label{class_ziz_swoop_state_ae0b154185a2b5150451965be9e2cb1ca} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_swoop_state_acb80634ace3d18dfd6b3f29f84707642}\label{class_ziz_swoop_state_acb80634ace3d18dfd6b3f29f84707642} 
+\mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}} \texorpdfstring{$\ast$}{*} {\bfseries attack\+Collider}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_swoop_state_afe8f28391487e8ebad816d3ab6720c9a}\label{class_ziz_swoop_state_afe8f28391487e8ebad816d3ab6720c9a} 
+static \mbox{\hyperlink{class_ziz_swoop_state}{Ziz\+Swoop\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_swoop_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_swoop_state_a0618533834b8abc431f14f688918fb69}\index{ZizSwoopState@{ZizSwoopState}!enter@{enter}}
+\index{enter@{enter}!ZizSwoopState@{ZizSwoopState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_swoop_state_a0618533834b8abc431f14f688918fb69} 
+void Ziz\+Swoop\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_swoop_state_ae61843b5cf6030fb3cfcaff2e8ec7539}\index{ZizSwoopState@{ZizSwoopState}!exit@{exit}}
+\index{exit@{exit}!ZizSwoopState@{ZizSwoopState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_swoop_state_ae61843b5cf6030fb3cfcaff2e8ec7539} 
+void Ziz\+Swoop\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_swoop_state_a2b743143a219da2a885a0c1dcc57fe21}\index{ZizSwoopState@{ZizSwoopState}!update@{update}}
+\index{update@{update}!ZizSwoopState@{ZizSwoopState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_swoop_state_a2b743143a219da2a885a0c1dcc57fe21} 
+void Ziz\+Swoop\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Swoop\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Swoop\+State.\+cpp\end{DoxyCompactItemize}

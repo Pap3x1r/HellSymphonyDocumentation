@@ -1,0 +1,45 @@
+\doxysection{QTEManager.\+h}
+\hypertarget{_q_t_e_manager_8h_source}{}\label{_q_t_e_manager_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/QTEManager.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/QTEManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }QTEManager\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ QTEManager()\ :\ isActive(\textcolor{keyword}{false}),\ timeLimit(0.0f)\ \{\}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ success();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ fail();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ vector<char>\ sequence;}
+\DoxyCodeLine{00017\ \ \ \ \ deque<char>\ inputs;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ currentIndex;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ timeLimit;}
+\DoxyCodeLine{00020\ \ \ \ \ chrono::steady\_clock::time\_point\ startTime;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ isActive;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ QTEManager*\ instance;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ QTEManager*\ getInstance()\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ QTEManager();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ startQTE(\textcolor{keyword}{const}\ vector<char>\&\ sequence,\ \textcolor{keywordtype}{float}\ timeLimit);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ handleInput(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ update();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ getActive()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ isActive;\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ setActive(\textcolor{keywordtype}{bool}\ value)\ \{\ isActive\ =\ value;\ \}}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

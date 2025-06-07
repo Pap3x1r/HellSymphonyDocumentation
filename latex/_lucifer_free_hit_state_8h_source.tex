@@ -1,0 +1,31 @@
+\doxysection{Lucifer\+Free\+Hit\+State.\+h}
+\hypertarget{_lucifer_free_hit_state_8h_source}{}\label{_lucifer_free_hit_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LuciferFreeHitState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LuciferFreeHitState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Lucifer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LuciferIdleState.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lucifer}{Lucifer}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lucifer_free_hit_state}{LuciferFreeHitState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_lucifer_free_hit_state}{LuciferFreeHitState}}*\ instance;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ idleTimer;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_lucifer}{Lucifer}}*\ lucifer;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_lucifer_free_hit_state}{LuciferFreeHitState}}*\ getInstance();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

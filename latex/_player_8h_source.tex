@@ -1,0 +1,203 @@
+\doxysection{Player.\+h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Player.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Player.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GroundChecker.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Health.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}StateMachine.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <imgui.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}WeaponType.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//Movesets}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}PlayerMovementState.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}PlayerBowState.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}PlayerSwordState.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}PlayerShieldState.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bow}{Bow}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sword}{Sword}};}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shield}{Shield}};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }Player\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ playerLives\ =\ 3;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDead\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ isStunned\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ stunTimer\ =\ 0.0f;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ movementSpeed\ =\ 5.0f;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ minMovementSpeed\ =\ 5.0f;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ maxMovementSpeed\ =\ 20.0f;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ jumpingPower\ =\ 1.0f;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFacingRight\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGrounded\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInvincible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ invincibleTimer\ =\ 0.0f;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ WeaponType\ currentWeapon\ =\ WeaponType::None\_;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ ultimateGaugeMax\ =\ 100.0f;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ currentUltimateGauge\ =\ 0.0f;\ \textcolor{comment}{//For\ ultimate\ attack}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ ultimateSlotMax\ =\ 5;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ currentUltimateSlot\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ canMove\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDash\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDashing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ dashCooldown\ =\ 1.0f;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ dashTimer\ =\ 0.0f;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//cam}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ isShaking\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeDuration\ =\ 0.0f;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeTimer\ =\ 0.0f;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeIntensity\ =\ 15.0f;\ \textcolor{comment}{//\ Adjust\ for\ desired\ intensity}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeInterval;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeIntervalTimer;}
+\DoxyCodeLine{00059\ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{00060\ \ \ \ \ std::mt19937\ gen;}
+\DoxyCodeLine{00061\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetX;}
+\DoxyCodeLine{00062\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetY;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ currentLevel;}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ health;}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_state_machine}{StateMachine}}*\ playerState;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_bow}{Bow}}*\ bow;}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_sword}{Sword}}*\ sword;}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_shield}{Shield}}*\ shield;}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_ground_checker}{GroundChecker}}*\ groundChecker;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ vector<string>\ texturePaths;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ velocityThreshold\ =\ 0.02f;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ \ \ \ \ Player(\textcolor{keywordtype}{float}\ currentHealth,\ \textcolor{keywordtype}{float}\ witherHealth,\ \textcolor{keywordtype}{int}\ life);}
+\DoxyCodeLine{00080\ \ \ \ \ \string~Player();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ selfUpdate(\textcolor{keywordtype}{float}\ dt\_);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ setLives(\textcolor{keywordtype}{int}\ value)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ playerLives\ =\ value;}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsDead(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ isDead\ =\ value;}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsDead()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isDead;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ getLives()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ playerLives;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ setInvincibleBool(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ isInvincible\ =\ value;}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ setInvincibleFloat(\textcolor{keywordtype}{float}\ value)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ isInvincible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ invincibleTimer\ =\ value;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{bool}\ getInvincible()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isInvincible;}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ setCanDash(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ canDash\ =\ value;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ getCanDash()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ canDash;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsDashing(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ isDashing\ =\ value;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsDashing()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isDashing;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsStunned()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isStunned;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ increaseUltimateGauge(\textcolor{keywordtype}{float}\ amount)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ currentUltimateGauge\ +=\ amount;}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ setUltimateGauge(\textcolor{keywordtype}{float}\ amount)\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ currentUltimateGauge\ =\ amount;}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{float}\ getUltimateGauge()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentUltimateGauge;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ increaseUltimateSlot(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ currentUltimateSlot\ +=\ amount;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ setUltimateSlot(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ currentUltimateSlot\ =\ amount;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ getUltimateSlot()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentUltimateSlot;}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ getUltimateSlotMax()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ultimateSlotMax;}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsGrounded(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ isGrounded\ =\ value;}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsGrounded()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isGrounded;}
+\DoxyCodeLine{00159\ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ setFacingRight(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{bool}\ getFacingRight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ setMovementSpeed(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{float}\ getMovementSpeed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ setJumpPower(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{float}\ getJumpPower()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{class_state_machine}{StateMachine}}*\ getStateMachine()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{class_ground_checker}{GroundChecker}}*\ getGroundChecker()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ setWeaponType(WeaponType\ newType);}
+\DoxyCodeLine{00175\ \ \ \ \ WeaponType\ getWeaponType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ setLevel(\mbox{\hyperlink{class_level}{Level}}*\ newLevel);}
+\DoxyCodeLine{00178\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ getLevel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ getHealth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{class_bow}{Bow}}*\ getBow()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{class_sword}{Sword}}*\ getSword()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_shield}{Shield}}*\ getShield()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ startShake(\textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ intensity);}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ updateShake(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ stopShake();}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ stun(\textcolor{keywordtype}{float}\ duration);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{/*void\ onCollisionEnter(Collider*\ collider)\ override;}}
+\DoxyCodeLine{00193\ \textcolor{comment}{\ \ \ \ void\ onCollisionStay(Collider*\ collider)\ override;}}
+\DoxyCodeLine{00194\ \textcolor{comment}{}}
+\DoxyCodeLine{00195\ \textcolor{comment}{\ \ \ \ void\ onTriggerEnter(Collider*\ collider)\ override;}}
+\DoxyCodeLine{00196\ \textcolor{comment}{\ \ \ \ void\ onTriggerStay(Collider*\ collider)\ override;*/}}
+\DoxyCodeLine{00197\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,135 @@
+\doxysection{Ziz.\+h}
+\hypertarget{_ziz_8h_source}{}\label{_ziz_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Ziz.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Ziz.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Boss.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ZizIdleState.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ZizGustState.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ZizStormRiseState.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ZizDeathState.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Gust.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}StormRise.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}SwoopWarning.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}UltZizOnBG.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ChompTentacle.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Lightning.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Impale.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}QTEButtonUI.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum}\ zizPhase\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ none,}
+\DoxyCodeLine{00021\ \ \ \ \ firstPhase,}
+\DoxyCodeLine{00022\ \ \ \ \ secondPhase}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }Ziz\ :\ \textcolor{keyword}{public}\ Boss\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ Ziz*\ instance;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFacingRight\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGrounded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasTransformed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ dead;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInvincible;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//cam}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ isShaking\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeDuration\ =\ 0.0f;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeTimer\ =\ 0.0f;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeIntensity\ =\ 15.0f;\ \textcolor{comment}{//\ Adjust\ for\ desired\ intensity}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeInterval;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeIntervalTimer;}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{00045\ \ \ \ \ std::mt19937\ gen;}
+\DoxyCodeLine{00046\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetX;}
+\DoxyCodeLine{00047\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetY;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ zizPhase\ currentPhase\ =\ zizPhase::firstPhase;}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_boss_state_machine}{BossStateMachine}}*\ currentState;}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ currentLevel;}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ health;}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ vector<string>\ texturePaths;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//qte}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ qteMode;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ qteInputReceieved;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ QTEInput;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ QTECorrect;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ distanceFromPlayer;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ Ziz*\ getInstance();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ Ziz();}
+\DoxyCodeLine{00072\ \ \ \ \ \string~Ziz();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ setLevel(\mbox{\hyperlink{class_level}{Level}}*\ newLevel);}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ getLevel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ setFacingRight(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ getFacingRight()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createGust();}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createStormRise();}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createSwoopWarning(\textcolor{keywordtype}{int}\ side);}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createChompTentacle();}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createLightning();}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createLightning(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createImpale();}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ createBGZiz();}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButtonUI}}*\ createQTEButtonUI();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsInvincible();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsInvincible(\textcolor{keywordtype}{bool}\ val);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTECorrect();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTEMode();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTEInputReceieved();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ handleQTEInput(\textcolor{keywordtype}{int}\ input);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ startQTEMode(\textcolor{keywordtype}{int}\ target);}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ endQTEMode();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{float}\ getDistanceFromPlayer();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{class_boss_state_machine}{BossStateMachine}}*\ getStateMachine()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ facePlayer();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayer(\mbox{\hyperlink{class_player}{Player}}*\ playr);}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ getPlayer();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ zizPhase\ getCurrentPhase()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ phaseChangeTracker();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{float}\ getCurrentHealth();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ setIdleState();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ changePhase();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptPhaseChange();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptDeath();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ startShake(\textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ intensity);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ updateShake(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ updateQTEMode(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ stopShake();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ interruptIntoPhase();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ resetCam();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ getHealth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \};}
+
+\end{DoxyCode}

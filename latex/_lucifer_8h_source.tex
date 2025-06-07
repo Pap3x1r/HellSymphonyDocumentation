@@ -1,0 +1,85 @@
+\doxysection{Lucifer.\+h}
+\hypertarget{_lucifer_8h_source}{}\label{_lucifer_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Lucifer.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Lucifer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Boss.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LuciferIdleState.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IceSpear.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}QTEButtonUI.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Lucifer\ :\ \textcolor{keyword}{public}\ Boss\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ Lucifer*\ instance;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_boss_state_machine}{BossStateMachine}}*\ currentState;}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ currentLevel;}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ health;}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInvincible;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//cam}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ isShaking\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeDuration\ =\ 0.0f;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeTimer\ =\ 0.0f;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{float}\ shakeIntensity\ =\ 15.0f;\ \textcolor{comment}{//\ Adjust\ for\ desired\ intensity}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeInterval;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ shakeIntervalTimer;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{00030\ \ \ \ \ std::mt19937\ gen;}
+\DoxyCodeLine{00031\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetX;}
+\DoxyCodeLine{00032\ \ \ \ \ std::uniform\_real\_distribution<>\ shakeOffsetY;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//qte}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ qteMode;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ qteInputReceieved;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ QTEInput;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ QTECorrect;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ vector<string>\ texturePaths;}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ Lucifer*\ getInstance();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ Lucifer();}
+\DoxyCodeLine{00046\ \ \ \ \ \string~Lucifer();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ setLevel(\mbox{\hyperlink{class_level}{Level}}*\ newLevel);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}*\ getLevel()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ setFacingRight(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_boss_state_machine}{BossStateMachine}}*\ getStateMachine()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlayer(\mbox{\hyperlink{class_player}{Player}}*\ playr);}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ getPlayer();}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_health}{Health}}*\ getHealth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsInvincible();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ setIsInvincible(\textcolor{keywordtype}{bool}\ val);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ startShake(\textcolor{keywordtype}{float}\ duration,\ \textcolor{keywordtype}{float}\ intensity);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ updateShake(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ stopShake();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ resetCam();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_ice_spear}{IceSpear}}*\ createIceSpear(FacingDirection\ fd);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//qte}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ updateQTEMode(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTECorrect();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTEMode();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ getQTEInputReceieved();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ handleQTEInput(\textcolor{keywordtype}{int}\ input);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ startQTEMode(\textcolor{keywordtype}{int}\ target);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ endQTEMode();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButtonUI}}*\ createQTEButtonUI();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

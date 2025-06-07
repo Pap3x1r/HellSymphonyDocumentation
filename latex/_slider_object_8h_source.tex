@@ -1,0 +1,53 @@
+\doxysection{Slider\+Object.\+h}
+\hypertarget{_slider_object_8h_source}{}\label{_slider_object_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/SliderObject.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/SliderObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}SimpleObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UIButton.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_slider_object_a3681e233addbb43a30b69d9e7245bda9}{SliderObject}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{stringliteral}{"{}Slider\ Object"{}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ value;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ glm::vec3\ bgColor;}
+\DoxyCodeLine{00019\ \ \ \ \ glm::vec3\ fillColor;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ glm::vec3\ position;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ glm::vec3\ originalWidth;}
+\DoxyCodeLine{00024\ \ \ \ \ glm::vec3\ basePosition;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ sliderBackground;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ sliderFill;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_u_i_button}{UIButton}}*\ sliderHandle;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_slider_object_a3681e233addbb43a30b69d9e7245bda9}{SliderObject}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_slider_object_a3681e233addbb43a30b69d9e7245bda9}{SliderObject}}(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_slider_object_aee61b551f2ac4d417e8432c118316b5a}{\string~SliderObject}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_a6737540fe973d02bd357be694c919cd9}{update}}(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_a3bfc97454cf2197bb76d7041c9050c65}{setPosition}}(glm::vec3\ position,\ \textcolor{keywordtype}{int}\ type);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_ae058ad0910a6b55327e1e253e229f0c4}{setColor}}(glm::vec3\ color,\ \textcolor{keywordtype}{int}\ type);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_a496c8f272a198cf1cdff5d32e3cbf4a0}{setScale}}(glm::vec3\ scale,\ \textcolor{keywordtype}{int}\ type);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_a79e3953dfc7a2f749b091dc181f9df5e}{setValue}}(\textcolor{keywordtype}{float}\ v);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_slider_object_af51a9e83c5c3319fb2f8144d549f0ef4}{getValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slider_object_a62d53dc33efa0b006e987b40d29f7a72}{setMenuState}}(MenuState\ state);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ std::list<DrawableObject*>\ \mbox{\hyperlink{class_slider_object_a660c898738f9e6a4354d59a86183f435}{getObjectsList}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ \mbox{\hyperlink{class_slider_object_a918dd5a7e94932157ae3b287b6756e3c}{getObject}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00104\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_slider_object_a7b3eeb72cb7bd668fc3cc65591444aa7}{getOriginalWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ std::string\ \mbox{\hyperlink{class_slider_object_a525047188d1e5321b6ce2ec9e01675f7}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ \};}
+
+\end{DoxyCode}

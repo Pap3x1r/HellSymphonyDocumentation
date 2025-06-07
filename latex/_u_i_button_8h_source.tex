@@ -1,0 +1,99 @@
+\doxysection{UIButton.\+h}
+\hypertarget{_u_i_button_8h_source}{}\label{_u_i_button_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/UIButton.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/UIButton.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UIText.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameEngine.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}imgui.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_slider_object}{SliderObject}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i_button_a36c70940a7a6ca4b607f78f1134de98e}{UIButton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ active\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ isEnable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ mouseOver\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ function<void()>\ func;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{stringliteral}{"{}Button"{}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ xPosition;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ yPosition;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ xScale;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ yScale;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_u_i_text}{UIText}}*\ label\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ slider\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ isHandle\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_u_i_button_a36c70940a7a6ca4b607f78f1134de98e}{UIButton}}()\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ DrawableObject::setName(name);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ setDrawCollider(\textcolor{keyword}{true});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ setCanDrawColliderNew(\textcolor{keyword}{false});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ setTag(Tag::UI);}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_u_i_button_aaea199ca2bf709323448e7fc90cc6221}{UIButton}}(\textcolor{keywordtype}{string}\ name)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>name\ =\ name;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ DrawableObject::setName(this-\/>name);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ setDrawCollider(\textcolor{keyword}{true});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ setCanDrawColliderNew(\textcolor{keyword}{false});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ setTag(Tag::UI);}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_u_i_button_a89c2530ffea21ed7a24fcc1c33e93ab8}{\string~UIButton}}()\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ label\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_ae70ea7acc0917e85725b7d33714e8fb6}{OnClick}}()\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (func)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ func();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a2cd95ca1006218204cb5ff1524a8c854}{setFunction}}(function<\textcolor{keywordtype}{void}()>\ func)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this-\/>func\ =\ func;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a36e5f1123dc73c7879ccd10934425413}{update}}(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_button_a5b706cbf1030b1c07e1ceb8276333f19}{isHovered}}(\textcolor{keywordtype}{int}\ mouseX,\ \textcolor{keywordtype}{int}\ mouseY);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_button_a43d7cb75879cddc45483d621939e6495}{getMouseOver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a4d17d929f5fc40949dd9a083079c1708}{setMouseOver}}(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ mouseOver\ =\ value;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a4c2cbe45f536408c8c3bebb91cf23a0c}{setEnable}}(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ isEnable\ =\ value;}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_button_af9a1bee0ff3e8628dca2026a4c676f5f}{getEnable}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isEnable;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a1c9e1e4fcb0b773bf436c79e4b5542b8}{setLabel}}(\mbox{\hyperlink{class_u_i_text}{UIText}}*\ text)\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ label\ =\ text;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_u_i_text}{UIText}}*\ \mbox{\hyperlink{class_u_i_button_a58228aa5cfd9b1437fded676073b8ff4}{getLabel}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ label;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_u_i_button_a27d5ca7229fa75aee5527b34c0f01ef9}{getName}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a9b564da2624c2487a92d6c239a5457f2}{setHandle}}(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ isHandle\ =\ value;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_button_ad3a1fee245d5b868a2bb560b9f6eed0b}{getHandle}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isHandle;}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_a81c4b599e7821f93b092190c2c84d400}{setSlider}}(\mbox{\hyperlink{class_slider_object}{SliderObject}}*\ obj)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ slider\ =\ obj;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_slider_object}{SliderObject}}*\ \mbox{\hyperlink{class_u_i_button_a7c92b3549b62aa8ed768482acea2f7f3}{getSlider}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ slider;}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_button_ac9eae3d5976ac5388a8d5791df1e0652}{setActive}}(\textcolor{keywordtype}{bool}\ a)\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ active\ =\ a;}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_button_aefaf5fd8829eae0038ca0865b7134462}{getActive}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ active;}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \};}
+
+\end{DoxyCode}

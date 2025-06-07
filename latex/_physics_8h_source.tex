@@ -1,0 +1,62 @@
+\doxysection{Physics.\+h}
+\hypertarget{_physics_8h_source}{}\label{_physics_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Physics.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Physics.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ "{}CollisionHandler.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}glm.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Transform.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ DEFAULT\_GRAVITY\ -\/1.0f\ }\textcolor{comment}{//\ fine\ tune\ later}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CONST\_DELTA\_TIME\ 0.001f\ }\textcolor{comment}{//\ for\ testing}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_physics_ab28f78316c054dff62ff71ea7deed7be}{Physics}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_physics_a8577c954aca855bd9746503e09b508eb}{lastPos}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_physics_a76638be5763ded658de7954a9dc05db3}{velocity}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_physics_ac747b0ddf1a4a65e1fd1efa7bab481ce}{acceleration}};\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_physics_aa49cb13c2e45ee01091b171fe51c6a5e}{gravity}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_physics_a8af55ef072a48055b5bfe473c6627423}{mass}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{class_physics_ace478b50bdbc5b5de0e9d9d9a8a3b00b}{force}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_physics_a50b1ba3fabef04b519f3c15668e076c9}{drag}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_physics_a81246bc16e2477152c4c51374c4a935d}{enablePhysics}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_physics_a8b67f4529f6e8721fa074926627baea7}{enableGravity}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_physics_ab28f78316c054dff62ff71ea7deed7be}{Physics}}(\mbox{\hyperlink{class_transform}{Transform}}\&\ transform);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setVelocity(glm::vec2\ vel);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setAcceleration(glm::vec2\ accel);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGravity(glm::vec2\ g);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMass(\textcolor{keywordtype}{float}\ m);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_ad8d73a86753aa26a32c48169b1d85234}{addForce}}(glm::vec2\ f);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setDrag(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_physics_a50b1ba3fabef04b519f3c15668e076c9}{drag}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setLastPosition(glm::vec3\ pos);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_ac1d13b5486e62dfc43fdcf9777e2f780}{setEnablePhysics}}(\textcolor{keywordtype}{bool}\ flag);\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_acac8b0c880dedd71d043cf5843b610d5}{setEnableGravity}}(\textcolor{keywordtype}{bool}\ flag);\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ glm::vec3\ getLastPosition();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ glm::vec2\ getVelocity();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ glm::vec2\ getAcceleration();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ glm::vec2\ getGravity();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getMass();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ glm::vec2\ getForce();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ getDrag();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_physics_ad5584257168c0861888999f75474e280}{isGravityEnable}}();\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_ae1fc53c825f97aeb9369694fa21abe99}{applyGravity}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_abbfbb68b563c37fe711a84715c90ca64}{update}}(\mbox{\hyperlink{class_transform}{Transform}}\&\ transform);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_physics_abbfbb68b563c37fe711a84715c90ca64}{update}}(\mbox{\hyperlink{class_transform}{Transform}}\&\ transform,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ assignment\ operator\ intentionally\ commented\ out}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ operator=(Physics\&\ other);}}
+\DoxyCodeLine{00082\ \};}
+
+\end{DoxyCode}

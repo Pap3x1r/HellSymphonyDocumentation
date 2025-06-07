@@ -1,0 +1,11 @@
+<map id="Collider" name="Collider">
+<area shape="rect" id="Node000001" title="Manages collision properties and state for a DrawableObject." alt="" coords="20,104,86,131"/>
+<area shape="rect" id="Node000002" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="47,203,161,229"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="22,142,12,156,8,167,12,177,27,192,47,202,45,207,24,197,7,180,3,167,7,153,17,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,192,72,180,54,132,59,130,77,177,84,189"/>
+<area shape="rect" id="Node000003" href="$class_transform.html" title="Represents the position, rotation, and scale of an object in 2D/3D space." alt="" coords="54,5,135,32"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="65,44,57,57,52,81,53,103,48,104,46,80,52,55,61,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,44,120,55,128,89,129,117,120,179,112,203,107,202,115,178,124,117,122,90,115,57,110,46"/>
+<area shape="rect" id="Node000004" href="$class_physics.html" title="Handles 2D physics calculations including motion, forces, gravity, and drag." alt="" coords="223,104,291,131"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="226,142,125,204,122,200,223,137"/>
+</map>

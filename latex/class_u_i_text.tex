@@ -1,0 +1,372 @@
+\doxysection{UIText Class Reference}
+\hypertarget{class_u_i_text}{}\label{class_u_i_text}\index{UIText@{UIText}}
+
+
+Renders text as a textured quad using SDL\+\_\+ttf and Open\+GL.  
+
+
+
+
+{\ttfamily \#include $<$UIText.\+h$>$}
+
+
+
+Inheritance diagram for UIText\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_u_i_text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UIText\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{class_u_i_text__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_text_a15dd95be500776895430e0d80ddc3493}{UIText}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the \doxylink{class_u_i_text}{UIText} with a name. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_text_ab675aed394119e92a853abec341df06d}\label{class_u_i_text_ab675aed394119e92a853abec341df06d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+UIText} ()
+\begin{DoxyCompactList}\small\item\em Destructor, cleans up Open\+GL texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_a24ff5c16de1d6d2e269e00cb2385bfb5}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the text to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_af962f9a544720de395b138b9128c3c42}{update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates \doxylink{class_u_i_text}{UIText} properties, e.\+g., position and scale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}{load\+Text}} (string text, SDL\+\_\+\+Color text\+Color, int font\+Size, bool bold=false)
+\begin{DoxyCompactList}\small\item\em Loads the text and creates an Open\+GL texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_aa6c9842508d2947a622c29297803d6e6}{set\+Text}} (const string \&new\+Text)
+\begin{DoxyCompactList}\small\item\em Updates the displayed text if different from current. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_a188c21cf56014b3bfe0aa1d01d61ef18}{set\+Color}} (const SDL\+\_\+\+Color \&new\+Color)
+\begin{DoxyCompactList}\small\item\em Updates the text color and reloads the texture if changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_a38f2a0d1d2a5ab8aa0fb37312d1454ea}{set\+Font}} (const int \&new\+Size)
+\begin{DoxyCompactList}\small\item\em Sets a new font size and reloads the texture if changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_af461cbda1037cc9d30c588d5b457f319}{set\+Alpha}} (float new\+Alpha) override
+\begin{DoxyCompactList}\small\item\em Sets the alpha transparency for the text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_text_a5820bd1716c772d47e92091b3582e1b2}{set\+Offset}} (const glm\+::vec3 \&new\+Vec)
+\begin{DoxyCompactList}\small\item\em Sets an offset to be applied to the text position during rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+virtual float \mbox{\hyperlink{class_drawable_object_a49db5ebe33539bfd2bdf4e133919d7c0}{get\+Alpha}} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_text_adf97c12a6a78128a0fabc77dcf1660e1}\label{class_u_i_text_adf97c12a6a78128a0fabc77dcf1660e1} 
+string {\bfseries name}
+\item 
+\Hypertarget{class_u_i_text_a3bab764bdd5a0eb035fef14a9f1d92be}\label{class_u_i_text_a3bab764bdd5a0eb035fef14a9f1d92be} 
+unsigned int {\bfseries texture}
+\item 
+\Hypertarget{class_u_i_text_ab15c39c8285278d6a121cd29f6d98ead}\label{class_u_i_text_ab15c39c8285278d6a121cd29f6d98ead} 
+string {\bfseries text}
+\item 
+\Hypertarget{class_u_i_text_aad81c5cc6c5dea0bd511ec3bc5245186}\label{class_u_i_text_aad81c5cc6c5dea0bd511ec3bc5245186} 
+SDL\+\_\+\+Color {\bfseries color}
+\item 
+\Hypertarget{class_u_i_text_a3849157cea759042062b3fb1c5c1b8f8}\label{class_u_i_text_a3849157cea759042062b3fb1c5c1b8f8} 
+int {\bfseries font\+Size}
+\item 
+\Hypertarget{class_u_i_text_aeed5fb16464028e04175f350ae271646}\label{class_u_i_text_aeed5fb16464028e04175f350ae271646} 
+float {\bfseries alpha} = 1.\+0f
+\item 
+\Hypertarget{class_u_i_text_a4974d976ca936ad5b376242a9090c905}\label{class_u_i_text_a4974d976ca936ad5b376242a9090c905} 
+glm\+::vec3 {\bfseries text\+Offset} = \{ 0.\+0f,0.\+0f,0.\+0f \}
+\item 
+\Hypertarget{class_u_i_text_aba78b56a4a278ad5f4b59914d545d5d8}\label{class_u_i_text_aba78b56a4a278ad5f4b59914d545d5d8} 
+float {\bfseries x\+Position}
+\item 
+\Hypertarget{class_u_i_text_a316f569455fe3dcd52e321df37517f01}\label{class_u_i_text_a316f569455fe3dcd52e321df37517f01} 
+float {\bfseries y\+Position}
+\item 
+\Hypertarget{class_u_i_text_a78651ac424abc1bf9a9052c3a0a6c731}\label{class_u_i_text_a78651ac424abc1bf9a9052c3a0a6c731} 
+float {\bfseries x\+Scale}
+\item 
+\Hypertarget{class_u_i_text_afe7f4ab6ca826d1d7c7989889fd2c7c6}\label{class_u_i_text_afe7f4ab6ca826d1d7c7989889fd2c7c6} 
+float {\bfseries y\+Scale}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Renders text as a textured quad using SDL\+\_\+ttf and Open\+GL. 
+
+This class handles loading a text string into an Open\+GL texture, managing its color, font size, alpha transparency, and rendering it on screen using your engine\textquotesingle{}s transformation system.
+
+It supports dynamic updates to text, color, font size, and alpha. 
+
+\label{doc-constructors}
+\Hypertarget{class_u_i_text_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_i_text_a15dd95be500776895430e0d80ddc3493}\index{UIText@{UIText}!UIText@{UIText}}
+\index{UIText@{UIText}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{UIText()}{UIText()}}
+{\footnotesize\ttfamily \label{class_u_i_text_a15dd95be500776895430e0d80ddc3493} 
+UIText\+::\+UIText (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the \doxylink{class_u_i_text}{UIText} with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The unique name for the \doxylink{class_u_i_text}{UIText} object. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_text_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_text_ae9d83a302679639424372f3fccc8a42f}\index{UIText@{UIText}!loadText@{loadText}}
+\index{loadText@{loadText}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{loadText()}{loadText()}}
+{\footnotesize\ttfamily \label{class_u_i_text_ae9d83a302679639424372f3fccc8a42f} 
+void UIText\+::load\+Text (\begin{DoxyParamCaption}\item[{string}]{text}{, }\item[{SDL\+\_\+\+Color}]{text\+Color}{, }\item[{int}]{font\+Size}{, }\item[{bool}]{bold}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the text and creates an Open\+GL texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The string to display. \\
+\hline
+{\em text\+Color} & The SDL\+\_\+\+Color specifying text color. \\
+\hline
+{\em font\+Size} & Font size to use. \\
+\hline
+{\em bold} & Whether to use bold font style (default false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_text_a24ff5c16de1d6d2e269e00cb2385bfb5}\index{UIText@{UIText}!render@{render}}
+\index{render@{render}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_u_i_text_a24ff5c16de1d6d2e269e00cb2385bfb5} 
+void UIText\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{global\+Model\+Transform}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Renders the text to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+Model\+Transform} & The global transformation matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}{Drawable\+Object}}.
+
+\Hypertarget{class_u_i_text_af461cbda1037cc9d30c588d5b457f319}\index{UIText@{UIText}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily \label{class_u_i_text_af461cbda1037cc9d30c588d5b457f319} 
+void UIText\+::set\+Alpha (\begin{DoxyParamCaption}\item[{float}]{new\+Alpha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the alpha transparency for the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Alpha} & Alpha value between 0.\+0 (transparent) and 1.\+0 (opaque). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}.
+
+\Hypertarget{class_u_i_text_a188c21cf56014b3bfe0aa1d01d61ef18}\index{UIText@{UIText}!setColor@{setColor}}
+\index{setColor@{setColor}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{class_u_i_text_a188c21cf56014b3bfe0aa1d01d61ef18} 
+void UIText\+::set\+Color (\begin{DoxyParamCaption}\item[{const SDL\+\_\+\+Color \&}]{new\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the text color and reloads the texture if changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Color} & New color for the text. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_text_a38f2a0d1d2a5ab8aa0fb37312d1454ea}\index{UIText@{UIText}!setFont@{setFont}}
+\index{setFont@{setFont}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily \label{class_u_i_text_a38f2a0d1d2a5ab8aa0fb37312d1454ea} 
+void UIText\+::set\+Font (\begin{DoxyParamCaption}\item[{const int \&}]{new\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets a new font size and reloads the texture if changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Size} & The new font size. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_text_a5820bd1716c772d47e92091b3582e1b2}\index{UIText@{UIText}!setOffset@{setOffset}}
+\index{setOffset@{setOffset}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{setOffset()}{setOffset()}}
+{\footnotesize\ttfamily \label{class_u_i_text_a5820bd1716c772d47e92091b3582e1b2} 
+void UIText\+::set\+Offset (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{new\+Vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets an offset to be applied to the text position during rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Vec} & Offset vector in 3D space. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_text_aa6c9842508d2947a622c29297803d6e6}\index{UIText@{UIText}!setText@{setText}}
+\index{setText@{setText}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily \label{class_u_i_text_aa6c9842508d2947a622c29297803d6e6} 
+void UIText\+::set\+Text (\begin{DoxyParamCaption}\item[{const string \&}]{new\+Text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the displayed text if different from current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Text} & New string to display. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_text_af962f9a544720de395b138b9128c3c42}\index{UIText@{UIText}!update@{update}}
+\index{update@{update}!UIText@{UIText}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_u_i_text_af962f9a544720de395b138b9128c3c42} 
+void UIText\+::update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates \doxylink{class_u_i_text}{UIText} properties, e.\+g., position and scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time since last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/UIText.\+h\end{DoxyCompactItemize}

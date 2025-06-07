@@ -1,0 +1,141 @@
+\doxysection{Time Class Reference}
+\hypertarget{class_time}{}\label{class_time}\index{Time@{Time}}
+
+
+Manages timing and delta time for frame updates and time scaling.  
+
+
+
+
+{\ttfamily \#include $<$Time.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_time_a4245e409c7347d1d671858962c2ca3b5}\label{class_time_a4245e409c7347d1d671858962c2ca3b5} 
+{\bfseries Time} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_time}{Time} object with default values. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_a405c7642c4ba0ee719a8d0491099102a}{get\+Delta\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the time between frames, scaled by time\+Scale. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_a4fc461a407c494e9fc893909be39a4c5}{get\+Delta\+Time\+Real\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the real (unscaled) delta time between frames. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_time_ac81e431616ee0e46201715be56f2bebd}{get\+Ticks}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current internal tick count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_a54e4757c8ae465b85f66b1587c2ccd33}{update\+Tick}} (uint64\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Updates internal time state and computes delta time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_a1b84830287fc391fda3fed66c7303411}{update\+Tick\+Counter\+Only}} (uint64\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Updates only the tick counter without computing delta time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_ae93c0037d63d8aec951a64b277e7a408}{set\+Time\+Scale}} (float \mbox{\hyperlink{class_time_a1a42c48e601fa3f6724ca61ae3f472e3}{time\+Scale}})
+\begin{DoxyCompactList}\small\item\em Sets the time scaling factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_time_a28bd745a6935c018025f3c9d023f656f}\label{class_time_a28bd745a6935c018025f3c9d023f656f} 
+uint64\+\_\+t {\bfseries tick\+Counter}
+\begin{DoxyCompactList}\small\item\em Internal tick counter (in milliseconds or microseconds depending on usage) \end{DoxyCompactList}\item 
+\Hypertarget{class_time_a1a42c48e601fa3f6724ca61ae3f472e3}\label{class_time_a1a42c48e601fa3f6724ca61ae3f472e3} 
+float {\bfseries time\+Scale}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_time}{Time} scaling factor (e.\+g. for slow motion) \end{DoxyCompactList}\item 
+\Hypertarget{class_time_a35fe30294c847679da506b540f05d593}\label{class_time_a35fe30294c847679da506b540f05d593} 
+float {\bfseries delta\+Time}
+\begin{DoxyCompactList}\small\item\em Scaled delta time between frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages timing and delta time for frame updates and time scaling. 
+
+Provides time tracking utilities such as delta time (scaled and unscaled), tick counting, and time scale adjustment for use in game loops. 
+
+\label{doc-func-members}
+\Hypertarget{class_time_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_a405c7642c4ba0ee719a8d0491099102a}\index{Time@{Time}!getDeltaTime@{getDeltaTime}}
+\index{getDeltaTime@{getDeltaTime}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
+{\footnotesize\ttfamily \label{class_time_a405c7642c4ba0ee719a8d0491099102a} 
+float Time\+::get\+Delta\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the time between frames, scaled by time\+Scale. 
+
+\begin{DoxyReturn}{Returns}
+Scaled delta time. 
+\end{DoxyReturn}
+\Hypertarget{class_time_a4fc461a407c494e9fc893909be39a4c5}\index{Time@{Time}!getDeltaTimeRealTime@{getDeltaTimeRealTime}}
+\index{getDeltaTimeRealTime@{getDeltaTimeRealTime}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{getDeltaTimeRealTime()}{getDeltaTimeRealTime()}}
+{\footnotesize\ttfamily \label{class_time_a4fc461a407c494e9fc893909be39a4c5} 
+float Time\+::get\+Delta\+Time\+Real\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the real (unscaled) delta time between frames. 
+
+\begin{DoxyReturn}{Returns}
+Raw delta time. 
+\end{DoxyReturn}
+\Hypertarget{class_time_ac81e431616ee0e46201715be56f2bebd}\index{Time@{Time}!getTicks@{getTicks}}
+\index{getTicks@{getTicks}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{getTicks()}{getTicks()}}
+{\footnotesize\ttfamily \label{class_time_ac81e431616ee0e46201715be56f2bebd} 
+uint64\+\_\+t Time\+::get\+Ticks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current internal tick count. 
+
+\begin{DoxyReturn}{Returns}
+Tick counter value. 
+\end{DoxyReturn}
+\Hypertarget{class_time_ae93c0037d63d8aec951a64b277e7a408}\index{Time@{Time}!setTimeScale@{setTimeScale}}
+\index{setTimeScale@{setTimeScale}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{setTimeScale()}{setTimeScale()}}
+{\footnotesize\ttfamily \label{class_time_ae93c0037d63d8aec951a64b277e7a408} 
+void Time\+::set\+Time\+Scale (\begin{DoxyParamCaption}\item[{float}]{time\+Scale}{}\end{DoxyParamCaption})}
+
+
+
+Sets the time scaling factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Scale} & The new time scale (e.\+g. 0.\+5 for half-\/speed). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_time_a54e4757c8ae465b85f66b1587c2ccd33}\index{Time@{Time}!updateTick@{updateTick}}
+\index{updateTick@{updateTick}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{updateTick()}{updateTick()}}
+{\footnotesize\ttfamily \label{class_time_a54e4757c8ae465b85f66b1587c2ccd33} 
+void Time\+::update\+Tick (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Updates internal time state and computes delta time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The current tick value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_time_a1b84830287fc391fda3fed66c7303411}\index{Time@{Time}!updateTickCounterOnly@{updateTickCounterOnly}}
+\index{updateTickCounterOnly@{updateTickCounterOnly}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{updateTickCounterOnly()}{updateTickCounterOnly()}}
+{\footnotesize\ttfamily \label{class_time_a1b84830287fc391fda3fed66c7303411} 
+void Time\+::update\+Tick\+Counter\+Only (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Updates only the tick counter without computing delta time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The current tick value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Time.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Time.\+cpp\end{DoxyCompactItemize}

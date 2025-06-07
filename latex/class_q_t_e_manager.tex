@@ -1,0 +1,77 @@
+\doxysection{QTEManager Class Reference}
+\hypertarget{class_q_t_e_manager}{}\label{class_q_t_e_manager}\index{QTEManager@{QTEManager}}
+
+
+Collaboration diagram for QTEManager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_q_t_e_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_q_t_e_manager_a4b268cc82b1b3f766417e012c619a89c}\label{class_q_t_e_manager_a4b268cc82b1b3f766417e012c619a89c} 
+void {\bfseries start\+QTE} (const vector$<$ char $>$ \&sequence, float time\+Limit)
+\item 
+\Hypertarget{class_q_t_e_manager_ac5a753c4f10900a0d1c0a6e8de95dafc}\label{class_q_t_e_manager_ac5a753c4f10900a0d1c0a6e8de95dafc} 
+void {\bfseries handle\+Input} (char key)
+\item 
+\Hypertarget{class_q_t_e_manager_ac1d9d0220b97e21aeca35631b88993ed}\label{class_q_t_e_manager_ac1d9d0220b97e21aeca35631b88993ed} 
+void {\bfseries update} ()
+\item 
+\Hypertarget{class_q_t_e_manager_af7658c577ac02c4e137b41a915778c09}\label{class_q_t_e_manager_af7658c577ac02c4e137b41a915778c09} 
+bool {\bfseries get\+Active} () const
+\item 
+\Hypertarget{class_q_t_e_manager_ace1b6c045d188897921bff5118094f98}\label{class_q_t_e_manager_ace1b6c045d188897921bff5118094f98} 
+void {\bfseries set\+Active} (bool value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_q_t_e_manager_a33d9d12e87e1dcb6cb0b5fc52cc39d2c}\label{class_q_t_e_manager_a33d9d12e87e1dcb6cb0b5fc52cc39d2c} 
+static \mbox{\hyperlink{class_q_t_e_manager}{QTEManager}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_q_t_e_manager_a816e91471a65a5eee412a52dbdfe25c6}\label{class_q_t_e_manager_a816e91471a65a5eee412a52dbdfe25c6} 
+static \mbox{\hyperlink{class_q_t_e_manager}{QTEManager}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_q_t_e_manager_ad31153052030cdf0f5a205cf1513292b}\label{class_q_t_e_manager_ad31153052030cdf0f5a205cf1513292b} 
+void {\bfseries success} ()
+\item 
+\Hypertarget{class_q_t_e_manager_a3ed3ab8f2653e72e51bcff7c346c9028}\label{class_q_t_e_manager_a3ed3ab8f2653e72e51bcff7c346c9028} 
+void {\bfseries fail} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_q_t_e_manager_a6d2980438f51eeed87b05b06d88d7c28}\label{class_q_t_e_manager_a6d2980438f51eeed87b05b06d88d7c28} 
+vector$<$ char $>$ {\bfseries sequence}
+\item 
+\Hypertarget{class_q_t_e_manager_aff31147367c6a566afeb9bbfd6b996fe}\label{class_q_t_e_manager_aff31147367c6a566afeb9bbfd6b996fe} 
+deque$<$ char $>$ {\bfseries inputs}
+\item 
+\Hypertarget{class_q_t_e_manager_a24b422db122adf93bbe6434350af87fe}\label{class_q_t_e_manager_a24b422db122adf93bbe6434350af87fe} 
+size\+\_\+t {\bfseries current\+Index}
+\item 
+\Hypertarget{class_q_t_e_manager_a79dce8d45921884600781ccc0308a40a}\label{class_q_t_e_manager_a79dce8d45921884600781ccc0308a40a} 
+float {\bfseries time\+Limit}
+\item 
+\Hypertarget{class_q_t_e_manager_a046e69703e5eccb1ae2e3e1e8cf8abd4}\label{class_q_t_e_manager_a046e69703e5eccb1ae2e3e1e8cf8abd4} 
+chrono\+::steady\+\_\+clock\+::time\+\_\+point {\bfseries start\+Time}
+\item 
+\Hypertarget{class_q_t_e_manager_aaabe83b5c3ff79e126e834c9c465df5b}\label{class_q_t_e_manager_aaabe83b5c3ff79e126e834c9c465df5b} 
+bool {\bfseries is\+Active}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/QTEManager.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/QTEManager.\+cpp\end{DoxyCompactItemize}

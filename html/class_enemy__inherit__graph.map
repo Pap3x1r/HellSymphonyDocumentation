@@ -1,0 +1,13 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="40,155,103,181"/>
+<area shape="rect" id="Node000004" href="$class_boss.html" title=" " alt="" coords="46,229,97,256"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="74,197,74,229,69,229,69,197"/>
+<area shape="rect" id="Node000002" href="$class_textured_object.html" title="A renderable game object that uses a texture and supports animation." alt="" coords="17,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,122,74,154,69,154,69,122"/>
+<area shape="rect" id="Node000003" href="$class_drawable_object.html" title="Base class for any renderable and interactable game object." alt="" coords="14,5,129,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,48,74,80,69,80,69,48"/>
+<area shape="rect" id="Node000005" href="$class_lucifer.html" title=" " alt="" coords="5,304,66,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="61,271,44,305,39,302,56,269"/>
+<area shape="rect" id="Node000006" href="$class_ziz.html" title=" " alt="" coords="89,304,128,331"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="87,269,105,302,100,305,83,271"/>
+</map>

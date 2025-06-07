@@ -1,0 +1,103 @@
+\doxysection{Ziz\+Gust\+State Class Reference}
+\hypertarget{class_ziz_gust_state}{}\label{class_ziz_gust_state}\index{ZizGustState@{ZizGustState}}
+
+
+Inheritance diagram for Ziz\+Gust\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_ziz_gust_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Gust\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_gust_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_gust_state_a1214bff40b047132814ad13e71c39fd7}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_gust_state_a49c0d6e49ff96d270aa583368e099eb5}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_gust_state_ae2243e9c8a97802bf856c892cb2f97b1}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_gust_state_abd154ccd19aaf2e4426f102f17eebf22}\label{class_ziz_gust_state_abd154ccd19aaf2e4426f102f17eebf22} 
+static \mbox{\hyperlink{class_ziz_gust_state}{Ziz\+Gust\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_gust_state_a5259d8c876ccab57f24eba9fc9c323ce}\label{class_ziz_gust_state_a5259d8c876ccab57f24eba9fc9c323ce} 
+float {\bfseries timer}
+\item 
+\Hypertarget{class_ziz_gust_state_a143edd9d83c39b0be917ddc1db228145}\label{class_ziz_gust_state_a143edd9d83c39b0be917ddc1db228145} 
+float {\bfseries startup\+Timer}
+\item 
+\Hypertarget{class_ziz_gust_state_a128c0ad1bdf70a006da60a0e48d8017c}\label{class_ziz_gust_state_a128c0ad1bdf70a006da60a0e48d8017c} 
+float {\bfseries active\+Timer}
+\item 
+\Hypertarget{class_ziz_gust_state_a4c974dff635e9a6676e25cfb73c2db33}\label{class_ziz_gust_state_a4c974dff635e9a6676e25cfb73c2db33} 
+float {\bfseries recovery\+Timer}
+\item 
+\Hypertarget{class_ziz_gust_state_a0bf26527bc31b2c60a4b02bc75677243}\label{class_ziz_gust_state_a0bf26527bc31b2c60a4b02bc75677243} 
+int {\bfseries current\+State}
+\item 
+\Hypertarget{class_ziz_gust_state_aec9f1e65f943b5fa6063380b12d092f3}\label{class_ziz_gust_state_aec9f1e65f943b5fa6063380b12d092f3} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_gust_state_af9792ec6e19b2a9a1bd246a3f746e37f}\label{class_ziz_gust_state_af9792ec6e19b2a9a1bd246a3f746e37f} 
+static \mbox{\hyperlink{class_ziz_gust_state}{Ziz\+Gust\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_gust_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_gust_state_a1214bff40b047132814ad13e71c39fd7}\index{ZizGustState@{ZizGustState}!enter@{enter}}
+\index{enter@{enter}!ZizGustState@{ZizGustState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_gust_state_a1214bff40b047132814ad13e71c39fd7} 
+void Ziz\+Gust\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_gust_state_ae2243e9c8a97802bf856c892cb2f97b1}\index{ZizGustState@{ZizGustState}!exit@{exit}}
+\index{exit@{exit}!ZizGustState@{ZizGustState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_gust_state_ae2243e9c8a97802bf856c892cb2f97b1} 
+void Ziz\+Gust\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_gust_state_a49c0d6e49ff96d270aa583368e099eb5}\index{ZizGustState@{ZizGustState}!update@{update}}
+\index{update@{update}!ZizGustState@{ZizGustState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_gust_state_a49c0d6e49ff96d270aa583368e099eb5} 
+void Ziz\+Gust\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Gust\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Gust\+State.\+cpp\end{DoxyCompactItemize}

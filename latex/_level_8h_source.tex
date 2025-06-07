@@ -1,0 +1,74 @@
+\doxysection{Level.\+h}
+\hypertarget{_level_8h_source}{}\label{_level_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Level.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Level.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameEngine.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SoundManager.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SquareMeshVbo.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SquareBorderMesh.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}SimpleObject.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Button.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SliderObject.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}PlayerObject.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}EnemyObject.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}UIText.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}UIButton.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//imgui.h}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <imgui.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <imgui\_impl\_opengl3.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ list<DrawableObject*>\ \mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objectsList}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ \mbox{\hyperlink{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}{player}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_enemy_object}{EnemyObject}}*\ \mbox{\hyperlink{class_level_a9a2e270836b6f04b0043841e54ba59db}{enemy}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_textured_object}{TexturedObject}}*\ \mbox{\hyperlink{class_level_a6564a0ac93a868de138ab81bfc8bbe5f}{background}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_level_a78b295dd39f7c6f72cc7305fa62f8c62}{transitionTime}}\ =\ 0.0f;\ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_level_a387475e9e898a0752df56a81ddcb6143}{transitionDuration}}\ =\ 1.0f;\ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_afff42d975e0642e1824b5655dbb59def}{transitioning}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ MenuState\ \mbox{\hyperlink{class_level_af6de0498aeac0880453dc7a13677ae21}{currentMenuState}}\ =\ MenuState::MAIN;\ }
+\DoxyCodeLine{00040\ \ \ \ \ MenuState\ \mbox{\hyperlink{class_level_af4db809a31f383cb1789e28f79acb9de}{nextMenuState}}\ =\ MenuState::MAIN;\ \ \ \ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{levelLoad}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{levelInit}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{levelUpdate}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{levelDraw}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{levelFree}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{levelUnload}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{isReceivingNoInputs}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{handleControllerButton}}(SDL\_GameControllerButton\ button);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{handleAnalogStick}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{updateObjects}}(list<DrawableObject*>\&\ \mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objectsList}});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{addObject}}(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj);}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_aa314cf0d21e34ae189088dbf31c20926}{renderGUI}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{changeMenuState}}(MenuState\ targetState);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{virtual}\ MenuState\ \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{getMenuState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ \};}
+
+\end{DoxyCode}

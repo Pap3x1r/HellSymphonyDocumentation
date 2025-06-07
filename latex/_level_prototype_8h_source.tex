@@ -1,0 +1,56 @@
+\doxysection{Level\+Prototype.\+h}
+\hypertarget{_level_prototype_8h_source}{}\label{_level_prototype_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelPrototype.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/LevelPrototype.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Sword.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Bow.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Shield.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}QTEManager.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level_prototype}{LevelPrototype}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ timeK\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ dt\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ list<DrawableObject*>\ objectsList;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_enemy}{Enemy}}*\ enemy;}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_sword}{Sword}}*\ sword;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_bow}{Bow}}*\ bow;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_shield}{Shield}}*\ shield;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_q_t_e_manager}{QTEManager}}*\ qteManager;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//UI}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ playerHealthBar;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ playerUltimateBar;}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_simple_object}{SimpleObject}}*\ witherHealthBar;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ d\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ row\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ col\ =\ 0;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_a207fe1aa2a5de70c8733424d48ed9e2d}{levelLoad}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_abc92c10f95cd5a93062c4e39f23f26b0}{levelInit}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_a64d1ebe813c5c165968f305a5efa8fa4}{levelUpdate}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_ab3b053a71a71daad422e59d877edccc6}{levelDraw}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_ac9c17a2c86323ae0fd12e574cb552948}{levelFree}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_a325bece4138e7034cad0ef804f0fcb59}{levelUnload}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_ab566669b72e38e5780d7ea0fe45f3344}{handleKey}}(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_ab32fb5e4dbed646fc1bd07a7f1b66cce}{handleMouse}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ handleAnalogStick(\textcolor{keywordtype}{int}\ type,\ \textcolor{keywordtype}{float}\ amount);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_prototype_af94b83a464a1e8841c0e2b481b2bc990}{addObject}}(\mbox{\hyperlink{class_drawable_object}{DrawableObject}}*\ obj)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ getPlayer()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ savePlayerData(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ loadPlayerData(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filepath);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ Phase1QTE();}
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

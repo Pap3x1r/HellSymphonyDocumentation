@@ -1,0 +1,39 @@
+\doxysection{Chomp\+Tentacle.\+h}
+\hypertarget{_chomp_tentacle_8h_source}{}\label{_chomp_tentacle_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ChompTentacle.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ChompTentacle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}DrawableObject.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Boss.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }ChompTentacle\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFacingRight;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAttack1;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAttack2;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ damage;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ chompTimer;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ attackOffSet1;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ attackOffSet2;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimer1;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ attackTimer2;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ attackduration1;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ attackduration2;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider1;\ \textcolor{comment}{//chomp\ 1}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider2;\ \textcolor{comment}{//chomp\ 2}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ ChompTentacle();}
+\DoxyCodeLine{00030\ \ \ \ \ \string~ChompTentacle();}
+\DoxyCodeLine{00031\ \ \ \ \ ChompTentacle(\textcolor{keywordtype}{bool}\ facingRight,\mbox{\hyperlink{class_ziz}{Ziz}}*\ boss);\ \textcolor{comment}{//created\ by\ ziz}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

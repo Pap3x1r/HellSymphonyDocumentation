@@ -1,0 +1,563 @@
+\doxysection{Level\+Mem\+Test Class Reference}
+\hypertarget{class_level_mem_test}{}\label{class_level_mem_test}\index{LevelMemTest@{LevelMemTest}}
+
+
+Inheritance diagram for Level\+Mem\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_level_mem_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Mem\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_mem_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a80162969e949b7652ff3a5e2ea01087d}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a9c172ae784fd8ae1b709942ee8b23f97}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_ae5a8a859d01d1ecfac1d6c2601019786}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a11f27f6d8e5bf36b8dbbf51cbe9e0a36}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_aa7c72246a33c841b836ff94df92b5de6}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_ac01d315aeb70712a791c7ba228acf115}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a09f5c41184cc2a1100e4f2b9e40efa00}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a2f71c223bf6dfdfcef356116de4459f4}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a35408f2665603cadca0ab907921c001f}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a93887ab706e3eeb987d3318d8e53258e}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a23bff8f59ca38596962edecaa2c216b0}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_mem_test_a56a4578488e476815f485c754e309cfb}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_mem_test_a1ebc909fd2a6bf3876a2e1c40bbd5b66}\label{class_level_mem_test_a1ebc909fd2a6bf3876a2e1c40bbd5b66} 
+void {\bfseries add\+Player\+To\+Debug} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}{player}})
+\item 
+\Hypertarget{class_level_mem_test_a5083b577a53d6dc089f0b54f0791c902}\label{class_level_mem_test_a5083b577a53d6dc089f0b54f0791c902} 
+void {\bfseries reset\+Level} ()
+\item 
+\Hypertarget{class_level_mem_test_abfe80d0fe4594b286f126e390c4f46e5}\label{class_level_mem_test_abfe80d0fe4594b286f126e390c4f46e5} 
+bool {\bfseries is\+Pausing} (float dt)
+\item 
+void \mbox{\hyperlink{class_level_mem_test_a87dbe6f7ee9bc4995691ea78b626e964}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+Menu\+State \mbox{\hyperlink{class_level_mem_test_a177996b8b72509cbe830e819f1b1135c}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_mem_test_afdd6b47a4662d9cc91a6daf61ff7997a}\label{class_level_mem_test_afdd6b47a4662d9cc91a6daf61ff7997a} 
+void {\bfseries mouse\+UIHandling} (int type, float x, float y)
+\item 
+\Hypertarget{class_level_mem_test_a1255e9b322b155619606216f8dd871e9}\label{class_level_mem_test_a1255e9b322b155619606216f8dd871e9} 
+void {\bfseries keyboard\+UIHandling} (char key)
+\item 
+\Hypertarget{class_level_mem_test_ab0b6db277fb3461b8c16875087d710c5}\label{class_level_mem_test_ab0b6db277fb3461b8c16875087d710c5} 
+glm\+::vec2 {\bfseries convert\+Mouse\+To\+Game\+Space} (int mouseX, int mouseY)
+\item 
+\Hypertarget{class_level_mem_test_a5d8275ea122d5755376fbaf6ab19f304}\label{class_level_mem_test_a5d8275ea122d5755376fbaf6ab19f304} 
+void {\bfseries change\+Selection} (int direction)
+\item 
+\Hypertarget{class_level_mem_test_a47e22deaa07850788e39fda224b19158}\label{class_level_mem_test_a47e22deaa07850788e39fda224b19158} 
+void {\bfseries buttons\+Free} ()
+\item 
+\Hypertarget{class_level_mem_test_a9ef115e0b0f2fac5fdc2d13acca54c40}\label{class_level_mem_test_a9ef115e0b0f2fac5fdc2d13acca54c40} 
+void {\bfseries UIUpdate} ()
+\item 
+\Hypertarget{class_level_mem_test_a51b29d6715b511ba6ba05d0b982e19ec}\label{class_level_mem_test_a51b29d6715b511ba6ba05d0b982e19ec} 
+void {\bfseries switch\+Control\+Type} (Control\+Type ct)
+\item 
+\Hypertarget{class_level_mem_test_a01903a42982b6a0afae6cf8d6728baf8}\label{class_level_mem_test_a01903a42982b6a0afae6cf8d6728baf8} 
+void {\bfseries create\+Pause\+UI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_mem_test_ae59ce85dbd6aae842bb853e8cf830a5d}\label{class_level_mem_test_ae59ce85dbd6aae842bb853e8cf830a5d} 
+enum {\bfseries Control\+Type} \{ {\bfseries keyboard} = 0
+, {\bfseries controller}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_mem_test_ad5adf2f1f909316b182e305e657e0b8f}\label{class_level_mem_test_ad5adf2f1f909316b182e305e657e0b8f} 
+void {\bfseries create\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_mem_test_a3dbbc948c12c08bcd3dc9d09f9ef8b07}\label{class_level_mem_test_a3dbbc948c12c08bcd3dc9d09f9ef8b07} 
+void {\bfseries update\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_mem_test_a81aba92caa7532fe2940f9578b5e7bbd}\label{class_level_mem_test_a81aba92caa7532fe2940f9578b5e7bbd} 
+void {\bfseries player\+Ultimate\+Input} ()
+\item 
+\Hypertarget{class_level_mem_test_a9212d80a1c2f05d4586a92478040e101}\label{class_level_mem_test_a9212d80a1c2f05d4586a92478040e101} 
+void {\bfseries update\+UIBar} ()
+\item 
+\Hypertarget{class_level_mem_test_a82d3ac0981de619f47d29cce47d136d5}\label{class_level_mem_test_a82d3ac0981de619f47d29cce47d136d5} 
+void {\bfseries state\+Machine\+Update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_mem_test_adaf91ec382b28d9aa37b6ae40ed69a68}\label{class_level_mem_test_adaf91ec382b28d9aa37b6ae40ed69a68} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Button} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a6b9efab51705d5189669438a0ba7726a}\label{class_level_mem_test_a6b9efab51705d5189669438a0ba7726a} 
+int {\bfseries selected\+Index} = -\/1
+\item 
+\Hypertarget{class_level_mem_test_ae86f0727a6128e19e2946249b1e06606}\label{class_level_mem_test_ae86f0727a6128e19e2946249b1e06606} 
+int {\bfseries hovered\+Index} = -\/1
+\item 
+\Hypertarget{class_level_mem_test_ad0460ad26f0456e444c8e4eb6745912b}\label{class_level_mem_test_ad0460ad26f0456e444c8e4eb6745912b} 
+bool {\bfseries control\+By\+Mouse} = false
+\item 
+\Hypertarget{class_level_mem_test_ac07e6cb4520038008a4daa34693eefab}\label{class_level_mem_test_ac07e6cb4520038008a4daa34693eefab} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_mem_test_ab796a6a8db3a0801e33443f92288e59c}\label{class_level_mem_test_ab796a6a8db3a0801e33443f92288e59c} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries main\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_aca9a98cb9840426cc8ca811ba13cd7b0}\label{class_level_mem_test_aca9a98cb9840426cc8ca811ba13cd7b0} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries pause\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_a90d17d28b07c2cad3cfdceebaefd638d}\label{class_level_mem_test_a90d17d28b07c2cad3cfdceebaefd638d} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries options\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_a8800fcbc56834a6aecb9be534f25d9aa}\label{class_level_mem_test_a8800fcbc56834a6aecb9be534f25d9aa} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries audio\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_a7e84ddc5bf7f91fbff343fe9b41c746e}\label{class_level_mem_test_a7e84ddc5bf7f91fbff343fe9b41c746e} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries controller\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_abe8b93ca8707fad77775c3097b93c23c}\label{class_level_mem_test_abe8b93ca8707fad77775c3097b93c23c} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries keyboard\+Buttons}
+\item 
+\Hypertarget{class_level_mem_test_a768754853edcf3dc5de44e7c915bfb78}\label{class_level_mem_test_a768754853edcf3dc5de44e7c915bfb78} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries credits\+Button}
+\item 
+\Hypertarget{class_level_mem_test_ad497300adcefb4dc23c3da09dd6e5ac2}\label{class_level_mem_test_ad497300adcefb4dc23c3da09dd6e5ac2} 
+list$<$ \mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries sliders\+List}
+\item 
+\Hypertarget{class_level_mem_test_adaccbd48736af1a728516dc6f83e6d41}\label{class_level_mem_test_adaccbd48736af1a728516dc6f83e6d41} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries master\+Slider}
+\item 
+\Hypertarget{class_level_mem_test_a28abb0da9b838f759c97c6ee14c4316b}\label{class_level_mem_test_a28abb0da9b838f759c97c6ee14c4316b} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
+\item 
+\Hypertarget{class_level_mem_test_a76460a54da22397d3a001e6ef4a22259}\label{class_level_mem_test_a76460a54da22397d3a001e6ef4a22259} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sfx\+Slider}
+\item 
+\Hypertarget{class_level_mem_test_afc405c54fee326c8684e67e24a2b7b87}\label{class_level_mem_test_afc405c54fee326c8684e67e24a2b7b87} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ambient\+Slider}
+\item 
+\Hypertarget{class_level_mem_test_a78c477475b1493b746e8bde8e533d1ba}\label{class_level_mem_test_a78c477475b1493b746e8bde8e533d1ba} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Handle} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_ab6d068a0280ba54f39d1fa4c7aeaa1b0}\label{class_level_mem_test_ab6d068a0280ba54f39d1fa4c7aeaa1b0} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries controller\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a7fc475824bbcfb637f0012e72a1873ab}\label{class_level_mem_test_a7fc475824bbcfb637f0012e72a1873ab} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries kb\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_ad7e01f82af3fe160b2e53b3b65844bca}\label{class_level_mem_test_ad7e01f82af3fe160b2e53b3b65844bca} 
+float {\bfseries transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_mem_test_a3530578fe2b745d19a9bfce727a40cf6}\label{class_level_mem_test_a3530578fe2b745d19a9bfce727a40cf6} 
+float {\bfseries transition\+Duration} = 0.\+5f
+\item 
+\Hypertarget{class_level_mem_test_a44eb137900511a9beded1274ca3944bb}\label{class_level_mem_test_a44eb137900511a9beded1274ca3944bb} 
+bool {\bfseries transitioning} = false
+\item 
+\Hypertarget{class_level_mem_test_a7b41754464f35279e44d146cf8091f58}\label{class_level_mem_test_a7b41754464f35279e44d146cf8091f58} 
+float {\bfseries hold\+Button\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_level_mem_test_ae4672783c5cce7eff8f18a221bf6b148}\label{class_level_mem_test_ae4672783c5cce7eff8f18a221bf6b148} 
+float {\bfseries hold\+Button\+Threshold} = 0.\+5f
+\item 
+\Hypertarget{class_level_mem_test_a0f21a281fed588533578331f4723e02f}\label{class_level_mem_test_a0f21a281fed588533578331f4723e02f} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_mem_test_a48f9fbde352d7bc66641b936beb3075d}\label{class_level_mem_test_a48f9fbde352d7bc66641b936beb3075d} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_mem_test_ab66a64f01bcbc599b0b17312f5d02cbd}\label{class_level_mem_test_ab66a64f01bcbc599b0b17312f5d02cbd} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_mem_test_a35b19d3f777f547060f0746942045e4f}\label{class_level_mem_test_a35b19d3f777f547060f0746942045e4f} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a21d5f42e77ef77788cc12b4e08d46b7b}\label{class_level_mem_test_a21d5f42e77ef77788cc12b4e08d46b7b} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_mem_test_a9a0d3d38dc638d6d3704e5be86d9d134}\label{class_level_mem_test_a9a0d3d38dc638d6d3704e5be86d9d134} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_mem_test_a3e7722c079723391fd0c908a8bfdaa2e}\label{class_level_mem_test_a3e7722c079723391fd0c908a8bfdaa2e} 
+bool {\bfseries is\+Holding}
+\item 
+\Hypertarget{class_level_mem_test_ae91a322bb803d0732f367b2161c60e1e}\label{class_level_mem_test_ae91a322bb803d0732f367b2161c60e1e} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_mem_test_a72fa994fbc9346d81c4563a2e409d887}\label{class_level_mem_test_a72fa994fbc9346d81c4563a2e409d887} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_mem_test_a0b46bfebd544fe3cbcb5abb704d05084}\label{class_level_mem_test_a0b46bfebd544fe3cbcb5abb704d05084} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_mem_test_a24cad36cd70a464fec002eada44c6eca}\label{class_level_mem_test_a24cad36cd70a464fec002eada44c6eca} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_level_mem_test_a798013088a3c39487f85e80b62956c04}\label{class_level_mem_test_a798013088a3c39487f85e80b62956c04} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_mem_test_a830bde36ad9cfea65acd26a100a98b8c}\label{class_level_mem_test_a830bde36ad9cfea65acd26a100a98b8c} 
+\mbox{\hyperlink{class_gust}{Gust}} \texorpdfstring{$\ast$}{*} {\bfseries gust}
+\item 
+\Hypertarget{class_level_mem_test_ab881d98e94b692d3d35a1b0db668b428}\label{class_level_mem_test_ab881d98e94b692d3d35a1b0db668b428} 
+\mbox{\hyperlink{class_storm_rise}{Storm\+Rise}} \texorpdfstring{$\ast$}{*} {\bfseries storm\+Rise}
+\item 
+\Hypertarget{class_level_mem_test_a670d739702ffd767f206d4784f0481af}\label{class_level_mem_test_a670d739702ffd767f206d4784f0481af} 
+\mbox{\hyperlink{class_chomp_tentacle}{Chomp\+Tentacle}} \texorpdfstring{$\ast$}{*} {\bfseries chomp\+Tentacle}
+\item 
+\Hypertarget{class_level_mem_test_a6c80eed25b149e2bf3efc2dd1b56f2d9}\label{class_level_mem_test_a6c80eed25b149e2bf3efc2dd1b56f2d9} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qbui}
+\item 
+\Hypertarget{class_level_mem_test_a130515141633585469a8883ad2baa75a}\label{class_level_mem_test_a130515141633585469a8883ad2baa75a} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries input\+Manager}
+\item 
+\Hypertarget{class_level_mem_test_a9ec6df9c61c9bed763ab3f3a6560f93f}\label{class_level_mem_test_a9ec6df9c61c9bed763ab3f3a6560f93f} 
+Control\+Type {\bfseries current\+Control\+Type} = Control\+Type\+::keyboard
+\item 
+\Hypertarget{class_level_mem_test_a331f335267b664fbb7c48cf2edce22d1}\label{class_level_mem_test_a331f335267b664fbb7c48cf2edce22d1} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Health\+Bar}
+\item 
+\Hypertarget{class_level_mem_test_aec1280163aac948e3cb0424116886173}\label{class_level_mem_test_aec1280163aac948e3cb0424116886173} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Ultimate\+Bar}
+\item 
+\Hypertarget{class_level_mem_test_a0fb0d6a17db91d739e6eaca74afdd316}\label{class_level_mem_test_a0fb0d6a17db91d739e6eaca74afdd316} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries wither\+Health\+Bar}
+\item 
+\Hypertarget{class_level_mem_test_a88a0f4eb0951f2bc16c45ba96d5d1d47}\label{class_level_mem_test_a88a0f4eb0951f2bc16c45ba96d5d1d47} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries boss\+Health\+Bar}
+\item 
+\Hypertarget{class_level_mem_test_a2833448b5706dc3029da0766a5b482c7}\label{class_level_mem_test_a2833448b5706dc3029da0766a5b482c7} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar}
+\item 
+\Hypertarget{class_level_mem_test_a0e3c6684fd10f02bb2ea73ce4d4f6062}\label{class_level_mem_test_a0e3c6684fd10f02bb2ea73ce4d4f6062} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Background} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a57e8d7d33bb08940c3d4e55e3bc66d03}\label{class_level_mem_test_a57e8d7d33bb08940c3d4e55e3bc66d03} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Frame} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_acbde8b43e046a2723b94d3e7479760b1}\label{class_level_mem_test_acbde8b43e046a2723b94d3e7479760b1} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_aa8d1e89d793b9c7653a25adcef2263b2}\label{class_level_mem_test_aa8d1e89d793b9c7653a25adcef2263b2} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a44701c33bffc6d10616ddc421891ae1d}\label{class_level_mem_test_a44701c33bffc6d10616ddc421891ae1d} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a173aba94828c3dbfae2d38dfaacb710f}\label{class_level_mem_test_a173aba94828c3dbfae2d38dfaacb710f} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a5dceb015ffe43140808f62ae5eeed8e3}\label{class_level_mem_test_a5dceb015ffe43140808f62ae5eeed8e3} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_af69721f5c41a8477b8276198bfb20c51}\label{class_level_mem_test_af69721f5c41a8477b8276198bfb20c51} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a497bbd2ee3789899b62d3dcc3222c395}\label{class_level_mem_test_a497bbd2ee3789899b62d3dcc3222c395} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a245b5a913dc9069b34f5e0cb08a2beb7}\label{class_level_mem_test_a245b5a913dc9069b34f5e0cb08a2beb7} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a6ae782867dffd138ca139592c79189fc}\label{class_level_mem_test_a6ae782867dffd138ca139592c79189fc} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a1a8878b259e9ad9a97c04fac7e234dd9}\label{class_level_mem_test_a1a8878b259e9ad9a97c04fac7e234dd9} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a94e60104e234b8cda69c8daaecb4c7e7}\label{class_level_mem_test_a94e60104e234b8cda69c8daaecb4c7e7} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_ad17a5cbf546034b56272e411104a5709}\label{class_level_mem_test_ad17a5cbf546034b56272e411104a5709} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_mem_test_a7ec7f1053cf14c20dc52b15f3ff65630}\label{class_level_mem_test_a7ec7f1053cf14c20dc52b15f3ff65630} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_mem_test_a66a740b003a26f05ef56760beafaaa48}\label{class_level_mem_test_a66a740b003a26f05ef56760beafaaa48} 
+int {\bfseries tempx}
+\item 
+\Hypertarget{class_level_mem_test_a323053782b4a0a315a51ff789a999470}\label{class_level_mem_test_a323053782b4a0a315a51ff789a999470} 
+int {\bfseries tempx2}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_mem_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_mem_test_a56a4578488e476815f485c754e309cfb}\index{LevelMemTest@{LevelMemTest}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a56a4578488e476815f485c754e309cfb} 
+void Level\+Mem\+Test\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_mem_test_a87dbe6f7ee9bc4995691ea78b626e964}\index{LevelMemTest@{LevelMemTest}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a87dbe6f7ee9bc4995691ea78b626e964} 
+void Level\+Mem\+Test\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{Level}}.
+
+\Hypertarget{class_level_mem_test_a177996b8b72509cbe830e819f1b1135c}\index{LevelMemTest@{LevelMemTest}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a177996b8b72509cbe830e819f1b1135c} 
+Menu\+State Level\+Mem\+Test\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{Level}}.
+
+\Hypertarget{class_level_mem_test_a93887ab706e3eeb987d3318d8e53258e}\index{LevelMemTest@{LevelMemTest}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a93887ab706e3eeb987d3318d8e53258e} 
+void Level\+Mem\+Test\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_mem_test_a2f71c223bf6dfdfcef356116de4459f4}\index{LevelMemTest@{LevelMemTest}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a2f71c223bf6dfdfcef356116de4459f4} 
+void Level\+Mem\+Test\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_mem_test_a09f5c41184cc2a1100e4f2b9e40efa00}\index{LevelMemTest@{LevelMemTest}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a09f5c41184cc2a1100e4f2b9e40efa00} 
+void Level\+Mem\+Test\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_mem_test_a35408f2665603cadca0ab907921c001f}\index{LevelMemTest@{LevelMemTest}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a35408f2665603cadca0ab907921c001f} 
+void Level\+Mem\+Test\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_mem_test_a23bff8f59ca38596962edecaa2c216b0}\index{LevelMemTest@{LevelMemTest}!isReceivingNoInputs@{isReceivingNoInputs}}
+\index{isReceivingNoInputs@{isReceivingNoInputs}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{isReceivingNoInputs()}{isReceivingNoInputs()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a23bff8f59ca38596962edecaa2c216b0} 
+void Level\+Mem\+Test\+::is\+Receiving\+No\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when no input is currently being received. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{Level}}.
+
+\Hypertarget{class_level_mem_test_a11f27f6d8e5bf36b8dbbf51cbe9e0a36}\index{LevelMemTest@{LevelMemTest}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a11f27f6d8e5bf36b8dbbf51cbe9e0a36} 
+void Level\+Mem\+Test\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_mem_test_aa7c72246a33c841b836ff94df92b5de6}\index{LevelMemTest@{LevelMemTest}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_aa7c72246a33c841b836ff94df92b5de6} 
+void Level\+Mem\+Test\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_mem_test_a9c172ae784fd8ae1b709942ee8b23f97}\index{LevelMemTest@{LevelMemTest}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a9c172ae784fd8ae1b709942ee8b23f97} 
+void Level\+Mem\+Test\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_mem_test_a80162969e949b7652ff3a5e2ea01087d}\index{LevelMemTest@{LevelMemTest}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_a80162969e949b7652ff3a5e2ea01087d} 
+void Level\+Mem\+Test\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_mem_test_ac01d315aeb70712a791c7ba228acf115}\index{LevelMemTest@{LevelMemTest}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_ac01d315aeb70712a791c7ba228acf115} 
+void Level\+Mem\+Test\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_mem_test_ae5a8a859d01d1ecfac1d6c2601019786}\index{LevelMemTest@{LevelMemTest}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelMemTest@{LevelMemTest}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_mem_test_ae5a8a859d01d1ecfac1d6c2601019786} 
+void Level\+Mem\+Test\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Mem\+Test.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Mem\+Test.\+cpp\end{DoxyCompactItemize}

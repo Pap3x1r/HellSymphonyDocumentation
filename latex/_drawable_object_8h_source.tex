@@ -1,0 +1,174 @@
+\doxysection{Drawable\+Object.\+h}
+\hypertarget{_drawable_object_8h_source}{}\label{_drawable_object_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/DrawableObject.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/DrawableObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}glm.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Collider.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Physics.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Transform.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collider}{Collider}};\ \textcolor{comment}{//\ forward\ declaration}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{enum}\ MenuState\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ NONE,}
+\DoxyCodeLine{00020\ \ \ \ \ MAIN,}
+\DoxyCodeLine{00021\ \ \ \ \ PAUSE,}
+\DoxyCodeLine{00022\ \ \ \ \ OPTIONS,}
+\DoxyCodeLine{00023\ \ \ \ \ AUDIO,}
+\DoxyCodeLine{00024\ \ \ \ \ CONTROLLER,}
+\DoxyCodeLine{00025\ \ \ \ \ KEYBOARD,}
+\DoxyCodeLine{00026\ \ \ \ \ CREDITS,}
+\DoxyCodeLine{00027\ \ \ \ \ QUITCONFIRM,}
+\DoxyCodeLine{00028\ \ \ \ \ SAVECONFIRM,}
+\DoxyCodeLine{00029\ \ \ \ \ DEATH,}
+\DoxyCodeLine{00030\ \ \ \ \ VICTORY,}
+\DoxyCodeLine{00031\ \ \ \ \ IGNORE}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{enum\ class}\ Tag\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}},}
+\DoxyCodeLine{00040\ \ \ \ \ PlayerAttack,}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_enemy}{Enemy}},}
+\DoxyCodeLine{00042\ \ \ \ \ EnemyAttack,}
+\DoxyCodeLine{00043\ \ \ \ \ Floor,}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_ground_checker}{GroundChecker}},}
+\DoxyCodeLine{00045\ \ \ \ \ UI,}
+\DoxyCodeLine{00046\ \ \ \ \ Default}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}\ \{}
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDrawColliderNew;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDrawCollider;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ canDraw;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ processCollider();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ isActive;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ isMarkedForDelete;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ MenuState\ menuState\ =\ MenuState::NONE;}
+\DoxyCodeLine{00066\ \ \ \ \ vector<MenuState>\ menuStateVec;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ alpha\ =\ 1.0f;\ \textcolor{comment}{//\ Default\ alpha\ (visible)}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ maximumAlpha\ =\ 1.0f;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{stringliteral}{"{}Object"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ Tag\ tag;}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_transform}{Transform}}\ transform;}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_physics}{Physics}}*\ physics;}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_collider}{Collider}}*\ collider;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Collision\ Events\ -\/-\/-\/}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{onCollisionEnter}}(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onCollisionStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onCollisionExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onTriggerEnter(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onTriggerStay(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ onTriggerExit(\mbox{\hyperlink{class_collider}{Collider}}*\ collider);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_drawable_object_ae53dadd4ba46f09d4e53b181d68e2b2a}{drawLayer}}\ =\ 0;\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Tag\ and\ Name\ -\/-\/-\/}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{string}\ getName();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ setName(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ Tag\ getTag()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tag;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ setTag(Tag\ newTag)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ tag\ =\ newTag;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Transform\ and\ Components\ -\/-\/-\/}}
+\DoxyCodeLine{00102\ \ \ \ \ Transform\&\ getTransform();}
+\DoxyCodeLine{00103\ \ \ \ \ glm::mat4\ getTransformMat4();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ Physics*\ getPhysicsComponent();}
+\DoxyCodeLine{00106\ \ \ \ \ Collider*\ getColliderComponent();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ addPhysicsComponent();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ addPhysicsComponent(Physics\&\ physics);}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ addColliderComponent();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ addColliderComponent(Collider\&\ collider);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Update\ -\/-\/-\/}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ updateBehavior();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ update();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_drawable_object_a4f324725016a6a5ad312eff92e6f4576}{\string~DrawableObject}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drawable_object_a4060525ff8558cba05a83f86a42ceb8e}{render}}(glm::mat4\ globalModelTransform)\ =\ 0;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Drawing\ -\/-\/-\/}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ setDrawCollider(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ setDraw(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ drawCollider();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ setActive(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{bool}\ getIsActive();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ getMarkedForDelete();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{bool}\ getCanDraw();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ setCanDrawColliderNew(\textcolor{keywordtype}{bool}\ value)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ canDrawColliderNew\ =\ value;}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ getCanDrawCollider()\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ canDrawCollider;}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{bool}*\ getCanDrawColliderAddress()\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&canDrawColliderNew;}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Menu\ State\ -\/-\/-\/}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ setMenuState(MenuState\ newMenuState)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ menuState\ =\ newMenuState;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ menuStateVec.push\_back(newMenuState);}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ MenuState\ getMenuState()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ menuState;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ addMenuStateToVec(MenuState\ newMenuState)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ menuStateVec.push\_back(newMenuState);}
+\DoxyCodeLine{00166\ \ \ \ \ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ vector<MenuState>\ getMenuStateVec()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ menuStateVec;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Alpha/Transparency\ -\/-\/-\/}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setAlpha(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ getAlpha()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ setMaximumAlpha(\textcolor{keywordtype}{float}\ alpha)\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ maximumAlpha\ =\ alpha;}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{float}\ getMaximumAlpha()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ maximumAlpha;}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroyObject}}(\mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}*\ obj);}
+\DoxyCodeLine{00190\ \};}
+
+\end{DoxyCode}

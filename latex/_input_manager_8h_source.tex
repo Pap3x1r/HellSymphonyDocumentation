@@ -1,0 +1,91 @@
+\doxysection{Input\+Manager.\+h}
+\hypertarget{_input_manager_8h_source}{}\label{_input_manager_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/InputManager.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/InputManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ INPUT\_MANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ INPUT\_MANAGER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <imgui\_impl\_sdl2.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_engine}{GameEngine}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum\ class}\ InputDevice\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ NONE,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ KEYBOARD,\ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ MOUSE,\ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ CONTROLLER\ \ }
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager_a8be46886da639b26d67181c29dab6d6c}{InputManager}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_input_manager_a97d401bc0a71863f466e9525ecf0d520}{KeyState}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ KEY\_IDLE,\ \ \ \ \textcolor{comment}{//\ Not\ pressed}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ KEY\_PRESSED,\ \textcolor{comment}{//\ Just\ pressed\ this\ frame}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ KEY\_HELD,\ \ \ \ \textcolor{comment}{//\ Held\ down\ across\ multiple\ frames}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ KEY\_RELEASED\ \textcolor{comment}{//\ Just\ released\ this\ frame}}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_input_manager_a8be46886da639b26d67181c29dab6d6c}{InputManager}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_input_manager_af518290877dd183606709d5852db5491}{\string~InputManager}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a1803c060ad2c92696eff31319ffa81f3}{updateInput}}();\ \ \textcolor{comment}{//\ Poll\ inputs\ and\ update\ the\ state}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a3559c8fe485b466eb68774b715b84bda}{getButtonDown}}(SDL\_Keycode\ key);\ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetButtonDown}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a6cc22cbe5af59a8811778a2f8518067c}{getButton}}(SDL\_Keycode\ key);\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetButton}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_aa233c664d51b31b4b39a028d01c8e7e8}{getButtonUp}}(SDL\_Keycode\ key);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetButtonUp}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a0887b18202868f3cfddecda56c7f52a9}{getMouseButtonDown}}(\textcolor{keywordtype}{int}\ button);\ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetMouseButtonDown}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a04cb7ed663078d7f3366012a40174daf}{getMouseButton}}(\textcolor{keywordtype}{int}\ button);\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetMouseButton}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a5a628d6467b95e2969f0befea7cc8b09}{getMouseButtonUp}}(\textcolor{keywordtype}{int}\ button);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetMouseButtonUp}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a11b290340ef80563c1fb2ffa63b62531}{getControllerButtonDown}}(Uint8\ button);\ \textcolor{comment}{//\ Equivalent\ to\ Input.GetControllerButtonDown}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_add53eb0419d6de3344907f74525bccc7}{getControllerButton}}(Uint8\ button);\ \ \ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetControllerButton}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a44cfbb9a7df3a31f785ade86862c330a}{getControllerButtonUp}}(Uint8\ button);\ \ \ \textcolor{comment}{//\ Equivalent\ to\ Input.GetControllerButtonUp}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_input_manager_a841cdbb7b2716ff4e6e0792b58effadb}{getControllerAnalogStickX}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_input_manager_a2984307dff0b4ad63e62383fa5334d10}{getControllerAnalogStickY}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_input_manager_a2ccfd1f234397ec4afcb8a17c75ce253}{getControllerLeftTrigger}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_input_manager_a2573afdc934f80c6ad7841f0bc3edd0d}{getControllerRightTrigger}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_input_manager_a60fedb42fd7273db969ddebd559da916}{getMouseX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_input_manager_a51b3f558039a5d4cb2811d0d6f9fd748}{getMouseY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a452946fa07e1f9c791b0607d6e474b59}{isMovementInputIdle}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Is\ Receiving\ Input}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a88d64e2c7be9d05d75212e50e7131831}{setLastInput}}(InputDevice\ device);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \ \ \ \ InputDevice\ \mbox{\hyperlink{class_input_manager_ae31efd9a011ed020d860441fbd4af7a9}{getLastInput}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00179\ \ \ \ \ std::unordered\_map<SDL\_Keycode,\ KeyState>\ keyStates;\ \ \ \textcolor{comment}{//\ Map\ of\ key\ states}}
+\DoxyCodeLine{00180\ \ \ \ \ std::unordered\_map<int,\ KeyState>\ mouseButtonStates;\ \ \ \textcolor{comment}{//\ Mouse\ button\ states}}
+\DoxyCodeLine{00181\ \ \ \ \ std::unordered\_map<Uint8,\ KeyState>\ buttonStates;\ \ \ \ \ \ \textcolor{comment}{//\ Controller\ button\ states}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ mouseX,\ mouseY;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mouse\ position}}
+\DoxyCodeLine{00183\ \ \ \ \ SDL\_GameController*\ controller;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Controller\ pointer}}
+\DoxyCodeLine{00184\ \ \ \ \ std::pair<float,\ float>\ analogStick;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Analog\ Stick}}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{float}\ leftTrigger;}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{float}\ rightTrigger;}
+\DoxyCodeLine{00187\ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ InputDevice\ lastInput\ =\ InputDevice::CONTROLLER;}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ lastFrameChange\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

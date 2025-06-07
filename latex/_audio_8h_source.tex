@@ -1,0 +1,118 @@
+\doxysection{Audio.\+h}
+\hypertarget{_audio_8h_source}{}\label{_audio_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Audio.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Audio.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\#include\ <filesystem>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\#include\ <SDL\_mixer.h>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//class\ SoundEffect\ \{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ friend\ class\ AudioEngine;}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ void\ play(int\ loop\ =\ 0);}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ Mix\_Chunk*\ m\_chunk\ =\ nullptr;}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//class\ Music\ \{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ friend\ class\ AudioEngine;}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ void\ play(int\ loop\ =\ 0);}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ void\ pause();}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ void\ stop();}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ void\ resume();}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Mix\_Music*\ m\_music\ =\ nullptr;}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//struct\ SoundEffectObj\ \{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ std::string\ fileName;}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ \ SoundEffect\ soundEffect;}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ \ bool\ isAmbient\ =\ false;\ }}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//struct\ MusicObj\ \{}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ std::string\ fileName;}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ Music\ music;}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ bool\ isAmbient\ =\ false;}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//class\ AudioEngine\ \{}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ AudioEngine();}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ \string~AudioEngine();}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ void\ init(const\ std::string\&\ effectFolderPath,\ const\ std::string\&\ musicFolderPath);}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ \ void\ update();}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ \ void\ destroy();}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \ SoundEffect\ loadSoundEffect(const\ std::string\&\ filePath);}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \ void\ playSoundEffectByIndex(int\ index,\ int\ loop\ =\ 0);}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ \ void\ playSoundEffectByName(const\ std::string\&\ fileName,\ int\ loop\ =\ 0);}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ \ Music\ loadMusic(const\ std::string\&\ filePath);}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ void\ playMusicByIndex(int\ index,\ int\ loop\ =\ 0);}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ void\ playMusicByName(const\ std::string\&\ fileName,\ int\ loop\ =\ 0);}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ \ void\ stopMusic();}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ \ void\ adjustMasterVolume(float\ amount);}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ \ void\ adjustSoundEffectVolume(float\ amount);}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ \ void\ adjustMusicVolume(float\ amount);}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ \ void\ adjustAmbientVolume(float\ amount);}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ \ void\ setMasterVolume(float\ value);}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ \ void\ setSoundEffectVolume(float\ value);}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ \ void\ setMusicVolume(float\ value);}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ \ void\ setAmbientVolume(float\ value);}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ \ float\ getMasterVolume()\ const;}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ \ float\ getSoundEffectVolume()\ const;}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ \ float\ getMusicVolume()\ const;}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ \ float\ getAmbientVolume()\ const;}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ \ void\ saveVolumeToFile();}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ \ void\ printVolume();}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ \ bool\ isInit\ =\ false;}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ \ float\ currentMasterVolume;}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//\ \ float\ currentSoundEffectVolume;}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ \ float\ currentMusicVolume;}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ \ float\ currentAmbientVolume;}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ \ //\ Sound\ effects}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ \ std::vector<std::filesystem::directory\_entry>\ soundEffectEntries;}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ \ size\_t\ soundEffectLoadIndex\ =\ 0;}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ \ bool\ soundEffectsLoadingDone\ =\ false;}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ \ //\ Music}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\ \ std::vector<std::filesystem::directory\_entry>\ musicEntries;}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ \ size\_t\ musicLoadIndex\ =\ 0;}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ \ bool\ musicLoadingDone\ =\ false;}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ \ const\ size\_t\ filesToLoadPerFrame\ =\ 1;\ //\ Shared\ chunk\ size}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ \ std::vector<SoundEffectObj>\ v\_soundEffect;}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ \ std::vector<MusicObj>\ v\_music;}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ \ std::map<std::string,\ Mix\_Chunk*>\ m\_effectMap;}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ \ std::map<std::string,\ Mix\_Music*>\ m\_musicMap;}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ \ void\ loadSoundEffectFromDir(const\ std::string\&\ dir);}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ \ void\ loadMusicFromDir(const\ std::string\&\ dir);}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ \ void\ updateAllVolumes();}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ \ int\ convertVolume(float\ volume);}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ \ void\ initLoadSoundEffectsFromDir(const\ std::string\&\ dir);}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ \ void\ initLoadMusicFromDir(const\ std::string\&\ dir);}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ \ void\ loadSoundEffectsIncremental();}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ \ void\ loadMusicIncremental();}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\};}}
+
+\end{DoxyCode}

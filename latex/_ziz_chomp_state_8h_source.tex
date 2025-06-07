@@ -1,0 +1,60 @@
+\doxysection{Ziz\+Chomp\+State.\+h}
+\hypertarget{_ziz_chomp_state_8h_source}{}\label{_ziz_chomp_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizChompState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizChompState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ChompTentacle.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_chomp_state}{ZizChompState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_chomp_state}{ZizChompState}}*\ instance;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ facingDirection;\ \textcolor{comment}{//-\/1\ for\ facing\ left,\ 1\ for\ facing\ right}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ chompCount;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ isChomping;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasChomped;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPreparing;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ isStartingUp;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ animCorrected;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ attackOffSet1;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ attackOffSet2;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer1;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer1;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ pauseTimer1;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ startUpTimer2;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ activeTimer2;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ pauseTimer2;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ recoveryTimer;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ animOffsetTimer;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider1;\ \textcolor{comment}{//chomp\ 1}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider2;\ \textcolor{comment}{//chomp\ 2}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_chomp_state}{ZizChompState}}*\ getInstance();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ findPlayer();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

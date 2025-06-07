@@ -1,0 +1,614 @@
+\doxysection{Level\+Boss\+Test Class Reference}
+\hypertarget{class_level_boss_test}{}\label{class_level_boss_test}\index{LevelBossTest@{LevelBossTest}}
+
+
+Inheritance diagram for Level\+Boss\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_level_boss_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Boss\+Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_boss_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a517f4b7fd2a954fc8ca0b81057b5b8c8}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_af08af0bf8c4d3edde1fcc20acd19ae88}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a96246f535ec2f4fcd805430313a0a359}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a6948b507c7c8cbe5a829986f6226180e}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a5324a866860c232cad45f42301ecf2f1}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_ab11bb0b5fcd3875ac0c795ce1739a629}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a39cbac3dff9d17004bbc82e5b6666b33}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a450e8deb088cf4b84e980f32545717a0}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_ad8b125b09aa61a7acf294d433e6fd0bd}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_a6d4f732d1dc63f7ec1c11453de0c7c84}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_aeacd92e25ede4b43960a110713cb85cc}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_boss_test_ab24de7b0429a0aed680da63e61ac5182}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_boss_test_a600644983d94ac7c68afb6c2bbcf5308}\label{class_level_boss_test_a600644983d94ac7c68afb6c2bbcf5308} 
+void {\bfseries add\+Player\+To\+Debug} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}{player}})
+\item 
+\Hypertarget{class_level_boss_test_a282c6a5c1af0daa582d7959846ab0ddf}\label{class_level_boss_test_a282c6a5c1af0daa582d7959846ab0ddf} 
+void {\bfseries reset\+Level} ()
+\item 
+\Hypertarget{class_level_boss_test_a70c4713e3a4988badc4a6dcc5abe9857}\label{class_level_boss_test_a70c4713e3a4988badc4a6dcc5abe9857} 
+bool {\bfseries is\+Pausing} (float dt)
+\item 
+void \mbox{\hyperlink{class_level_boss_test_aa53868b1ebaf4668b1a33abb02e987ce}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+Menu\+State \mbox{\hyperlink{class_level_boss_test_a469e94b4919a6e8bd825b2d11107985a}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_boss_test_a54f09f26c99c4008fa403fc8b0c8471c}\label{class_level_boss_test_a54f09f26c99c4008fa403fc8b0c8471c} 
+void {\bfseries mouse\+UIHandling} (int type, float x, float y)
+\item 
+\Hypertarget{class_level_boss_test_a6f0c38b41bf267997823b5165593320d}\label{class_level_boss_test_a6f0c38b41bf267997823b5165593320d} 
+void {\bfseries keyboard\+UIHandling} (char key)
+\item 
+\Hypertarget{class_level_boss_test_a70b042872c5fe69570fe9a753f0cb9de}\label{class_level_boss_test_a70b042872c5fe69570fe9a753f0cb9de} 
+glm\+::vec2 {\bfseries convert\+Mouse\+To\+Game\+Space} (int mouseX, int mouseY)
+\item 
+\Hypertarget{class_level_boss_test_ae274d855b2e085d20bdb74a2d59c2885}\label{class_level_boss_test_ae274d855b2e085d20bdb74a2d59c2885} 
+void {\bfseries change\+Selection} (int direction)
+\item 
+\Hypertarget{class_level_boss_test_a26ac6f1c4756b8d46ab5b717d26e0a2c}\label{class_level_boss_test_a26ac6f1c4756b8d46ab5b717d26e0a2c} 
+void {\bfseries buttons\+Free} ()
+\item 
+\Hypertarget{class_level_boss_test_a17781c50036aedc04a5afda0da5a2763}\label{class_level_boss_test_a17781c50036aedc04a5afda0da5a2763} 
+void {\bfseries UIUpdate} ()
+\item 
+\Hypertarget{class_level_boss_test_a6ff4e390b323844f850fe9cfba794c78}\label{class_level_boss_test_a6ff4e390b323844f850fe9cfba794c78} 
+void {\bfseries switch\+Control\+Type} (Control\+Type ct)
+\item 
+\Hypertarget{class_level_boss_test_a9ac335df87ffea383665d2759f66539e}\label{class_level_boss_test_a9ac335df87ffea383665d2759f66539e} 
+void {\bfseries create\+Pause\+UI} ()
+\item 
+\Hypertarget{class_level_boss_test_a1f7c12b80467d4b01e969bf36eff3226}\label{class_level_boss_test_a1f7c12b80467d4b01e969bf36eff3226} 
+void {\bfseries to\+Loading\+Screen\+Death} ()
+\item 
+\Hypertarget{class_level_boss_test_a657dbc95690b8e2ceb3d6f03dc0c1b8f}\label{class_level_boss_test_a657dbc95690b8e2ceb3d6f03dc0c1b8f} 
+void {\bfseries to\+Loading\+Screen\+Victory} ()
+\item 
+\Hypertarget{class_level_boss_test_a81985dc3a7549118d018e9981c3db76f}\label{class_level_boss_test_a81985dc3a7549118d018e9981c3db76f} 
+void {\bfseries to\+Loading\+Screen} ()
+\item 
+\Hypertarget{class_level_boss_test_aa4f0b3f8637c37fb887cb96f5c4d8b73}\label{class_level_boss_test_aa4f0b3f8637c37fb887cb96f5c4d8b73} 
+void {\bfseries next\+Level} ()
+\item 
+\Hypertarget{class_level_boss_test_a0bec5df3ed526f98c1972151e7868aad}\label{class_level_boss_test_a0bec5df3ed526f98c1972151e7868aad} 
+void {\bfseries retry\+Level} ()
+\item 
+\Hypertarget{class_level_boss_test_a3299ac989b478f81da715ef392b97452}\label{class_level_boss_test_a3299ac989b478f81da715ef392b97452} 
+void {\bfseries resurrect} ()
+\item 
+\Hypertarget{class_level_boss_test_a9983d66037e99d925e235f5087f76439}\label{class_level_boss_test_a9983d66037e99d925e235f5087f76439} 
+void {\bfseries exit\+Death} ()
+\item 
+\Hypertarget{class_level_boss_test_ad7d4aebc363ee75eb30499aafe7f9548}\label{class_level_boss_test_ad7d4aebc363ee75eb30499aafe7f9548} 
+void {\bfseries exit\+Victory} ()
+\item 
+\Hypertarget{class_level_boss_test_abaa92f70989fb88abe741544b6ede438}\label{class_level_boss_test_abaa92f70989fb88abe741544b6ede438} 
+void {\bfseries controller\+UIHandling} (SDL\+\_\+\+Game\+Controller\+Button button)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_boss_test_adb1783526cfad4f3b7258b1bb162573e}\label{class_level_boss_test_adb1783526cfad4f3b7258b1bb162573e} 
+enum {\bfseries Control\+Type} \{ {\bfseries keyboard} = 0
+, {\bfseries controller}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_boss_test_ac1fc5561a2f9514fea16db7bf851a699}\label{class_level_boss_test_ac1fc5561a2f9514fea16db7bf851a699} 
+void {\bfseries create\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_boss_test_aa0f72f9637bc2bcc6e0e40fcbc4c32a4}\label{class_level_boss_test_aa0f72f9637bc2bcc6e0e40fcbc4c32a4} 
+void {\bfseries update\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_boss_test_a7fd96f9d082428f55f8993780c9bbb64}\label{class_level_boss_test_a7fd96f9d082428f55f8993780c9bbb64} 
+void {\bfseries player\+Ultimate\+Input} ()
+\item 
+\Hypertarget{class_level_boss_test_af17eab632ffdbada0145883293c5c897}\label{class_level_boss_test_af17eab632ffdbada0145883293c5c897} 
+void {\bfseries update\+UIBar} ()
+\item 
+\Hypertarget{class_level_boss_test_abbc25d759f86f8de1e894b74b6f36215}\label{class_level_boss_test_abbc25d759f86f8de1e894b74b6f36215} 
+void {\bfseries state\+Machine\+Update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_boss_test_a21b39afc3d29a822f6fd1f31ce34dd9f}\label{class_level_boss_test_a21b39afc3d29a822f6fd1f31ce34dd9f} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Button} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_ac1c79062b9c6a1cb952e99e58f4a279f}\label{class_level_boss_test_ac1c79062b9c6a1cb952e99e58f4a279f} 
+int {\bfseries selected\+Index} = -\/1
+\item 
+\Hypertarget{class_level_boss_test_addde5a7d61226bdd24403bc2800ad72e}\label{class_level_boss_test_addde5a7d61226bdd24403bc2800ad72e} 
+int {\bfseries hovered\+Index} = -\/1
+\item 
+\Hypertarget{class_level_boss_test_aae33db7a42c76ff45ea91b3dd48840aa}\label{class_level_boss_test_aae33db7a42c76ff45ea91b3dd48840aa} 
+bool {\bfseries control\+By\+Mouse} = false
+\item 
+\Hypertarget{class_level_boss_test_a43f767061af688cbd8f85ff6b37275e2}\label{class_level_boss_test_a43f767061af688cbd8f85ff6b37275e2} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_boss_test_ada0cf2812a6b385798f172af6ab66459}\label{class_level_boss_test_ada0cf2812a6b385798f172af6ab66459} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries main\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_a2ee7d7fab42b4293c98f767fca2a90d9}\label{class_level_boss_test_a2ee7d7fab42b4293c98f767fca2a90d9} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries pause\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_a97b7613dc9eabf7b5d7be7a1a0548ea4}\label{class_level_boss_test_a97b7613dc9eabf7b5d7be7a1a0548ea4} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries options\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_ac0a0218d511cf195e53c58c2a40fe7b9}\label{class_level_boss_test_ac0a0218d511cf195e53c58c2a40fe7b9} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries audio\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_a422ab344cd58a7aaa30e24d0b800bbd7}\label{class_level_boss_test_a422ab344cd58a7aaa30e24d0b800bbd7} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries controller\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_afbd0d11aef4ac4f809c2bf3d32f3744c}\label{class_level_boss_test_afbd0d11aef4ac4f809c2bf3d32f3744c} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries keyboard\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_ad310694fa2257c5900c8926e9707b08e}\label{class_level_boss_test_ad310694fa2257c5900c8926e9707b08e} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries credits\+Button}
+\item 
+\Hypertarget{class_level_boss_test_a5ada0542cb0d0e7f082d3f706b809cab}\label{class_level_boss_test_a5ada0542cb0d0e7f082d3f706b809cab} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries quit\+Confirm\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_a4eff842a540df92c917aba55e98cb61e}\label{class_level_boss_test_a4eff842a540df92c917aba55e98cb61e} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries death\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_afee4edd6ac668249dbe56cb6fffe8b10}\label{class_level_boss_test_afee4edd6ac668249dbe56cb6fffe8b10} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries victory\+Buttons}
+\item 
+\Hypertarget{class_level_boss_test_ade23c4926b80051ddc45009812496bc3}\label{class_level_boss_test_ade23c4926b80051ddc45009812496bc3} 
+list$<$ \mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries sliders\+List}
+\item 
+\Hypertarget{class_level_boss_test_ade6f2886a2ad970aca124a64dd2703e5}\label{class_level_boss_test_ade6f2886a2ad970aca124a64dd2703e5} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries master\+Slider}
+\item 
+\Hypertarget{class_level_boss_test_a17b04d452d4f94442d801442aa9d8458}\label{class_level_boss_test_a17b04d452d4f94442d801442aa9d8458} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
+\item 
+\Hypertarget{class_level_boss_test_a06288fc6c1eaf5c8f2275ca66c1fc36e}\label{class_level_boss_test_a06288fc6c1eaf5c8f2275ca66c1fc36e} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sfx\+Slider}
+\item 
+\Hypertarget{class_level_boss_test_a131cfce0c630ee382e824478bc861e37}\label{class_level_boss_test_a131cfce0c630ee382e824478bc861e37} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ambient\+Slider}
+\item 
+\Hypertarget{class_level_boss_test_a95f3c46af783f3f940d38870c0c25d87}\label{class_level_boss_test_a95f3c46af783f3f940d38870c0c25d87} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon1} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a39dc92cd091a978251f7c1b20efacf06}\label{class_level_boss_test_a39dc92cd091a978251f7c1b20efacf06} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon2} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a1a876d3f0655d67e356384f9c85282c0}\label{class_level_boss_test_a1a876d3f0655d67e356384f9c85282c0} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon3} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_aab4e1f0abff3c439d87f40489e63a18a}\label{class_level_boss_test_aab4e1f0abff3c439d87f40489e63a18a} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Handle} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a617f46f7b2b644e9df4c070271f364eb}\label{class_level_boss_test_a617f46f7b2b644e9df4c070271f364eb} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries controller\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a6631a170dea0e2b9803987e2e53b0108}\label{class_level_boss_test_a6631a170dea0e2b9803987e2e53b0108} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries kb\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a5b9ae9c921f174390daafad54f05ab6e}\label{class_level_boss_test_a5b9ae9c921f174390daafad54f05ab6e} 
+float {\bfseries transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_boss_test_a7fb456a5ea02d89c5135f1925a2a96f1}\label{class_level_boss_test_a7fb456a5ea02d89c5135f1925a2a96f1} 
+float {\bfseries transition\+Duration} = 0.\+2f
+\item 
+\Hypertarget{class_level_boss_test_ab9502e3a638eb1081f4a9047d829e32c}\label{class_level_boss_test_ab9502e3a638eb1081f4a9047d829e32c} 
+bool {\bfseries transitioning} = false
+\item 
+\Hypertarget{class_level_boss_test_aa1b358b60e6686b2ad7a1000e947e856}\label{class_level_boss_test_aa1b358b60e6686b2ad7a1000e947e856} 
+float {\bfseries hold\+Button\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_level_boss_test_ac7e22814a3ce9721817a5c4d8a6f6256}\label{class_level_boss_test_ac7e22814a3ce9721817a5c4d8a6f6256} 
+float {\bfseries hold\+Button\+Threshold} = 0.\+5f
+\item 
+\Hypertarget{class_level_boss_test_aaa19ead4be3817329cd4fcfa99495a27}\label{class_level_boss_test_aaa19ead4be3817329cd4fcfa99495a27} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_boss_test_ad38a6654acbbda2631cfc2570a13fea7}\label{class_level_boss_test_ad38a6654acbbda2631cfc2570a13fea7} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_boss_test_a9c973c0596d58fc5d9530c2f76366975}\label{class_level_boss_test_a9c973c0596d58fc5d9530c2f76366975} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_boss_test_a2bf7fa5c1ff5f88e0a6e89b0906bac83}\label{class_level_boss_test_a2bf7fa5c1ff5f88e0a6e89b0906bac83} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_aa926c4a263c72a622d271800af638db2}\label{class_level_boss_test_aa926c4a263c72a622d271800af638db2} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_boss_test_a5fd4445501726c555507b865f2add6af}\label{class_level_boss_test_a5fd4445501726c555507b865f2add6af} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_boss_test_a3060d857329e34127e0cf3023dea4303}\label{class_level_boss_test_a3060d857329e34127e0cf3023dea4303} 
+bool {\bfseries is\+Holding}
+\item 
+\Hypertarget{class_level_boss_test_adb4825a2abf403238fc5abfcdde30714}\label{class_level_boss_test_adb4825a2abf403238fc5abfcdde30714} 
+bool {\bfseries level\+End} = false
+\item 
+\Hypertarget{class_level_boss_test_aeea0426c40bd0c0e7c93a703cdbaa741}\label{class_level_boss_test_aeea0426c40bd0c0e7c93a703cdbaa741} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_boss_test_ad9a747577ce039acbcadcde95d91ca55}\label{class_level_boss_test_ad9a747577ce039acbcadcde95d91ca55} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_boss_test_ac8d3464757a3a110b17228074381f326}\label{class_level_boss_test_ac8d3464757a3a110b17228074381f326} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_boss_test_ab524f83a3f934a8521d9c90001dbf282}\label{class_level_boss_test_ab524f83a3f934a8521d9c90001dbf282} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_level_boss_test_a5d8927fc4d6c3f79121b174f316ac3b9}\label{class_level_boss_test_a5d8927fc4d6c3f79121b174f316ac3b9} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_boss_test_a8bdffbefad1293db36d1a4c2469b2e74}\label{class_level_boss_test_a8bdffbefad1293db36d1a4c2469b2e74} 
+\mbox{\hyperlink{class_gust}{Gust}} \texorpdfstring{$\ast$}{*} {\bfseries gust}
+\item 
+\Hypertarget{class_level_boss_test_a74173e9d22b205899fb2eb942e41ca05}\label{class_level_boss_test_a74173e9d22b205899fb2eb942e41ca05} 
+\mbox{\hyperlink{class_storm_rise}{Storm\+Rise}} \texorpdfstring{$\ast$}{*} {\bfseries storm\+Rise}
+\item 
+\Hypertarget{class_level_boss_test_afc1bb0c5fdc2766dbeb51b4ae93ddfb7}\label{class_level_boss_test_afc1bb0c5fdc2766dbeb51b4ae93ddfb7} 
+\mbox{\hyperlink{class_chomp_tentacle}{Chomp\+Tentacle}} \texorpdfstring{$\ast$}{*} {\bfseries chomp\+Tentacle}
+\item 
+\Hypertarget{class_level_boss_test_a88820a5855c603e00a57f01382d626a4}\label{class_level_boss_test_a88820a5855c603e00a57f01382d626a4} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qbui}
+\item 
+\Hypertarget{class_level_boss_test_a4488b50bf071ea1e53c6bd527c3c4757}\label{class_level_boss_test_a4488b50bf071ea1e53c6bd527c3c4757} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries input\+Manager}
+\item 
+\Hypertarget{class_level_boss_test_ae814d09bd13206cc5a211b510c57590c}\label{class_level_boss_test_ae814d09bd13206cc5a211b510c57590c} 
+Control\+Type {\bfseries current\+Control\+Type} = Control\+Type\+::keyboard
+\item 
+\Hypertarget{class_level_boss_test_a01e1beb020b45bb1feadcc7b4766f497}\label{class_level_boss_test_a01e1beb020b45bb1feadcc7b4766f497} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Health\+Bar}
+\item 
+\Hypertarget{class_level_boss_test_adbab8b2d5974cfea2ac190016569449c}\label{class_level_boss_test_adbab8b2d5974cfea2ac190016569449c} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Ultimate\+Bar}
+\item 
+\Hypertarget{class_level_boss_test_ab08661338db5e8c7b4d91eebd5070e36}\label{class_level_boss_test_ab08661338db5e8c7b4d91eebd5070e36} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries wither\+Health\+Bar}
+\item 
+\Hypertarget{class_level_boss_test_a26502f7b9dfdacd7e229a9f8a9cf5383}\label{class_level_boss_test_a26502f7b9dfdacd7e229a9f8a9cf5383} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries boss\+Health\+Bar}
+\item 
+\Hypertarget{class_level_boss_test_a081007f7c777bdbd0844c1b0e5d549d6}\label{class_level_boss_test_a081007f7c777bdbd0844c1b0e5d549d6} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar}
+\item 
+\Hypertarget{class_level_boss_test_a0d860d7da7c535d74cde05006361ce79}\label{class_level_boss_test_a0d860d7da7c535d74cde05006361ce79} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Background} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a61f67ed335b1d7f6e98320ad470ddad1}\label{class_level_boss_test_a61f67ed335b1d7f6e98320ad470ddad1} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Frame} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a8f4126a49b1bf371525e458b1129042e}\label{class_level_boss_test_a8f4126a49b1bf371525e458b1129042e} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a8c53133152f5ac73d01ebed2cdae2170}\label{class_level_boss_test_a8c53133152f5ac73d01ebed2cdae2170} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_ab5541ace7dcf6554f1b3630d4a4e4b17}\label{class_level_boss_test_ab5541ace7dcf6554f1b3630d4a4e4b17} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a8eb7b4193ef1b58ecba9e1ef7f1b6920}\label{class_level_boss_test_a8eb7b4193ef1b58ecba9e1ef7f1b6920} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_aedb754e70752c1ab475267a43647e561}\label{class_level_boss_test_aedb754e70752c1ab475267a43647e561} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a23cb4d6a19b08b403657bad55c2846d4}\label{class_level_boss_test_a23cb4d6a19b08b403657bad55c2846d4} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_ab2233b68c4e99fe69192cd8e305d7b3d}\label{class_level_boss_test_ab2233b68c4e99fe69192cd8e305d7b3d} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a41962b1e24c8dd8b4e051e94bf4fe22d}\label{class_level_boss_test_a41962b1e24c8dd8b4e051e94bf4fe22d} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a2ee0739b281069ec8a0bd1657ab0365c}\label{class_level_boss_test_a2ee0739b281069ec8a0bd1657ab0365c} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a06a753ed0fa24b1a0d00cbcfb6b87319}\label{class_level_boss_test_a06a753ed0fa24b1a0d00cbcfb6b87319} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_abed2dd4516b540f92b8655aa73cd3cf6}\label{class_level_boss_test_abed2dd4516b540f92b8655aa73cd3cf6} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a496396b89cc211916b658d364ef6fc02}\label{class_level_boss_test_a496396b89cc211916b658d364ef6fc02} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_a931c8ecb76bc09f71332586efdb93105}\label{class_level_boss_test_a931c8ecb76bc09f71332586efdb93105} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries dash\+Icon} = nullptr
+\item 
+\Hypertarget{class_level_boss_test_acd21fdde8ad73fee5cb54d6fe68cb024}\label{class_level_boss_test_acd21fdde8ad73fee5cb54d6fe68cb024} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_boss_test_ad8e12a437c92de2df620f196313ca47b}\label{class_level_boss_test_ad8e12a437c92de2df620f196313ca47b} 
+int {\bfseries tempx}
+\item 
+\Hypertarget{class_level_boss_test_aae1c540359165964784978d2ed003a6c}\label{class_level_boss_test_aae1c540359165964784978d2ed003a6c} 
+int {\bfseries tempx2}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_boss_test_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_boss_test_ab24de7b0429a0aed680da63e61ac5182}\index{LevelBossTest@{LevelBossTest}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_ab24de7b0429a0aed680da63e61ac5182} 
+void Level\+Boss\+Test\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_boss_test_aa53868b1ebaf4668b1a33abb02e987ce}\index{LevelBossTest@{LevelBossTest}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_aa53868b1ebaf4668b1a33abb02e987ce} 
+void Level\+Boss\+Test\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{Level}}.
+
+\Hypertarget{class_level_boss_test_a469e94b4919a6e8bd825b2d11107985a}\index{LevelBossTest@{LevelBossTest}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a469e94b4919a6e8bd825b2d11107985a} 
+Menu\+State Level\+Boss\+Test\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{Level}}.
+
+\Hypertarget{class_level_boss_test_a6d4f732d1dc63f7ec1c11453de0c7c84}\index{LevelBossTest@{LevelBossTest}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a6d4f732d1dc63f7ec1c11453de0c7c84} 
+void Level\+Boss\+Test\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_boss_test_a450e8deb088cf4b84e980f32545717a0}\index{LevelBossTest@{LevelBossTest}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a450e8deb088cf4b84e980f32545717a0} 
+void Level\+Boss\+Test\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_boss_test_a39cbac3dff9d17004bbc82e5b6666b33}\index{LevelBossTest@{LevelBossTest}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a39cbac3dff9d17004bbc82e5b6666b33} 
+void Level\+Boss\+Test\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_boss_test_ad8b125b09aa61a7acf294d433e6fd0bd}\index{LevelBossTest@{LevelBossTest}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_ad8b125b09aa61a7acf294d433e6fd0bd} 
+void Level\+Boss\+Test\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_boss_test_aeacd92e25ede4b43960a110713cb85cc}\index{LevelBossTest@{LevelBossTest}!isReceivingNoInputs@{isReceivingNoInputs}}
+\index{isReceivingNoInputs@{isReceivingNoInputs}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{isReceivingNoInputs()}{isReceivingNoInputs()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_aeacd92e25ede4b43960a110713cb85cc} 
+void Level\+Boss\+Test\+::is\+Receiving\+No\+Inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when no input is currently being received. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{Level}}.
+
+\Hypertarget{class_level_boss_test_a6948b507c7c8cbe5a829986f6226180e}\index{LevelBossTest@{LevelBossTest}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a6948b507c7c8cbe5a829986f6226180e} 
+void Level\+Boss\+Test\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_boss_test_a5324a866860c232cad45f42301ecf2f1}\index{LevelBossTest@{LevelBossTest}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a5324a866860c232cad45f42301ecf2f1} 
+void Level\+Boss\+Test\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_boss_test_af08af0bf8c4d3edde1fcc20acd19ae88}\index{LevelBossTest@{LevelBossTest}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_af08af0bf8c4d3edde1fcc20acd19ae88} 
+void Level\+Boss\+Test\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_boss_test_a517f4b7fd2a954fc8ca0b81057b5b8c8}\index{LevelBossTest@{LevelBossTest}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a517f4b7fd2a954fc8ca0b81057b5b8c8} 
+void Level\+Boss\+Test\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_boss_test_ab11bb0b5fcd3875ac0c795ce1739a629}\index{LevelBossTest@{LevelBossTest}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_ab11bb0b5fcd3875ac0c795ce1739a629} 
+void Level\+Boss\+Test\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_boss_test_a96246f535ec2f4fcd805430313a0a359}\index{LevelBossTest@{LevelBossTest}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelBossTest@{LevelBossTest}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_boss_test_a96246f535ec2f4fcd805430313a0a359} 
+void Level\+Boss\+Test\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Boss\+Test.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Boss\+Test.\+cpp\end{DoxyCompactItemize}

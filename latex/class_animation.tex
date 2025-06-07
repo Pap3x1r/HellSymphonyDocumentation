@@ -1,0 +1,350 @@
+\doxysection{Animation Class Reference}
+\hypertarget{class_animation}{}\label{class_animation}\index{Animation@{Animation}}
+
+
+Handles sprite sheet animations and state management for animated objects.  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+
+
+Collaboration diagram for Animation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_animation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_animation_a658045b1217aaa4d8e04b4bf9956d641}{add\+State}} (string name, int row, int frame\+Count)
+\begin{DoxyCompactList}\small\item\em Adds a new animation state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a54e1528ef06937fa389ae4a9b9ea6092}{set\+State}} (string name)
+\begin{DoxyCompactList}\small\item\em Sets the current animation state by name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a586d5a01caf380babeb177b3eeafc63e}{update\+Current\+State}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates the current animation state by advancing frames based on delta time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation_a98cb8c0a556ae9bbf3fa3ebf51bb41fe}{Animation}} (unsigned int \&\mbox{\hyperlink{class_animation_aa49057f90664f27cb367810c71f17638}{texture}})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_animation}{Animation} object tied to a texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a1b72300836e81a6bea389da1b7e0c187}{render}} (glm\+::mat4 global\+Model\+Transform, \mbox{\hyperlink{class_transform}{Transform}} \&transform)
+\begin{DoxyCompactList}\small\item\em Renders the current frame of the animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_af928b8b48c570c067e5d3550930a2358}{set\+Frame}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Sets the animation frame by row and column on the sprite sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a6830e1eb70e523e4532e962a7e839d88}{set\+Dimension}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Sets the dimensions of the sprite sheet (rows and columns). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a861e63397842f8249d86833e3e266475}{set\+Texture}} (unsigned int new\+Texture)
+\begin{DoxyCompactList}\small\item\em Changes the texture used for the animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_af1fa6960b7a861743f0d7efd465df9d2}{set\+Starting\+Frame}} (int frame)
+\begin{DoxyCompactList}\small\item\em Sets the starting frame of the animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a96b3ba53e8c4750cb4f04a923946204f}{set\+Anim\+Offset}} (glm\+::vec3 offset)
+\begin{DoxyCompactList}\small\item\em Sets positional offset for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_ae244c43307853afbcb5cf99c4b9516ff}{set\+Loop}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether the animation should loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a32d7acf06dfd65fea89149bee2801ffa}{set\+OffsetX}} (float offset)
+\begin{DoxyCompactList}\small\item\em Sets the horizontal offset for rendering the sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a97136de2623f8cbbe934bcc6ee4321cf}{set\+OffsetY}} (float offset)
+\begin{DoxyCompactList}\small\item\em Sets the vertical offset for rendering the sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_afd2c54203e3c95158ff35fb10ff1449a}{set\+Parent}} (\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Sets the parent object owning this animation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_animation_a47d6564e24f39e1141f50ac04fe678e9}{get\+Animation\+Completed}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether a non-\/looping animation has completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animation_a155955f18ee8140eb916dec708eafb1f}\label{class_animation_a155955f18ee8140eb916dec708eafb1f} 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_state}{State}} $>$ {\bfseries states}
+\begin{DoxyCompactList}\small\item\em All possible animation states by name. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a81cb34132c2f778a47d40c4c9fe55739}\label{class_animation_a81cb34132c2f778a47d40c4c9fe55739} 
+\mbox{\hyperlink{struct_state}{State}} {\bfseries current\+State}
+\begin{DoxyCompactList}\small\item\em Currently active animation state. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_adc7df29e613689f29ddac3316b2a509d}\label{class_animation_adc7df29e613689f29ddac3316b2a509d} 
+int {\bfseries current\+Frame} = 0
+\begin{DoxyCompactList}\small\item\em Current frame index in the animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_abd96d0a6cd9709e1171afb5e8f31e22d}\label{class_animation_abd96d0a6cd9709e1171afb5e8f31e22d} 
+int {\bfseries starting\+Frame} = 0
+\begin{DoxyCompactList}\small\item\em Frame to start animation from. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a951ff207e048c16b7c5dde293eb5419b}\label{class_animation_a951ff207e048c16b7c5dde293eb5419b} 
+bool {\bfseries loop} = true
+\begin{DoxyCompactList}\small\item\em Should the animation loop? \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_abf0d74adbcf0b45740c6a8b0c501a94b}\label{class_animation_abf0d74adbcf0b45740c6a8b0c501a94b} 
+bool {\bfseries animation\+Completed} = false
+\begin{DoxyCompactList}\small\item\em True if a non-\/looping animation finished. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_aa49057f90664f27cb367810c71f17638}\label{class_animation_aa49057f90664f27cb367810c71f17638} 
+unsigned int \& {\bfseries texture}
+\begin{DoxyCompactList}\small\item\em Reference to the texture ID used for this animation. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_ad255bf4f70b65961c58f347d810cd3cd}\label{class_animation_ad255bf4f70b65961c58f347d810cd3cd} 
+int {\bfseries row\+Count} = 1
+\begin{DoxyCompactList}\small\item\em Total rows in the sprite sheet. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a5e8cf7298879eeb07fbb7b8fb14b0e96}\label{class_animation_a5e8cf7298879eeb07fbb7b8fb14b0e96} 
+int {\bfseries col\+Count} = 1
+\begin{DoxyCompactList}\small\item\em Total columns (frames per row) in the sprite sheet. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a2f7be7a60e789952d1c809f554279f88}\label{class_animation_a2f7be7a60e789952d1c809f554279f88} 
+float {\bfseries offsetX} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em X offset for rendering the sprite. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a06e808c8d41d684d2a172547cbfb8141}\label{class_animation_a06e808c8d41d684d2a172547cbfb8141} 
+float {\bfseries offsetY} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Y offset for rendering the sprite. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a5834c1a2669e60d3d85251d34011938e}\label{class_animation_a5834c1a2669e60d3d85251d34011938e} 
+float {\bfseries animation\+Timer} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Timer to track animation frame duration. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a103c92b7fdf57c79312967b05df399f3}\label{class_animation_a103c92b7fdf57c79312967b05df399f3} 
+glm\+::vec3 {\bfseries anim\+Offset} = \{ 0.\+0f, 0.\+0f, 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em Positional offset applied during rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_ad26077b14a12f176a72e501c61850bc4}\label{class_animation_ad26077b14a12f176a72e501c61850bc4} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries parent} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointer to the parent object owning this animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles sprite sheet animations and state management for animated objects. 
+
+\label{doc-constructors}
+\Hypertarget{class_animation_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_animation_a98cb8c0a556ae9bbf3fa3ebf51bb41fe}\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily \label{class_animation_a98cb8c0a556ae9bbf3fa3ebf51bb41fe} 
+Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{unsigned int \&}]{texture}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_animation}{Animation} object tied to a texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Reference to an Open\+GL texture ID. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_animation_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_a658045b1217aaa4d8e04b4bf9956d641}\index{Animation@{Animation}!addState@{addState}}
+\index{addState@{addState}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{addState()}{addState()}}
+{\footnotesize\ttfamily \label{class_animation_a658045b1217aaa4d8e04b4bf9956d641} 
+void Animation\+::add\+State (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{row}{, }\item[{int}]{frame\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new animation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{struct_state}{State} identifier. \\
+\hline
+{\em row} & Row index in the sprite sheet for the frames. \\
+\hline
+{\em frame\+Count} & Number of frames in this state. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a47d6564e24f39e1141f50ac04fe678e9}\index{Animation@{Animation}!getAnimationCompleted@{getAnimationCompleted}}
+\index{getAnimationCompleted@{getAnimationCompleted}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{getAnimationCompleted()}{getAnimationCompleted()}}
+{\footnotesize\ttfamily \label{class_animation_a47d6564e24f39e1141f50ac04fe678e9} 
+bool Animation\+::get\+Animation\+Completed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether a non-\/looping animation has completed. 
+
+\begin{DoxyReturn}{Returns}
+True if animation completed. 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a1b72300836e81a6bea389da1b7e0c187}\index{Animation@{Animation}!render@{render}}
+\index{render@{render}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_animation_a1b72300836e81a6bea389da1b7e0c187} 
+void Animation\+::render (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{global\+Model\+Transform}{, }\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{transform}{}\end{DoxyParamCaption})}
+
+
+
+Renders the current frame of the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+Model\+Transform} & The global transform matrix. \\
+\hline
+{\em transform} & Local transform of the object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a96b3ba53e8c4750cb4f04a923946204f}\index{Animation@{Animation}!setAnimOffset@{setAnimOffset}}
+\index{setAnimOffset@{setAnimOffset}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setAnimOffset()}{setAnimOffset()}}
+{\footnotesize\ttfamily \label{class_animation_a96b3ba53e8c4750cb4f04a923946204f} 
+void Animation\+::set\+Anim\+Offset (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Sets positional offset for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & 3D vector offset. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a6830e1eb70e523e4532e962a7e839d88}\index{Animation@{Animation}!setDimension@{setDimension}}
+\index{setDimension@{setDimension}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setDimension()}{setDimension()}}
+{\footnotesize\ttfamily \label{class_animation_a6830e1eb70e523e4532e962a7e839d88} 
+void Animation\+::set\+Dimension (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Sets the dimensions of the sprite sheet (rows and columns). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Number of rows. \\
+\hline
+{\em col} & Number of columns. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_af928b8b48c570c067e5d3550930a2358}\index{Animation@{Animation}!setFrame@{setFrame}}
+\index{setFrame@{setFrame}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setFrame()}{setFrame()}}
+{\footnotesize\ttfamily \label{class_animation_af928b8b48c570c067e5d3550930a2358} 
+void Animation\+::set\+Frame (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})}
+
+
+
+Sets the animation frame by row and column on the sprite sheet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Row index. \\
+\hline
+{\em column} & Column index. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_ae244c43307853afbcb5cf99c4b9516ff}\index{Animation@{Animation}!setLoop@{setLoop}}
+\index{setLoop@{setLoop}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setLoop()}{setLoop()}}
+{\footnotesize\ttfamily \label{class_animation_ae244c43307853afbcb5cf99c4b9516ff} 
+void Animation\+::set\+Loop (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether the animation should loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True to loop, false to play once. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a32d7acf06dfd65fea89149bee2801ffa}\index{Animation@{Animation}!setOffsetX@{setOffsetX}}
+\index{setOffsetX@{setOffsetX}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setOffsetX()}{setOffsetX()}}
+{\footnotesize\ttfamily \label{class_animation_a32d7acf06dfd65fea89149bee2801ffa} 
+void Animation\+::set\+OffsetX (\begin{DoxyParamCaption}\item[{float}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the horizontal offset for rendering the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a97136de2623f8cbbe934bcc6ee4321cf}\index{Animation@{Animation}!setOffsetY@{setOffsetY}}
+\index{setOffsetY@{setOffsetY}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setOffsetY()}{setOffsetY()}}
+{\footnotesize\ttfamily \label{class_animation_a97136de2623f8cbbe934bcc6ee4321cf} 
+void Animation\+::set\+OffsetY (\begin{DoxyParamCaption}\item[{float}]{offset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the vertical offset for rendering the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Offset value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_afd2c54203e3c95158ff35fb10ff1449a}\index{Animation@{Animation}!setParent@{setParent}}
+\index{setParent@{setParent}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily \label{class_animation_afd2c54203e3c95158ff35fb10ff1449a} 
+void Animation\+::set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the parent object owning this animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the parent \doxylink{class_textured_object}{Textured\+Object}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_af1fa6960b7a861743f0d7efd465df9d2}\index{Animation@{Animation}!setStartingFrame@{setStartingFrame}}
+\index{setStartingFrame@{setStartingFrame}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setStartingFrame()}{setStartingFrame()}}
+{\footnotesize\ttfamily \label{class_animation_af1fa6960b7a861743f0d7efd465df9d2} 
+void Animation\+::set\+Starting\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+Sets the starting frame of the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame index to start from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a54e1528ef06937fa389ae4a9b9ea6092}\index{Animation@{Animation}!setState@{setState}}
+\index{setState@{setState}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily \label{class_animation_a54e1528ef06937fa389ae4a9b9ea6092} 
+void Animation\+::set\+State (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the current animation state by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{struct_state}{State} name to switch to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a861e63397842f8249d86833e3e266475}\index{Animation@{Animation}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily \label{class_animation_a861e63397842f8249d86833e3e266475} 
+void Animation\+::set\+Texture (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+Texture}{}\end{DoxyParamCaption})}
+
+
+
+Changes the texture used for the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Texture} & New Open\+GL texture ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a586d5a01caf380babeb177b3eeafc63e}\index{Animation@{Animation}!updateCurrentState@{updateCurrentState}}
+\index{updateCurrentState@{updateCurrentState}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{updateCurrentState()}{updateCurrentState()}}
+{\footnotesize\ttfamily \label{class_animation_a586d5a01caf380babeb177b3eeafc63e} 
+void Animation\+::update\+Current\+State (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the current animation state by advancing frames based on delta time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & \doxylink{class_time}{Time} elapsed since last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Animation.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Animation.\+cpp\end{DoxyCompactItemize}

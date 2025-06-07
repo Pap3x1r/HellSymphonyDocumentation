@@ -1,0 +1,30 @@
+\doxysection{Parallax\+Object.\+h}
+\hypertarget{_parallax_object_8h_source}{}\label{_parallax_object_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ParallaxObject.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ParallaxObject.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}TexturedObject.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }ParallaxObject\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_textured_object_a0269cba0bdaba33b6e5a451afc7a95f9}{TexturedObject}}\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{comment}{//glm::vec3\ camPos;}}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//glm::vec3\ playerPos;}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{float}\ z;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ vertical;}
+\DoxyCodeLine{00010\ \ \ \ \ glm::vec3\ startPos;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ nearPlane;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ farPlane;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ ParallaxObject(\textcolor{keywordtype}{float}\ z,\ \textcolor{keywordtype}{bool}\ vertical);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//void\ setStartPos(glm::vec3\ startPos);}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ setPlane(\textcolor{keywordtype}{float}\ nearPlane,\ \textcolor{keywordtype}{float}\ farPlane);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ updateParallax(glm::vec3\ camPos,\ glm::vec3\ playerPos);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ setTexture(\textcolor{keywordtype}{string}\ path);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ initAnimation(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_parallax_object_a48b1eb36edd2fb52a42ac3facf94aa3a}{render}}(glm::mat4\ globalModelTransform);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_animation}{Animation}}*\ \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{getAnimationComponent}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{isAnimated}}();}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

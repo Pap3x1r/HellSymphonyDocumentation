@@ -1,0 +1,103 @@
+\doxysection{Ziz\+Transition\+State Class Reference}
+\hypertarget{class_ziz_transition_state}{}\label{class_ziz_transition_state}\index{ZizTransitionState@{ZizTransitionState}}
+
+
+Inheritance diagram for Ziz\+Transition\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_ziz_transition_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ziz\+Transition\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ziz_transition_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ziz_transition_state_a20c5d6bfcdffdff5500b5b0b6f9f453d}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_ziz_transition_state_ac83f89dbf6339985ca73e571c632d44d}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_ziz_transition_state_a405a8b40ef9e3335941f2c95c4a2aa01}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_transition_state_ae232eb94720d2f1a3b653bf27a667fc4}\label{class_ziz_transition_state_ae232eb94720d2f1a3b653bf27a667fc4} 
+static \mbox{\hyperlink{class_ziz_transition_state}{Ziz\+Transition\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_transition_state_af86fde84764ec57cbcec8ac7672d6d40}\label{class_ziz_transition_state_af86fde84764ec57cbcec8ac7672d6d40} 
+\mbox{\hyperlink{class_ziz}{Ziz}} \texorpdfstring{$\ast$}{*} {\bfseries ziz}
+\item 
+\Hypertarget{class_ziz_transition_state_a335137353833bc1005e0121442175b9d}\label{class_ziz_transition_state_a335137353833bc1005e0121442175b9d} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_ziz_transition_state_a2071258f7253f3be303e0d186bfcdd83}\label{class_ziz_transition_state_a2071258f7253f3be303e0d186bfcdd83} 
+float {\bfseries transition\+Timer}
+\item 
+\Hypertarget{class_ziz_transition_state_af918fa9767f0e4cf8e462793b0bb8364}\label{class_ziz_transition_state_af918fa9767f0e4cf8e462793b0bb8364} 
+bool {\bfseries transforming}
+\item 
+\Hypertarget{class_ziz_transition_state_ab45a5d4df528794dbdc1b71a1fc13c3a}\label{class_ziz_transition_state_ab45a5d4df528794dbdc1b71a1fc13c3a} 
+bool {\bfseries transformed}
+\item 
+\Hypertarget{class_ziz_transition_state_ab9731508c3bffcb21210e1ac163e54c7}\label{class_ziz_transition_state_ab9731508c3bffcb21210e1ac163e54c7} 
+float {\bfseries buffer\+Timer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ziz_transition_state_af531d3511cd18ab57461f3581cea6e2c}\label{class_ziz_transition_state_af531d3511cd18ab57461f3581cea6e2c} 
+static \mbox{\hyperlink{class_ziz_transition_state}{Ziz\+Transition\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ziz_transition_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ziz_transition_state_a20c5d6bfcdffdff5500b5b0b6f9f453d}\index{ZizTransitionState@{ZizTransitionState}!enter@{enter}}
+\index{enter@{enter}!ZizTransitionState@{ZizTransitionState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_ziz_transition_state_a20c5d6bfcdffdff5500b5b0b6f9f453d} 
+void Ziz\+Transition\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_transition_state_a405a8b40ef9e3335941f2c95c4a2aa01}\index{ZizTransitionState@{ZizTransitionState}!exit@{exit}}
+\index{exit@{exit}!ZizTransitionState@{ZizTransitionState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_ziz_transition_state_a405a8b40ef9e3335941f2c95c4a2aa01} 
+void Ziz\+Transition\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_ziz_transition_state_ac83f89dbf6339985ca73e571c632d44d}\index{ZizTransitionState@{ZizTransitionState}!update@{update}}
+\index{update@{update}!ZizTransitionState@{ZizTransitionState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ziz_transition_state_ac83f89dbf6339985ca73e571c632d44d} 
+void Ziz\+Transition\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Transition\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ziz\+Transition\+State.\+cpp\end{DoxyCompactItemize}

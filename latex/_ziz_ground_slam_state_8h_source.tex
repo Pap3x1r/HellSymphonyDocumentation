@@ -1,0 +1,55 @@
+\doxysection{Ziz\+Ground\+Slam\+State.\+h}
+\hypertarget{_ziz_ground_slam_state_8h_source}{}\label{_ziz_ground_slam_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizGroundSlamState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizGroundSlamState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Level.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}EnemyAttackCollider.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_ground_slam_state}{ZizGroundSlamState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_ground_slam_state}{ZizGroundSlamState}}*\ instance;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_enemy_attack_collider}{EnemyAttackCollider}}*\ attackCollider\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Phase\ control}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasLaunched\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ peakReached\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDescending\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasImpacted\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ tooClose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ wayTooClose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasStartUp\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Timers}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ startupTime;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ flyupTime;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ hoverTime;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ slamTimer;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ descendTime\ =\ 0.0f;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ recoverTime\ =\ 0.0f;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Movement\ points}}
+\DoxyCodeLine{00037\ \ \ \ \ glm::vec3\ startupPosition;}
+\DoxyCodeLine{00038\ \ \ \ \ glm::vec3\ midairTarget;}
+\DoxyCodeLine{00039\ \ \ \ \ glm::vec3\ slamStartPos;}
+\DoxyCodeLine{00040\ \ \ \ \ glm::vec3\ impactPosition;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ selectTarget();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_ground_slam_state}{ZizGroundSlamState}}*\ getInstance();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}

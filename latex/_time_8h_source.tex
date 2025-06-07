@@ -1,0 +1,31 @@
+\doxysection{Time.\+h}
+\hypertarget{_time_8h_source}{}\label{_time_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/Time.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/Time.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_time_a4245e409c7347d1d671858962c2ca3b5}{Time}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_time_a28bd745a6935c018025f3c9d023f656f}{tickCounter}};\ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_a1a42c48e601fa3f6724ca61ae3f472e3}{timeScale}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_a35fe30294c847679da506b540f05d593}{deltaTime}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_time_a4245e409c7347d1d671858962c2ca3b5}{Time}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_a405c7642c4ba0ee719a8d0491099102a}{getDeltaTime}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_a4fc461a407c494e9fc893909be39a4c5}{getDeltaTimeRealTime}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_time_ac81e431616ee0e46201715be56f2bebd}{getTicks}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_a54e4757c8ae465b85f66b1587c2ccd33}{updateTick}}(uint64\_t\ time);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_a1b84830287fc391fda3fed66c7303411}{updateTickCounterOnly}}(uint64\_t\ time);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_ae93c0037d63d8aec951a64b277e7a408}{setTimeScale}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_a1a42c48e601fa3f6724ca61ae3f472e3}{timeScale}});}
+\DoxyCodeLine{00059\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,64 @@
+\doxysection{Ziz\+QTEState.\+h}
+\hypertarget{_ziz_q_t_e_state_8h_source}{}\label{_ziz_q_t_e_state_8h_source}\index{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizQTEState.h@{C:/HellSymphony/HellSymphonyEngine/NextEngine/ZizQTEState.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}BossStateM.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Ziz.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ZizIdleState.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}QTEManager.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}QTEButtonUI.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz}{Ziz}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ziz_q_t_e_state}{ZizQTEState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_boss_state_m}{BossStateM}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_q_t_e_state}{ZizQTEState}}*\ instance;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_ziz}{Ziz}}*\ ziz;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}*\ player;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ bufferTimerFailure;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ bufferTimerSuccess;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ posingBeforeQTE;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ timerbeforeQTE;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ needToPose;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ recoveryPosed;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ timerAfterQTE;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ timer;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ timer1;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ timer2;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ timer3;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ failedAny;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ currentSeq;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget1;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget2;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ QTETarget3;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButtonUI}}*\ qteButtonUI;}
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_ziz_q_t_e_state}{ZizQTEState}}*\ getInstance();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ enter(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ update(\mbox{\hyperlink{class_boss}{Boss}}*\ boss,\ \textcolor{keywordtype}{float}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ exit(\mbox{\hyperlink{class_boss}{Boss}}*\ boss)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ randomQTETarget();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ randomQTESequence();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ startQTE(\textcolor{keywordtype}{int}\ target);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \};}
+
+\end{DoxyCode}

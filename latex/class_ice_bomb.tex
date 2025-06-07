@@ -1,0 +1,294 @@
+\doxysection{Ice\+Bomb Class Reference}
+\hypertarget{class_ice_bomb}{}\label{class_ice_bomb}\index{IceBomb@{IceBomb}}
+
+
+Inheritance diagram for Ice\+Bomb\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_ice_bomb__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ice\+Bomb\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_ice_bomb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ice_bomb_a6c92415c6fd704025c608822e854662c}\label{class_ice_bomb_a6c92415c6fd704025c608822e854662c} 
+{\bfseries Ice\+Bomb} (float pos)
+\item 
+\Hypertarget{class_ice_bomb_add07eb8deb104f5f01d1a00f13f7d47f}\label{class_ice_bomb_add07eb8deb104f5f01d1a00f13f7d47f} 
+void {\bfseries update} (float dt)
+\item 
+\Hypertarget{class_ice_bomb_aedf320b9920ebaf9d808ce0a8dbcee7a}\label{class_ice_bomb_aedf320b9920ebaf9d808ce0a8dbcee7a} 
+void {\bfseries check\+Off\+Map} ()
+\item 
+void \mbox{\hyperlink{class_ice_bomb_ad6b24cc2b03bec19dc45c748a6e2c80e}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ice_bomb_a0755bb15c518ecebc6047779624a832a}{on\+Collision\+Stay}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_ice_bomb_a60a8751135dbdd2d145d7cbd49b6127c}{on\+Collision\+Exit}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_ice_bomb_aca4912c75a2ef49368575a1975a2954f}{on\+Trigger\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_ice_bomb_a760bd01d6883879e629356eb14dd4239}{on\+Trigger\+Stay}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\item 
+void \mbox{\hyperlink{class_ice_bomb_a2767ebc0fd215d2f058db926d918e239}{on\+Trigger\+Exit}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Enemy\+Attack\+Collider} (float damage\+\_\+)
+\item 
+{\bfseries Enemy\+Attack\+Collider} (float damage\+\_\+, float force, float duration)
+\item 
+void {\bfseries reset\+Hit} ()
+\item 
+void {\bfseries set\+Player\+Inside} (bool inside)
+\item 
+bool {\bfseries get\+Player\+Inside} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_textured_object}{Textured\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_ice_bomb_a09b2d4b7f325438332046199f3938f3a}\label{class_ice_bomb_a09b2d4b7f325438332046199f3938f3a} 
+float {\bfseries duration}
+\item 
+\Hypertarget{class_ice_bomb_a9bd89ecccf55c6dcb1ba135b1759576a}\label{class_ice_bomb_a9bd89ecccf55c6dcb1ba135b1759576a} 
+bool {\bfseries has\+Hit}
+\item 
+\Hypertarget{class_ice_bomb_a75dae3915d825f2d19d3c5afc045b7c0}\label{class_ice_bomb_a75dae3915d825f2d19d3c5afc045b7c0} 
+float {\bfseries damage}
+\item 
+\Hypertarget{class_ice_bomb_ad3b4b184eb27d35de93dbca6dddb997e}\label{class_ice_bomb_ad3b4b184eb27d35de93dbca6dddb997e} 
+bool {\bfseries has\+Started}
+\item 
+\Hypertarget{class_ice_bomb_a9105ec466d93ce7c88adc740db02d3a6}\label{class_ice_bomb_a9105ec466d93ce7c88adc740db02d3a6} 
+bool {\bfseries has\+Bombed}
+\item 
+\Hypertarget{class_ice_bomb_aadc6f6e5a94b6d7402b0b18c5b763fd5}\label{class_ice_bomb_aadc6f6e5a94b6d7402b0b18c5b763fd5} 
+bool {\bfseries is\+Active}
+\item 
+\Hypertarget{class_ice_bomb_af52da11e88a7800fcbf522e575eb9c07}\label{class_ice_bomb_af52da11e88a7800fcbf522e575eb9c07} 
+float {\bfseries start\+Up\+Timer}
+\item 
+\Hypertarget{class_ice_bomb_a3d83b6545651dce15b03b6339a21a517}\label{class_ice_bomb_a3d83b6545651dce15b03b6339a21a517} 
+float {\bfseries active\+Timer}
+\item 
+\Hypertarget{class_ice_bomb_a90a92fb53bb20b861119fa0d4b93c725}\label{class_ice_bomb_a90a92fb53bb20b861119fa0d4b93c725} 
+float {\bfseries recovery\+Timer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ice_bomb_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ice_bomb_ad6b24cc2b03bec19dc45c748a6e2c80e}\index{IceBomb@{IceBomb}!onCollisionEnter@{onCollisionEnter}}
+\index{onCollisionEnter@{onCollisionEnter}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onCollisionEnter()}{onCollisionEnter()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_ad6b24cc2b03bec19dc45c748a6e2c80e} 
+void Ice\+Bomb\+::on\+Collision\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+For implementation in derived class ///. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider_a285162718819ca512a7231c4acdc8182}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_ice_bomb_a60a8751135dbdd2d145d7cbd49b6127c}\index{IceBomb@{IceBomb}!onCollisionExit@{onCollisionExit}}
+\index{onCollisionExit@{onCollisionExit}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onCollisionExit()}{onCollisionExit()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_a60a8751135dbdd2d145d7cbd49b6127c} 
+void Ice\+Bomb\+::on\+Collision\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_ice_bomb_a0755bb15c518ecebc6047779624a832a}\index{IceBomb@{IceBomb}!onCollisionStay@{onCollisionStay}}
+\index{onCollisionStay@{onCollisionStay}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onCollisionStay()}{onCollisionStay()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_a0755bb15c518ecebc6047779624a832a} 
+void Ice\+Bomb\+::on\+Collision\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_ice_bomb_aca4912c75a2ef49368575a1975a2954f}\index{IceBomb@{IceBomb}!onTriggerEnter@{onTriggerEnter}}
+\index{onTriggerEnter@{onTriggerEnter}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onTriggerEnter()}{onTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_aca4912c75a2ef49368575a1975a2954f} 
+void Ice\+Bomb\+::on\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_ice_bomb_a2767ebc0fd215d2f058db926d918e239}\index{IceBomb@{IceBomb}!onTriggerExit@{onTriggerExit}}
+\index{onTriggerExit@{onTriggerExit}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onTriggerExit()}{onTriggerExit()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_a2767ebc0fd215d2f058db926d918e239} 
+void Ice\+Bomb\+::on\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+\Hypertarget{class_ice_bomb_a760bd01d6883879e629356eb14dd4239}\index{IceBomb@{IceBomb}!onTriggerStay@{onTriggerStay}}
+\index{onTriggerStay@{onTriggerStay}!IceBomb@{IceBomb}}
+\doxysubsubsection{\texorpdfstring{onTriggerStay()}{onTriggerStay()}}
+{\footnotesize\ttfamily \label{class_ice_bomb_a760bd01d6883879e629356eb14dd4239} 
+void Ice\+Bomb\+::on\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}}]{collider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_attack_collider}{Enemy\+Attack\+Collider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ice\+Bomb.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Ice\+Bomb.\+cpp\end{DoxyCompactItemize}

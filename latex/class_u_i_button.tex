@@ -1,0 +1,534 @@
+\doxysection{UIButton Class Reference}
+\hypertarget{class_u_i_button}{}\label{class_u_i_button}\index{UIButton@{UIButton}}
+
+
+UI button class with click functionality, hover detection, and optional label and slider.  
+
+
+
+
+{\ttfamily \#include $<$UIButton.\+h$>$}
+
+
+
+Inheritance diagram for UIButton\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_u_i_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UIButton\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_button_a36c70940a7a6ca4b607f78f1134de98e}\label{class_u_i_button_a36c70940a7a6ca4b607f78f1134de98e} 
+{\bfseries UIButton} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the button with default name and properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_button_aaea199ca2bf709323448e7fc90cc6221}{UIButton}} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the button with a custom name. \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_button_a89c2530ffea21ed7a24fcc1c33e93ab8}\label{class_u_i_button_a89c2530ffea21ed7a24fcc1c33e93ab8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+UIButton} ()
+\begin{DoxyCompactList}\small\item\em Destructor cleans up associated label pointer (does not delete). \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_button_ae70ea7acc0917e85725b7d33714e8fb6}\label{class_u_i_button_ae70ea7acc0917e85725b7d33714e8fb6} 
+void {\bfseries On\+Click} ()
+\begin{DoxyCompactList}\small\item\em Called when the button is clicked; executes the bound function if any. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a2cd95ca1006218204cb5ff1524a8c854}{set\+Function}} (function$<$ void()$>$ func)
+\begin{DoxyCompactList}\small\item\em Sets the callback function to be executed on click. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a36e5f1123dc73c7879ccd10934425413}{update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Updates the button state, typically called every frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_button_a5b706cbf1030b1c07e1ceb8276333f19}{is\+Hovered}} (int mouseX, int mouseY)
+\begin{DoxyCompactList}\small\item\em Checks whether the mouse coordinates hover over the button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_button_a43d7cb75879cddc45483d621939e6495}{get\+Mouse\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether the mouse is currently over the button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a4d17d929f5fc40949dd9a083079c1708}{set\+Mouse\+Over}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the mouse hover state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a4c2cbe45f536408c8c3bebb91cf23a0c}{set\+Enable}} (bool value)
+\begin{DoxyCompactList}\small\item\em Enables or disables the button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_button_af9a1bee0ff3e8628dca2026a4c676f5f}{get\+Enable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the button is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a1c9e1e4fcb0b773bf436c79e4b5542b8}{set\+Label}} (\mbox{\hyperlink{class_u_i_text}{UIText}} \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em Sets the label text object associated with this button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_text}{UIText}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_button_a58228aa5cfd9b1437fded676073b8ff4}{get\+Label}} () const
+\begin{DoxyCompactList}\small\item\em Returns the label text object associated with this button. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_u_i_button_a27d5ca7229fa75aee5527b34c0f01ef9}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the button\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a9b564da2624c2487a92d6c239a5457f2}{set\+Handle}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether this button acts as a slider handle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_button_ad3a1fee245d5b868a2bb560b9f6eed0b}{get\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether this button acts as a slider handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_a81c4b599e7821f93b092190c2c84d400}{set\+Slider}} (\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Sets the slider object linked to this button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_button_a7c92b3549b62aa8ed768482acea2f7f3}{get\+Slider}} () const
+\begin{DoxyCompactList}\small\item\em Gets the slider object linked to this button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_button_ac9eae3d5976ac5388a8d5791df1e0652}{set\+Active}} (bool a)
+\begin{DoxyCompactList}\small\item\em Sets the active state of the button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_button_aefaf5fd8829eae0038ca0865b7134462}{get\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the button is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_textured_object}{Textured\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Textured\+Object} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Textured\+Object} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ad328eaf5f786c6c6405ce56afc54c22f}{set\+Texture}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Sets a static texture (non-\/animated). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a35babc707cb8a0be94a96b4455b7f074}{set\+Texture}} (string path, int row, int col, int start\+Frame)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a8d7ff4954af019c543791e639c406d3e}{set\+Texture}} (string path, int row, int col, int start\+Frame, bool loop)
+\begin{DoxyCompactList}\small\item\em Sets up an animated texture with loop option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a3e603b7a7dd31c75fef9362cf2af5092}{init\+Animation}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Initializes animation with a given grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a21ce4cdeb2df210275c4cd212d12e5a3}{render}} (glm\+::mat4 global\+Model\+Transform)
+\begin{DoxyCompactList}\small\item\em Renders the object with its texture and animation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_textured_object_a159fcd470b04372aa28fdd795a29713f}{get\+Animation\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the animation component. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_textured_object_a13b2464d520ab26555805c143cfc5a38}{is\+Animated}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the object has an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a53750cd85fd2b8ceaf33c5ce26a2dfe0}{set\+Sprite\+Offset}} (glm\+::vec3 vector3)
+\begin{DoxyCompactList}\small\item\em Sets an offset to the sprite rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_ab24ad7c2715e8e5fb6032f9aec111012}{set\+Hit\+Effect\+Strength}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the strength of the hit effect. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_ad96939c9af1f909a3a4bbce532ea6383}{get\+Hit\+Effect\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Gets the strength of the hit effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a1f66428fe49296d22f1e458aa6ff31ff}{set\+Alpha}} (float value) override
+\begin{DoxyCompactList}\small\item\em Overrides the object\textquotesingle{}s alpha (transparency). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_textured_object_a3dee67e7305c475297b4115274954ebe}{get\+Alpha}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the current alpha value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_textured_object_a4a30bd926274c2c17838ce046bfa21e8}{set\+New\+Color}} (glm\+::vec4 v4)
+\begin{DoxyCompactList}\small\item\em Sets the override color for the sprite. \end{DoxyCompactList}\item 
+glm\+::vec4 \mbox{\hyperlink{class_textured_object_a02eba34316a3b9714b872158c92b59d1}{get\+New\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the override color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries get\+Name} ()
+\item 
+void {\bfseries set\+Name} (string name)
+\item 
+Tag {\bfseries get\+Tag} () const
+\item 
+void {\bfseries set\+Tag} (Tag new\+Tag)
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \& {\bfseries get\+Transform} ()
+\item 
+glm\+::mat4 {\bfseries get\+Transform\+Mat4} ()
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Physics\+Component} ()
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} ()
+\item 
+void {\bfseries add\+Physics\+Component} (\mbox{\hyperlink{class_physics}{Physics}} \&physics)
+\item 
+void {\bfseries add\+Collider\+Component} ()
+\item 
+void {\bfseries add\+Collider\+Component} (\mbox{\hyperlink{class_collider}{Collider}} \&collider)
+\item 
+virtual void {\bfseries update\+Behavior} ()
+\item 
+virtual void {\bfseries update} ()
+\item 
+void {\bfseries update} (float dt)
+\item 
+{\bfseries Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\bfseries Drawable\+Object} (string name)
+\begin{DoxyCompactList}\small\item\em Constructor with name parameter. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable\+Object} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void {\bfseries set\+Draw\+Collider} (bool value)
+\item 
+void {\bfseries set\+Draw} (bool value)
+\item 
+void {\bfseries draw\+Collider} ()
+\item 
+void {\bfseries set\+Active} (bool value)
+\item 
+bool {\bfseries get\+Is\+Active} ()
+\item 
+bool {\bfseries get\+Marked\+For\+Delete} ()
+\item 
+bool {\bfseries get\+Can\+Draw} ()
+\item 
+void {\bfseries set\+Can\+Draw\+Collider\+New} (bool value)
+\item 
+bool {\bfseries get\+Can\+Draw\+Collider} ()
+\item 
+bool \texorpdfstring{$\ast$}{*} {\bfseries get\+Can\+Draw\+Collider\+Address} ()
+\item 
+void {\bfseries set\+Menu\+State} (Menu\+State new\+Menu\+State)
+\item 
+Menu\+State {\bfseries get\+Menu\+State} () const
+\item 
+void {\bfseries add\+Menu\+State\+To\+Vec} (Menu\+State new\+Menu\+State)
+\item 
+vector$<$ Menu\+State $>$ {\bfseries get\+Menu\+State\+Vec} () const
+\item 
+void {\bfseries set\+Maximum\+Alpha} (float alpha)
+\item 
+float {\bfseries get\+Maximum\+Alpha} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_button_a9bdbaaa416e4d8ef114dc16072b2844a}\label{class_u_i_button_a9bdbaaa416e4d8ef114dc16072b2844a} 
+bool {\bfseries active} = true
+\item 
+\Hypertarget{class_u_i_button_a8bcec054bde8701d29acd36f619a1a0f}\label{class_u_i_button_a8bcec054bde8701d29acd36f619a1a0f} 
+bool {\bfseries is\+Enable} = true
+\item 
+\Hypertarget{class_u_i_button_afa989e649ff4bfdda26b1a82627fff6c}\label{class_u_i_button_afa989e649ff4bfdda26b1a82627fff6c} 
+bool {\bfseries mouse\+Over} = false
+\item 
+\Hypertarget{class_u_i_button_a976985d69da7f5e47a53e7af11f4a127}\label{class_u_i_button_a976985d69da7f5e47a53e7af11f4a127} 
+function$<$ void()$>$ {\bfseries func}
+\item 
+\Hypertarget{class_u_i_button_aa21b6e90a68f97337162dfdb1f78c392}\label{class_u_i_button_aa21b6e90a68f97337162dfdb1f78c392} 
+string {\bfseries name} = "{}Button"{}
+\item 
+\Hypertarget{class_u_i_button_a61f30d305742815f7fa91356566c0a52}\label{class_u_i_button_a61f30d305742815f7fa91356566c0a52} 
+float {\bfseries x\+Position}
+\item 
+\Hypertarget{class_u_i_button_a4933978a602ed25781c8c6260424579c}\label{class_u_i_button_a4933978a602ed25781c8c6260424579c} 
+float {\bfseries y\+Position}
+\item 
+\Hypertarget{class_u_i_button_a9eed788a106f576ca9f6da4694485457}\label{class_u_i_button_a9eed788a106f576ca9f6da4694485457} 
+float {\bfseries x\+Scale}
+\item 
+\Hypertarget{class_u_i_button_a9e5d009346199bd77ccdba3428deca58}\label{class_u_i_button_a9e5d009346199bd77ccdba3428deca58} 
+float {\bfseries y\+Scale}
+\item 
+\Hypertarget{class_u_i_button_ab193190455a0c5c12d835f281a0cbbcc}\label{class_u_i_button_ab193190455a0c5c12d835f281a0cbbcc} 
+\mbox{\hyperlink{class_u_i_text}{UIText}} \texorpdfstring{$\ast$}{*} {\bfseries label} = nullptr
+\item 
+\Hypertarget{class_u_i_button_ac5d50af09dcd9914e91b35a7ec2690e9}\label{class_u_i_button_ac5d50af09dcd9914e91b35a7ec2690e9} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries slider} = nullptr
+\item 
+\Hypertarget{class_u_i_button_a4547954fa6718c05b8a3620faab5fc64}\label{class_u_i_button_a4547954fa6718c05b8a3620faab5fc64} 
+bool {\bfseries is\+Handle} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_drawable_object_a355f602cb9c5bf8f33f92175f90e14ca}{destroy\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Marks the object for deletion and destroys it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries draw\+Layer} = 0
+\begin{DoxyCompactList}\small\item\em Draw layer priority (higher = drawn first) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_drawable_object_ab6b2ca686973fd4494e01a0623d79495}{on\+Collision\+Enter}} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\begin{DoxyCompactList}\small\item\em For implementation in derived class ///. \end{DoxyCompactList}\item 
+virtual void {\bfseries on\+Collision\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Collision\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Enter} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Stay} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\item 
+virtual void {\bfseries on\+Trigger\+Exit} (\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*}collider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name} = "{}Object"{}
+\item 
+Tag {\bfseries tag}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries transform}
+\item 
+\mbox{\hyperlink{class_physics}{Physics}} \texorpdfstring{$\ast$}{*} {\bfseries physics}
+\item 
+\mbox{\hyperlink{class_collider}{Collider}} \texorpdfstring{$\ast$}{*} {\bfseries collider}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UI button class with click functionality, hover detection, and optional label and slider. 
+
+Extends \doxylink{class_textured_object}{Textured\+Object} and supports\+:
+\begin{DoxyItemize}
+\item Activation and enable/disable states.
+\item Mouse hover detection.
+\item Function callback on click.
+\item Associated \doxylink{class_u_i_text}{UIText} label and \doxylink{class_slider_object}{Slider\+Object}. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_u_i_button_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_i_button_aaea199ca2bf709323448e7fc90cc6221}\index{UIButton@{UIButton}!UIButton@{UIButton}}
+\index{UIButton@{UIButton}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{UIButton()}{UIButton()}}
+{\footnotesize\ttfamily \label{class_u_i_button_aaea199ca2bf709323448e7fc90cc6221} 
+UIButton\+::\+UIButton (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes the button with a custom name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to assign to the button. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_button_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_button_aefaf5fd8829eae0038ca0865b7134462}\index{UIButton@{UIButton}!getActive@{getActive}}
+\index{getActive@{getActive}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getActive()}{getActive()}}
+{\footnotesize\ttfamily \label{class_u_i_button_aefaf5fd8829eae0038ca0865b7134462} 
+bool UIButton\+::get\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the button is active. 
+
+\begin{DoxyReturn}{Returns}
+True if active; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_af9a1bee0ff3e8628dca2026a4c676f5f}\index{UIButton@{UIButton}!getEnable@{getEnable}}
+\index{getEnable@{getEnable}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getEnable()}{getEnable()}}
+{\footnotesize\ttfamily \label{class_u_i_button_af9a1bee0ff3e8628dca2026a4c676f5f} 
+bool UIButton\+::get\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the button is enabled. 
+
+\begin{DoxyReturn}{Returns}
+True if enabled; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_ad3a1fee245d5b868a2bb560b9f6eed0b}\index{UIButton@{UIButton}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily \label{class_u_i_button_ad3a1fee245d5b868a2bb560b9f6eed0b} 
+bool UIButton\+::get\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets whether this button acts as a slider handle. 
+
+\begin{DoxyReturn}{Returns}
+True if handle, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_a58228aa5cfd9b1437fded676073b8ff4}\index{UIButton@{UIButton}!getLabel@{getLabel}}
+\index{getLabel@{getLabel}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getLabel()}{getLabel()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a58228aa5cfd9b1437fded676073b8ff4} 
+\mbox{\hyperlink{class_u_i_text}{UIText}} \texorpdfstring{$\ast$}{*} UIButton\+::get\+Label (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the label text object associated with this button. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_u_i_text}{UIText} label. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_a43d7cb75879cddc45483d621939e6495}\index{UIButton@{UIButton}!getMouseOver@{getMouseOver}}
+\index{getMouseOver@{getMouseOver}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getMouseOver()}{getMouseOver()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a43d7cb75879cddc45483d621939e6495} 
+bool UIButton\+::get\+Mouse\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets whether the mouse is currently over the button. 
+
+\begin{DoxyReturn}{Returns}
+True if hovered; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_a27d5ca7229fa75aee5527b34c0f01ef9}\index{UIButton@{UIButton}!getName@{getName}}
+\index{getName@{getName}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a27d5ca7229fa75aee5527b34c0f01ef9} 
+string UIButton\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the button\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+The button name string. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_a7c92b3549b62aa8ed768482acea2f7f3}\index{UIButton@{UIButton}!getSlider@{getSlider}}
+\index{getSlider@{getSlider}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{getSlider()}{getSlider()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a7c92b3549b62aa8ed768482acea2f7f3} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} UIButton\+::get\+Slider (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the slider object linked to this button. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_slider_object}{Slider\+Object}. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_a5b706cbf1030b1c07e1ceb8276333f19}\index{UIButton@{UIButton}!isHovered@{isHovered}}
+\index{isHovered@{isHovered}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{isHovered()}{isHovered()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a5b706cbf1030b1c07e1ceb8276333f19} 
+bool UIButton\+::is\+Hovered (\begin{DoxyParamCaption}\item[{int}]{mouseX}{, }\item[{int}]{mouseY}{}\end{DoxyParamCaption})}
+
+
+
+Checks whether the mouse coordinates hover over the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouseX} & X coordinate of the mouse. \\
+\hline
+{\em mouseY} & Y coordinate of the mouse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if mouse is over the button; false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_button_ac9eae3d5976ac5388a8d5791df1e0652}\index{UIButton@{UIButton}!setActive@{setActive}}
+\index{setActive@{setActive}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setActive()}{setActive()}}
+{\footnotesize\ttfamily \label{class_u_i_button_ac9eae3d5976ac5388a8d5791df1e0652} 
+void UIButton\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the active state of the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & True to activate, false to deactivate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a4c2cbe45f536408c8c3bebb91cf23a0c}\index{UIButton@{UIButton}!setEnable@{setEnable}}
+\index{setEnable@{setEnable}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setEnable()}{setEnable()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a4c2cbe45f536408c8c3bebb91cf23a0c} 
+void UIButton\+::set\+Enable (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables or disables the button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True to enable, false to disable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a2cd95ca1006218204cb5ff1524a8c854}\index{UIButton@{UIButton}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setFunction()}{setFunction()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a2cd95ca1006218204cb5ff1524a8c854} 
+void UIButton\+::set\+Function (\begin{DoxyParamCaption}\item[{function$<$ void()$>$}]{func}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the callback function to be executed on click. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & A std\+::function$<$void()$>$ callback. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a9b564da2624c2487a92d6c239a5457f2}\index{UIButton@{UIButton}!setHandle@{setHandle}}
+\index{setHandle@{setHandle}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setHandle()}{setHandle()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a9b564da2624c2487a92d6c239a5457f2} 
+void UIButton\+::set\+Handle (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether this button acts as a slider handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True if it is a handle, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a1c9e1e4fcb0b773bf436c79e4b5542b8}\index{UIButton@{UIButton}!setLabel@{setLabel}}
+\index{setLabel@{setLabel}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setLabel()}{setLabel()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a1c9e1e4fcb0b773bf436c79e4b5542b8} 
+void UIButton\+::set\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_i_text}{UIText}} \texorpdfstring{$\ast$}{*}}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the label text object associated with this button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Pointer to a \doxylink{class_u_i_text}{UIText} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a4d17d929f5fc40949dd9a083079c1708}\index{UIButton@{UIButton}!setMouseOver@{setMouseOver}}
+\index{setMouseOver@{setMouseOver}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setMouseOver()}{setMouseOver()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a4d17d929f5fc40949dd9a083079c1708} 
+void UIButton\+::set\+Mouse\+Over (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the mouse hover state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True if mouse is over the button, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a81c4b599e7821f93b092190c2c84d400}\index{UIButton@{UIButton}!setSlider@{setSlider}}
+\index{setSlider@{setSlider}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{setSlider()}{setSlider()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a81c4b599e7821f93b092190c2c84d400} 
+void UIButton\+::set\+Slider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the slider object linked to this button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to a \doxylink{class_slider_object}{Slider\+Object}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_button_a36e5f1123dc73c7879ccd10934425413}\index{UIButton@{UIButton}!update@{update}}
+\index{update@{update}!UIButton@{UIButton}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_u_i_button_a36e5f1123dc73c7879ccd10934425413} 
+void UIButton\+::update (\begin{DoxyParamCaption}\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Updates the button state, typically called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time since last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/UIButton.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/UIButton.\+cpp\end{DoxyCompactItemize}

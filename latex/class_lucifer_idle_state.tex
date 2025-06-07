@@ -1,0 +1,100 @@
+\doxysection{Lucifer\+Idle\+State Class Reference}
+\hypertarget{class_lucifer_idle_state}{}\label{class_lucifer_idle_state}\index{LuciferIdleState@{LuciferIdleState}}
+
+
+Inheritance diagram for Lucifer\+Idle\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_lucifer_idle_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lucifer\+Idle\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_lucifer_idle_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_lucifer_idle_state_a5321664daf5f25283c0d260e80db14e7}{enter}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+void \mbox{\hyperlink{class_lucifer_idle_state_a4d136615538d58c1e6bceefac93e2098}{update}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss, float dt) override
+\item 
+void \mbox{\hyperlink{class_lucifer_idle_state_ae8dc603763b5083c492f7aeb25745370}{exit}} (\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss) override
+\item 
+\Hypertarget{class_lucifer_idle_state_a9e103dc333d311d92929cfa037c4cb0e}\label{class_lucifer_idle_state_a9e103dc333d311d92929cfa037c4cb0e} 
+void {\bfseries pick\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_idle_state_a61eb82257e1f6b9cc68aeefcac9c8829}\label{class_lucifer_idle_state_a61eb82257e1f6b9cc68aeefcac9c8829} 
+static \mbox{\hyperlink{class_lucifer_idle_state}{Lucifer\+Idle\+State}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_idle_state_a299cab4e4a192f743641639f6786a4bf}\label{class_lucifer_idle_state_a299cab4e4a192f743641639f6786a4bf} 
+float {\bfseries idle\+Timer}
+\item 
+\Hypertarget{class_lucifer_idle_state_a5c95c8e497fd46b9ae31bf1ccc793bd0}\label{class_lucifer_idle_state_a5c95c8e497fd46b9ae31bf1ccc793bd0} 
+\mbox{\hyperlink{class_lucifer}{Lucifer}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer}
+\item 
+\Hypertarget{class_lucifer_idle_state_a753f70cb87ef32b592b210beba0e28b9}\label{class_lucifer_idle_state_a753f70cb87ef32b592b210beba0e28b9} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_lucifer_idle_state_ac8a19d3a31250e13722048f12b66c058}\label{class_lucifer_idle_state_ac8a19d3a31250e13722048f12b66c058} 
+\mbox{\hyperlink{class_lucifer_heart_beat}{Lucifer\+Heart\+Beat}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer\+Heart\+Beat}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lucifer_idle_state_a5e78a271182c16a1b79f1418b0a1a587}\label{class_lucifer_idle_state_a5e78a271182c16a1b79f1418b0a1a587} 
+static \mbox{\hyperlink{class_lucifer_idle_state}{Lucifer\+Idle\+State}} \texorpdfstring{$\ast$}{*} {\bfseries instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_lucifer_idle_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lucifer_idle_state_a5321664daf5f25283c0d260e80db14e7}\index{LuciferIdleState@{LuciferIdleState}!enter@{enter}}
+\index{enter@{enter}!LuciferIdleState@{LuciferIdleState}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily \label{class_lucifer_idle_state_a5321664daf5f25283c0d260e80db14e7} 
+void Lucifer\+Idle\+State\+::enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_idle_state_ae8dc603763b5083c492f7aeb25745370}\index{LuciferIdleState@{LuciferIdleState}!exit@{exit}}
+\index{exit@{exit}!LuciferIdleState@{LuciferIdleState}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily \label{class_lucifer_idle_state_ae8dc603763b5083c492f7aeb25745370} 
+void Lucifer\+Idle\+State\+::exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+\Hypertarget{class_lucifer_idle_state_a4d136615538d58c1e6bceefac93e2098}\index{LuciferIdleState@{LuciferIdleState}!update@{update}}
+\index{update@{update}!LuciferIdleState@{LuciferIdleState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_lucifer_idle_state_a4d136615538d58c1e6bceefac93e2098} 
+void Lucifer\+Idle\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_boss_state_m}{Boss\+StateM}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Idle\+State.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Lucifer\+Idle\+State.\+cpp\end{DoxyCompactItemize}

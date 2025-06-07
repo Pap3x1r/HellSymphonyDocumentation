@@ -1,0 +1,594 @@
+\doxysection{Level\+Lucifer Class Reference}
+\hypertarget{class_level_lucifer}{}\label{class_level_lucifer}\index{LevelLucifer@{LevelLucifer}}
+
+
+Inheritance diagram for Level\+Lucifer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{class_level_lucifer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+Lucifer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_lucifer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a36da04486391f21bd168e75e1b6a6507}{level\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all assets and data needed for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a3e90d01361527fc4cd8e83057006ba70}{level\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the level (called after load). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_afc92145aca580f44195ea5cedd7ff2c5}{level\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the level logic. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a325194d0f5794147155a4791c47d1338}{level\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders all objects in the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_aed8f4570b0c6bf7e75ae0d1375207a42}{level\+Free}} ()
+\begin{DoxyCompactList}\small\item\em Frees temporary resources (called before unload). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a4d499fbb6e7b1bdd423a26ce9473ba24}{level\+Unload}} ()
+\begin{DoxyCompactList}\small\item\em Unloads all resources for the level. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a22e608a6cf5466e3fb9ce57bb74136d6}{handle\+Key}} (char key)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a8a619656088c0636080984cd9967fd78}{handle\+Controller\+Button}} (SDL\+\_\+\+Game\+Controller\+Button button)
+\begin{DoxyCompactList}\small\item\em Handles controller button input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a8bd9c5429121e973512d87731a23401b}{handle\+Mouse}} (int type, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handles mouse input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_ade15880531f7d0d0e89a18e11b3efca0}{handle\+Analog\+Stick}} (int type, char key)
+\begin{DoxyCompactList}\small\item\em Handles analog stick input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_lucifer_a06503d8a207cc4dd0789703097992aa3}{add\+Object}} (\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}obj) override
+\begin{DoxyCompactList}\small\item\em Adds a drawable object to the level. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_lucifer_a34d34fbbd60c55e63241dc3c1ab55956}\label{class_level_lucifer_a34d34fbbd60c55e63241dc3c1ab55956} 
+void {\bfseries add\+Player\+To\+Debug} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_level_a76b010ccc524cef1ae0c3adc2a63d3b1}{player}})
+\item 
+\Hypertarget{class_level_lucifer_aca64f9f4b98b450fa9277a5249eabc52}\label{class_level_lucifer_aca64f9f4b98b450fa9277a5249eabc52} 
+void {\bfseries reset\+Level} ()
+\item 
+\Hypertarget{class_level_lucifer_ab1c0ca8e219882c73494665bf91acd97}\label{class_level_lucifer_ab1c0ca8e219882c73494665bf91acd97} 
+bool {\bfseries is\+Pausing} (float dt)
+\item 
+void \mbox{\hyperlink{class_level_lucifer_a50dc99c406a50efc0181088bcdd28635}{change\+Menu\+State}} (Menu\+State target\+State)
+\begin{DoxyCompactList}\small\item\em Changes the menu state to a new target state. \end{DoxyCompactList}\item 
+Menu\+State \mbox{\hyperlink{class_level_lucifer_a357d5c8e72472ed4dad72baeb65204c1}{get\+Menu\+State}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current menu state. \end{DoxyCompactList}\item 
+\Hypertarget{class_level_lucifer_aeaf7d561fb49a1d65c7c6699b9909d77}\label{class_level_lucifer_aeaf7d561fb49a1d65c7c6699b9909d77} 
+void {\bfseries mouse\+UIHandling} (int type, float x, float y)
+\item 
+\Hypertarget{class_level_lucifer_ab39c54186ca3102aefed820d1f38f707}\label{class_level_lucifer_ab39c54186ca3102aefed820d1f38f707} 
+void {\bfseries keyboard\+UIHandling} (char key)
+\item 
+\Hypertarget{class_level_lucifer_a2374171a58cb0e4371c167a8abd78deb}\label{class_level_lucifer_a2374171a58cb0e4371c167a8abd78deb} 
+glm\+::vec2 {\bfseries convert\+Mouse\+To\+Game\+Space} (int mouseX, int mouseY)
+\item 
+\Hypertarget{class_level_lucifer_a081d982c1372f2183ce6fa12a80eae85}\label{class_level_lucifer_a081d982c1372f2183ce6fa12a80eae85} 
+void {\bfseries change\+Selection} (int direction)
+\item 
+\Hypertarget{class_level_lucifer_aa05c4fd82130e8c1945514dac41fbc91}\label{class_level_lucifer_aa05c4fd82130e8c1945514dac41fbc91} 
+void {\bfseries buttons\+Free} ()
+\item 
+\Hypertarget{class_level_lucifer_a3589f4f19faf0299d0cac627db67e84f}\label{class_level_lucifer_a3589f4f19faf0299d0cac627db67e84f} 
+void {\bfseries UIUpdate} ()
+\item 
+\Hypertarget{class_level_lucifer_ad9ce2a498f669738c005080737995c2d}\label{class_level_lucifer_ad9ce2a498f669738c005080737995c2d} 
+void {\bfseries switch\+Control\+Type} (Control\+Type ct)
+\item 
+\Hypertarget{class_level_lucifer_a192d9a833a67b1a53be84db77b8c17dd}\label{class_level_lucifer_a192d9a833a67b1a53be84db77b8c17dd} 
+void {\bfseries create\+Pause\+UI} ()
+\item 
+\Hypertarget{class_level_lucifer_afbe8bf79a71007fcedd38b64196b9bf3}\label{class_level_lucifer_afbe8bf79a71007fcedd38b64196b9bf3} 
+void {\bfseries to\+Loading\+Screen\+Death} ()
+\item 
+\Hypertarget{class_level_lucifer_a0180186cc9a297ba544300bbc9e1d90c}\label{class_level_lucifer_a0180186cc9a297ba544300bbc9e1d90c} 
+void {\bfseries to\+Loading\+Screen\+Victory} ()
+\item 
+\Hypertarget{class_level_lucifer_af1241ed630fca0a6f399b8ae5f8ba37f}\label{class_level_lucifer_af1241ed630fca0a6f399b8ae5f8ba37f} 
+void {\bfseries to\+Loading\+Screen} ()
+\item 
+\Hypertarget{class_level_lucifer_a937f20f897487e9566f61fc38b06cc58}\label{class_level_lucifer_a937f20f897487e9566f61fc38b06cc58} 
+void {\bfseries next\+Level} ()
+\item 
+\Hypertarget{class_level_lucifer_a4947747df639aab075c54f502f43f701}\label{class_level_lucifer_a4947747df639aab075c54f502f43f701} 
+void {\bfseries retry\+Level} ()
+\item 
+\Hypertarget{class_level_lucifer_a247dfd4a2a17be8742b97bb83aff5208}\label{class_level_lucifer_a247dfd4a2a17be8742b97bb83aff5208} 
+void {\bfseries resurrect} ()
+\item 
+\Hypertarget{class_level_lucifer_a0312ea227810b5eed8dea8f43392e2e5}\label{class_level_lucifer_a0312ea227810b5eed8dea8f43392e2e5} 
+void {\bfseries exit\+Death} ()
+\item 
+\Hypertarget{class_level_lucifer_aa6b30047707a767d3ed6c8350f335919}\label{class_level_lucifer_aa6b30047707a767d3ed6c8350f335919} 
+void {\bfseries exit\+Victory} ()
+\item 
+\Hypertarget{class_level_lucifer_a154deb601a8575fc3d4321088205ddf8}\label{class_level_lucifer_a154deb601a8575fc3d4321088205ddf8} 
+void {\bfseries controller\+UIHandling} (SDL\+\_\+\+Game\+Controller\+Button button)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_level}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_level_a791a883a14cb9326a95e1230e8756c73}{is\+Receiving\+No\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em Called when no input is currently being received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_level_a47e9ac888f58f1f1b47e4a191e533c27}{update\+Objects}} (list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\mbox{\hyperlink{class_level_a360ccd2c1dd127d452842a37f86cde49}{objects\+List}})
+\begin{DoxyCompactList}\small\item\em Updates all drawable objects in the level. \end{DoxyCompactList}\item 
+virtual void {\bfseries render\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Renders GUI elements using Im\+Gui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_lucifer_a822c4ef606856504eb7c5b52f1e738e8}\label{class_level_lucifer_a822c4ef606856504eb7c5b52f1e738e8} 
+enum {\bfseries Control\+Type} \{ {\bfseries keyboard} = 0
+, {\bfseries controller}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_lucifer_a15740316135e7723fa35d12c4f3f0906}\label{class_level_lucifer_a15740316135e7723fa35d12c4f3f0906} 
+void {\bfseries create\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_lucifer_afc78da2a36585ba3422cf05f87632c5f}\label{class_level_lucifer_afc78da2a36585ba3422cf05f87632c5f} 
+void {\bfseries update\+Skills\+Icon} ()
+\item 
+\Hypertarget{class_level_lucifer_a4f6e80afeb23daf44eb65d957b097859}\label{class_level_lucifer_a4f6e80afeb23daf44eb65d957b097859} 
+void {\bfseries player\+Ultimate\+Input} ()
+\item 
+\Hypertarget{class_level_lucifer_a6384defba1f59d539ea8b756f4339caf}\label{class_level_lucifer_a6384defba1f59d539ea8b756f4339caf} 
+void {\bfseries update\+UIBar} ()
+\item 
+\Hypertarget{class_level_lucifer_ac9cb5f868cffc864c6b7cfe9e7844500}\label{class_level_lucifer_ac9cb5f868cffc864c6b7cfe9e7844500} 
+void {\bfseries state\+Machine\+Update} (float dt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_level_lucifer_adf2a65946007c11e2bc5b43555c6fd75}\label{class_level_lucifer_adf2a65946007c11e2bc5b43555c6fd75} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Button} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ac7d97737965ffb2403e09f85cc385d10}\label{class_level_lucifer_ac7d97737965ffb2403e09f85cc385d10} 
+int {\bfseries selected\+Index} = -\/1
+\item 
+\Hypertarget{class_level_lucifer_a00b7fdca38cc9ab498c96bba17b0a98d}\label{class_level_lucifer_a00b7fdca38cc9ab498c96bba17b0a98d} 
+int {\bfseries hovered\+Index} = -\/1
+\item 
+\Hypertarget{class_level_lucifer_a990afb28cc80d0ce671afc0b941e4b8e}\label{class_level_lucifer_a990afb28cc80d0ce671afc0b941e4b8e} 
+bool {\bfseries control\+By\+Mouse} = false
+\item 
+\Hypertarget{class_level_lucifer_a7f2ed0b79d912d471cc40dbd75d93f21}\label{class_level_lucifer_a7f2ed0b79d912d471cc40dbd75d93f21} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries buttons\+List}
+\item 
+\Hypertarget{class_level_lucifer_a4d431e8cd457e90fc7b859bd147b86ae}\label{class_level_lucifer_a4d431e8cd457e90fc7b859bd147b86ae} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries main\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_ac91d5000781df516b02b9402435a30b8}\label{class_level_lucifer_ac91d5000781df516b02b9402435a30b8} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries pause\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a4a20bf444a65222b00851bc035a5b56d}\label{class_level_lucifer_a4a20bf444a65222b00851bc035a5b56d} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries options\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a890b93a86e7adccaf18c900ba0799a1e}\label{class_level_lucifer_a890b93a86e7adccaf18c900ba0799a1e} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries audio\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a704d41d246f6ae0cd24216a2ae303d61}\label{class_level_lucifer_a704d41d246f6ae0cd24216a2ae303d61} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries controller\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a7e12a71c104f0ba9dc0181f9f932eeef}\label{class_level_lucifer_a7e12a71c104f0ba9dc0181f9f932eeef} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries keyboard\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_ace6365e4a014e6a3b6dd587eb9234fee}\label{class_level_lucifer_ace6365e4a014e6a3b6dd587eb9234fee} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries credits\+Button}
+\item 
+\Hypertarget{class_level_lucifer_a1932c23bf347b020765bd737fd136def}\label{class_level_lucifer_a1932c23bf347b020765bd737fd136def} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries quit\+Confirm\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a066737facf44bdbb392225595bd3adbc}\label{class_level_lucifer_a066737facf44bdbb392225595bd3adbc} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries death\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_aceb664906a740a82aeee0431972e480a}\label{class_level_lucifer_aceb664906a740a82aeee0431972e480a} 
+list$<$ \mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries victory\+Buttons}
+\item 
+\Hypertarget{class_level_lucifer_a047a172eb1ac94dfabfa30f8b6e007d6}\label{class_level_lucifer_a047a172eb1ac94dfabfa30f8b6e007d6} 
+list$<$ \mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries sliders\+List}
+\item 
+\Hypertarget{class_level_lucifer_ad0fa06fbb9a4b8b0782e508a8d179389}\label{class_level_lucifer_ad0fa06fbb9a4b8b0782e508a8d179389} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries master\+Slider}
+\item 
+\Hypertarget{class_level_lucifer_a02b6e1ab8adcc8db6d97a7eaca125be1}\label{class_level_lucifer_a02b6e1ab8adcc8db6d97a7eaca125be1} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
+\item 
+\Hypertarget{class_level_lucifer_a4ca9889adca092249c0e246c8e834981}\label{class_level_lucifer_a4ca9889adca092249c0e246c8e834981} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sfx\+Slider}
+\item 
+\Hypertarget{class_level_lucifer_a6d14316ad2676df99f8bb75e01eda085}\label{class_level_lucifer_a6d14316ad2676df99f8bb75e01eda085} 
+\mbox{\hyperlink{class_slider_object}{Slider\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries ambient\+Slider}
+\item 
+\Hypertarget{class_level_lucifer_a1398fbb92fb332f84c0b8d8ca9f7a7ed}\label{class_level_lucifer_a1398fbb92fb332f84c0b8d8ca9f7a7ed} 
+\mbox{\hyperlink{class_u_i_button}{UIButton}} \texorpdfstring{$\ast$}{*} {\bfseries focused\+Handle} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a09924c732c02f2bb6f783ed145bfc977}\label{class_level_lucifer_a09924c732c02f2bb6f783ed145bfc977} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon1} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ae4df1428021970c03f188f8a06c411a5}\label{class_level_lucifer_ae4df1428021970c03f188f8a06c411a5} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon2} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a1d200c4ab4e2e3b823d5e2b593e2829f}\label{class_level_lucifer_a1d200c4ab4e2e3b823d5e2b593e2829f} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries life\+Icon3} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a8cccd37ad58f895e8a0e0f38f72391c8}\label{class_level_lucifer_a8cccd37ad58f895e8a0e0f38f72391c8} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries controller\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ac714ccd258328436673f006490046a9d}\label{class_level_lucifer_ac714ccd258328436673f006490046a9d} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries kb\+Overlay} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_abb8c8771cdd38852dbb3122095f1466b}\label{class_level_lucifer_abb8c8771cdd38852dbb3122095f1466b} 
+float {\bfseries transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_lucifer_ab3167599b6f9ab48ccc741f0d10b57bc}\label{class_level_lucifer_ab3167599b6f9ab48ccc741f0d10b57bc} 
+float {\bfseries transition\+Duration} = 0.\+2f
+\item 
+\Hypertarget{class_level_lucifer_a50fb83423e21763b3f585b998c00768b}\label{class_level_lucifer_a50fb83423e21763b3f585b998c00768b} 
+bool {\bfseries transitioning} = false
+\item 
+\Hypertarget{class_level_lucifer_a8b220f6bedf40a64c8116e14dc2518d0}\label{class_level_lucifer_a8b220f6bedf40a64c8116e14dc2518d0} 
+float {\bfseries hold\+Button\+Timer} = 0.\+0f
+\item 
+\Hypertarget{class_level_lucifer_a6deb2cc46a48617c93f54120c21100a1}\label{class_level_lucifer_a6deb2cc46a48617c93f54120c21100a1} 
+float {\bfseries hold\+Button\+Threshold} = 0.\+5f
+\item 
+\Hypertarget{class_level_lucifer_a2c2a8ae6d16521fd0b3d26e1fd4f306c}\label{class_level_lucifer_a2c2a8ae6d16521fd0b3d26e1fd4f306c} 
+float {\bfseries black\+Fade\+Transition\+Time} = 0.\+0f
+\item 
+\Hypertarget{class_level_lucifer_af06d41f9ca8cd0d87e150357895e49bc}\label{class_level_lucifer_af06d41f9ca8cd0d87e150357895e49bc} 
+float {\bfseries black\+Fade\+Transition\+Duration} = 1.\+0f
+\item 
+\Hypertarget{class_level_lucifer_a16588816b762eccdca347c8052b3a264}\label{class_level_lucifer_a16588816b762eccdca347c8052b3a264} 
+bool {\bfseries first\+Start} = true
+\item 
+\Hypertarget{class_level_lucifer_a0120729918494e7bdcc3f61b104d7921}\label{class_level_lucifer_a0120729918494e7bdcc3f61b104d7921} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries black\+Fade} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ad4c7afa9d6cf01aa4569c39a5953aaea}\label{class_level_lucifer_ad4c7afa9d6cf01aa4569c39a5953aaea} 
+Menu\+State {\bfseries current\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_lucifer_a24d4746e60f07001afffdcff3300b984}\label{class_level_lucifer_a24d4746e60f07001afffdcff3300b984} 
+Menu\+State {\bfseries next\+Menu\+State} = Menu\+State\+::\+MAIN
+\item 
+\Hypertarget{class_level_lucifer_a1fd5e2bc96853f7c279f6f815660079f}\label{class_level_lucifer_a1fd5e2bc96853f7c279f6f815660079f} 
+bool {\bfseries is\+Holding}
+\item 
+\Hypertarget{class_level_lucifer_a8337008c92d5ffcaffbfb5f00453773d}\label{class_level_lucifer_a8337008c92d5ffcaffbfb5f00453773d} 
+bool {\bfseries level\+End} = false
+\item 
+\Hypertarget{class_level_lucifer_a35f733ac414f650821ae29924d8d63fc}\label{class_level_lucifer_a35f733ac414f650821ae29924d8d63fc} 
+\mbox{\hyperlink{class_q_t_e_button_u_i}{QTEButton\+UI}} \texorpdfstring{$\ast$}{*} {\bfseries qbui}
+\item 
+\Hypertarget{class_level_lucifer_a1047ccfa5d8050f661da16448ee90a58}\label{class_level_lucifer_a1047ccfa5d8050f661da16448ee90a58} 
+list$<$ \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries objects\+List}
+\item 
+\Hypertarget{class_level_lucifer_a2f7f018f6076f272081ff6ce92566827}\label{class_level_lucifer_a2f7f018f6076f272081ff6ce92566827} 
+float {\bfseries timeK} = 0
+\item 
+\Hypertarget{class_level_lucifer_a2dadc461241e613cbff4f30faca8c883}\label{class_level_lucifer_a2dadc461241e613cbff4f30faca8c883} 
+float {\bfseries dt} = 0
+\item 
+\Hypertarget{class_level_lucifer_aed319aeae33c61d3fb64bfeeef174e6b}\label{class_level_lucifer_aed319aeae33c61d3fb64bfeeef174e6b} 
+\mbox{\hyperlink{class_lucifer}{Lucifer}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer}
+\item 
+\Hypertarget{class_level_lucifer_a0944f4582868995bebc258f79143c701}\label{class_level_lucifer_a0944f4582868995bebc258f79143c701} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} {\bfseries player}
+\item 
+\Hypertarget{class_level_lucifer_a0cc05749a10875ccf6962d37883fd809}\label{class_level_lucifer_a0cc05749a10875ccf6962d37883fd809} 
+\mbox{\hyperlink{class_lucifer_heart_beat}{Lucifer\+Heart\+Beat}} \texorpdfstring{$\ast$}{*} {\bfseries lucifer\+Heart\+Beat}
+\item 
+\Hypertarget{class_level_lucifer_a0ed8aecc4f91ed04c89cb22176893beb}\label{class_level_lucifer_a0ed8aecc4f91ed04c89cb22176893beb} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries input\+Manager}
+\item 
+\Hypertarget{class_level_lucifer_a99d6a3485d3d0532c78948eea3577d14}\label{class_level_lucifer_a99d6a3485d3d0532c78948eea3577d14} 
+Control\+Type {\bfseries current\+Control\+Type} = Control\+Type\+::keyboard
+\item 
+\Hypertarget{class_level_lucifer_ad9fc12c719f1b4d52e65503901f9bdea}\label{class_level_lucifer_ad9fc12c719f1b4d52e65503901f9bdea} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Health\+Bar}
+\item 
+\Hypertarget{class_level_lucifer_a629d2fde61ae2b999b4c27fd54e29022}\label{class_level_lucifer_a629d2fde61ae2b999b4c27fd54e29022} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Ultimate\+Bar}
+\item 
+\Hypertarget{class_level_lucifer_a11bb0c5d2466a695d75c2bf0bc3a77f9}\label{class_level_lucifer_a11bb0c5d2466a695d75c2bf0bc3a77f9} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries wither\+Health\+Bar}
+\item 
+\Hypertarget{class_level_lucifer_a59ad811ff11b947214beae47c4f18c44}\label{class_level_lucifer_a59ad811ff11b947214beae47c4f18c44} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries boss\+Health\+Bar}
+\item 
+\Hypertarget{class_level_lucifer_a7eb9077e005b508464fd53f62c57847c}\label{class_level_lucifer_a7eb9077e005b508464fd53f62c57847c} 
+\mbox{\hyperlink{class_simple_object}{Simple\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar}
+\item 
+\Hypertarget{class_level_lucifer_a7313a32c6b215a469910574e02f5db8a}\label{class_level_lucifer_a7313a32c6b215a469910574e02f5db8a} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Background} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_aeed4cba33e96502994ca91489499f6d0}\label{class_level_lucifer_aeed4cba33e96502994ca91489499f6d0} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries player\+Overheat\+Bar\+Frame} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a04e39d349dfc962d95e1625412467baf}\label{class_level_lucifer_a04e39d349dfc962d95e1625412467baf} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ab85b33ce8058c5d3b0da5fe2318ceebe}\label{class_level_lucifer_ab85b33ce8058c5d3b0da5fe2318ceebe} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a1134fb9f4bd0c20c653578021d60cfb2}\label{class_level_lucifer_a1134fb9f4bd0c20c653578021d60cfb2} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a1fdb96cf236e4f8fced31a60b8e6bc5b}\label{class_level_lucifer_a1fdb96cf236e4f8fced31a60b8e6bc5b} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries bow\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a66df27851a221e7b7e7fcc8366b2963a}\label{class_level_lucifer_a66df27851a221e7b7e7fcc8366b2963a} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a2cbd1301cfb16032d989f3cc52181cd9}\label{class_level_lucifer_a2cbd1301cfb16032d989f3cc52181cd9} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_aeb752793f7926df8c591d0edf7b285d1}\label{class_level_lucifer_aeb752793f7926df8c591d0edf7b285d1} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a39ffbfc87061019b291432b5102c7dc9}\label{class_level_lucifer_a39ffbfc87061019b291432b5102c7dc9} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries sword\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_aa269a4c07c2dfcaf27aa9ddf45c06201}\label{class_level_lucifer_aa269a4c07c2dfcaf27aa9ddf45c06201} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_ad4a1513ac4d5bc1c7234cb795f17555f}\label{class_level_lucifer_ad4a1513ac4d5bc1c7234cb795f17555f} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Small\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a6243825c365317aae8b7d586a72ff05e}\label{class_level_lucifer_a6243825c365317aae8b7d586a72ff05e} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+Off} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a484b96b6cc2534005920bf584b05724a}\label{class_level_lucifer_a484b96b6cc2534005920bf584b05724a} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries shield\+Big\+Ult\+Icon\+On} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a4fa438db0e772c2da6a402f727e8ac55}\label{class_level_lucifer_a4fa438db0e772c2da6a402f727e8ac55} 
+\mbox{\hyperlink{class_textured_object}{Textured\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries dash\+Icon} = nullptr
+\item 
+\Hypertarget{class_level_lucifer_a1996afe10f2beb781a3b5c21cb79a878}\label{class_level_lucifer_a1996afe10f2beb781a3b5c21cb79a878} 
+float {\bfseries player\+Time\+Scale} = 1.\+0f
+\item 
+\Hypertarget{class_level_lucifer_a3eec3fea2656b8725cb45395b6d93c4a}\label{class_level_lucifer_a3eec3fea2656b8725cb45395b6d93c4a} 
+int {\bfseries tempx}
+\item 
+\Hypertarget{class_level_lucifer_ae9276851664046ce31c13897b620f4c6}\label{class_level_lucifer_ae9276851664046ce31c13897b620f4c6} 
+int {\bfseries tempx2}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_level_lucifer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_lucifer_a06503d8a207cc4dd0789703097992aa3}\index{LevelLucifer@{LevelLucifer}!addObject@{addObject}}
+\index{addObject@{addObject}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a06503d8a207cc4dd0789703097992aa3} 
+void Level\+Lucifer\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a drawable object to the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to the drawable object. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_aef49fbeb779a9fa8d663268413596c97}{Level}}.
+
+\Hypertarget{class_level_lucifer_a50dc99c406a50efc0181088bcdd28635}\index{LevelLucifer@{LevelLucifer}!changeMenuState@{changeMenuState}}
+\index{changeMenuState@{changeMenuState}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{changeMenuState()}{changeMenuState()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a50dc99c406a50efc0181088bcdd28635} 
+void Level\+Lucifer\+::change\+Menu\+State (\begin{DoxyParamCaption}\item[{Menu\+State}]{target\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the menu state to a new target state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+State} & The new menu state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a820a0dcdd8b865cae0f1e7134a54c972}{Level}}.
+
+\Hypertarget{class_level_lucifer_a357d5c8e72472ed4dad72baeb65204c1}\index{LevelLucifer@{LevelLucifer}!getMenuState@{getMenuState}}
+\index{getMenuState@{getMenuState}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{getMenuState()}{getMenuState()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a357d5c8e72472ed4dad72baeb65204c1} 
+Menu\+State Level\+Lucifer\+::get\+Menu\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the current menu state. 
+
+\begin{DoxyReturn}{Returns}
+The current Menu\+State. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a36bc96d202f04a14396ff2c17fb642c6}{Level}}.
+
+\Hypertarget{class_level_lucifer_ade15880531f7d0d0e89a18e11b3efca0}\index{LevelLucifer@{LevelLucifer}!handleAnalogStick@{handleAnalogStick}}
+\index{handleAnalogStick@{handleAnalogStick}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{handleAnalogStick()}{handleAnalogStick()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_ade15880531f7d0d0e89a18e11b3efca0} 
+void Level\+Lucifer\+::handle\+Analog\+Stick (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles analog stick input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Analog input type. \\
+\hline
+{\em key} & Identifier for analog input. \\
+\hline
+\end{DoxyParams}
+Usage ///
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a4bf16fa2345bfc5024218a50a3ebb254}{Level}}.
+
+\Hypertarget{class_level_lucifer_a8a619656088c0636080984cd9967fd78}\index{LevelLucifer@{LevelLucifer}!handleControllerButton@{handleControllerButton}}
+\index{handleControllerButton@{handleControllerButton}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{handleControllerButton()}{handleControllerButton()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a8a619656088c0636080984cd9967fd78} 
+void Level\+Lucifer\+::handle\+Controller\+Button (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Game\+Controller\+Button}]{button}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles controller button input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & SDL game controller button. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af8635a2be12ace76428850089dee82bf}{Level}}.
+
+\Hypertarget{class_level_lucifer_a22e608a6cf5466e3fb9ce57bb74136d6}\index{LevelLucifer@{LevelLucifer}!handleKey@{handleKey}}
+\index{handleKey@{handleKey}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{handleKey()}{handleKey()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a22e608a6cf5466e3fb9ce57bb74136d6} 
+void Level\+Lucifer\+::handle\+Key (\begin{DoxyParamCaption}\item[{char}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The pressed key. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a335aff777af5f2e664c3bf135802f3ab}{Level}}.
+
+\Hypertarget{class_level_lucifer_a8bd9c5429121e973512d87731a23401b}\index{LevelLucifer@{LevelLucifer}!handleMouse@{handleMouse}}
+\index{handleMouse@{handleMouse}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{handleMouse()}{handleMouse()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a8bd9c5429121e973512d87731a23401b} 
+void Level\+Lucifer\+::handle\+Mouse (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles mouse input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Mouse event type. \\
+\hline
+{\em x} & X position of the mouse. \\
+\hline
+{\em y} & Y position of the mouse. \\
+\hline
+\end{DoxyParams}
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_af94de9c1b4b706811dcd137377a48201}{Level}}.
+
+\Hypertarget{class_level_lucifer_a325194d0f5794147155a4791c47d1338}\index{LevelLucifer@{LevelLucifer}!levelDraw@{levelDraw}}
+\index{levelDraw@{levelDraw}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelDraw()}{levelDraw()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a325194d0f5794147155a4791c47d1338} 
+void Level\+Lucifer\+::level\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders all objects in the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ad13ee79561d43ae24e4f50fbcda13d25}{Level}}.
+
+\Hypertarget{class_level_lucifer_aed8f4570b0c6bf7e75ae0d1375207a42}\index{LevelLucifer@{LevelLucifer}!levelFree@{levelFree}}
+\index{levelFree@{levelFree}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelFree()}{levelFree()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_aed8f4570b0c6bf7e75ae0d1375207a42} 
+void Level\+Lucifer\+::level\+Free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Frees temporary resources (called before unload). 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_ae93ec144c275cf24e2e82d20b0efdbdb}{Level}}.
+
+\Hypertarget{class_level_lucifer_a3e90d01361527fc4cd8e83057006ba70}\index{LevelLucifer@{LevelLucifer}!levelInit@{levelInit}}
+\index{levelInit@{levelInit}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelInit()}{levelInit()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a3e90d01361527fc4cd8e83057006ba70} 
+void Level\+Lucifer\+::level\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the level (called after load). 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_a6934fe9b9786ad0780672ddc73471939}{Level}}.
+
+\Hypertarget{class_level_lucifer_a36da04486391f21bd168e75e1b6a6507}\index{LevelLucifer@{LevelLucifer}!levelLoad@{levelLoad}}
+\index{levelLoad@{levelLoad}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelLoad()}{levelLoad()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a36da04486391f21bd168e75e1b6a6507} 
+void Level\+Lucifer\+::level\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loads all assets and data needed for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a50b7ab555735b967f2812b8d18b317c3}{Level}}.
+
+\Hypertarget{class_level_lucifer_a4d499fbb6e7b1bdd423a26ce9473ba24}\index{LevelLucifer@{LevelLucifer}!levelUnload@{levelUnload}}
+\index{levelUnload@{levelUnload}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelUnload()}{levelUnload()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_a4d499fbb6e7b1bdd423a26ce9473ba24} 
+void Level\+Lucifer\+::level\+Unload (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Unloads all resources for the level. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_level_a7cea1904911630093477eb046f0d195c}{Level}}.
+
+\Hypertarget{class_level_lucifer_afc92145aca580f44195ea5cedd7ff2c5}\index{LevelLucifer@{LevelLucifer}!levelUpdate@{levelUpdate}}
+\index{levelUpdate@{levelUpdate}!LevelLucifer@{LevelLucifer}}
+\doxysubsubsection{\texorpdfstring{levelUpdate()}{levelUpdate()}}
+{\footnotesize\ttfamily \label{class_level_lucifer_afc92145aca580f44195ea5cedd7ff2c5} 
+void Level\+Lucifer\+::level\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the level logic. 
+
+Will be implemented in inherited level when used ///
+
+Reimplemented from \mbox{\hyperlink{class_level_aa440723edf7b49ef13c36366293c3e97}{Level}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Lucifer.\+h\item 
+C\+:/\+Hell\+Symphony/\+Hell\+Symphony\+Engine/\+Next\+Engine/Level\+Lucifer.\+cpp\end{DoxyCompactItemize}
